@@ -1,2 +1,2 @@
-# tesis
+# Tesis
 Trabajo de graduación
