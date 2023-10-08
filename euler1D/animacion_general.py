@@ -103,8 +103,6 @@ def animate_3(i):
     animacion(data_u, subsets_velocidad[i], r'Velocidad $\left(\frac{m}{s}\right)$', 0.25, ax3, line3)
     return line3,
 
-# anim1 = animation.FuncAnimation(fig, animate_1, init_func=init, frames=(range(num_frames)), repeat=False, interval=100)
-# anim2 = animation.FuncAnimation(fig, animate_2, init_func=init2, frames=(range(num_frames)), repeat=False, interval=100)
 anim3 = animation.FuncAnimation(fig, animate_3, init_func=init3, frames=(range(num_frames)), repeat=False, interval=100)
 
 
