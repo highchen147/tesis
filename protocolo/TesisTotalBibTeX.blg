@@ -1,5 +1,76 @@
-[0] Config.pm:306> INFO - This is Biber 2.18
-[0] Config.pm:309> INFO - Logfile is 'TesisTotalBibTeX.blg'
-[182] biber-MSWIN64:340> INFO - === 
-[975] Utils.pm:410> ERROR - Cannot find 'TesisTotalBibTeX.bcf'!
-[975] Biber.pm:135> INFO - ERRORS: 1
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: TesisTotalBibTeX.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: objetivos.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: introduccion.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: metodologia.aux
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: justificacion.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: contenido.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: tch3.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: tch2.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: tch1.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: tch5.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: tch6.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: flexbib.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+Database file #1: bbtesis.bib
+Warning--entry type for "Cameron" isn't style-file defined
+--line 3 of file bbtesis.bib
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Warning--can't use both author and editor fields in Leveque
+Warning--empty translator in Leveque
+Warning--empty translator in Roe81
+Warning--empty translator in Roe86
+You've used 5 entries,
+            3599 wiz_defined-function locations,
+            731 strings with 9361 characters,
+and the built_in function-call counts, 3217 in all, are:
+= -- 251
+> -- 50
+< -- 8
++ -- 20
+- -- 15
+* -- 252
+:= -- 441
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 26
+chr.to.int$ -- 5
+cite$ -- 10
+duplicate$ -- 292
+empty$ -- 292
+format.name$ -- 25
+if$ -- 667
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 67
+newline$ -- 45
+num.names$ -- 20
+pop$ -- 97
+preamble$ -- 1
+purify$ -- 25
+quote$ -- 0
+skip$ -- 115
+stack$ -- 0
+substring$ -- 135
+swap$ -- 171
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 42
+warning$ -- 4
+while$ -- 22
+width$ -- 0
+write$ -- 93
+(There were 5 warnings)

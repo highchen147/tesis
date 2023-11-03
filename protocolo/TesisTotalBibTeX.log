@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  23 OCT 2023 20:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  1 NOV 2023 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,8 +465,9 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
- (objetivos.aux) (introduccion.aux) (tch3.aux)
-(tch2.aux) (tch1.aux) (tch4.aux) (tch5.aux) (tch6.aux))
+ (objetivos.aux) (introduccion.aux)
+(metodologia.aux) (justificacion.aux) (contenido.aux) (tch3.aux) (tch2.aux)
+(tch1.aux) (tch5.aux) (tch6.aux))
 \openout1 = `TesisTotalBibTeX.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
@@ -584,7 +585,7 @@ Package hyperref Warning: Option `pdfstartview' has already been used,
 
 Package hyperref Info: Option `plainpages' set `false' on input line 66.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 66.
-<escudo.pdf, id=43, 652.4375pt x 652.4375pt>
+<escudo.pdf, id=55, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
 Package pdftex.def Info: escudo.pdf  used on input line 66.
@@ -646,7 +647,32 @@ File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 
 
 
-]) [5] [6
+]) [5]
+\openout2 = `metodologia.aux'.
+
+ (metodologia.tex [6
+
+
+
+
+]) [7]
+\openout2 = `justificacion.aux'.
+
+ (justificacion.tex
+[8
+
+
+
+
+]) [9]
+\openout2 = `contenido.aux'.
+
+ (contenido.tex [10
+
+
+
+
+]) [11] [12
 
 
 
@@ -660,7 +686,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.104 \include{tch3}
+l.110 \include{tch3}
                           % Cap. 1 [1
 
 
@@ -685,7 +711,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.106 \include{tch2}
+l.112 \include{tch2}
                           % Cap. 2 [3]
 \openout2 = `tch1.aux'.
 
@@ -695,7 +721,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {ECUACIONES DE EULER} [4
+            {ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE} [4
 
 
 
@@ -703,9 +729,9 @@ l.1 \chapter
 ]
 Cap\'{\i }tulo 3.
 ) [5]
-\openout2 = `tch4.aux'.
+\openout2 = `tch5.aux'.
 
- (tch4.tex [6
+ (tch5.tex [6
 
 
 
@@ -713,58 +739,51 @@ Cap\'{\i }tulo 3.
 ]
 Cap\'{\i }tulo 4.
 ) [7]
-\openout2 = `tch5.aux'.
+\openout2 = `tch6.aux'.
 
- (tch5.tex [8
+ (tch6.tex [8
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [9]
-\openout2 = `tch6.aux'.
-
- (tch6.tex [10
+) [9] [10
 
 
 
+] (TesisTotalBibTeX.bbl) [11
 
-]
-Cap\'{\i }tulo 6.
-) [11] [12
-
-
-
-] (TesisTotalBibTeX.bbl) (TesisTotalBibTeX.aux
+] (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
  (objetivos.aux)
-(introduccion.aux) (tch3.aux) (tch2.aux) (tch1.aux) (tch4.aux) (tch5.aux)
-(tch6.aux))
+(introduccion.aux) (metodologia.aux) (justificacion.aux) (contenido.aux)
+(tch3.aux) (tch2.aux) (tch1.aux) (tch5.aux) (tch6.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: 157F9617E451FFA51A20D3961BF1AD15;2055.
+(rerunfilecheck)             Checksum: 47620A85949305EF62655FDE67891E5F;2435.
  ) 
 Here is how much of TeX's memory you used:
- 14789 strings out of 476339
- 244324 string characters out of 5787175
+ 14885 strings out of 476339
+ 246902 string characters out of 5787175
  1856340 words of memory out of 5000000
- 34879 multiletter control sequences out of 15000+600000
- 523732 words of font info for 62 fonts, out of 8000000 for 9000
+ 34947 multiletter control sequences out of 15000+600000
+ 524416 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,7n,90p,767b,702s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,7n,90p,772b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-tt1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\eccc1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecxc1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Rodrigo\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/Rodrigo/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-Output written on TesisTotalBibTeX.pdf (22 pages, 276256 bytes).
+ti1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ectt1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\eccc1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Rodrigo\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Rodrigo\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Rodrigo\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Users/Rod
+rigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+Output written on TesisTotalBibTeX.pdf (27 pages, 329147 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 
