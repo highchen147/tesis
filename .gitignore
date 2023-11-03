@@ -33,3 +33,6 @@
 
 # Datos
 *.dat
+
+# Carpeta con documentos de lectura o referencia
+docs/*
