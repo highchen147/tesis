@@ -1,0 +1,16 @@
+\chapter{ECUACIONES DE CONSERVACIÓN Y SISTEMAS HIPERBÓLICOS DE PRIMER ORDEN}
+\section{Ecuaciones de conservación}
+En este capítulo se introducen los conceptos fundamentales de las ecuaciones de conservación y sistemas hiperbólicos de primer orden. Se introduce el problema de Riemann de una ecuación de conservación.\\
+
+En física, una ecuación de conservación es una ecuación diferencial parcial de la siguiente forma
+\begin{equation}
+	\pdv{\mathbf{U}}{t} + \pdv{\mathbf{F}(\mathbf{U})}{x} = 0
+\end{equation}
+donde $\mathbf{U}$ es un vector n-dimensional de variables físicas que se conservan, por ejemplo, la densidad, la masa o el momentum de un medio \cite{Leveque}. En este texto, las variables de las que depende $\mathbf{U}$ son $x$ y $t$, una variable espacial y otra temporal respectivamente. Por tanto, formalmente, $\mathbf{U} : \mathbb{R} \times  \mathbb{R} \rightarrow \mathbb{R}^{n}$ mientras que las variables conservadas se denominan $u_{i}$, de tal manera que $\mathbf{U} = \mathbf{U}(u_{1}, u_{2}, \dots, u_{n})$\hspace{2mm}\cite{Leveque}. La función $\mathbf{F}$ corresponde al \textbf{flujo} de cada una de las variables involucradas en un punto $(x,t)$ \cite{Leveque}. Al igual que $\mathbf{U}$, la función $\mathbf{F}$ depende de las mismas variables físicas y por ende, también depende de $(x,t)$. Sin embargo, el flujo de cada variable conservada puede tener una forma distinta, entonces es conveniente escribir a $\mathbf{F}$ como un vector de $n$ funciones independientes, $\mathbf{F} = (f_{1}, f_{2}, \dots, f_{n})$
+de tal manera que $f_i$ es la función de flujo de la i-ésima variable conservada, $u_i$ \cite{Leveque}.
+
+Una ecuación de conservación para un sistema definido en un intervalo espacial $D = [a,b]$ necesita de condiciones iniciales para su resolución, el caso más simple a considerar es el de un problema de Cauchy \cite{Leveque}. En dicho caso, se debe especificar una función $\mathbf{U}_0(x)$
+\begin{equation}
+	\mathbf{U}(x,0) = \mathbf{U}_0(x)
+\end{equation} 
+la cual sea válida para todo $x$ tal que $x \in D$.

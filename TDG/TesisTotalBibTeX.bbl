@@ -1,0 +1,103 @@
+\begin{thebibliography}{5}
+%Comandos de formato, por si no están definidos.
+\ProvideTextCommand{\guillemotleft}{OT1}{\leavevmode\raise
+  .27ex\hbox{$\scriptscriptstyle\ll$}}
+  \ProvideTextCommand{\guillemotright}{OT1}{\leavevmode\raise
+  .27ex\hbox{$\scriptscriptstyle\gg$}}
+\providecommand{\enquote}[1]{\guillemotleft#1\guillemotright}
+  \providecommand{\natexlab}[1]{#1}
+  \providecommand{\bibnamefont}[1]{\textsc{#1}}
+  \providecommand{\bibfnamefont}[1]{\textsc{#1}}
+  \providecommand{\bibfnamefontand}[1]{#1}
+  \providecommand{\citenamefont}[1]{#1}
+  \providecommand{\bibnamefont}[1]{\textsc{#1}}
+  \providecommand{\bbletalfont}[1]{\emph{#1}}
+  \providecommand{\citeandfont}[1]{#1} \providecommand{\citetalfont}[1]{#1}
+  \providecommand{\bibyearfont}[1]{#1} \providecommand{\isbn}[1]{ISBN #1}
+  \providecommand{\url}[1]{\texttt{#1}} \providecommand{\urlprefix}{}
+  \providecommand{\nameseparator}{;}
+  \providecommand{\namereplace}[1]{{---{}---} \ifx\datebegin\relax \else
+  \def\datebegin #1.{\relax}\fi} \providecommand{\dateend}[1]{, #1}
+  \providecommand{\bibtitle}[1]{#1}\providecommand{\bibtranslator}[1]{#1}
+  \providecommand{\bibtranslatorname}{Traducido por }
+  \providecommand{\selectlanguage}[1]{\relax} \providecommand{\finalpoint}{.}
+  \providecommand{\namesend}{:} \providecommand{\Capitalize}[1]{\uppercase{#1}}
+  \providecommand{\capitalize}[1]{\expandafter\Capitalize#1}
+  \providecommand{\bibinfont}[1]{\textbf{#1}}
+  \providecommand{\inbooktitlefont}[1]{\emph{#1}}
+  \providecommand{\bibvolfont}[1]{\textbf{#1}}
+  \providecommand{\bibandfont}[1]{#1}
+  \providecommand{\bibcommentname}{\textsc{Obs:}}
+  \providecommand{\bibcomment}[2]{\begin{quotation}
+  \noindent\textsc{\bibcommentname}\ #2\end{quotation}}
+  \providecommand{\bibabstract}[2]{\begin{quotation}
+  \noindent\textsc{\abstractname:}\ #2\end{quotation}}
+\providecommand{\bblin}{En} \providecommand{\bbland}{y}
+  \providecommand{\bbletal}{y otros} \providecommand{\bbled}{ed.}
+  \providecommand{\bbleds}{eds.} \providecommand{\bbvolume}{vol.}
+  \providecommand{\bblof}{de} \providecommand{\bbledition}{ª~edición}
+  \providecommand{\bblp}{p.}  \providecommand{\bblpp}{pp.}
+  \providecommand{\bbltechreport}{Informe técnico}
+  \providecommand{\bblmthesis}{Tesina} \providecommand{\bblphdthesis}{Tesis
+  doctoral} \providecommand{\bblchapter}{cap\'\i{}tulo}
+  \providecommand{\bblnumber}{número} \providecommand{\bblvolume}{volumen}
+  \providecommand{\MR}[1]{\relax\ifhmode\unskip\space\fi MR #1}
+  \expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else  \providecommand{\doi}{doi:
+  \begingroup \urlstyle{rm}\Url}\fi
+%Para resultados estilo plain descomente la línea siguiente
+%\let\oldbibitem=\bibitem \def\bibitem[#1]#2{\oldbibitem{#2}}
+
+\bibitem[{\citenamefont{Cameron}(2016)}]{Cameron}
+  \bibnamefont{Cameron}, \bibfnamefont{Maria}\namesend{}\datebegin 2016.
+  \newblock \bibtitle{\enquote{Notes on Burger's
+  Equation}}\dateend{2016}\finalpoint{}
+  \newline\urlprefix\url{https://www.math.umd.edu/~mariakc/burgers.pdf}
+
+\bibitem[{\citenamefont{{Clawpack Development Team}}(2020)}]{clawpack}
+  \bibnamefont{{Clawpack Development Team}}\namesend{}\datebegin 2020.
+  \newblock \bibtitle{\enquote{Clawpack software}}\dateend{2020}.
+  \newblock \doi{https://doi.org/10.5281/zenodo.4025432}.
+  \newblock Version 5.7.1\finalpoint{}
+  \newline\urlprefix\url{http://www.clawpack.org}
+
+\bibitem[{\citenamefont{LeVeque}(1998)}]{Leveque}
+  \bibnamefont{LeVeque}, \bibfnamefont{Randall~J.}\namesend{}\datebegin 1998.
+  \newblock \bibtitle{\emph{Nonlinear Conservation Laws and Finite Volume
+  Methods}}.
+  \newblock \bblpp{} 1--159.
+  \newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+  \newblock ISBN 978-3-540-31632-9\dateend{1998}.
+  \newblock \doi{10.1007/3-540-31632-9_1}\finalpoint{}
+  \newline\urlprefix\url{https://doi.org/10.1007/3-540-31632-9_1}
+
+\bibitem[{\citenamefont{Roe}(1981)}]{Roe81}
+  \bibnamefont{Roe}, \bibfnamefont{P.L}\namesend{}\datebegin 1981.
+  \newblock \bibtitle{\enquote{Approximate Riemann solvers, parameter vectors,
+  and difference schemes}}.
+  \newblock \emph{Journal of Computational Physics}\dateend{1981},
+  \bibvolfont{43(2)}, \bblpp{} 357--372.
+  \newblock ISSN 0021-9991.
+  \newblock \doi{https://doi.org/10.1016/0021-9991(81)90128-5}\finalpoint{}
+  \bibabstract{Roe81}{Several numerical schemes for the solution of hyperbolic
+  conservation laws are based on exploiting the information obtained by
+  considering a sequence of Riemann problems. It is argued that in existing
+  schemes much of this information is degraded, and that only certain features
+  of the exact solution are worth striving for. It is shown that these features
+  can be obtained by constructing a matrix with a certain “Property U.”
+  Matrices having this property are exhibited for the equations of steady and
+  unsteady gasdynamics. In order to construct thems it is found helpful to
+  introduce “parameter vectors” which notably simplify the structure of the
+  conservation laws.}
+  \newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/0021999181901285}
+
+\bibitem[{\citenamefont{Roe}(2003)}]{Roe86}
+  \namereplace{  \bibnamefont{Roe}, \bibfnamefont{P.L}}\namesend{}\datebegin
+  2003.
+  \newblock \bibtitle{\enquote{Characteristic-Based Schemes for the Euler
+  Equations}}.
+  \newblock \emph{Annual Review of Fluid Mechanics}\dateend{2003},
+  \bibvolfont{18}, \bblpp{} 337--365.
+  \newblock \doi{10.1146/annurev.fl.18.010186.002005}\finalpoint{}
+
+\end{thebibliography}
