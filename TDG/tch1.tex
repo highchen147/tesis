@@ -1,16 +1,44 @@
 \chapter{ECUACIONES DE CONSERVACIÓN Y SISTEMAS HIPERBÓLICOS DE PRIMER ORDEN}
+En este capítulo se introducen los conceptos fundamentales de las ecuaciones de conservación y sistemas hiperbólicos de primer orden. Se introduce el problema de Riemann asociado a una ecuación de conservación.
 \section{Ecuaciones de conservación}
-En este capítulo se introducen los conceptos fundamentales de las ecuaciones de conservación y sistemas hiperbólicos de primer orden. Se introduce el problema de Riemann de una ecuación de conservación.\\
-
 En física, una ecuación de conservación es una ecuación diferencial parcial de la siguiente forma
 \begin{equation}
 	\pdv{\mathbf{U}}{t} + \pdv{\mathbf{F}(\mathbf{U})}{x} = 0
+	\label{eq:conservacion}
 \end{equation}
-donde $\mathbf{U}$ es un vector n-dimensional de variables físicas que se conservan, por ejemplo, la densidad, la masa o el momentum de un medio \cite{Leveque}. En este texto, las variables de las que depende $\mathbf{U}$ son $x$ y $t$, una variable espacial y otra temporal respectivamente. Por tanto, formalmente, $\mathbf{U} : \mathbb{R} \times  \mathbb{R} \rightarrow \mathbb{R}^{n}$ mientras que las variables conservadas se denominan $u_{i}$, de tal manera que $\mathbf{U} = \mathbf{U}(u_{1}, u_{2}, \dots, u_{n})$\hspace{2mm}\cite{Leveque}. La función $\mathbf{F}$ corresponde al \textbf{flujo} de cada una de las variables involucradas en un punto $(x,t)$ \cite{Leveque}. Al igual que $\mathbf{U}$, la función $\mathbf{F}$ depende de las mismas variables físicas y por ende, también depende de $(x,t)$. Sin embargo, el flujo de cada variable conservada puede tener una forma distinta, entonces es conveniente escribir a $\mathbf{F}$ como un vector de $n$ funciones independientes, $\mathbf{F} = (f_{1}, f_{2}, \dots, f_{n})$
+o utilizando una notación más compacta para las derivadas,
+\begin{equation}
+	\mathbf{U}_{t} + \mathbf{F}(\mathbf{U})_{x} = 0
+\end{equation}
+donde $\mathbf{U}$ es un vector n-dimensional de variables físicas que se conservan, por ejemplo, la densidad, la masa o el momentum de un medio \cite{Leveque}. En este texto, las variables de las que depende $\mathbf{U}$ dependen de $x$ y $t$, una variable espacial y otra temporal respectivamente. Por tanto, formalmente, $\mathbf{U} : \mathbb{R} \times  \mathbb{R} \rightarrow \mathbb{R}^{n}$ mientras que las variables conservadas se denominan $u_{i}$, de tal manera que $\mathbf{U} = \mathbf{U}(u_{1}, u_{2}, \dots, u_{n})$\hspace{2mm}\cite{Leveque}. La función $\mathbf{F}$ corresponde al \textbf{flujo} de cada una de las variables involucradas en un punto $(x,t)$ \cite{Leveque}. Al igual que $\mathbf{U}$, la función $\mathbf{F}$ depende de las mismas variables físicas y por ende, también depende de $(x,t)$. Sin embargo, el flujo de cada variable conservada puede tener una forma distinta, entonces es conveniente escribir a $\mathbf{F}$ como un vector de $n$ funciones independientes, $\mathbf{F} = (f_{1}, f_{2}, \dots, f_{n})$
 de tal manera que $f_i$ es la función de flujo de la i-ésima variable conservada, $u_i$ \cite{Leveque}.
 
 Una ecuación de conservación para un sistema definido en un intervalo espacial $D = [a,b]$ necesita de condiciones iniciales para su resolución, el caso más simple a considerar es el de un problema de Cauchy \cite{Leveque}. En dicho caso, se debe especificar una función $\mathbf{U}_0(x)$
 \begin{equation}
 	\mathbf{U}(x,0) = \mathbf{U}_0(x)
 \end{equation} 
-la cual sea válida para todo $x$ tal que $x \in D$.
+la cual sea válida para todo $x$ tal que $x \in D$ y condiciones de frontera
+\begin{equation}
+	\mathbf{U}(a,t) = \mathbf{U}_{a}
+\end{equation}
+\begin{equation}
+	\mathbf{U}(b,t) = \mathbf{U}_{b}
+\end{equation}
+con $\mathbf{U}_{a}$ y $\mathbf{U}_{b}$ fijos.
+
+Otra forma de escribir una ecuación de conservación es utilizando la matriz jacobiana $\mathbf{A(\mathbf{U})}$ definida como
+\begin{equation}
+	\mathbf{A(\mathbf{U})} \equiv
+	\begin{bmatrix}
+		\pdv{f_1}{u_1} & \dots & \pdv{f_1}{u_n} \\
+		\vdots & \ddots & \vdots \\
+		\pdv{f_n}{u_1} & \dots & \pdv{f_n}{u_n} \\
+	\end{bmatrix}
+\end{equation}
+de tal manera que la ecuación \ref{eq:conservacion} se convierte en
+\begin{equation}
+	\mathbf{U}_{t} + \mathbf{A(\mathbf{U})}\mathbf{U}_{x} = 0
+	\label{eq:conservacion-jacobiana}
+\end{equation}.
+Esta forma de escribir una ecuación de conservación es relevante ya que permite definir un \textbf{sistema hiperbólico}. Un sistema hiperbólico es una ecuación de conservación de la forma \ref{eq:conservacion-jacobiana} tal que los autovalores de la matriz $\mathbf{A(\mathbf{U})}$ para todo $\mathbf{U}$ sean reales y que dicha matriz sea diagonalizable \cite{Leveque}. Esto implica que existen $n$ vectores propios linealmente independientes de $\mathbf{A(\mathbf{U})}$\cite{Leveque}.
+Una ecuación de conservación depende de una función $\mathbf{F(\mathbf{U})}$ que, por lo general, no es una función lineal de $\mathbf{U}$, lo que implica que las ecuaciones de conservación son regularmente no lineales. Esto se puede inferir también por la dependencia en $\mathbf{U}$ de la matriz $\mathbf{A}$ en la ecuación \ref{eq:conservacion-jacobiana}.
