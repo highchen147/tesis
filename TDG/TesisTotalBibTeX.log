@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  15 NOV 2023 12:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  15 NOV 2023 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -595,7 +595,7 @@ Package hyperref Warning: Option `pdfstartview' has already been used,
 
 Package hyperref Info: Option `plainpages' set `false' on input line 67.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 67.
-<escudo.pdf, id=71, 652.4375pt x 652.4375pt>
+<escudo.pdf, id=75, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
 Package pdftex.def Info: escudo.pdf  used on input line 67.
@@ -632,7 +632,7 @@ File: escudo.pdf Graphic file (type pdf)
 Package pdftex.def Info: escudo.pdf  used on input line 75.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
-<ordenImpresion.pdf, id=106, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=110, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 78.
@@ -641,7 +641,7 @@ File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 78.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ordenImpresion.pdf, id=109, page=1, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=113, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
 Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 78.
@@ -766,28 +766,43 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 \begin{equation}
+l.18 \begin{equation}
                       [1
 
 
-])
+]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.49 \begin{equation}
+                      [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.74 \begin{equation}
+                      [3])
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.104 \include{tch1}
-                          % Cap. 1 [2]
+                          % Cap. 1 [4]
 \openout2 = `tch2.aux'.
 
  (tch2.tex
 Cap\'{\i }tulo 2.
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.106 \include{tch2}
-                          % Cap. 2 [3
+                          % Cap. 2 [5
 
 
 
@@ -796,12 +811,12 @@ l.106 \include{tch2}
 \openout2 = `tch3.aux'.
 
  (tch3.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE} [4
+            {ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE} [6
 
 
 
@@ -809,21 +824,21 @@ l.1 \chapter
 ]
 Cap\'{\i }tulo 3.
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.108 \include{tch3}
-                          % Cap. 3 [5]
+                          % Cap. 3 [7]
 \openout2 = `tch4.aux'.
 
  (tch4.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {COMPARACIÓN CON PYCLAW} [6
+            {COMPARACIÓN CON PYCLAW} [8
 
 
 
@@ -831,22 +846,22 @@ l.1 \chapter
 ]
 Cap\'{\i }tulo 4.
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.110 \include{tch4}
-                     [7]
+                     [9]
 \openout2 = `tch5.aux'.
 
  (tch5.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
             {SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁT...
-[8
+[10
 
 
 
@@ -854,47 +869,35 @@ l.1 \chapter
 ]
 Cap\'{\i }tulo 5.
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.112 \include{tch5}
-                     [9]
-pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+                     [11]
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.114 {\backmatter
                        %	Capítulos no van numerados -----------------------...
-[10
+[12
 
 
 
 ]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.11 \chapter
-             {RECOMENDACIONES} [11
+ (c_y_r.tex [13
 
 
-]
-pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.11 \chapter
-             {RECOMENDACIONES} [12
+] [14
 
-]) [13] (TesisTotalBibTeX.bbl [14
+]) [15] (TesisTotalBibTeX.bbl [16
 
 
 
-]) [15]
+]) [17]
 (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
@@ -902,41 +905,45 @@ LaTeX Info: Redefining \% on input line 22.
 (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux)
 (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: CB26AD4C3E26051675B1B7C62843608E;3183.
+(rerunfilecheck)             Checksum: D219AD75073C1BCC596F3ED58DAB8BE2;3495.
  ) 
 Here is how much of TeX's memory you used:
- 15649 strings out of 476339
- 257066 string characters out of 5787175
- 1858340 words of memory out of 5000000
- 35655 multiletter control sequences out of 15000+600000
- 526114 words of font info for 67 fonts, out of 8000000 for 9000
+ 15706 strings out of 476339
+ 257776 string characters out of 5787175
+ 1861340 words of memory out of 5000000
+ 35687 multiletter control sequences out of 15000+600000
+ 532306 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,1127b,839s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,90p,1127b,840s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 ti1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ectt1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecss1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Rodrigo\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Rodrigo\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Ro
-drigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/U
-sers/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Rodrigo/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Rodrigo/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ro
-drigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
-/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
-y10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on TesisTotalBibTeX.pdf (39 pages, 442118 bytes).
+pi600\ecbx1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecrm1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Rodrigo\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Rodrigo\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\Rodrigo\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Ro
+drigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\
+Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.
+pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
+cbx1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecbx1440.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecrm1200.pk><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Rodrigo/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Rodrigo/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users
+/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on TesisTotalBibTeX.pdf (41 pages, 470779 bytes).
 PDF statistics:
- 733 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 833 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
