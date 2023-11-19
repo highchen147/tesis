@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 %Comandos de formato, por si no están definidos.
 \ProvideTextCommand{\guillemotleft}{OT1}{\leavevmode\raise
   .27ex\hbox{$\scriptscriptstyle\ll$}}
@@ -70,6 +70,20 @@
   \newblock ISBN 978-3-540-31632-9\dateend{1998}.
   \newblock \doi{10.1007/3-540-31632-9_1}\finalpoint{}
   \newline\urlprefix\url{https://doi.org/10.1007/3-540-31632-9_1}
+
+\bibitem[{\citenamefont{Pletcher}
+  \citetalfont{\bbletal{}}(1997)\citenamefont{Pletcher},
+  \citenamefont{Tannehill} \citeandfont{\bbland{}}
+  \citenamefont{Anderson}}]{heattransfer}
+  \bibnamefont{Pletcher}, \bibfnamefont{R.H.}\nameseparator{}
+  \bibnamefont{Tannehill}, \bibfnamefont{J.C.} \bibandfont{\bbland{}}
+  \bibnamefont{Anderson}, \bibfnamefont{D.}\namesend{}\datebegin 1997.
+  \newblock \bibtitle{\emph{Computational Fluid Mechanics and Heat Transfer,
+  Second Edition}}.
+  \newblock Series in Computational and Physical Processes in Mechanics and
+  Thermal Sciences. Taylor \& Francis\dateend{1997}.
+  \newblock ISBN 9781560320463\finalpoint{}
+  \newline\urlprefix\url{https://books.google.com.gt/books?id=ZJPbtHeilCgC}
 
 \bibitem[{\citenamefont{Roe}(1981)}]{Roe81}
   \bibnamefont{Roe}, \bibfnamefont{P.L}\namesend{}\datebegin 1981.

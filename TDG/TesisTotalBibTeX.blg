@@ -15,6 +15,12 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 A level-1 auxiliary file: tch1.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 A level-1 auxiliary file: tch2.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: tch3.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: tch4.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+A level-1 auxiliary file: tch5.aux
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 A level-1 auxiliary file: c_y_r.aux
 Reallocating 'name_of_file' (item size: 1) to 8 items.
@@ -23,55 +29,51 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: bbtesis.bib
 Warning--entry type for "Cameron" isn't style-file defined
 --line 3 of file bbtesis.bib
-Warning--I didn't find a database entry for "Halmo"
-Warning--I didn't find a database entry for "Haus"
-Warning--I didn't find a database entry for "Hewit"
-Warning--I didn't find a database entry for "Brez"
-Warning--I didn't find a database entry for "liu"
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--can't use both author and editor fields in Leveque
 Warning--empty translator in Leveque
+Warning--empty translator in heattransfer
 Warning--empty translator in Roe81
 Warning--empty translator in Roe86
-You've used 5 entries,
+You've used 6 entries,
             3599 wiz_defined-function locations,
-            738 strings with 9386 characters,
-and the built_in function-call counts, 3217 in all, are:
-= -- 251
-> -- 50
+            740 strings with 9660 characters,
+and the built_in function-call counts, 3981 in all, are:
+= -- 301
+> -- 76
 < -- 8
-+ -- 20
-- -- 15
-* -- 252
-:= -- 441
-add.period$ -- 16
-call.type$ -- 5
-change.case$ -- 26
-chr.to.int$ -- 5
-cite$ -- 10
-duplicate$ -- 292
-empty$ -- 292
-format.name$ -- 25
-if$ -- 667
++ -- 30
+- -- 24
+* -- 335
+:= -- 542
+add.period$ -- 20
+call.type$ -- 6
+change.case$ -- 33
+chr.to.int$ -- 6
+cite$ -- 12
+duplicate$ -- 363
+empty$ -- 363
+format.name$ -- 40
+if$ -- 818
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 67
-newline$ -- 45
-num.names$ -- 20
-pop$ -- 97
+missing$ -- 83
+newline$ -- 52
+num.names$ -- 24
+pop$ -- 126
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 32
 quote$ -- 0
-skip$ -- 115
+skip$ -- 134
 stack$ -- 0
-substring$ -- 135
-swap$ -- 171
+substring$ -- 146
+swap$ -- 213
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
-warning$ -- 4
-while$ -- 22
+type$ -- 48
+warning$ -- 5
+while$ -- 25
 width$ -- 0
-write$ -- 93
-(There were 10 warnings)
+write$ -- 110
+(There were 6 warnings)

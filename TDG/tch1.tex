@@ -11,7 +11,9 @@ o utilizando una notación más compacta para las derivadas,
 	\mathbf{U}_{t} + \mathbf{F}(\mathbf{U})_{x} = 0
 	\label{eq:conserv-deriv-short}
 \end{equation}
-donde $\mathbf{U}$ es un vector n-dimensional de variables físicas que se conservan, por ejemplo, la densidad, la masa o el momentum de un medio \cite{Leveque}. En este texto, las variables de las que depende $\mathbf{U}$ dependen de $x$ y $t$, una variable espacial y otra temporal respectivamente. Por tanto, formalmente, $\mathbf{U} : \mathbb{R} \times  \mathbb{R} \rightarrow \mathbb{R}^{n}$ mientras que las variables conservadas se denominan $u_{i}$, de tal manera que $\mathbf{U} = \mathbf{U}(u_{1}, u_{2}, \dots, u_{n})$\hspace{2mm}\cite{Leveque}. La función $\mathbf{F}$ corresponde al \textbf{flujo} de cada una de las variables involucradas en un punto $(x,t)$ \cite{Leveque}. Al igual que $\mathbf{U}$, la función $\mathbf{F}$ depende de las mismas variables físicas y por ende, también depende de $(x,t)$. Sin embargo, el flujo de cada variable conservada puede tener una forma distinta, entonces es conveniente escribir a $\mathbf{F}$ como un vector de $n$ funciones independientes, $\mathbf{F} = (f_{1}, f_{2}, \dots, f_{n})$
+donde $\mathbf{U}$ es un vector n-dimensional de variables físicas que se conservan, por ejemplo, la densidad, la masa o el momentum de un medio \cite{Leveque}. En este texto, las variables de las que depende $\mathbf{U}$ dependen de $x$ y $t$, una variable espacial y otra temporal respectivamente. Por tanto, $\mathbf{U}$ se define formalmente como $\mathbf{U} : \mathbb{R} \times  \mathbb{R} \rightarrow \mathbb{R}^{n}$, mientras que la i-ésima variable conservada se denomina $u_{i}$, de tal manera que $\mathbf{U} = \mathbf{U}(u_{1}, u_{2}, \dots, u_{n})$\hspace{2mm}\cite{Leveque}. 
+
+La función $\mathbf{F}$ corresponde al \textbf{flujo} de cada una de las variables involucradas en un punto $(x,t)$ \cite{Leveque}. Al igual que $\mathbf{U}$, la función $\mathbf{F}$ depende de las mismas variables físicas y por ende, también depende de $(x,t)$. Sin embargo, el flujo de cada variable conservada puede tener una forma distinta, entonces es conveniente escribir a $\mathbf{F}$ como un vector de $n$ funciones independientes, $\mathbf{F} = (f_{1}, f_{2}, \dots, f_{n})$
 de tal manera que $f_i$ es la función de flujo de la i-ésima variable conservada, $u_i$ \cite{Leveque}.
 
 Una ecuación de conservación para un sistema definido en un intervalo espacial $D = [a,b]$ necesita de condiciones iniciales para su resolución, el caso más simple a considerar es el de un problema de Cauchy \cite{Leveque}. En dicho caso, se debe especificar una función $\mathbf{U}_0(x)$
@@ -44,8 +46,7 @@ de tal manera que la ecuación (\ref{eq:conservacion}) se convierte en
 Esta forma de escribir una ecuación de conservación es relevante ya que permite definir un \textbf{sistema hiperbólico}. Un sistema hiperbólico es una ecuación de conservación de la forma (\ref{eq:conservacion-jacobiana}) tal que los autovalores de la matriz $\mathbf{A(\mathbf{U})}$ para todo $\mathbf{U}$ sean reales y que dicha matriz sea diagonalizable \cite{Leveque}. Esto implica que existen $n$ vectores propios linealmente independientes de $\mathbf{A(\mathbf{U})}$\cite{Leveque}.
 Una ecuación de conservación depende de una función $\mathbf{F(\mathbf{U})}$ que, por lo general, no es una función lineal de $\mathbf{U}$, lo que implica que las ecuaciones de conservación son regularmente no lineales\cite{Leveque}. Esto también se puede inferir por la dependencia en $\mathbf{U}$ de la matriz $\mathbf{A}$ en la ecuación (\ref{eq:conservacion-jacobiana}).
 \section{Derivación de una ecuación de conservación}
-%\subsubsection{Forma integral y diferencial de una ecuación de conservación}
-El principio físico de una ecuación de conservación es más explícito cuando esta se deriva a través de cantidades expresadas en forma \textbf{integral.} Considerando un ejemplo de la mecánica de fluidos, se define $M(x_1,x_2,t)$ como la cantidad de masa de un fluido que se encuentra contenido en un ``tubo'' unidimensional en un intervalo  $[x_1,x_2]$ en un tiempo $t$. Si a dicho fluido se le asocia una densidad $\rho(x,t)$, entonces esta última se define de tal manera que su integral definida en un intervalo espacial sea igual a la masa contenida en ese mismo intervalo \cite{Leveque}, es decir,
+El principio físico de una ecuación de conservación es más explícito cuando esta se deriva a través de cantidades expresadas en forma \textbf{integral.} Considerando un ejemplo de la mecánica de fluidos, se define $M(x_1,x_2,t)$ como la cantidad de masa de un fluido que se encuentra contenido en un ``tubo'' unidimensional en un intervalo  $[x_1,x_2]$ en un tiempo $t$. Si a dicho fluido se le asocia una densidad $\rho(x,t)$, entonces esta última se define de tal manera que su integral definida en un intervalo espacial sea igual a la masa contenida en ese mismo intervalo \cite{Leveque}, i.e.,
 \begin{equation}
 	M(x_1, x_2, t) = \int_{x_1}^{x_2}\rho(x,t)\dd{x}.
 \end{equation}
@@ -53,7 +54,7 @@ Ahora, asumiendo que el tubo es cerrado e impenetrable, la cantidad de masa en u
 \begin{equation}
 	F(x,t) = \rho(x,t)v(x,t)
 \end{equation}\cite{Leveque}.
-Entonces, como previamente se comentó, se puede escribir la razón de cambio de masa en la región $[x_1,x_2]$ en términos del flujo entrante y saliente de la misma región
+Entonces, como previamente se comentó, se puede escribir la razón instantánea de cambio de masa en la región $[x_1,x_2]$ en términos del flujo entrante y saliente de la misma región
 \begin{equation}
 	\dv{t}	\left[M(x_1, x_2, t)\right] = F(x_2,t) - F(x_1,t)
 \end{equation}
@@ -70,7 +71,8 @@ Esta es la forma integral de una ecuación de conservación \cite{Leveque}. En p
 	\label{eq:continuidad-2-integral}.
 \end{equation}
 Asumiendo que $t_1<t_2$, esta igualdad ofrece una expresión para la diferencia de masa contenida en la región $[x_1,x_2]$ entre los instantes $t_2$ y $t_1$ \cite{Leveque}. 
-Es posible obtener una forma diferencial partiendo de la forma integral de una ecuación de conservación, pero es necesario asumir que las funciones $\rho(x,t)$ y $v(x,t)$ son \textbf{diferenciables}. Esta última característica que se exige en las funciones entra en conflicto cuando se estudian soluciones\footnote{Dichas soluciones se conocen como \textbf{soluciones débiles}, tema que se abordará a detalle más adelante.} de las ecuaciones de conservación con discontinuidades, por lo tanto, la forma integral de las ecuaciones es utilizada al estudiar problemas con dichas características. Para convertir la ecuación en forma integral a su forma diferencial, se tienen que usar las siguientes expresiones:
+
+Es posible obtener una forma diferencial partiendo de la forma integral de una ecuación de conservación, pero es necesario asumir que las funciones $\rho(x,t)$ y $v(x,t)$ son \textbf{diferenciables}. Esta última característica que se exige en las funciones entra en conflicto cuando se estudian soluciones\footnote{Dichas soluciones se conocen como \textbf{soluciones débiles}, tema que se abordará a detalle más adelante.} de las ecuaciones de conservación con discontinuidades. Por lo tanto, la forma integral de las ecuaciones es utilizada al estudiar problemas con dichas características. Para convertir la ecuación en forma integral a su forma diferencial, se tienen que usar las siguientes expresiones:
 \begin{equation}
 	\rho(x,t_2)-\rho(x,t_1) = \int_{t_1}^{t_2}\pdv{t}\rho(x,t)\dd{t}
 \end{equation}
@@ -87,9 +89,41 @@ Puesto que la ecuación (\ref{eq:integral-con-derivadas}) se cumple para cualqui
 \begin{equation}
 	\rho_{t} + (\rho v)_{x} = 0
 \end{equation}
-es la forma diferencial de la ecuación de conservación de la masa, así como se definió una ecuación de conservación en (\ref{eq:conserv-deriv-short}), ya que la función de flujo se definió como $F = \rho v$. Puesto que la ecuación diferencial de conservación de la masa involucra dos cantidades físicas, esta se puede resolver ya sea si se conoce previamente la función $v(x,t)$ o si esta última se puede escribir como una función de $\rho$, i.e., $v=v(\rho)$, en este último caso la ecuación de conservación de la masa es una ecuación diferencial parcial únicamente para $\rho$ \cite{Leveque} y toma la siguiente forma
+es la forma diferencial de la ecuación de conservación de la masa, así como se definió una ecuación de conservación en (\ref{eq:conserv-deriv-short}), ya que la función de flujo se definió como $F = \rho v$. Puesto que la ecuación diferencial de conservación de la masa involucra dos cantidades físicas, esta se puede resolver ya sea si se conoce previamente la función $v(x,t)$ o si esta última se puede escribir como una función de $\rho$, i.e., $v=v(\rho)$. En este último caso la ecuación de conservación de la masa es una ecuación diferencial parcial únicamente para $\rho$ \cite{Leveque} y toma la siguiente forma
 \begin{equation}
 	\rho_t + f(\rho)_x = 0.
 \end{equation}
-Esta última es un ejemplo de \textbf{ecuación de conservación escalar} \cite{Leveque} ya que únicamente interviene una incógnita, $\rho$ \cite{Leveque}.
-% prueba
+Esta última es un ejemplo de \textbf{ecuación de conservación escalar} \cite{Leveque} ya que solamente interviene una incógnita, $\rho$ \cite{Leveque}.
+En caso que la velocidad $v(x,t)$ sea una constante $\alpha$, la ecuación de conservación de la masa se convierte en:
+\begin{equation}
+	\rho_t + \alpha\rho_x = 0,
+	\label{eq:adveccion}
+\end{equation}
+esta ecuación se conoce como \textbf{ecuación de advección lineal} \cite{Leveque} o como ecuación de onda de primer orden \cite{heattransfer}.
+\section{Ecuación de advección lineal}
+La ecuación de advección (\ref{eq:adveccion}) con la siguiente condición inicial:
+\begin{equation}
+	\rho(x,0) = \rho_0(x), \hspace{1.7cm} -\infty < x < \infty,
+\end{equation}
+tiene como solución:
+\begin{equation}
+	\rho(x,t) = \rho_0(x - \alpha t),
+	\label{eq:sol-advec}
+\end{equation}
+para $t> 0$, asumiendo que $\rho_0$ es una función diferenciable \cite{Leveque}. Esta solución se puede interpretar como la traslación de la función $\rho_0$ a lo largo del eje $x$ con una velocidad $\alpha$, en la misma dirección de la velocidad, es decir, a la derecha si $\alpha > 0$ y a la izquierda en caso contrario.
+
+Se puede notar que la solución (\ref{eq:sol-advec}) es constante respecto al tiempo a lo largo de cada curva definida por $x-\alpha t = x_0$, para cualquier $x_0$ tal que $x_0 \in [-\infty, \infty]$. Dichas curvas de la forma $x=x(t)$ son conocidas como \textbf{curvas características} de la ecuación diferencial en cuestión \cite{Leveque}. Las curvas características definen dominios en los que la ecuación diferencial parcial se puede escribir como una ecuación diferencial ordinaria. Dichas curvas se definen a partir de ecuaciones diferenciales ordinarias. En el caso de la ecuación de advección lineal (\ref{eq:sol-advec}), las características satisfacen la siguiente ecuación diferencial:
+\begin{equation}
+	\dv{x}{t} = \alpha, \hspace{1.7cm} x(0) = x_0,
+\end{equation}
+cuya solución es: $x-\alpha t = x_0$ \cite{Leveque}. Para demostrar que la ecuación de advección lineal se convierte en una ecuación diferencial ordinaria a lo largo de dichas curvas, se deriva la función incógnita $\rho$ respecto al tiempo,
+\begin{equation}
+	\dv{\rho}{t} = \pdv{\rho}{t} + \pdv{\rho}{x}\dv{x}{t}
+\end{equation}
+\begin{equation}
+	\dv{\rho}{t} = \pdv{\rho}{t} + \alpha\pdv{\rho}{x}
+\end{equation}
+\begin{equation}
+	\dv{\rho}{t} = 0,
+\end{equation}
+este último paso toma efecto dado que a lo largo de las curvas características, $\dv{x}{t} = \alpha$ \cite{Leveque}. Se puede notar que en este último procedimiento se recuperó la ecuación diferencial en cuestión (\ref{eq:sol-advec}), expresada como una ecuación diferencial ordinaria y concluyó al igualar la derivada temporal a cero, consiguiendo demostrar que $\rho$ es constante a lo largo de las características \cite{Leveque}.
