@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  18 NOV 2023 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  21 NOV 2023 20:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -595,7 +595,7 @@ Package hyperref Warning: Option `pdfstartview' has already been used,
 
 Package hyperref Info: Option `plainpages' set `false' on input line 67.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 67.
-<escudo.pdf, id=79, 652.4375pt x 652.4375pt>
+<escudo.pdf, id=83, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
 Package pdftex.def Info: escudo.pdf  used on input line 67.
@@ -632,7 +632,7 @@ File: escudo.pdf Graphic file (type pdf)
 Package pdftex.def Info: escudo.pdf  used on input line 75.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
-<ordenImpresion.pdf, id=114, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=118, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 78.
@@ -641,7 +641,7 @@ File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 78.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ordenImpresion.pdf, id=117, page=1, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=121, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
 Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 78.
@@ -910,16 +910,16 @@ LaTeX Info: Redefining \% on input line 22.
 (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux)
 (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: B34093F5CD9226C750EB900289913E79;3728.
+(rerunfilecheck)             Checksum: B0715313EBBF30C6CD99E7DD3CA7F04D;4103.
  ) 
 Here is how much of TeX's memory you used:
- 15728 strings out of 476339
- 258067 string characters out of 5787175
+ 15732 strings out of 476339
+ 258111 string characters out of 5787175
  1861340 words of memory out of 5000000
- 35698 multiletter control sequences out of 15000+600000
- 532306 words of font info for 85 fonts, out of 8000000 for 9000
+ 35700 multiletter control sequences out of 15000+600000
+ 533072 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,800b,840s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,90p,882b,840s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 ti1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\ecbx1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
@@ -945,10 +945,12 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users
 msfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TesisTotalBibTeX.pdf (43 pages, 486363 bytes).
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Rodrigo/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Rodrigo/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on TesisTotalBibTeX.pdf (43 pages, 510094 bytes).
 PDF statistics:
- 886 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 500000)
- 178 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 912 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
