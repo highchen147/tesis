@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  21 NOV 2023 20:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  22 NOV 2023 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -595,7 +595,7 @@ Package hyperref Warning: Option `pdfstartview' has already been used,
 
 Package hyperref Info: Option `plainpages' set `false' on input line 67.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 67.
-<escudo.pdf, id=83, 652.4375pt x 652.4375pt>
+<escudo.pdf, id=91, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
 Package pdftex.def Info: escudo.pdf  used on input line 67.
@@ -632,7 +632,7 @@ File: escudo.pdf Graphic file (type pdf)
 Package pdftex.def Info: escudo.pdf  used on input line 75.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
-<ordenImpresion.pdf, id=118, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=126, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 78.
@@ -641,7 +641,7 @@ File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 78.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ordenImpresion.pdf, id=121, page=1, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=129, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
 Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 78.
@@ -684,15 +684,13 @@ Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 78.
 ] (TesisTotalBibTeX.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-)
+ [1
+
+])
 \tf@toc=\write4
 \openout4 = `TesisTotalBibTeX.toc'.
 
- [1
-
-] [2
-
-]
+ [2]
 (TesisTotalBibTeX.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -700,7 +698,9 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lof=\write5
 \openout5 = `TesisTotalBibTeX.lof'.
 
- [3] [4
+ [3
+
+] [4
 
 ] (TesisTotalBibTeX.lot
 LaTeX Info: Redefining \. on input line 1.
@@ -803,38 +803,50 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.125 \end{equation}
-                     [5])
+                     [5]
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.104 \include{tch1}
-                          % Cap. 1 [6]
-\openout2 = `tch2.aux'.
-
- (tch2.tex
-Cap\'{\i }tulo 2.
-)
+l.137 
+       [6])
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.106 \include{tch2}
-                          % Cap. 2 [7
+l.104 \include{tch1}
+                          % Cap. 1 [7]
+\openout2 = `tch2.aux'.
 
-
-
-
-]
-\openout2 = `tch3.aux'.
-
- (tch3.tex
+ (tch2.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE} [8
+            {MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE} [8
+
+
+
+
+]
+Cap\'{\i }tulo 2.
+)
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.106 \include{tch2}
+                          % Cap. 2 [9]
+\openout2 = `tch3.aux'.
+
+ (tch3.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE} [10
 
 
 
@@ -842,115 +854,112 @@ l.1 \chapter
 ]
 Cap\'{\i }tulo 3.
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.108 \include{tch3}
-                          % Cap. 3 [9]
+                          % Cap. 3 [11]
 \openout2 = `tch4.aux'.
 
  (tch4.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {COMPARACIÓN CON PYCLAW} [10
+            {COMPARACIÓN CON PYCLAW} [12
 
 
 
 
 ]
 Cap\'{\i }tulo 4.
-)
-pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.110 \include{tch4}
-                     [11]
+) [13]
 \openout2 = `tch5.aux'.
 
- (tch5.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁT...
-[12
+ (tch5.tex [14
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [13] [14
+) [15] [16
 
 
 
 ]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex [15
+ (c_y_r.tex [17
 
 
-] [16
+] [18
 
-]) [17] (TesisTotalBibTeX.bbl [18
+]) [19] (TesisTotalBibTeX.bbl [20
 
 
 
-]) [19]
+]) [21]
 (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
  (agradecimientos.aux) (dedicatoria.aux) (simbolos.aux)
 (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux)
 (tch5.aux) (c_y_r.aux))
-Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: B0715313EBBF30C6CD99E7DD3CA7F04D;4103.
+
+Package rerunfilecheck Warning: File `TesisTotalBibTeX.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TesisTotalBibTeX.out':
+(rerunfilecheck)             Before: E3F320C38EF6F34A970BA7C0088BD2FC;4586
+(rerunfilecheck)             After:  D220932DA2463D250A64D6635CB59C6F;4571.
  ) 
 Here is how much of TeX's memory you used:
- 15732 strings out of 476339
- 258111 string characters out of 5787175
+ 15739 strings out of 476339
+ 258209 string characters out of 5787175
  1861340 words of memory out of 5000000
- 35700 multiletter control sequences out of 15000+600000
+ 35702 multiletter control sequences out of 15000+600000
  533072 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,882b,840s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-ti1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecbx1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Rodrigo\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Rodrigo\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\Rodrigo\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Ro
-drigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\
-Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.
-pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
-cbx1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecbx1440.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecrm1200.pk><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Rodrigo/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Rodrigo/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users
-/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Rodrigo/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Rodrigo/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TesisTotalBibTeX.pdf (43 pages, 510094 bytes).
+ 90i,17n,90p,1143b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subsubsection.1.5.0.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+ <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti
+1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecbx1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ecrm1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/p
+k/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Rodrigo\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\Rodrigo\AppD
+ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Rodr
+igo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Us
+ers\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk
+> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecb
+x1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
+i600\ecbx1440.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
+en/ec/dpi600\ecrm1200.pk><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Rodrigo/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Rodrigo/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/R
+odrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Rodrigo/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Rodrigo/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on TesisTotalBibTeX.pdf (45 pages, 521227 bytes).
 PDF statistics:
- 912 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 952 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 
