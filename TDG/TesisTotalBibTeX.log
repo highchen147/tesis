@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  23 NOV 2023 21:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  25 NOV 2023 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -922,7 +922,7 @@ Package hyperref Warning: Option `pdfstartview' has already been used,
 
 Package hyperref Info: Option `plainpages' set `false' on input line 68.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 68.
-<escudo.pdf, id=98, 652.4375pt x 652.4375pt>
+<escudo.pdf, id=102, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
 Package pdftex.def Info: escudo.pdf  used on input line 68.
@@ -959,7 +959,7 @@ File: escudo.pdf Graphic file (type pdf)
 Package pdftex.def Info: escudo.pdf  used on input line 76.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
-<ordenImpresion.pdf, id=133, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=137, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 79.
@@ -968,7 +968,7 @@ File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 79.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ordenImpresion.pdf, id=136, page=1, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=140, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
 Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 79.
@@ -1050,10 +1050,10 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 8
 File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 17.
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 18.
 
 
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 17.
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 18.
 
 
 ) [7]
@@ -1145,24 +1145,42 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.148 
-       [7])
+       [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.166 \end{equation}
+                     [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.205 
+       [9])
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.105 \include{tch1}
-                          % Cap. 1 [8]
+                          % Cap. 1 [10]
 \openout2 = `tch2.aux'.
 
  (tch2.tex
 Cap\'{\i }tulo 2.
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.107 \include{tch2}
-                          % Cap. 2 [9
+                          % Cap. 2 [11
 
 
 
@@ -1171,67 +1189,55 @@ l.107 \include{tch2}
 \openout2 = `tch3.aux'.
 
  (tch3.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE} [10
+            {ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE} [12
 
 
 
 
 ]
 Cap\'{\i }tulo 3.
-)
-pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.109 \include{tch3}
-                          % Cap. 3 [11]
+) [13]
 \openout2 = `tch4.aux'.
 
- (tch4.tex
-pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {COMPARACIÓN CON PYCLAW} [12
+ (tch4.tex [14
 
 
 
 
 ]
 Cap\'{\i }tulo 4.
-) [13]
+) [15]
 \openout2 = `tch5.aux'.
 
- (tch5.tex [14
+ (tch5.tex [16
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [15] [16
+) [17] [18
 
 
 
 ]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex [17
+ (c_y_r.tex [19
 
 
-] [18
+] [20
 
-]) [19] (TesisTotalBibTeX.bbl [20
+]) [21] (TesisTotalBibTeX.bbl [22
 
 
 
-]) [21]
+]) [23]
 (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
@@ -1239,13 +1245,13 @@ LaTeX Info: Redefining \% on input line 22.
 (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux)
 (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: EAAF74305E080EC99FE28724262E7B8E;4782.
+(rerunfilecheck)             Checksum: 097D519AB28DD11C853BBACC587B72E1;4915.
  ) 
 Here is how much of TeX's memory you used:
- 26123 strings out of 476339
- 485029 string characters out of 5787175
- 1861340 words of memory out of 5000000
- 45874 multiletter control sequences out of 15000+600000
+ 26146 strings out of 476339
+ 485323 string characters out of 5787175
+ 1863340 words of memory out of 5000000
+ 45880 multiletter control sequences out of 15000+600000
  533072 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,17n,90p,1143b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1266,20 +1272,24 @@ dpi600\ecbx1440.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
 ppen/ec/dpi600\ecrm1200.pk><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Rodrigo/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Rodrigo/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users
-/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Rodrigo/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Rodrigo/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TesisTotalBibTeX.pdf (45 pages, 533358 bytes).
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Rodrigo/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/User
+s/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/User
+s/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on TesisTotalBibTeX.pdf (47 pages, 584566 bytes).
 PDF statistics:
- 983 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1065 PDF objects out of 1200 (max. 8388607)
+ 126 named destinations out of 1000 (max. 500000)
+ 230 words of extra memory for PDF output out of 10000 (max. 10000000)
 

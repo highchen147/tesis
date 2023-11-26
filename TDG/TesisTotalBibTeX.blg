@@ -30,50 +30,51 @@ Database file #1: bbtesis.bib
 Warning--entry type for "Cameron" isn't style-file defined
 --line 3 of file bbtesis.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Warning--empty translator in methods
 Warning--can't use both author and editor fields in Leveque
 Warning--empty translator in Leveque
 Warning--empty translator in heattransfer
 Warning--empty translator in Roe81
 Warning--empty translator in Roe86
-You've used 6 entries,
+You've used 7 entries,
             3599 wiz_defined-function locations,
-            740 strings with 9660 characters,
-and the built_in function-call counts, 3981 in all, are:
-= -- 301
-> -- 76
-< -- 8
-+ -- 30
-- -- 24
-* -- 335
-:= -- 542
-add.period$ -- 20
-call.type$ -- 6
-change.case$ -- 33
-chr.to.int$ -- 6
-cite$ -- 12
-duplicate$ -- 363
-empty$ -- 363
-format.name$ -- 40
-if$ -- 818
+            748 strings with 9814 characters,
+and the built_in function-call counts, 4551 in all, are:
+= -- 343
+> -- 86
+< -- 9
++ -- 34
+- -- 27
+* -- 377
+:= -- 625
+add.period$ -- 24
+call.type$ -- 7
+change.case$ -- 38
+chr.to.int$ -- 7
+cite$ -- 14
+duplicate$ -- 417
+empty$ -- 421
+format.name$ -- 45
+if$ -- 937
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 83
-newline$ -- 52
-num.names$ -- 24
-pop$ -- 126
+missing$ -- 97
+newline$ -- 59
+num.names$ -- 28
+pop$ -- 149
 preamble$ -- 1
-purify$ -- 32
+purify$ -- 37
 quote$ -- 0
-skip$ -- 134
+skip$ -- 154
 stack$ -- 0
-substring$ -- 146
-swap$ -- 213
+substring$ -- 157
+swap$ -- 238
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
-warning$ -- 5
-while$ -- 25
+type$ -- 54
+warning$ -- 6
+while$ -- 28
 width$ -- 0
-write$ -- 110
-(There were 6 warnings)
+write$ -- 127
+(There were 7 warnings)

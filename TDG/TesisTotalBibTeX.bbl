@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 %Comandos de formato, por si no están definidos.
 \ProvideTextCommand{\guillemotleft}{OT1}{\leavevmode\raise
   .27ex\hbox{$\scriptscriptstyle\ll$}}
@@ -47,6 +47,13 @@
   \begingroup \urlstyle{rm}\Url}\fi
 %Para resultados estilo plain descomente la línea siguiente
 %\let\oldbibitem=\bibitem \def\bibitem[#1]#2{\oldbibitem{#2}}
+
+\bibitem[{\citenamefont{Boas}(2006)}]{methods}
+  \bibnamefont{Boas}, \bibfnamefont{M.L.}\namesend{}\datebegin 2006.
+  \newblock \bibtitle{\emph{Mathematical Methods in the Physical Sciences}}.
+  \newblock Wiley student edition. Wiley\dateend{2006}.
+  \newblock ISBN 9788126508105\finalpoint{}
+  \newline\urlprefix\url{https://books.google.com.gt/books?id=1xV0CgAAQBAJ}
 
 \bibitem[{\citenamefont{Cameron}(2016)}]{Cameron}
   \bibnamefont{Cameron}, \bibfnamefont{Maria}\namesend{}\datebegin 2016.
