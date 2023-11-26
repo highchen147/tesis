@@ -43,8 +43,8 @@ de tal manera que la ecuación (\ref{eq:conservacion}) se convierte en
 	\mathbf{U}_{t} + \mathbf{A(\mathbf{U})}\mathbf{U}_{x} = 0
 	\label{eq:conservacion-jacobiana}
 \end{equation}.
-Esta forma de escribir una ecuación de conservación es relevante ya que permite definir un \textbf{sistema hiperbólico}. Un sistema hiperbólico es una ecuación de conservación de la forma (\ref{eq:conservacion-jacobiana}) tal que los autovalores de la matriz $\mathbf{A(\mathbf{U})}$ para todo $\mathbf{U}$ sean reales y que dicha matriz sea diagonalizable \cite{Leveque}. Esto implica que existen $n$ vectores propios linealmente independientes de $\mathbf{A(\mathbf{U})}$\cite{Leveque}.
-Una ecuación de conservación depende de una función $\mathbf{F(\mathbf{U})}$ que, por lo general, no es una función lineal de $\mathbf{U}$, lo que implica que las ecuaciones de conservación son regularmente no lineales\cite{Leveque}. Esto también se puede inferir por la dependencia en $\mathbf{U}$ de la matriz $\mathbf{A}$ en la ecuación (\ref{eq:conservacion-jacobiana}).
+Esta forma de escribir una ecuación de conservación es relevante ya que permite definir un \textbf{sistema hiperbólico}. Un sistema hiperbólico es una ecuación de conservación de la forma (\ref{eq:conservacion-jacobiana}) tal que los autovalores de la matriz $\mathbf{A(\mathbf{U})}$ para todo $\mathbf{U}$ sean reales y que dicha matriz sea diagonalizable \cite{Leveque}. Esto implica que existen $n$ vectores propios linealmente independientes de $\mathbf{A(\mathbf{U})}$ \cite{Leveque}.
+Una ecuación de conservación depende de una función $\mathbf{F(\mathbf{U})}$ que, por lo general, no es una función lineal de $\mathbf{U}$, lo que implica que las ecuaciones de conservación son regularmente no lineales \cite{Leveque}. Esto también se puede inferir por la dependencia en $\mathbf{U}$ de la matriz $\mathbf{A}$ en la ecuación (\ref{eq:conservacion-jacobiana}).
 \section{Derivación de una ecuación de conservación}
 El principio físico de una ecuación de conservación es más explícito cuando esta se deriva a través de cantidades expresadas en forma \textbf{integral.} Considerando un ejemplo de la mecánica de fluidos, se define $M(x_1,x_2,t)$ como la cantidad de masa de un fluido que se encuentra contenido en un ``tubo'' unidimensional en un intervalo  $[x_1,x_2]$ en un tiempo $t$. Si a dicho fluido se le asocia una densidad $\rho(x,t)$, entonces esta última se define de tal manera que su integral definida en un intervalo espacial sea igual a la masa contenida en ese mismo intervalo \cite{Leveque}, i.e.,
 \begin{equation}
@@ -99,7 +99,7 @@ En caso que la velocidad $v(x,t)$ sea una constante $\alpha$, la ecuación de co
 	\rho_t + \alpha\rho_x = 0,
 	\label{eq:adveccion}
 \end{equation}
-esta ecuación se conoce como \textbf{ecuación de advección lineal} \cite{Leveque} o como ecuación de onda de primer orden \cite{heattransfer}.
+esta ecuación se conoce como \textbf{ecuación de advección lineal} o como ecuación de onda de primer orden \cite{Leveque}\cite{heattransfer}.
 \section{Ecuación de advección lineal}
 La ecuación de advección (\ref{eq:adveccion}) con la siguiente condición inicial:
 \begin{equation}
@@ -139,7 +139,7 @@ Si la condición inicial de una ecuación de conservación escalar $u_0(x)$ tien
 
 A continuación se describen dos formas de definir las soluciones con singularidades:
 \subsection{Viscosidad disipada}
-Como se vio anteriormente algunas soluciones de las ecuaciones de conservación pueden poseer singularidades si la condición inicial de la ecuación tiene una singularidad. Para los sistemas hiperbólicos no lineales, las discontinuidades pueden formarse a lo largo de la evolución temporal de la solución \cite{Leveque}. A las singularidades que se desarrollan en las soluciones se les llama \textbf{ondas de choque} o \textbf{shocks} en inglés \cite{Cameron}. Para definir cómo estas funciones siguen siendo soluciones, en el sentido estricto de la palabra, se redefine la ecuación que deben satisfacer agregándole un término de viscosidad $\varepsilon$ que va acompañado del laplaciano de alguna variable involucrada \cite{Leveque}. En el caso de la ecuación de advección para $u$, se define la siguiente ecuación modificada
+Como se vio anteriormente algunas soluciones de las ecuaciones de conservación pueden poseer singularidades si la condición inicial de la ecuación tiene una singularidad. Para los sistemas hiperbólicos no lineales, las discontinuidades pueden formarse a lo largo de la evolución temporal de la solución \cite{Leveque}. A las singularidades que se desarrollan en las soluciones se les llama \textbf{ondas de choque} o \textbf{shocks} en inglés \cite{Cameron}. Para definir cómo estas funciones siguen siendo soluciones, en el sentido estricto de la palabra, se redefine la ecuación que deben satisfacer agregándole un coeficiente de viscosidad $\varepsilon$ que va acompañado del laplaciano de la variable involucrada \cite{Leveque}. En el caso de la ecuación de advección para $u$, se define la siguiente ecuación modificada
 \begin{equation}
 	u_t + \alpha u_x = \varepsilon u_{xx},
 	\label{eq:advec-difus}
@@ -174,7 +174,7 @@ luego, integrando por partes cada término de la integral, se obtiene
 Dado que $\phi$ tiene soporte compacto, es posible asegurarse que $\lim\limits_{t\rightarrow \infty}\phi(x,t) = 0$. Por tanto,
 \begin{equation}
 	\int_{-\infty}^{\infty}\int_{0}^{\infty} \phi u_t \dd{t}\dd{x} = 
-	\int_{-\infty}^{\infty} \phi(x,0)u(x,0) \dd{x} - \int_{-\infty}^{\infty}\int_{0}^{\infty}\phi_t u \dd{t}\dd{x}.
+	-\int_{-\infty}^{\infty} \phi(x,0)u(x,0) \dd{x} - \int_{-\infty}^{\infty}\int_{0}^{\infty}\phi_t u \dd{t}\dd{x}.
 \end{equation}
 Trabajando el segundo término, se tiene
 \begin{equation}
@@ -185,7 +185,7 @@ Trabajando el segundo término, se tiene
 	\int_{0}^{\infty}\int_{-\infty}^{\infty}  \phi f(u)_x \dd{x}\dd{t} = 
 	\int_{0}^{\infty} \phi f(u) \Big|_{-\infty}^{\infty} \dd{t}  - \int_{0}^{\infty}\int_{-\infty}^{\infty} \phi_x f(u) \dd{x}\dd{t},
 \end{equation}
-de igual manera que con la valuación de la integral del término anterior, el soporte compacto de $\phi$ permite justificar que $\lim\limits_{x\rightarrow -\infty}\phi = \lim\limits_{x\rightarrow \infty}\phi = 0$. Entonces,
+de igual manera que con la valuación de la integral del término anterior, el soporte compacto de $\phi$ permite justificar que $\lim\limits_{x\rightarrow -\infty}\phi = 0 = \lim\limits_{x\rightarrow \infty}\phi$. Entonces,
 \begin{equation}
 	\int_{0}^{\infty}\int_{-\infty}^{\infty}  \phi f(u)_x \dd{x}\dd{t} =  -\int_{0}^{\infty}\int_{-\infty}^{\infty} \phi_x f(u) \dd{x}\dd{t}.
 \end{equation}
@@ -212,3 +212,41 @@ Es posible demostrar que la igualdad (\ref{eq:weak-equality}) es equivalente a l
  	\end{cases}
 \end{equation}
 Además $\phi$ es una función suave en la banda intermedia con ancho $\epsilon$ \cite{Leveque}. Entonces al calcular la integral (\ref{eq:weak-equality})  se puede notar que esta se reduce a la integral sobre la banda $\epsilon$, a raíz de la propiedad expuesta anteriormente. Al calcular esta integral y haciendo el límite $\epsilon \rightarrow 0$, las derivadas $\phi_x$ y $\phi_t$ tienden a deltas de Dirac \footnote{La delta de Dirac $\delta(x)$ es una función generalizada que cumple con la siguiente propiedad $\int_{-\infty}^{\infty} \delta(x-a) f(x)\dd{x} = f(a)$ \cite{methods}.}, recuperando así los valores de $u$ y $ f(u)$ en las fronteras del dominio $ [x_1, x_2] \times [t_1, t_2]$ en integrales que equivalen a los términos de la ecuación de conservación en forma integral (\ref{eq:continuidad-2-integral})\cite{Leveque}. Cabe destacar que este es u esbozo solamente de la demostración, ya que esta requiere más rigor matemático. Sin embargo, lo imprescindible es destacar la equivalencia entre ambas expresiones.
+
+\section{Ecuación de Burgers}
+Se pueden destacar las propiedades más importantes de las ecuaciones de conservación no lineales de la mecánica de fluidos a través de un ejemplo escalar conocido como \textbf{ecuación de Burgers.} Esta ecuación tiene la siguiente forma:
+
+\begin{equation}
+	u_t + u u_x = 0,
+	\label{eq:burgers}
+\end{equation}
+la cual es formalmente conocida como Ecuación de Burgers sin viscosidad \cite{Leveque}, pero en este texto se le referirá solamente como Ecuación de Burgers. Esta ecuación es un modelo muy simple de la velocidad $u$ de un gas \cite{Cameron}. La ecuación originalmente estudiada por Jan Burgers \cite{Leveque} contiene un término de viscosidad cinemática:
+\begin{equation}
+	u_t + u u_x = \varepsilon u_{xx},
+	\label{eq:burgers-vis}
+\end{equation}
+donde $\varepsilon$ es el coeficiente de viscosidad cinemática. A esta última ecuación se le referirá como Ecuación de Burgers viscosa.
+
+De la ecuación (\ref{eq:burgers}) podemos notar un ligero parecido a la ecuación de advección (\ref{eq:adveccion}), con la diferencia que la velocidad de advección $\alpha$ se reemplaza por la variable que sufre la advección, i.e., $u$ \cite{Leveque}, lo que brinda la naturaleza no lineal de este modelo. La ecuación de Burgers se puede escribir en forma conservativa:
+\begin{equation}
+	u_t + \left(\frac{1}{2}u^{2}\right)_x = 0.
+	\label{eq:burgers-cons}
+\end{equation}
+A partir de esta forma, se puede concluir que la función de flujo es $f(u) = \frac{1}{2}u^{2}$.
+\subsection{Curvas características}
+Las curvas características de la ecuación de Burgers se pueden definir a través de la siguiente ecuación diferencial \cite{Leveque}
+\begin{equation}
+	x'(t) = u(x(t),t),
+	\label{eq:burgers-char}
+\end{equation}
+dado que se puede recuperar la ecuación diferencial parcial derivando respecto al tiempo la velocidad:
+\begin{equation}
+	\dv{t} u(x(t),t) = \pdv{u}{t} + \pdv{u}{x} \dv{x}{t}
+\end{equation}
+\begin{equation}
+	\dv{t} u(x(t),t) = \pdv{u}{t} + u\pdv{u}{x} = 0.
+\end{equation}
+Por lo tanto, $u$ es constante en el tiempo sobre cualquier característica. Se puede resolver la ecuación (\ref{eq:burgers-char}) utilizando este último hecho:
+\begin{equation}
+	x(t) = u(\xi,0)t + \xi
+\end{equation}
