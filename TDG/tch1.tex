@@ -112,7 +112,7 @@ tiene como solución:
 \end{equation}
 para $t> 0$, asumiendo que $\rho_0$ es una función diferenciable \cite{Leveque}. Esta solución se puede interpretar como la traslación de la función $\rho_0$ a lo largo del eje $x$ con una velocidad $\alpha$, en la misma dirección de la velocidad, es decir, a la derecha si $\alpha > 0$ y a la izquierda si $\alpha < 0$.
 \subsection{Curvas características}
-Se puede demostrar que la solución (\ref{eq:sol-advec}) es constante respecto al tiempo a lo largo de cada curva definida por $x-\alpha t = x_0$, para cualquier $x_0$ tal que $x_0 \in [-\infty, \infty]$. Dichas curvas de la forma $x=x(t)$ son conocidas como \textbf{curvas características} de la ecuación diferencial en cuestión \cite{Leveque}. Las curvas características definen dominios en los que la ecuación diferencial parcial se puede escribir como una ecuación diferencial ordinaria. Dichas curvas se definen a partir de ecuaciones diferenciales ordinarias. En el caso de la ecuación de advección lineal (\ref{eq:sol-advec}), las características satisfacen la siguiente ecuación diferencial:
+Se puede demostrar que la solución (\ref{eq:sol-advec}) es constante respecto al tiempo a lo largo de cada curva definida por $x-\alpha t = x_0$, para cualquier $x_0$ tal que $x_0 \in [-\infty, \infty]$. Dichas curvas de la forma $x=x(t)$ son conocidas como \textbf{curvas características} de la ecuación diferencial en cuestión \cite{Leveque}. Las curvas características definen dominios en donde la ecuación diferencial parcial se puede escribir como una ecuación diferencial ordinaria. Dichas curvas se definen a partir de ecuaciones diferenciales ordinarias. En el caso de la ecuación de advección lineal (\ref{eq:sol-advec}), las características satisfacen la siguiente ecuación diferencial:
 \begin{equation}
 	\dv{x}{t} = \alpha, \hspace{1.7cm} x(0) = x_0,
 \end{equation}
@@ -249,4 +249,28 @@ dado que se puede recuperar la ecuación diferencial parcial derivando respecto 
 Por lo tanto, $u$ es constante en el tiempo sobre cualquier característica. Se puede resolver la ecuación (\ref{eq:burgers-char}) utilizando este último hecho:
 \begin{equation}
 	x(t) = u(\xi,0)t + \xi
+	\label{eq:burg-char-expr}
 \end{equation}
+y al resolver para $\xi$, es posible resolver la ecuación diferencial \cite{Leveque}
+\begin{equation}
+	u(x,t) = u(\xi, 0).
+	\label{eq:sol-burgers-char}
+\end{equation}
+Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t)$ no es válida para todo $t$, dado que las características definidas por la ecuación (\ref{eq:burg-char-expr}) pueden intersectarse en algún momento. Esto se da si para algún $x$, se tiene que $u_0'(x) < 0$ \cite{Leveque}. Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan.
+
+\begin{figure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../some_plots/cond_inicial.pdf}
+		\caption{Gráfica de $u(x,0) = \exp(-x^2)$.}
+		\label{fig:subfig1}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../some_plots/caracteristicas_burgers.pdf}
+		\caption{Características de la ecuación de Burgers.}
+		\label{fig:subfig2}
+	\end{subfigure}
+	\caption{Gráficas de la condición inicial $u(x,0) = \exp(-x^2)$ para la ecuación de Burgers y de algunas características asociadas a esta condición inicial. \textbf{Fuente:} elaboración propia.}
+	\label{fig:figura_completa}
+\end{figure}

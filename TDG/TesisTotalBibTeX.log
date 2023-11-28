@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  26 NOV 2023 13:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  27 NOV 2023 20:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,35 +798,39 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (TesisTotalBibTeX.aux
+)))
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.st
+y
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count326
+\c@subtable=\count327
+) (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
-
-(agradecimientos.aux) (dedicatoria.aux) (simbolos.aux) (objetivos.aux)
-(introduccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux) (tch5.aux)
-(c_y_r.aux))
+ (agradecimientos.aux) (dedicatoria.aux) (simbolos.aux) (objetivos.aux) (introd
+uccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux) (tch5.aux) (c_y_r.aux))
 \openout1 = `TesisTotalBibTeX.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -874,16 +878,16 @@ Package caption Info: End \AtBeginDocument code.
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
+\scratchcounter=\count328
 \scratchdimen=\dimen287
 \scratchbox=\box72
-\nofMPsegments=\count327
-\nofMParguments=\count328
+\nofMPsegments=\count329
+\nofMParguments=\count330
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count329
+\MPscratchCnt=\count331
 \MPscratchDim=\dimen288
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
+\MPnumerator=\count332
+\makeMPintoPDFobject=\count333
 \everyMPtoPDFconversion=\toks50
 )
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
@@ -910,7 +914,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring OFF on input line 59.
+Package hyperref Info: Link coloring OFF on input line 61.
  (TesisTotalBibTeX.out) (TesisTotalBibTeX.out)
 \@outlinefile=\write4
 \openout4 = `TesisTotalBibTeX.out'.
@@ -918,14 +922,14 @@ Package hyperref Info: Link coloring OFF on input line 59.
 
 
 Package hyperref Warning: Option `pdfstartview' has already been used,
-(hyperref)                setting the option has no effect on input line 68.
+(hyperref)                setting the option has no effect on input line 70.
 
-Package hyperref Info: Option `plainpages' set `false' on input line 68.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 68.
+Package hyperref Info: Option `plainpages' set `false' on input line 70.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 70.
 <escudo.pdf, id=110, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
-Package pdftex.def Info: escudo.pdf  used on input line 68.
+Package pdftex.def Info: escudo.pdf  used on input line 70.
 (pdftex.def)             Requested size: 71.13188pt x 71.1312pt.
 [1
 
@@ -933,21 +937,21 @@ Package pdftex.def Info: escudo.pdf  used on input line 68.
 df>] [2]
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
-Package pdftex.def Info: escudo.pdf  used on input line 68.
+Package pdftex.def Info: escudo.pdf  used on input line 70.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
 
 
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
 
 
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 68
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 70
 .
 
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -956,38 +960,38 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 [3] [4]
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
-Package pdftex.def Info: escudo.pdf  used on input line 76.
+Package pdftex.def Info: escudo.pdf  used on input line 78.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
 <ordenImpresion.pdf, id=145, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
-Package pdftex.def Info: ordenImpresion.pdf  used on input line 79.
+Package pdftex.def Info: ordenImpresion.pdf  used on input line 81.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
-Package pdftex.def Info: ordenImpresion.pdf  used on input line 79.
+Package pdftex.def Info: ordenImpresion.pdf  used on input line 81.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 <ordenImpresion.pdf, id=148, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 79.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 79.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 79.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 79.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 79.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 81.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [7 <./ordenImpresion.pdf>]
 \openout2 = `agradecimientos.aux'.
@@ -1165,29 +1169,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
 <to be read again> 
                    \relax 
 l.227 \end{equation}
-                     [10])
+                     [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 \include{tch1}
-                          % Cap. 1 [11]
-\openout2 = `tch2.aux'.
-
- (tch2.tex
+l.259 
+       [11]
+<../some_plots/cond_inicial.pdf, id=471, 462.52798pt x 346.89601pt>
+File: ../some_plots/cond_inicial.pdf Graphic file (type pdf)
+<use ../some_plots/cond_inicial.pdf>
+Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 263
+.
+(pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
+<../some_plots/caracteristicas_burgers.pdf, id=472, 578.16pt x 433.62pt>
+File: ../some_plots/caracteristicas_burgers.pdf Graphic file (type pdf)
+<use ../some_plots/caracteristicas_burgers.pdf>
+Package pdftex.def Info: ../some_plots/caracteristicas_burgers.pdf  used on inp
+ut line 269.
+(pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \chapter
-            {MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE} [12
+l.107 \include{tch1}
+                          % Cap. 1 [12 <../some_plots/cond_inicial.pdf> <../som
+e_plots/caracteristicas_burgers.pdf>]
+\openout2 = `tch2.aux'.
+
+ (tch2.tex
+Cap\'{\i }tulo 2.
+) [13
 
 
 
 
 ]
-Cap\'{\i }tulo 2.
-) [13]
 \openout2 = `tch3.aux'.
 
  (tch3.tex [14
@@ -1241,51 +1262,56 @@ LaTeX Info: Redefining \% on input line 22.
 (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux)
 (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: 7BC739DAF525A8AAE7D406ECE813FC77;5308.
+(rerunfilecheck)             Checksum: A6F438559C07F9BF6B702F0D6C234CF3;5308.
  ) 
 Here is how much of TeX's memory you used:
- 26163 strings out of 476339
- 485548 string characters out of 5787175
+ 26309 strings out of 476339
+ 488666 string characters out of 5787175
  1863340 words of memory out of 5000000
- 45886 multiletter control sequences out of 15000+600000
- 533072 words of font info for 86 fonts, out of 8000000 for 9000
+ 46023 multiletter control sequences out of 15000+600000
+ 536645 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,17n,90p,1143b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-ti1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecbx1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm1000.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Rodrigo\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Rodrigo\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1200.pk> <C:\Users\Rodrigo\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Ro
-drigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\
-Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.
-pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
-cbx1200.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecbx1440.pk> <C:\Users\Rodrigo\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecrm1200.pk><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Rodrigo/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Rodrigo/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/User
-s/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pf
-b><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/User
-s/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on TesisTotalBibTeX.pdf (49 pages, 594264 bytes).
+{C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-s
+uper-t1.enc}<C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Rodrigo/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Rodrigo/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Rod
+rigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
+/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Rodr
+igo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
+Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/cm-super/sfbx1000.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Users/Rodrigo/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Rodrigo/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/Rodrigo
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Use
+rs/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc1200.p
+fb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/
+sfrm0700.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/cm-super/sfrm0800.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/cm-super/sfrm1000.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Users/Rodrigo/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/Rodrigo/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss1200.pfb><C:/Users/Rodrig
+o/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Us
+ers/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1200.
+pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super
+/sfxc1200.pfb>
+Output written on TesisTotalBibTeX.pdf (49 pages, 866344 bytes).
 PDF statistics:
- 1104 PDF objects out of 1200 (max. 8388607)
- 137 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 744 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 
