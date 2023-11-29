@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  27 NOV 2023 20:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  28 NOV 2023 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1177,19 +1177,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.259 
+l.260 
        [11]
 <../some_plots/cond_inicial.pdf, id=471, 462.52798pt x 346.89601pt>
 File: ../some_plots/cond_inicial.pdf Graphic file (type pdf)
 <use ../some_plots/cond_inicial.pdf>
-Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 263
+Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 264
 .
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
 <../some_plots/caracteristicas_burgers.pdf, id=472, 578.16pt x 433.62pt>
 File: ../some_plots/caracteristicas_burgers.pdf Graphic file (type pdf)
 <use ../some_plots/caracteristicas_burgers.pdf>
 Package pdftex.def Info: ../some_plots/caracteristicas_burgers.pdf  used on inp
-ut line 269.
+ut line 270.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
@@ -1261,14 +1261,20 @@ LaTeX Info: Redefining \% on input line 22.
  (agradecimientos.aux) (dedicatoria.aux) (simbolos.aux)
 (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux)
 (tch5.aux) (c_y_r.aux))
-Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: A6F438559C07F9BF6B702F0D6C234CF3;5308.
+
+Package rerunfilecheck Warning: File `TesisTotalBibTeX.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TesisTotalBibTeX.out':
+(rerunfilecheck)             Before: A6F438559C07F9BF6B702F0D6C234CF3;5308
+(rerunfilecheck)             After:  81501039201ECC96F1D2312E5D0FBE21;5484.
  ) 
 Here is how much of TeX's memory you used:
- 26309 strings out of 476339
- 488666 string characters out of 5787175
+ 26317 strings out of 476339
+ 488781 string characters out of 5787175
  1863340 words of memory out of 5000000
- 46023 multiletter control sequences out of 15000+600000
+ 46030 multiletter control sequences out of 15000+600000
  536645 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,17n,90p,1143b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1309,9 +1315,9 @@ o/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Us
 ers/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1200.
 pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super
 /sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (49 pages, 866344 bytes).
+Output written on TesisTotalBibTeX.pdf (49 pages, 868611 bytes).
 PDF statistics:
- 744 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
+ 750 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
  256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

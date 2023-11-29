@@ -256,7 +256,7 @@ y al resolver para $\xi$, es posible resolver la ecuación diferencial \cite{Lev
 	u(x,t) = u(\xi, 0).
 	\label{eq:sol-burgers-char}
 \end{equation}
-Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t)$ no es válida para todo $t$, dado que las características definidas por la ecuación (\ref{eq:burg-char-expr}) pueden intersectarse en algún momento. Esto se da si para algún $x$, se tiene que $u_0'(x) < 0$ \cite{Leveque}. Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan.
+Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t)$ no es válida para todo $t$, dado que las características definidas por la ecuación (\ref{eq:burg-char-expr}) pueden intersectarse en algún momento. Esto se da si para algún $x$, se tiene que $u_0'(x) < 0$ \cite{Leveque}. 
 
 \begin{figure}
 	\begin{subfigure}{0.5\textwidth}
@@ -274,3 +274,7 @@ Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t
 	\caption{Gráficas de la condición inicial $u(x,0) = \exp(-x^2)$ para la ecuación de Burgers y de algunas características asociadas a esta condición inicial. \textbf{Fuente:} elaboración propia.}
 	\label{fig:figura_completa}
 \end{figure}
+\subsection{Ondas de choque}
+Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan. Entonces, si las características se intersectan, la expresión (\ref{eq:sol-burgers-char}) no está bien definida, sino que $u(x,t)$ puede tomar varios valores a la vez, cada uno correspondiente a una característica diferente. En el caso de la ecuación de Burgers, cuando las características se intersectan, la solución se convierte en una "función'' con tres valores distintos \cite{Leveque}. Esta solución puede tener sentido en algunos contextos, como en el caso del problema de agua superficial \cite{Leveque}. Sin embargo, en la mayoría de casos esta solución no tiene significado físico ya que la variable $u(x,t)$ representa una velocidad y esta debe devolver un solo valor \cite{Leveque}.
+
+La solución 

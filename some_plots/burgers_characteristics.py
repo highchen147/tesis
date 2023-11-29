@@ -20,8 +20,8 @@ for exp_m, m in zip(m_values, x_0s):
 
 # Configurar el aspecto del plot
 # plt.title(r'Características de $u(x,0)=\exp(-x^{2})$')
-plt.xlabel(r'$x$', fontsize=20)
-plt.ylabel(r'$t$', fontsize=20)
+plt.xlabel(r'$x$', fontsize=22)
+plt.ylabel(r'$t$', fontsize=22)
 plt.axhline(0, color='black',linewidth=0.2)
 plt.axvline(0, color='black',linewidth=0.2)
 plt.grid(color = 'gray', linestyle = '--', linewidth = 0.2, alpha=0.2)
