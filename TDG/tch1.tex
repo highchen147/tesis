@@ -277,34 +277,34 @@ Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t
 \subsection{Ondas de choque}
 Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan. Entonces, si las características se intersectan, la expresión (\ref{eq:sol-burgers-char}) no está bien definida, sino que $u(x,t)$ puede tomar varios valores a la vez, cada uno correspondiente a una característica diferente. En el caso de la ecuación de Burgers, cuando las características se intersectan, la solución se convierte en una ``función'' con tres valores distintos \cite{Leveque}. Esta solución puede tener sentido en algunos contextos, como en el caso del problema de agua superficial \cite{Leveque}. Sin embargo, en la mayoría de casos esta solución no tiene significado físico ya que la variable $u(x,t)$ representa una velocidad y esta debe devolver un solo valor \cite{Leveque}.
 
-La solución con el comportamiento físico correcto cuando las características se intersectan corresponde a una discontinuidad que se propaga con una velocidad determinada \cite{Leveque}. Este efecto se puede demostrar a través del formalismo de la viscosidad disipada. Al obtener la solución de la ecuación de Burgers viscosa (\ref{eq:burgers-vis}), el parámetro $\varepsilon u_{xx}$ previene que la solución presente una discontinuidad, dado que cuando la onda comienza a presentar el choque, la segunda derivada de $u$ crece más rápido que $u_x$ \cite{Leveque}. Sin embargo, al efectuar el límite $\lim\limits_{\varepsilon \rightarrow 0}$
+La solución con el comportamiento físico correcto cuando las características se intersectan corresponde a una discontinuidad que se propaga con una velocidad determinada \cite{Leveque}. Este efecto se puede demostrar a través del formalismo de la viscosidad disipada. Al obtener la solución de la ecuación de Burgers viscosa (\ref{eq:burgers-vis}), el parámetro $\varepsilon u_{xx}$ previene que la solución presente una discontinuidad, dado que cuando la onda comienza a presentar el choque, la segunda derivada de $u$ crece más rápido que su primera derivada \cite{Leveque}. Así, al efectuar el límite de $\varepsilon \rightarrow 0$ se puede obtener una discontinuidad absoluta que corresponde a la solución de la ecuación de Burgers sin viscosidad.
 
-\begin{figure}
+\begin{figure}[ht]
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/frame-0001.pdf}
-		\caption{.}
+		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf}
+%		\caption{.}
 		\label{fig:viscosas1}
 	\end{subfigure}%
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/frame-0002.pdf}
-		\caption{.}
+		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf}
+%		\caption{.}
 		\label{fig:viscosas2}
 	\end{subfigure}
 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/frame-0003.pdf}
-		\caption{.}
+		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf}
+%		\caption{.}
 		\label{fig:viscosas3}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/frame-0004.pdf}
-		\caption{.}
+		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf}
+%		\caption{.}
 		\label{fig:viscosas4}
 	\end{subfigure}
-	\caption{Gráficas de la condición inicial $u(x,0) = \exp(-x^2)$ para la ecuación de Burgers y de algunas características asociadas a esta condición inicial. \textbf{Fuente:} elaboración propia.}
+	\caption{Gráficas de las soluciones numéricas, en distintos instantes de tiempo, de la ecuación de Burgers viscosa para distintos valores de coeficiente de viscosidad cinemática ($\varepsilon$), incluyendo el caso donde no hay viscosidad (en rojo). \textbf{Fuente:} elaboración propia.}
 	\label{fig:viscosas}
 \end{figure}

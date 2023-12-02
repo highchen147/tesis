@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  29 NOV 2023 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  1 DEC 2023 20:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1179,68 +1179,66 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
                    \relax 
 l.260 
        [11]
-<../some_plots/cond_inicial.pdf, id=480, 462.52798pt x 346.89601pt>
+<../some_plots/cond_inicial.pdf, id=481, 462.52798pt x 346.89601pt>
 File: ../some_plots/cond_inicial.pdf Graphic file (type pdf)
 <use ../some_plots/cond_inicial.pdf>
 Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 264
 .
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/caracteristicas_burgers.pdf, id=481, 578.16pt x 433.62pt>
+<../some_plots/caracteristicas_burgers.pdf, id=482, 578.16pt x 433.62pt>
 File: ../some_plots/caracteristicas_burgers.pdf Graphic file (type pdf)
 <use ../some_plots/caracteristicas_burgers.pdf>
 Package pdftex.def Info: ../some_plots/caracteristicas_burgers.pdf  used on inp
 ut line 270.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/frame-0001.pdf, id=490, 361.35pt x 216.81pt>
-File: ../some_plots/burgers-viscosas/frame-0001.pdf Graphic file (type pdf)
-<use ../some_plots/burgers-viscosas/frame-0001.pdf>
-Package pdftex.def Info: ../some_plots/burgers-viscosas/frame-0001.pdf  used on
- input line 285.
-(pdftex.def)             Requested size: 213.19629pt x 127.91678pt.
-<../some_plots/burgers-viscosas/frame-0002.pdf, id=491, 361.35pt x 216.81pt>
-File: ../some_plots/burgers-viscosas/frame-0002.pdf Graphic file (type pdf)
-<use ../some_plots/burgers-viscosas/frame-0002.pdf>
-Package pdftex.def Info: ../some_plots/burgers-viscosas/frame-0002.pdf  used on
- input line 291.
-(pdftex.def)             Requested size: 213.19629pt x 127.91678pt.
-<../some_plots/burgers-viscosas/frame-0003.pdf, id=492, 361.35pt x 216.81pt>
-File: ../some_plots/burgers-viscosas/frame-0003.pdf Graphic file (type pdf)
-<use ../some_plots/burgers-viscosas/frame-0003.pdf>
-Package pdftex.def Info: ../some_plots/burgers-viscosas/frame-0003.pdf  used on
- input line 298.
-(pdftex.def)             Requested size: 213.19629pt x 127.91678pt.
-<../some_plots/burgers-viscosas/frame-0004.pdf, id=493, 361.35pt x 216.81pt>
-File: ../some_plots/burgers-viscosas/frame-0004.pdf Graphic file (type pdf)
-<use ../some_plots/burgers-viscosas/frame-0004.pdf>
-Package pdftex.def Info: ../some_plots/burgers-viscosas/frame-0004.pdf  used on
- input line 304.
-(pdftex.def)             Requested size: 213.19629pt x 127.91678pt.
+<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=491, 578.16pt x
+ 433.62pt>
+File: ../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf Graphic file (
+type pdf)
+<use ../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf>
+Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
+.pdf  used on input line 285.
+(pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
+<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=492, 578.16pt
+ x 433.62pt>
+File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
+ (type pdf)
+<use ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf>
+Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
+00.pdf  used on input line 291.
+(pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
+<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=493, 578.16pt
+ x 433.62pt>
+File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
+ (type pdf)
+<use ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf>
+Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-2
+00.pdf  used on input line 298.
+(pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
+<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=494, 578.16pt
+ x 433.62pt>
+File: ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf Graphic file
+ (type pdf)
+<use ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf>
+Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-4
+00.pdf  used on input line 304.
+(pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
 
 Overfull \hbox (2.61049pt too wide) in paragraph at lines 296--308
 [][] [] 
  []
 
-)
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.107 \include{tch1}
-                          % Cap. 1 [12 <../some_plots/cond_inicial.pdf> <../som
-e_plots/caracteristicas_burgers.pdf>] [13 <../some_plots/burgers-viscosas/frame
--0001.pdf> <../some_plots/burgers-viscosas/frame-0002.pdf
-
-pdfTeX warning: pdflatex.exe (file ../some_plots/burgers-viscosas/frame-0002.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
-> <../some_plots/burgers-viscosas/frame-0003.pdf
-
-pdfTeX warning: pdflatex.exe (file ../some_plots/burgers-viscosas/frame-0003.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
-> <../some_plots/burgers-viscosas/frame-0004.pdf
-
-pdfTeX warning: pdflatex.exe (file ../some_plots/burgers-viscosas/frame-0004.pd
-f): PDF inclusion: multiple pdfs with page group included in a single page
->]
+l.310 \end{figure}
+                   [12 <../some_plots/cond_inicial.pdf> <../some_plots/caracter
+isticas_burgers.pdf>]) [13 <../some_plots/burgers-viscosas/graficas/viscosidade
+s-1.pdf> <../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf> <../som
+e_plots/burgers-viscosas/graficas/viscosidades-200.pdf> <../some_plots/burgers-
+viscosas/graficas/viscosidades-400.pdf>]
 \openout2 = `tch2.aux'.
 
  (tch2.tex [14
@@ -1308,7 +1306,7 @@ Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  26353 strings out of 476339
- 490289 string characters out of 5787175
+ 490668 string characters out of 5787175
  1864340 words of memory out of 5000000
  46058 multiletter control sequences out of 15000+600000
  536645 words of font info for 96 fonts, out of 8000000 for 9000
@@ -1325,35 +1323,36 @@ rigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
 /Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmr12.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodrigo/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Rodr
-igo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
+blic/amsfonts/cm/cmr17.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Rodrigo/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Rodrigo/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Rodrigo/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Rodr
+igo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/
 Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/cm-super/sfbx1000.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Users/Rodrigo/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Rodrigo/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/Rodrigo
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Use
-rs/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfcc1200.p
+7.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Users/Rodrigo/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Users/Rodrigo/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/Rodrigo
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Use
+rs/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx1728.p
 fb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/
-sfrm0700.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/cm-super/sfrm0800.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/cm-super/sfrm1000.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Users/Rodrigo/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/Rodrigo/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss1200.pfb><C:/Users/Rodrig
-o/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Us
-ers/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1200.
+sfcc1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/cm-super/sfrm0700.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/cm-super/sfrm0800.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/Rodrigo/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Users/Rodrigo/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/Rodrig
+o/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfss1200.pfb><C:/Us
+ers/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1200.
 pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super
-/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (51 pages, 911564 bytes).
+/sftt1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/cm-super/sfxc1200.pfb>
+Output written on TesisTotalBibTeX.pdf (51 pages, 940231 bytes).
 PDF statistics:
- 802 PDF objects out of 1000 (max. 8388607)
+ 817 PDF objects out of 1000 (max. 8388607)
  143 named destinations out of 1000 (max. 500000)
  284 words of extra memory for PDF output out of 10000 (max. 10000000)
 

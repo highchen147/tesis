@@ -4,7 +4,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Gráficas de la condición inicial $u(x,0) = \exp (-x^2)$ para la ecuación de Burgers y de algunas características asociadas a esta condición inicial. \textbf {Fuente:} elaboración propia.\relax }}{12}{figure.caption.14}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Gráficas de la condición inicial $u(x,0) = \exp (-x^2)$ para la ecuación de Burgers y de algunas características asociadas a esta condición inicial. \textbf {Fuente:} elaboración propia.\relax }}{13}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Gráficas de las soluciones numéricas, en distintos instantes de tiempo, de la ecuación de Burgers viscosa para distintos valores de coeficiente de viscosidad cinemática ($\varepsilon $), incluyendo el caso donde no hay viscosidad (en rojo). \textbf {Fuente:} elaboración propia.\relax }}{13}{figure.caption.15}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
