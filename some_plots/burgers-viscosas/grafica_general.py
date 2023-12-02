@@ -18,11 +18,14 @@ for archivo in archivos:
     datos[archivo] = pd.read_csv(f"sol-burg-vis1DDF-nu-{archivo}0.dat", sep="\t", names=["t", "x", "u"])
     datos[archivo] = asignar_instantes(datos[archivo])
 
-def graficar(dic_datos: dict[pd.DataFrame], instantes_temporales: list, columna="u", eje="x", color="purple"):
+datos["0"] = asignar_instantes(pd.read_csv("gauss-fija.dat", sep="\t", names=["t", "x", "u"]))
+
+def graficar(dic_datos: dict[pd.DataFrame], instantes_temporales: list, columna="u", eje="x", imprimir=True):
     # Configurar latex
-    plt.rcParams['font.family'] = 'serif' 
-    plt.rcParams['text.usetex'] = True
-    plt.rcParams['text.latex.preamble'] = r'\usepackage{amsmath}'
+    if imprimir:
+        plt.rcParams['font.family'] = 'serif' 
+        plt.rcParams['text.usetex'] = True
+        plt.rcParams['text.latex.preamble'] = r'\usepackage{amsmath}'
     
     max_y = max([frame["u"].max() for frame in dic_datos.values()])
     
@@ -30,6 +33,7 @@ def graficar(dic_datos: dict[pd.DataFrame], instantes_temporales: list, columna=
         plt.clf()
         plt.figure(figsize=(8, 6))
         for nombre in dic_datos:
+            data: pd.DataFrame
             data = dic_datos[nombre].dropna()
             data = data[data["Instante"] == (instante)]
             x = data[eje].values[:]
@@ -37,23 +41,27 @@ def graficar(dic_datos: dict[pd.DataFrame], instantes_temporales: list, columna=
             label = r"$\varepsilon = "
             label += nombre
             label += r"$"
-            plt.plot(x, y, label=label)
-            # plt.close()
+            plt.plot(x, y, linewidth = 1, label=label)
+            
 
         x_label = "$" + eje + "$"
         y_label = "$" + columna + "$"
-        plt.xlabel(x_label, fontsize=22)
-        plt.ylabel(y_label, fontsize=22)
+        plt.xlabel(x_label, fontsize=23)
+        plt.ylabel(y_label, fontsize=23)
+        plt.tick_params(axis="both", labelsize=15)
         plt.axhline(0, color='black',linewidth=0.2)
-        plt.axvline(0, color='black',linewidth=0.2)
         plt.grid(color = 'gray', linestyle = '--', linewidth = 0.2, alpha=0.2)
-        plt.ylim(0,max_y)
+        plt.xlim(10,90)
+        plt.ylim(0,max_y*1.25)
         plt.legend(fontsize = 20)
-        plt.savefig(f'graficas/viscosidades-{instante}.pdf', format='pdf')
+        if imprimir:
+            plt.savefig(f'graficas/viscosidades-{instante}.pdf', format='pdf')
+        else:
+            plt.show()
 
 
 graficar(dic_datos=datos,
          instantes_temporales = [1, 100, 200, 400], 
          columna="u", 
          eje="x", 
-         color="purple")
+         imprimir=False)
