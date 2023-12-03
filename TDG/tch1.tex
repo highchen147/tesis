@@ -211,7 +211,9 @@ Es posible demostrar que la igualdad (\ref{eq:weak-equality}) es equivalente a l
 		0 & \text{para } (x,t) \notin [x_1 - \epsilon, x_2 + \epsilon] \times [t_1 - \epsilon, t_2 + \epsilon].
  	\end{cases}
 \end{equation}
-Además $\phi$ es una función suave en la banda intermedia con ancho $\epsilon$ \cite{Leveque}. Entonces al calcular la integral (\ref{eq:weak-equality})  se puede notar que esta se reduce a la integral sobre la banda $\epsilon$, a raíz de la propiedad expuesta anteriormente. Al calcular esta integral y haciendo el límite $\epsilon \rightarrow 0$, las derivadas $\phi_x$ y $\phi_t$ tienden a deltas de Dirac \footnote{La delta de Dirac $\delta(x)$ es una función generalizada que cumple con la siguiente propiedad $\int_{-\infty}^{\infty} \delta(x-a) f(x)\dd{x} = f(a)$ \cite{methods}.}, recuperando así los valores de $u$ y $ f(u)$ en las fronteras del dominio $ [x_1, x_2] \times [t_1, t_2]$ en integrales que equivalen a los términos de la ecuación de conservación en forma integral (\ref{eq:continuidad-2-integral})\cite{Leveque}. Cabe destacar que este es u esbozo solamente de la demostración, ya que esta requiere más rigor matemático. Sin embargo, lo imprescindible es destacar la equivalencia entre ambas expresiones.
+Además $\phi$ es una función suave en la banda intermedia con ancho $\epsilon$ \cite{Leveque}. Entonces al calcular la integral (\ref{eq:weak-equality})  se puede notar que esta se reduce a la integral sobre la banda $\epsilon$, a raíz de la propiedad expuesta anteriormente. Al calcular esta integral y haciendo el límite $\epsilon \rightarrow 0$, las derivadas $\phi_x$ y $\phi_t$ tienden a deltas de Dirac \footnote{La delta de Dirac $\delta(x)$ es una función generalizada que cumple con la siguiente propiedad $\int_{-\infty}^{\infty} \delta(x-a) f(x)\dd{x} = f(a)$ \cite{methods}.}, recuperando así los valores de $u$ y $ f(u)$ en las fronteras del dominio $ [x_1, x_2] \times [t_1, t_2]$ en integrales que equivalen a los términos de la ecuación de conservación en forma integral (\ref{eq:continuidad-2-integral})\cite{Leveque}. Cabe destacar que este es un esbozo solamente de la demostración, ya que esta requiere más rigor matemático. Sin embargo, lo imprescindible es destacar la equivalencia entre ambas expresiones.
+
+La solución de viscosidad disipada también califica como una solución débil y físicamente es la solución correcta \cite{Leveque}. Existen muchas soluciones débiles, incluyendo algunas que no tienen un significado físico consistente, para ello es necesario exigir otras condiciones sobre las soluciones débiles de tal manera que se obtenga la solución correcta \cite{Leveque}. Estas condiciones son conocidas como \texttt{condiciones de entropía} por su papel en la dinámica de fluidos.
 
 \section{Ecuación de Burgers}
 Se pueden destacar las propiedades más importantes de las ecuaciones de conservación no lineales de la mecánica de fluidos a través de un ejemplo escalar conocido como \textbf{ecuación de Burgers.} Esta ecuación tiene la siguiente forma:
@@ -277,7 +279,7 @@ Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t
 \subsection{Ondas de choque}
 Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan. Entonces, si las características se intersectan, la expresión (\ref{eq:sol-burgers-char}) no está bien definida, sino que $u(x,t)$ puede tomar varios valores a la vez, cada uno correspondiente a una característica diferente. En el caso de la ecuación de Burgers, cuando las características se intersectan, la solución se convierte en una ``función'' con tres valores distintos \cite{Leveque}. Esta solución puede tener sentido en algunos contextos, como en el caso del problema de agua superficial \cite{Leveque}. Sin embargo, en la mayoría de casos esta solución no tiene significado físico ya que la variable $u(x,t)$ representa una velocidad y esta debe devolver un solo valor \cite{Leveque}.
 
-La solución con el comportamiento físico correcto cuando las características se intersectan corresponde a una discontinuidad que se propaga con una velocidad determinada \cite{Leveque}. Este efecto se puede demostrar a través del formalismo de la viscosidad disipada. Al obtener la solución de la ecuación de Burgers viscosa (\ref{eq:burgers-vis}), el parámetro $\varepsilon u_{xx}$ previene que la solución presente una discontinuidad, dado que cuando la onda comienza a presentar el choque, la segunda derivada de $u$ crece más rápido que su primera derivada \cite{Leveque}. Así, al efectuar el límite de $\varepsilon \rightarrow 0$ se puede obtener una discontinuidad absoluta que corresponde a la solución de la ecuación de Burgers sin viscosidad.
+La solución con el comportamiento físico correcto cuando las características se intersectan corresponde a una discontinuidad que se propaga con una velocidad determinada \cite{Leveque}. Este efecto se puede demostrar a través del formalismo de la viscosidad disipada. Al obtener la solución de la ecuación de Burgers viscosa (\ref{eq:burgers-vis}), el parámetro $\varepsilon u_{xx}$ evita que la solución presente una discontinuidad, dado que cuando la onda comienza a presentar el choque, la segunda derivada de $u$ crece más rápido que su primera derivada \cite{Leveque}. Así, al efectuar el límite de $\varepsilon \rightarrow 0$ se puede obtener una discontinuidad absoluta que corresponde a la solución de la ecuación de Burgers sin viscosidad. La tendencia de adquirir una discontinuidad  de las soluciones con menos viscosidad se puede evidenciar en la figura (\ref{fig:viscosas}).
 
 \begin{figure}[ht]
 	\begin{subfigure}{0.5\textwidth}
@@ -292,7 +294,6 @@ La solución con el comportamiento físico correcto cuando las características 
 %		\caption{.}
 		\label{fig:viscosas2}
 	\end{subfigure}
-
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf}
@@ -307,4 +308,101 @@ La solución con el comportamiento físico correcto cuando las características 
 	\end{subfigure}
 	\caption{Gráficas de las soluciones numéricas, en distintos instantes de tiempo, de la ecuación de Burgers viscosa para distintos valores de coeficiente de viscosidad cinemática ($\varepsilon$), incluyendo el caso donde no hay viscosidad (en rojo). \textbf{Fuente:} elaboración propia.}
 	\label{fig:viscosas}
+\end{figure}
+
+\section{Problema de Riemann}
+Como se ha mostrado, las soluciones a las ecuaciones de conservación admiten soluciones débiles que pueden presentar discontinuidades tanto en la condición inicial como en la evolución temporal de las mismas. Por esta razón, es natural estudiar sistemas hiperbólicos con condiciones iniciales discontinuas, este problema es conocido como \textbf{problema de Riemann}. En el caso escalar, el problema de Riemann para una ecuación de conservación de la forma $u_t + f(u)_x = 0$ corresponde a la siguiente condición inicial
+\begin{equation}
+	u(x,0) = 
+	\begin{cases}
+		u_L & \text{si } x < 0 \\
+		u_R & \text{si } x \geq 0,
+		\label{eq:riemannLR}
+	\end{cases}
+\end{equation}
+en donde la solución es determinada por la relación entre $u_L$ y $u_R$ \cite{Leveque}.
+\subsection{Solución al problema de Riemann para la ecuación de Burgers}
+Para encontrar la solución al problema de Riemann de la ecuación de Burgers es necesario considerar dos casos.
+\subsubsection{Caso $u_L > u_R$:}
+La función
+\begin{equation}
+	u(x,t) = 
+	\begin{cases}
+		u_L, & \hspace{3mm} x < st \\
+		u_R, & \hspace{3mm} x > st,		
+	\end{cases}\label{eq:solriemannLR}
+\end{equation}
+conocida como \textbf{onda de choque}, representa una discontinuidad trasladándose a través del eje $x$ con una velocidad $s$. Esta última es una solución débil de la ecuación de Burgers, para la condición inicial (\ref{eq:riemannLR}), si se cumple la condición general de  \textbf{Rankine - Hugoniot} \cite{Cameron}, que se define como:
+\begin{equation}
+	f(u_L) - f(u_R) = s(u_L - u_R),
+	\label{eq:rankinehugo}
+\end{equation}
+donde $f(u) = \frac{1}{2} u^{2}$ \cite{Leveque}. A continuación se demuestra la expresión general de la condición Rankine - Hugoniot.\\
+
+\textit{Prueba:} Sea $u$ una solución débil de la ecuación diferencial $u_t + f(u)_x = 0$, de la forma (\ref{eq:solriemannLR}). Sea $\mathcal{M} \gg st$. Aplicando la expresión (\ref{eq:continuidad-1-integral}) a $u$:
+\begin{equation}
+	\dv{t} \int_{-\mathcal{M}}^{\mathcal{M}}u(x,t)\dd{x} = f(u_L) - f(u_R).
+	\label{eq:flux_diff}
+\end{equation}
+Integrando $u$ a partir de su definición (\ref{eq:solriemannLR}), se tiene
+\begin{equation}
+	\int_{-\mathcal{M}}^{\mathcal{M}}u(x,t)\dd{x} = (\mathcal{M} + st)u_L + (\mathcal{M} - st)u_R.
+\end{equation}
+Entonces, sustituyendo en (\ref{eq:flux_diff}),
+\begin{equation}
+	\dv{t}\left[(\mathcal{M} + st)u_L + (\mathcal{M} - st)u_R\right] = f(u_L) - f(u_R)
+\end{equation}
+\begin{equation}
+	s(u_L - u_R) = f(u_L) - f(u_R),
+\end{equation}
+se obtiene la condición de salto de Rankine - Hugoniot \cite{Leveque}.
+
+Por lo tanto, para el caso $u_L > u_R$, la solución de la ecuación de Burgers es una discontinuidad que se propaga con una velocidad constante $s = \frac{u_L + u_R}{2}$ \cite{Cameron}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../some_plots/cap1/graficas/riemannLR.pdf}
+	\caption{Ejemplo gráfico de la solución de la ecuación de Burgers para el caso $u_L > u_R$. \textbf{Fuente: }elaboración propia, basada en el esquema obtenido de \cite{Leveque}.}
+	\label{fig:solriemannLR}
+\end{figure}
+
+\subsubsection{Caso $u_L < u_R$:}
+Hay múltiples soluciones débiles para este caso, por ejemplo, la solución (\ref{eq:solriemannLR}) \cite{Cameron} \cite{Leveque}. Sin embargo, esta no es la solución que corresponde a la solución con viscosidad disipiada \cite{Cameron}. La solución
+\begin{equation}
+	u(x,t) = 
+	\begin{cases}
+		u_L, & \hspace{3mm} x < u_{L}t \\
+		x/t, & \hspace{3mm} u_{L}t \leq x \leq u_{R}t \\
+		u_R, & \hspace{3mm} x > u_{R}t,		
+	\end{cases}\label{eq:solriemannRL}
+\end{equation}
+es la solución correspondiente a la viscosidad disipada y es conocida como \textbf{onda de rarefacción} \cite{Leveque}. Resulta ser poco práctico tener que recurrir frecuentemente a la solución de viscosidad disipada para encontrar la solución a cualquier caso del problema de Riemann, por lo que en su lugar se suelen imponer condiciones conocidas como \textbf{condiciones de entropía} que son equivalentes a exigir que la solución sea consistente con el formalismo de viscosidad disipada \cite{Leveque}.
+
+\begin{figure}[ht]
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../some_plots/cap1/graficas/riemannRL-0.pdf}
+		%		\caption{.}
+%		\label{fig:rarefaccion}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../some_plots/cap1/graficas/riemannRL-0.4.pdf}
+		%		\caption{.}
+%		\label{fig:viscosas2}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../some_plots/cap1/graficas/riemannRL-0.8.pdf}
+		%		\caption{.}
+%		\label{fig:viscosas3}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../some_plots/cap1/graficas/riemannRL-1.pdf}
+		%		\caption{.}
+%		\label{fig:viscosas4}
+	\end{subfigure}
+	\caption{Gráficas de las soluciones, en distintos instantes de tiempo, de la ecuación de Burgers para el caso $u_L < u_R$ del problema de Riemann \textbf{Fuente:} elaboración propia.}
+	\label{fig:rarefaccion}
 \end{figure}

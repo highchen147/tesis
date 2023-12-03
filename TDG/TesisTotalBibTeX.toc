@@ -16,10 +16,14 @@
 \contentsline {section}{\numberline {1.6}Ecuación de Burgers}{10}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Curvas características}{11}{subsection.1.6.1}%
 \contentsline {subsection}{\numberline {1.6.2}Ondas de choque}{12}{subsection.1.6.2}%
-\contentsline {chapter}{\numberline {2}MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}{15}{chapter.2}%
-\contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{17}{chapter.3}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{19}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{21}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{23}{chapter*.16}%
-\contentsline {chapter}{RECOMENDACIONES}{25}{chapter*.17}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{27}{chapter*.18}%
+\contentsline {section}{\numberline {1.7}Problema de Riemann}{13}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Solución al problema de Riemann para la ecuación de Burgers}{14}{subsection.1.7.1}%
+\contentsline {subsubsection}{\numberline {1.7.1.1}Caso $u_L > u_R$:}{14}{subsubsection.1.7.1.1}%
+\contentsline {subsubsection}{\numberline {1.7.1.2}Caso $u_L < u_R$:}{15}{subsubsection.1.7.1.2}%
+\contentsline {chapter}{\numberline {2}MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}{17}{chapter.2}%
+\contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{19}{chapter.3}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{21}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{23}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{25}{chapter*.18}%
+\contentsline {chapter}{RECOMENDACIONES}{27}{chapter*.19}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{29}{chapter*.20}%
