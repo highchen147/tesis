@@ -266,7 +266,7 @@ Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t
 		\includegraphics[width=\linewidth]{../some_plots/cond_inicial.pdf}
 		\caption{Gráfica de $u(x,0) = \exp(-x^2)$.}
 		\label{fig:subfig1}
-	\end{subfigure}%
+	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/caracteristicas_burgers.pdf}
@@ -285,25 +285,21 @@ La solución con el comportamiento físico correcto cuando las características 
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf}
-%		\caption{.}
 		\label{fig:viscosas1}
-	\end{subfigure}%
+	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf}
-%		\caption{.}
 		\label{fig:viscosas2}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf}
-%		\caption{.}
 		\label{fig:viscosas3}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf}
-%		\caption{.}
 		\label{fig:viscosas4}
 	\end{subfigure}
 	\caption{Gráficas de las soluciones numéricas, en distintos instantes de tiempo, de la ecuación de Burgers viscosa para distintos valores de coeficiente de viscosidad cinemática ($\varepsilon$), incluyendo el caso donde no hay viscosidad (en rojo). \textbf{Fuente:} elaboración propia.}
@@ -382,27 +378,29 @@ es la solución correspondiente a la viscosidad disipada y es conocida como \tex
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/cap1/graficas/riemannRL-0.pdf}
-		%		\caption{.}
-%		\label{fig:rarefaccion}
-	\end{subfigure}%
+	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/cap1/graficas/riemannRL-0.4.pdf}
-		%		\caption{.}
-%		\label{fig:viscosas2}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/cap1/graficas/riemannRL-0.8.pdf}
-		%		\caption{.}
-%		\label{fig:viscosas3}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../some_plots/cap1/graficas/riemannRL-1.pdf}
-		%		\caption{.}
-%		\label{fig:viscosas4}
 	\end{subfigure}
 	\caption{Gráficas de las soluciones, en distintos instantes de tiempo, de la ecuación de Burgers para el caso $u_L < u_R$ del problema de Riemann \textbf{Fuente:} elaboración propia.}
 	\label{fig:rarefaccion}
 \end{figure}
+\section{Condiciones de entropía}
+Se ha mencionado que la solución con viscosidad disipada es la solución débil correcta que debe considerarse al resolver una ecuación de conservación, sin embargo, resulta ser complicado encontrar la solución para una ecuación de conservación con viscosidad. Por lo tanto, se suelen imponer un conjunto de condiciones que sean equivalentes a aplicar el formalismo de viscosidad disipada \cite{Leveque}. Estas se denominan \textbf{condiciones de entropía}, dado que cumplen un papel similar al de la entropía misma en problemas de la dinámica de los gases \cite{Leveque}.
+
+Existen varias versiones de la condición de entropía para una ecuación de conservación. Se mostraran las dos más relevantes con respecto a los métodos numéricos a tratar en este texto.
+\subsection{Condición de entropía, primera versión}
+La primera versión de la condición de entropía establece que una discontinuidad que se propaga a velocidad $s$ debe cumplir con la siguiente desigualdad
+\begin{equation}
+	f'(u_L) <s<f'(u_R)
+\end{equation}
+para que se satisfaga la misma condición \cite{Leveque}. Para interpretar esta condición se debe resaltar que la derivada $f'(u)$ corresponde a la velocidad característica de la onda en un punto $(x,t)$ \cite{Leveque}.

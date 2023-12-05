@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  2 DEC 2023 21:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  4 DEC 2023 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -926,7 +926,7 @@ Package hyperref Warning: Option `pdfstartview' has already been used,
 
 Package hyperref Info: Option `plainpages' set `false' on input line 70.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 70.
-<escudo.pdf, id=130, 652.4375pt x 652.4375pt>
+<escudo.pdf, id=138, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
 Package pdftex.def Info: escudo.pdf  used on input line 70.
@@ -963,7 +963,7 @@ File: escudo.pdf Graphic file (type pdf)
 Package pdftex.def Info: escudo.pdf  used on input line 78.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
-<ordenImpresion.pdf, id=165, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=173, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 81.
@@ -972,7 +972,7 @@ File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 81.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ordenImpresion.pdf, id=168, page=1, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=176, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
 Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 81.
@@ -1173,18 +1173,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
                    \relax 
 l.260 \end{equation}
                      [11]
-<../some_plots/cond_inicial.pdf, id=511, 462.52798pt x 346.89601pt>
+<../some_plots/cond_inicial.pdf, id=521, 462.52798pt x 346.89601pt>
 File: ../some_plots/cond_inicial.pdf Graphic file (type pdf)
 <use ../some_plots/cond_inicial.pdf>
 Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 266
 .
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/caracteristicas_burgers.pdf, id=512, 578.16pt x 433.62pt>
+<../some_plots/caracteristicas_burgers.pdf, id=522, 578.16pt x 433.62pt>
 File: ../some_plots/caracteristicas_burgers.pdf Graphic file (type pdf)
 <use ../some_plots/caracteristicas_burgers.pdf>
 Package pdftex.def Info: ../some_plots/caracteristicas_burgers.pdf  used on inp
 ut line 272.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 264--276
+[][] [] 
+ []
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
@@ -1193,7 +1198,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
 l.283 
        [12 <../some_plots/cond_inicial.pdf> <../some_plots/caracteristicas_burg
 ers.pdf>]
-<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=568, 578.16pt x
+<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=578, 578.16pt x
  433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf Graphic file (
 type pdf)
@@ -1201,32 +1206,37 @@ type pdf)
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
 .pdf  used on input line 287.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=569, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=579, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
  (type pdf)
 <use ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf>
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
-00.pdf  used on input line 293.
+00.pdf  used on input line 292.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=570, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=580, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
  (type pdf)
 <use ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf>
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-2
-00.pdf  used on input line 299.
+00.pdf  used on input line 297.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=571, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=581, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf Graphic file
  (type pdf)
 <use ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf>
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-4
-00.pdf  used on input line 305.
+00.pdf  used on input line 302.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 285--309
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 285--305
+[][] []
+ []
+
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 285--305
 [] [] 
  []
 
@@ -1236,142 +1246,150 @@ s/graficas/viscosidades-200.pdf> <../some_plots/burgers-viscosas/graficas/visco
 sidades-400.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 326.
+(hyperref)                removing `math shift' on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 326.
+(hyperref)                removing `subscript' on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 326.
+(hyperref)                removing `subscript' on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 326.
+(hyperref)                removing `math shift' on input line 322.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--341
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
 
  []
 
 [14]
-<../some_plots/cap1/graficas/riemannLR.pdf, id=638, 462.52798pt x 346.89601pt>
+<../some_plots/cap1/graficas/riemannLR.pdf, id=648, 462.52798pt x 346.89601pt>
 File: ../some_plots/cap1/graficas/riemannLR.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannLR.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannLR.pdf  used on inp
-ut line 364.
+ut line 360.
 (pdftex.def)             Requested size: 341.11536pt x 255.84682pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 369.
+(hyperref)                removing `math shift' on input line 365.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 369.
+(hyperref)                removing `subscript' on input line 365.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 369.
+(hyperref)                removing `subscript' on input line 365.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 369.
+(hyperref)                removing `math shift' on input line 365.
 
 [15 <../some_plots/cap1/graficas/riemannLR.pdf>]
-<../some_plots/cap1/graficas/riemannRL-0.pdf, id=667, 462.52798pt x 346.89601pt
+<../some_plots/cap1/graficas/riemannRL-0.pdf, id=677, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-0.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.pdf  used on i
-nput line 384.
+nput line 380.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=668, 462.52798pt x 346.89601
+<../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=678, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.4.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.4.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.4.pdf  used on
- input line 390.
+ input line 384.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=669, 462.52798pt x 346.89601
+<../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=679, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.8.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.8.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.8.pdf  used on
- input line 396.
+ input line 388.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-1.pdf, id=670, 462.52798pt x 346.89601pt
+<../some_plots/cap1/graficas/riemannRL-1.pdf, id=680, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-1.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-1.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-1.pdf  used on i
-nput line 402.
+nput line 392.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 382--406
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 378--394
+[][] []
+ []
+
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 378--394
 [] [] 
  []
 
-) [16 <../some_plots/cap1/graficas/riemannRL-0.pdf> <../some_plots/cap1/grafica
-s/riemannRL-0.4.pdf> <../some_plots/cap1/graficas/riemannRL-0.8.pdf> <../some_p
-lots/cap1/graficas/riemannRL-1.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <../some_plots/cap1/graficas/riemannRL-0.pdf> <../some_plots/cap1/graficas
+/riemannRL-0.4.pdf> <../some_plots/cap1/graficas/riemannRL-0.8.pdf> <../some_pl
+ots/cap1/graficas/riemannRL-1.pdf>]) [17]
 \openout2 = `tch2.aux'.
 
- (tch2.tex
-Cap\'{\i }tulo 2.
-) [17
+ (tch2.tex [18
 
 
 
 
 ]
+Cap\'{\i }tulo 2.
+) [19]
 \openout2 = `tch3.aux'.
 
- (tch3.tex [18
+ (tch3.tex [20
 
 
 
 
 ]
 Cap\'{\i }tulo 3.
-) [19]
+) [21]
 \openout2 = `tch4.aux'.
 
- (tch4.tex [20
+ (tch4.tex [22
 
 
 
 
 ]
 Cap\'{\i }tulo 4.
-) [21]
+) [23]
 \openout2 = `tch5.aux'.
 
- (tch5.tex [22
+ (tch5.tex [24
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [23] [24
+) [25] [26
 
 
 
 ]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex [25
+ (c_y_r.tex [27
 
 
-] [26
+] [28
 
-]) [27] (TesisTotalBibTeX.bbl [28
+]) [29] (TesisTotalBibTeX.bbl [30
 
 
 
-]) [29]
+]) [31]
 (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
@@ -1379,13 +1397,13 @@ LaTeX Info: Redefining \% on input line 22.
 (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux)
 (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: DFE41302F3B4FE8F30ACA9870F743AC6;6448.
+(rerunfilecheck)             Checksum: 389A6BB975E981D7F5946EA929978F9F;6956.
  ) 
 Here is how much of TeX's memory you used:
- 26420 strings out of 476339
- 492821 string characters out of 5787175
+ 26428 strings out of 476339
+ 492921 string characters out of 5787175
  1864340 words of memory out of 5000000
- 46103 multiletter control sequences out of 15000+600000
+ 46106 multiletter control sequences out of 15000+600000
  536645 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,17n,90p,1143b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1427,9 +1445,9 @@ ers/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1200.
 pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super
 /sftt1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (53 pages, 997577 bytes).
+Output written on TesisTotalBibTeX.pdf (55 pages, 1003234 bytes).
 PDF statistics:
- 945 PDF objects out of 1000 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 970 PDF objects out of 1000 (max. 8388607)
+ 164 named destinations out of 1000 (max. 500000)
+ 357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

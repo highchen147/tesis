@@ -20,10 +20,12 @@
 \contentsline {subsection}{\numberline {1.7.1}Solución al problema de Riemann para la ecuación de Burgers}{14}{subsection.1.7.1}%
 \contentsline {subsubsection}{\numberline {1.7.1.1}Caso $u_L > u_R$:}{14}{subsubsection.1.7.1.1}%
 \contentsline {subsubsection}{\numberline {1.7.1.2}Caso $u_L < u_R$:}{15}{subsubsection.1.7.1.2}%
-\contentsline {chapter}{\numberline {2}MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}{17}{chapter.2}%
-\contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{19}{chapter.3}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{21}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{23}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{25}{chapter*.18}%
-\contentsline {chapter}{RECOMENDACIONES}{27}{chapter*.19}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{29}{chapter*.20}%
+\contentsline {section}{\numberline {1.8}Condiciones de entropía}{17}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Condición de entropía, primera versión}{17}{subsection.1.8.1}%
+\contentsline {chapter}{\numberline {2}MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}{19}{chapter.2}%
+\contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{21}{chapter.3}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{23}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{25}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{27}{chapter*.18}%
+\contentsline {chapter}{RECOMENDACIONES}{29}{chapter*.19}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{31}{chapter*.20}%
