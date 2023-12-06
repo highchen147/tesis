@@ -401,6 +401,16 @@ Existen varias versiones de la condición de entropía para una ecuación de con
 \subsection{Condición de entropía, primera versión}
 La primera versión de la condición de entropía establece que una discontinuidad que se propaga a velocidad $s$ debe cumplir con la siguiente desigualdad
 \begin{equation}
-	f'(u_L) <s<f'(u_R)
+	f'(u_L) > s > f'(u_R)
+	\label{eq:entropy}
 \end{equation}
-para que se satisfaga la misma condición \cite{Leveque}. Para interpretar esta condición se debe resaltar que la derivada $f'(u)$ corresponde a la velocidad característica de la onda en un punto $(x,t)$ \cite{Leveque}.
+para que se satisfaga la misma condición \cite{Leveque}. Para interpretar esta condición se debe resaltar que la derivada $f'(u)$ corresponde a la velocidad característica de la onda en un punto $(x,t)$ \cite{Leveque}. Por lo tanto, se puede notar que las curvas características se intersectan con la velocidad de propagación de la discontinuidad, de tal manera que las características a la izquierda de la onda de choque avanzan hacia el mismo choque y las características a la derecha son alcanzadas por la onda de choque \cite{Leveque}.
+
+Por otro lado, si se tuviese una discontinuidad que se propaga con una velocidad $s$ tal que se cumple la condición contraria, i.e., $f'(u_L) < s < f'(u_R)$, esta solución no sería estable ante alguna perturbación, ya sea al añadir una pequeña viscosidad o suavizando la discontinuidad en la solución \cite{Leveque}. Al aplicar dichas perturbaciones, se generarían ondas de rarefacción en lugar de ondas de choque.
+
+\subsection{Condición de entropía, segunda versión}
+Esta condición desarrollada por Oleinik \cite{Leveque} indica que si $u(x,t)$ es una solución débil físicamente válida si existe una constante $E >0$  tal que para todo $a>0$, $t>0$, sobre cualquier punto $x$ del dominio espacial se cumple que:
+\begin{equation}
+	\frac{u(x+a,t) - u(x,t)}{a} < \frac{E}{t}
+\end{equation}
+\cite{Leveque}.
