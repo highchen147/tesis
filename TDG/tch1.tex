@@ -1,6 +1,7 @@
 \chapter{ECUACIONES DE CONSERVACIÓN Y SISTEMAS HIPERBÓLICOS DE PRIMER ORDEN}
 En este capítulo se introducen los conceptos fundamentales de las ecuaciones de conservación y sistemas hiperbólicos de primer orden. Se introduce el problema de Riemann asociado a una ecuación de conservación.
 \section{Ecuaciones de conservación}
+\label{sec:ecuaciones-de-conservacion}
 En física, una ecuación de conservación es una ecuación diferencial parcial de la siguiente forma
 \begin{equation}
 	\pdv{\mathbf{U}}{t} + \pdv{\mathbf{F}(\mathbf{U})}{x} = 0
@@ -417,3 +418,19 @@ Esta condición desarrollada por Oleinik \cite{Leveque} indica que si $u(x,t)$ e
 
 \section{Sistemas hiperbólicos lineales}
 El objetivo de esta sección es explicar la solución general de un sistema hiperbólico lineal y la solución del problema de Riemann asociado. Estos resultados serán de alta utilidad para construir la solución numérica que se busca en este texto.
+
+El sistema descrito en la ecuación (\ref{eq:conserv-deriv-short}) con una función de flujo dada por $\mathbf{F}(\mathbf{U}) = \mathbf{A}\mathbf{U}$, siendo $\mathbf{A}$ una matriz con entradas constantes, es un sistema lineal de conservación. El sistema se puede escribir como
+\begin{equation}
+	\mathbf{U}_t + \mathbf{A}\mathbf{U}_x = 0
+	\label{eq:linear-sys}
+\end{equation}
+donde $\mathbf{A} \in \mathbb{R}^{m \times m}$ y $\mathbf{U} : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}^{m}$. Por lo que, formalmente hablando, este es un sistema lineal de $m$ cantidades conservadas \cite{Leveque}. Naturalmente, también se define una condición inicial para este sistema,
+\begin{equation}
+	\mathbf{U}(x,0) = \mathbf{U}_{0}(x).
+\end{equation}
+
+En la sección \ref{sec:ecuaciones-de-conservacion} se definió un sistema hiperbólico de primer orden como un sistema de la forma (\ref{eq:conservacion-jacobiana}) en donde los autovalores de $\mathbf{A}$ son todos distintos y son reales. De tal manera que si el sistema (\ref{eq:linear-sys}) es hiperbólico, se puede diagonalizar $\mathbf{A}$, i.e.,
+\begin{equation}
+	\mathbf{A} = \mathbf{R}\mathbf{\Lambda} \mathbf{R}^{-1}
+	\label{eq:a-diago}
+\end{equation}
