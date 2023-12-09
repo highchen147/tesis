@@ -424,13 +424,24 @@ El sistema descrito en la ecuación (\ref{eq:conserv-deriv-short}) con una funci
 	\mathbf{U}_t + \mathbf{A}\mathbf{U}_x = 0
 	\label{eq:linear-sys}
 \end{equation}
-donde $\mathbf{A} \in \mathbb{R}^{m \times m}$ y $\mathbf{U} : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}^{m}$. Por lo que, formalmente hablando, este es un sistema lineal de $m$ cantidades conservadas \cite{Leveque}. Naturalmente, también se define una condición inicial para este sistema,
+donde $\mathbf{A} \in \mathbb{R}^{m \times m}$ y $\mathbf{U} : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}^{m}$. Formalmente hablando, este es un sistema lineal de $m$ cantidades conservadas \cite{Leveque}. Naturalmente, también se define una condición inicial para este sistema,
 \begin{equation}
 	\mathbf{U}(x,0) = \mathbf{U}_{0}(x).
 \end{equation}
 
 En la sección \ref{sec:ecuaciones-de-conservacion} se definió un sistema hiperbólico de primer orden como un sistema de la forma (\ref{eq:conservacion-jacobiana}) en donde los autovalores de $\mathbf{A}$ son todos distintos y son reales. De tal manera que si el sistema (\ref{eq:linear-sys}) es hiperbólico, se puede diagonalizar $\mathbf{A}$, i.e.,
 \begin{equation}
-	\mathbf{A} = \mathbf{R}\mathbf{\Lambda} \mathbf{R}^{-1}
+	\mathit{\mathbf{A}} = \mathbf{R}\mathbf{\Lambda} \mathbf{R}^{-1}.
 	\label{eq:a-diago}
+\end{equation}
+En esta relación, $\mathbf{\Lambda}$ es la matriz definida como $\text{diag}(\lambda_1, \lambda_2, \dots \lambda_m)$ donde $\lambda_i$ es el i-ésimo autovalor de $\mathbf{A}$. Mientras que $\mathbf{R}$ es la matriz formada por los autovectores columna de $\mathbf{A}$, denominados $\mathbf{r}_i$ \cite{Leveque}. Por ello, se tiene que
+\begin{equation}
+	\mathbf{A}\mathbf{r}_{p}  = \lambda_{p} \mathbf{r}_{p} 
+\end{equation}
+para todo $p \in [1,2,\dots, m]$ \cite{Leveque}.
+
+\subsection{Resolución de un sistema hiperbólico lineal}
+Se asumirá que se tiene un sistema de la forma (\ref{eq:linear-sys}), tal que los autovalores de $\mathbf{A}$ son todos distintos y reales, i.e., se trata de un sistema \textbf{estrictamente hiperbólico} \cite{Leveque}. Este sistema se puede resolver introduciendo nuevas variables conocidas como \textbf{variables características} \cite{Leveque}. Se define $\mathbf{v}$ como
+\begin{equation}
+	\mathbf{v} = \mathbf{R}^{-1} \mathbf{U}
 \end{equation}
