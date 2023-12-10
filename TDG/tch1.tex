@@ -427,6 +427,7 @@ El sistema descrito en la ecuación (\ref{eq:conserv-deriv-short}) con una funci
 donde $\mathbf{A} \in \mathbb{R}^{m \times m}$ y $\mathbf{U} : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}^{m}$. Formalmente hablando, este es un sistema lineal de $m$ cantidades conservadas \cite{Leveque}. Naturalmente, también se define una condición inicial para este sistema,
 \begin{equation}
 	\mathbf{U}(x,0) = \mathbf{U}_{0}(x).
+	\label{eq:cond-inicial-linear-sys}
 \end{equation}
 
 En la sección \ref{sec:ecuaciones-de-conservacion} se definió un sistema hiperbólico de primer orden como un sistema de la forma (\ref{eq:conservacion-jacobiana}) en donde los autovalores de $\mathbf{A}$ son todos distintos y son reales. De tal manera que si el sistema (\ref{eq:linear-sys}) es hiperbólico, se puede diagonalizar $\mathbf{A}$, i.e.,
@@ -443,5 +444,91 @@ para todo $p \in [1,2,\dots, m]$ \cite{Leveque}.
 \subsection{Resolución de un sistema hiperbólico lineal}
 Se asumirá que se tiene un sistema de la forma (\ref{eq:linear-sys}), tal que los autovalores de $\mathbf{A}$ son todos distintos y reales, i.e., se trata de un sistema \textbf{estrictamente hiperbólico} \cite{Leveque}. Este sistema se puede resolver introduciendo nuevas variables conocidas como \textbf{variables características} \cite{Leveque}. Se define $\mathbf{v}$ como
 \begin{equation}
-	\mathbf{v} = \mathbf{R}^{-1} \mathbf{U}
+	\mathbf{v} \equiv \mathbf{R}^{-1} \mathbf{U}.
+	\label{eq:def-v}
 \end{equation}
+Por otro lado, se multiplica la ecuación (\ref{eq:linear-sys}) por $\mathbf{R}$
+\begin{equation}
+	\mathbf{R}^{-1}\mathbf{U}_t + \mathbf{R}^{-1} \mathbf{A} \mathbf{U}_x = 0,
+\end{equation}
+sustituyendo la expresión (\ref{eq:a-diago}) obteniendo,
+\begin{equation}
+	\mathbf{R}^{-1}\mathbf{U}_t + \mathbf{\Lambda} \mathbf{R}^{-1} \mathbf{U}_x = 0
+\end{equation}
+al usar el hecho de que $\mathbf{R}^{-1} \mathbf{R} = \mathbf{I}$ \cite{Leveque}. Luego, usando la definición de $\mathbf{v}$ (\ref{eq:def-v}) y dado que este ejemplo corresponde a un sistema lineal, las matrices $\mathbf{R}$ y su inversa son constantes, se tiene que
+\begin{equation}
+	\mathbf{v}_t + \mathbf{\Lambda} \mathbf{v}_x = 0
+	\label{eq:diag-linear-sys}
+\end{equation}
+\cite{Leveque}. 
+Cabe destacar la similitud entre esta última ecuación y la ecuación (\ref{eq:linear-sys}). Sin embargo, la principal diferencia entre éstas es que la matriz $\mathbf{\Lambda}$ es una matriz diagonal y la matriz $\mathbf{A}$, en general, no lo es. Por tanto, el sistema definido en (\ref{eq:diag-linear-sys}) se puede desacoplar, obteniendo $m$ ecuaciones escalares lineales independientes \cite{Leveque}. Esto es,
+\begin{equation}
+	(v_p)_t + \lambda_{p} (v_{p})_x = 0, \hspace{17mm} \forall p \in [1,2, \dots, m],
+\end{equation}
+donde $v_p$ es cada componente de $\mathbf{v}$ \cite{Leveque}. Este último sistema se resuelve usando el resultado de la ecuación de advección lineal escalar (\ref{eq:sol-advec}), obteniendo
+\begin{equation}
+	v_p(x,t) = v_p(x - \lambda_{p}t, 0)
+\end{equation}
+dado que $v_p(x, 0)$ es la condición inicial para cada ecuación escalar según (\ref{eq:cond-inicial-linear-sys}) \cite{Leveque}.
+
+Ya que se tiene la solución al sistema lineal en términos de las variables características, es oportuno escribir las soluciones en términos de las variables originales, i.e., $\mathbf{U}$. De forma que se tiene,
+\begin{equation}
+	\mathbf{v}(x,0) = \mathbf{R}^{-1} \mathbf{U}_0(x)
+\end{equation}
+y
+\begin{equation}
+	\mathbf{U}(x,t) = \mathbf{R} \mathbf{v}(x,t)
+\end{equation}
+\cite{Leveque}. Además $\mathbf{U}$ se puede escribir como una combinación lineal de los autovectores de $\mathbf{A}$, tomando en cuenta que el valor $\mathbf{v}_p$ es el coeficiente de cada autovector $\mathbf{r}_p$ en dicha expansión lineal, de tal manera que se tiene lo siguiente
+\begin{equation}
+	\mathbf{U}(x,t) = \sum_{p=1}^{m} v_p(x,t) \mathbf{r}_p
+	\label{eq:sol-linear-sys}
+\end{equation}
+\begin{equation}
+	\mathbf{U}(x,t) = \sum_{p=1}^{m} v_p(x - \lambda_p t, 0) \mathbf{r}_p
+	\label{eq:sol-linear-sys-con-caracteristicas}
+\end{equation}
+\cite{Leveque}. Cabe destacar que, de forma similar al caso escalar, la solución $\mathbf{U}$ a este sistema lineal solo depende de la condición inicial $\mathbf{U}_0$ en los $m$ conjuntos de puntos, dados por $x - \lambda_p t$. Formalmente, su dominio de dependencia se escribe como $D(\bar{x}, \bar{t}) = \{x = \bar{x} - \lambda_{p} \bar{t}, \hspace{3mm} p = 1,2, \dots, m \}$ \cite{Leveque}.
+
+De la misma manera que al generalizar el dominio de dependencia de una ecuación de advección lineal, se pueden introducir las curvas características asociadas a este sistema. El conjunto de características de la $p$ familia está dado por la ecuación $x'(t)=\lambda_{p}$ \cite{Leveque}. De tal manera que dichas curvas son de la forma $x = x_0 + \lambda_{p}t$ y se interpretan como rectas sobre el plano $x-t$, lo cual es consistente con el hecho de que se tratan de las características asociadas a un sistema lineal \cite{Leveque}. El coeficiente $v_p(x,t)$ de cada autovector $\mathbf{r}_p$ es constante a lo largo de cada característica \cite{Leveque}.
+
+\subsection{Solución al problema de Riemann para un sistema hiperbólico lineal}
+El problema de Riemann para un sistema hiperbólico lineal corresponde a la ecuación diferencial
+\begin{equation}
+	\mathbf{U}_t + \mathbf{A}\mathbf{U}_x = 0
+\end{equation}
+junto a la siguiente condición inicial
+\begin{equation}
+	\mathbf{U}_{0}(x) = 
+	\begin{cases}
+		\mathbf{U}_L, & x < 0 \\
+		\mathbf{U}_R, & x > 0,
+	\end{cases}
+\end{equation}
+considerando que este sistema es estrictamente hiperbólico \cite{Leveque}.
+
+Para resolver este problema, es conveniente escribir los dos estados $\mathbf{U}_L$ y  $\mathbf{U}_R$ en términos de los autovectores de $\mathbf{A}$, $\mathbf{r}_i$ \cite{Leveque}. Esta expansión se sustenta en la propiedad de independencia lineal que poseen los vectores $\mathbf{r}_i$ y dado que estos son $m$ distintos vectores,  indica que forman una base del espacio $\mathbb{R}^{m}$. Por tanto,
+\begin{equation}
+	\mathbf{U}_L = \sum_{p=1}^{m} \alpha_{p} \mathbf{r}_{p}
+\end{equation}
+\begin{equation}
+	\mathbf{U}_R = \sum_{p=1}^{m} \beta_{p} \mathbf{r}_{p}
+\end{equation}
+con $\alpha_p$ y $\beta_{p}$ reales y constantes, para todo $p=1,2,\dots, m$ \cite{Leveque}.
+Luego, utilizando la solución (\ref{eq:sol-linear-sys}) se obtiene
+\begin{equation}
+	v_p(x,0) = 
+	\begin{cases}
+		\alpha_p, & x < 0 \\
+		\beta_{p}, & x > 0,
+	\end{cases}
+\end{equation}
+y
+\begin{equation}
+	v_p(x,t) = 
+	\begin{cases}
+		\alpha_p, & \text{si} \hspace{4mm} x - \lambda_{p} t < 0 \\
+		\beta_{p}, & \text{si} \hspace{4mm} x - \lambda_{p} t > 0,
+	\end{cases}
+\end{equation}
+utilizando la relación del resultado (\ref{eq:sol-linear-sys-con-caracteristicas}) \cite{Leveque}. 

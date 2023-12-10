@@ -25,10 +25,11 @@
 \contentsline {subsection}{\numberline {1.8.2}Condición de entropía, segunda versión}{17}{subsection.1.8.2}%
 \contentsline {section}{\numberline {1.9}Sistemas hiperbólicos lineales}{18}{section.1.9}%
 \contentsline {subsection}{\numberline {1.9.1}Resolución de un sistema hiperbólico lineal}{19}{subsection.1.9.1}%
-\contentsline {chapter}{\numberline {2}MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}{21}{chapter.2}%
-\contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{23}{chapter.3}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{25}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{27}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{29}{chapter*.18}%
-\contentsline {chapter}{RECOMENDACIONES}{31}{chapter*.19}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{33}{chapter*.20}%
+\contentsline {subsection}{\numberline {1.9.2}Solución al problema de Riemann para un sistema hiperbólico lineal}{20}{subsection.1.9.2}%
+\contentsline {chapter}{\numberline {2}MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}{23}{chapter.2}%
+\contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{25}{chapter.3}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{29}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{31}{chapter*.18}%
+\contentsline {chapter}{RECOMENDACIONES}{33}{chapter*.19}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{35}{chapter*.20}%
