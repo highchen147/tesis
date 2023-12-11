@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  9 DEC 2023 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  10 DEC 2023 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1342,18 +1342,27 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20])
-[21]
+ [20]
+Overfull \hbox (1.15164pt too wide) in paragraph at lines 544--545
+[]\T1/cmr/m/n/12 Se pue-de ve-ri-fi-car que es-ta so-lu-ción cum-ple con la con
+-di-ción de sal-to de Rankine-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21])
+[22]
 \openout2 = `tch2.aux'.
 
- (tch2.tex [22
+ (tch2.tex
+Cap\'{\i }tulo 2.
+) [23
 
 
 
 
 ]
-Cap\'{\i }tulo 2.
-) [23]
 \openout2 = `tch3.aux'.
 
  (tch3.tex [24
@@ -1410,10 +1419,10 @@ Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
 (rerunfilecheck)             Checksum: 201480440FBB4AB9CDDB135FB7B89C5D;8288.
  ) 
 Here is how much of TeX's memory you used:
- 26478 strings out of 476339
- 493628 string characters out of 5787175
+ 26487 strings out of 476339
+ 493760 string characters out of 5787175
  1864340 words of memory out of 5000000
- 46124 multiletter control sequences out of 15000+600000
+ 46126 multiletter control sequences out of 15000+600000
  537693 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,17n,90p,1143b,842s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1455,9 +1464,9 @@ ers/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1200.
 pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super
 /sftt1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (59 pages, 1031402 bytes).
+Output written on TesisTotalBibTeX.pdf (59 pages, 1037214 bytes).
 PDF statistics:
- 1071 PDF objects out of 1200 (max. 8388607)
- 193 named destinations out of 1000 (max. 500000)
+ 1085 PDF objects out of 1200 (max. 8388607)
+ 200 named destinations out of 1000 (max. 500000)
  389 words of extra memory for PDF output out of 10000 (max. 10000000)
 
