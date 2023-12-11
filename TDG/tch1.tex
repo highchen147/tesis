@@ -278,7 +278,7 @@ Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t
 	\label{fig:figura_completa}
 \end{figure}
 \subsection{Ondas de choque}
-Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan. Entonces, si las características se intersectan, la expresión (\ref{eq:sol-burgers-char}) no está bien definida, sino que $u(x,t)$ puede tomar varios valores a la vez, cada uno correspondiente a una característica diferente. En el caso de la ecuación de Burgers, cuando las características se intersectan, la solución se convierte en una ``función'' con tres valores distintos \cite{Leveque}. Esta solución puede tener sentido en algunos contextos, como en el caso del problema de agua superficial \cite{Leveque}. Sin embargo, en la mayoría de casos esta solución no tiene significado físico ya que la variable $u(x,t)$ representa una velocidad y esta debe devolver un solo valor \cite{Leveque}.
+Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan. Entonces, si las características se intersectan, la expresión (\ref{eq:sol-burgers-char}) no está bien definida, sino que $u(x,t)$ puede tomar varios valores a la vez, cada uno correspondiente a una característica diferente. En el caso de la ecuación de Burgers, cuando las características se intersectan, la solución se convierte en una ``función'' con tres valores distintos \cite{Leveque}. Esta solución puede tener sentido en algunos contextos, como en el caso del problema de agua superficial \cite{Leveque}. Sin embargo, en la mayoría de los casos esta solución no tiene significado físico. Por ejemplo, en la ecuación de Burgers la variable $u(x,t)$ representa una velocidad y esta debe devolver un solo valor \cite{Leveque}.
 
 La solución con el comportamiento físico correcto cuando las características se intersectan corresponde a una discontinuidad que se propaga con una velocidad determinada \cite{Leveque}. Este efecto se puede demostrar a través del formalismo de la viscosidad disipada. Al obtener la solución de la ecuación de Burgers viscosa (\ref{eq:burgers-vis}), el parámetro $\varepsilon u_{xx}$ evita que la solución presente una discontinuidad, dado que cuando la onda comienza a presentar el choque, la segunda derivada de $u$ crece más rápido que su primera derivada \cite{Leveque}. Así, al efectuar el límite de $\varepsilon \rightarrow 0$ se puede obtener una discontinuidad absoluta que corresponde a la solución de la ecuación de Burgers sin viscosidad. La tendencia de adquirir una discontinuidad  de las soluciones con menos viscosidad se puede evidenciar en la figura (\ref{fig:viscosas}).
 
@@ -308,7 +308,7 @@ La solución con el comportamiento físico correcto cuando las características 
 \end{figure}
 
 \section{Problema de Riemann}
-Como se ha mostrado, las soluciones a las ecuaciones de conservación admiten soluciones débiles que pueden presentar discontinuidades tanto en la condición inicial como en la evolución temporal de las mismas. Por esta razón, es natural estudiar sistemas hiperbólicos con condiciones iniciales discontinuas. Este problema es conocido como \textbf{problema de Riemann}. En el caso escalar, el problema de Riemann para una ecuación de conservación de la forma $u_t + f(u)_x = 0$ corresponde a la siguiente condición inicial
+Como se ha mostrado, las soluciones a las ecuaciones de conservación admiten soluciones débiles que pueden presentar discontinuidades tanto en la condición inicial como en la evolución temporal de las mismas. Por esta razón, es natural estudiar ecuaciones de conservación con condiciones iniciales discontinuas. Este problema es conocido como \textbf{problema de Riemann}. En el caso escalar, el problema de Riemann para una ecuación de conservación de la forma $u_t + f(u)_x = 0$ corresponde a la siguiente condición inicial
 \begin{equation}
 	u(x,0) = 
 	\begin{cases}
@@ -373,7 +373,7 @@ Hay múltiples soluciones débiles para este caso, por ejemplo, la solución (\r
 		u_R, & \hspace{3mm} x > u_{R}t,		
 	\end{cases}\label{eq:solriemannRL}
 \end{equation}
-es la solución correspondiente a la viscosidad disipada y es conocida como una \textbf{onda de rarefacción} \cite{Leveque}. Resulta ser poco práctico tener que recurrir frecuentemente a la solución de viscosidad disipada para encontrar la solución a cualquier caso del problema de Riemann, por lo que en su lugar se suelen imponer condiciones conocidas como \textbf{condiciones de entropía} que son equivalentes a exigir que la solución sea consistente con el formalismo de viscosidad disipada \cite{Leveque}.
+es la solución correspondiente a la solución con viscosidad disipada y es conocida como una \textbf{onda de rarefacción} \cite{Leveque}. Resulta ser poco práctico tener que recurrir frecuentemente a la solución de viscosidad disipada para encontrar la solución a cualquier caso del problema de Riemann, por lo que en su lugar se suelen imponer condiciones conocidas como \textbf{condiciones de entropía} que son equivalentes a exigir que la solución sea consistente con el formalismo de viscosidad disipada \cite{Leveque}.
 
 \begin{figure}[ht]
 	\begin{subfigure}{0.5\textwidth}
@@ -532,7 +532,7 @@ y
 		\beta_{p}, & \text{si} \hspace{4mm} x - \lambda_{p} t > 0,
 	\end{cases}
 \end{equation}
-utilizando la relación del resultado (\ref{eq:v-sub-p}) \cite{Leveque}. Entonces, la solución al problema de Riemann tiene la forma (\ref{eq:sol-linear-sys-con-caracteristicas}), siendo $v_p$ una función por partes.
+utilizando la relación del resultado (\ref{eq:v-sub-p}) \cite{Leveque}. Entonces, la solución al problema de Riemann tiene la forma (\ref{eq:sol-linear-sys-con-caracteristicas}), con $v_p$ definido como una función por partes.
 
 Si se define a $P(x,t)$ como el valor máximo de $p$ tal que $x - \lambda_{p} t > 0$, entonces se puede escribir la solución al problema de Riemann como:
 \begin{equation}
@@ -541,7 +541,7 @@ Si se define a $P(x,t)$ como el valor máximo de $p$ tal que $x - \lambda_{p} t 
 \end{equation}
 \cite{Leveque}.
 
-Se puede verificar que esta solución cumple con la condición de salto de Rankine-Hugoniot. Notando que al atravesar una curva característica $p$, el coeficiente de $\mathbf{r}_p$ salta de acuerdo a la siguiente expresión:
+Se puede verificar que esta solución cumple con la condición de salto de Rankine-Hugoniot (\ref{eq:rankinehugo}). Notando que al atravesar una curva característica $p$, el coeficiente de $\mathbf{r}_p$ salta de acuerdo a la siguiente expresión:
 \begin{equation}
 	\mathbf{U}_{Lp} - \mathbf{U}_{Rp} = (\beta_{p} - \alpha_{p})\mathbf{r}_p
 \end{equation}
@@ -555,15 +555,15 @@ Tomando en cuenta que $\mathbf{F}(\mathbf{U}) = \mathbf{A}\mathbf{U}$, entonces:
 	\mathbf{F}(\mathbf{U}_{Lp}) - \mathbf{F}(\mathbf{U}_{Rp}) = \mathbf{A}(\beta_{p} - \alpha_{p})\mathbf{r}_p
 \end{equation}
 \begin{equation}
-	\mathbf{F}(\mathbf{U}_{Lp}) - \mathbf{F}(\mathbf{U}_{Rp}) = \lambda_{p}(\mathbf{U}_{Lp} - \mathbf{U}_{Rp})
+	\mathbf{F}(\mathbf{U}_{Lp}) - \mathbf{F}(\mathbf{U}_{Rp}) = \lambda_{p}(\mathbf{U}_{Lp} - \mathbf{U}_{Rp}),
 \end{equation}
 con lo cual se demuestra que se cumple la condición Rankine - Hugoniot, notando que la velocidad de propagación de la discontinuidad es $\lambda_p$ \cite{Leveque}.
 
 Otra forma útil de escribir la solución (\ref{eq:sol-riemann-linear-sys-1}) es a través de los saltos previamente desarrollados, esto es,
 \begin{equation}
-	\mathbf{U}(x,t) = \mathbf{U}_{L}(x,t) + \sum_{\lambda_{p} < x/t} (\beta_{p} - \alpha_{p}) \mathbf{r}_{p} 
+	\mathbf{U}(x,t) = \mathbf{U}_{L}(x,t) + \sum_{\lambda_{p} < x/t} (\beta_{p} - \alpha_{p}) \mathbf{r}_{p},
 \end{equation}
-o, de forma equivalente,
+o de forma equivalente,
 \begin{equation}
 	\mathbf{U}(x,t) = \mathbf{U}_{R}(x,t) - \sum_{\lambda_{p} \geq x/t} (\beta_{p} - \alpha_{p}) \mathbf{r}_{p} 
 \end{equation}
