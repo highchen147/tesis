@@ -5,7 +5,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Gráficas de la condición inicial $u(x,0) = \exp (-x^2)$ para la ecuación de Burgers y de algunas características asociadas a esta condición inicial. \textbf {Fuente:} elaboración propia.\relax }}{12}{figure.caption.14}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Gráficas de las soluciones numéricas, en distintos instantes de tiempo, de la ecuación de Burgers viscosa para distintos valores de coeficiente de viscosidad cinemática ($\varepsilon $), incluyendo el caso donde no hay viscosidad (en rojo). \textbf {Fuente:} elaboración propia.\relax }}{13}{figure.caption.15}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplo gráfico de la solución de la ecuación de Burgers para el caso $u_L > u_R$. \textbf {Fuente: }elaboración propia, basada en el esquema obtenido de \cite {Leveque}.\relax }}{15}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplo gráfico de la solución de la ecuación de Burgers para el caso $u_L > u_R$. \textbf {Fuente: }elaboración propia, basada en el esquema obtenido de.\relax }}{15}{figure.caption.16}%
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Gráficas de las soluciones, en distintos instantes de tiempo, de la ecuación de Burgers para el caso $u_L < u_R$ del problema de Riemann \textbf {Fuente:} elaboración propia.\relax }}{16}{figure.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

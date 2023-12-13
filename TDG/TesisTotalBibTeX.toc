@@ -6,7 +6,7 @@
 \contentsline {chapter}{INTRODUCCIÓN}{\es@scroman {xi}}{chapter*.13}%
 \contentsline {chapter}{\numberline {1}ECUACIONES DE CONSERVACIÓN Y SISTEMAS HIPERBÓLICOS DE PRIMER ORDEN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Ecuaciones de conservación}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Derivación de una ecuación de conservación}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Derivación de una ecuación de conservación}{3}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Ecuación de advección lineal}{5}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Curvas características}{5}{subsection.1.3.1}%
 \contentsline {section}{\numberline {1.4}Dominio de dependencia de una ecuación de conservación}{6}{section.1.4}%

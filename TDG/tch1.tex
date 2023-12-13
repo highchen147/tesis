@@ -1,5 +1,5 @@
 \chapter{ECUACIONES DE CONSERVACIÓN Y SISTEMAS HIPERBÓLICOS DE PRIMER ORDEN}
-En este capítulo se introducen los conceptos fundamentales de las ecuaciones de conservación y sistemas hiperbólicos de primer orden. Se introduce el problema de Riemann asociado a una ecuación de conservación.
+En este capítulo se introducen los conceptos fundamentales de las ecuaciones de conservación y sistemas hiperbólicos de primer orden. También se introduce el problema de Riemann asociado a una ecuación de conservación. Los desarrollos de los conceptos en este capítulo están basados en la presentación del tema realizada por Randall Leveque \cite{Leveque}, especialmente en los capítulos \textit{The Derivations of Conservation Laws}, \textit{Scalar Conservations Laws}, \textit{Scalar Examples} y \textit{Linear Hyperbolic Systems}.
 \section{Ecuaciones de conservación}
 \label{sec:ecuaciones-de-conservacion}
 En física, una ecuación de conservación es una ecuación diferencial parcial de la siguiente forma
@@ -12,12 +12,12 @@ o utilizando una notación más compacta para las derivadas,
 	\mathbf{U}_{t} + \mathbf{F}(\mathbf{U})_{x} = 0
 	\label{eq:conserv-deriv-short}
 \end{equation}
-donde $\mathbf{U}$ es un vector n-dimensional de variables físicas que se conservan, por ejemplo, la densidad, la masa o el momentum de un medio \cite{Leveque}. En este texto, las variables de las que depende $\mathbf{U}$ dependen de $x$ y $t$, una variable espacial y otra temporal respectivamente. Por tanto, $\mathbf{U}$ se define formalmente como $\mathbf{U} : \mathbb{R} \times  \mathbb{R} \rightarrow \mathbb{R}^{n}$, mientras que la i-ésima variable conservada se denomina $u_{i}$, de tal manera que $\mathbf{U} = \mathbf{U}(u_{1}, u_{2}, \dots, u_{n})$\hspace{2mm}\cite{Leveque}. 
+donde $\mathbf{U}$ es un vector n-dimensional de variables físicas que se conservan, por ejemplo, la densidad, la masa o el momentum de un medio. En este texto, las variables de las que depende $\mathbf{U}$ dependen de $x$ y $t$, una variable espacial y otra temporal respectivamente. Por tanto, $\mathbf{U}$ se define formalmente como $\mathbf{U} : \mathbb{R} \times  \mathbb{R} \rightarrow \mathbb{R}^{n}$, mientras que la i-ésima variable conservada se denomina $u_{i}$, de tal manera que $\mathbf{U} = \mathbf{U}(u_{1}, u_{2}, \dots, u_{n})$\hspace{2mm}. 
 
-La función $\mathbf{F}$ corresponde al \textbf{flujo} de cada una de las variables involucradas en un punto $(x,t)$ \cite{Leveque}. Al igual que $\mathbf{U}$, la función $\mathbf{F}$ depende de las mismas variables físicas y por ende, también depende de $(x,t)$. Sin embargo, el flujo de cada variable conservada puede tener una forma distinta, entonces es conveniente escribir a $\mathbf{F}$ como un vector de $n$ funciones independientes, $\mathbf{F} = (f_{1}, f_{2}, \dots, f_{n})$
-de tal manera que $f_i$ es la función de flujo de la i-ésima variable conservada, $u_i$ \cite{Leveque}.
+La función $\mathbf{F}$ corresponde al \textbf{flujo} de cada una de las variables involucradas en un punto $(x,t)$. Al igual que $\mathbf{U}$, la función $\mathbf{F}$ depende de las mismas variables físicas y por ende, también depende de $(x,t)$. Sin embargo, el flujo de cada variable conservada puede tener una forma distinta, entonces es conveniente escribir a $\mathbf{F}$ como un vector de $n$ funciones independientes, $\mathbf{F} = (f_{1}, f_{2}, \dots, f_{n})$
+de tal manera que $f_i$ es la función de flujo de la i-ésima variable conservada, $u_i$.
 
-Una ecuación de conservación para un sistema definido en un intervalo espacial $D = [a,b]$ necesita de condiciones iniciales para su resolución, el caso más simple a considerar es el de un problema de Cauchy \cite{Leveque}. En dicho caso, se debe especificar una función $\mathbf{U}_0(x)$
+Una ecuación de conservación para un sistema definido en un intervalo espacial $D = [a,b]$ necesita de condiciones iniciales para su resolución, el caso más simple a considerar es el de un problema de Cauchy. En dicho caso, se debe especificar una función $\mathbf{U}_0(x)$
 \begin{equation}
 	\mathbf{U}(x,0) = \mathbf{U}_0(x)
 \end{equation} 
@@ -44,17 +44,17 @@ de tal manera que la ecuación (\ref{eq:conservacion}) se convierte en
 	\mathbf{U}_{t} + \mathbf{A(\mathbf{U})}\mathbf{U}_{x} = 0
 	\label{eq:conservacion-jacobiana}
 \end{equation}.
-Esta forma de escribir una ecuación de conservación es relevante ya que permite definir un \textbf{sistema hiperbólico}. Un sistema hiperbólico es una ecuación de conservación de la forma (\ref{eq:conservacion-jacobiana}) tal que los autovalores de la matriz $\mathbf{A(\mathbf{U})}$ para todo $\mathbf{U}$ sean reales y que dicha matriz sea diagonalizable \cite{Leveque}. Esto implica que existen $n$ vectores propios linealmente independientes de $\mathbf{A(\mathbf{U})}$ \cite{Leveque}.
-Una ecuación de conservación depende de una función $\mathbf{F(\mathbf{U})}$ que, por lo general, no es una función lineal de $\mathbf{U}$, lo que implica que las ecuaciones de conservación son regularmente no lineales \cite{Leveque}. Esto también se puede inferir por la dependencia en $\mathbf{U}$ de la matriz $\mathbf{A}$ en la ecuación (\ref{eq:conservacion-jacobiana}).
+Esta forma de escribir una ecuación de conservación es relevante ya que permite definir un \textbf{sistema hiperbólico}. Un sistema hiperbólico es una ecuación de conservación de la forma (\ref{eq:conservacion-jacobiana}) tal que los autovalores de la matriz $\mathbf{A(\mathbf{U})}$ para todo $\mathbf{U}$ sean reales y que dicha matriz sea diagonalizable. Esto implica que existen $n$ vectores propios linealmente independientes de $\mathbf{A(\mathbf{U})}$.
+Una ecuación de conservación depende de una función $\mathbf{F(\mathbf{U})}$ que, por lo general, no es una función lineal de $\mathbf{U}$, lo que implica que las ecuaciones de conservación son regularmente no lineales. Esto también se puede inferir por la dependencia en $\mathbf{U}$ de la matriz $\mathbf{A}$ en la ecuación (\ref{eq:conservacion-jacobiana}).
 \section{Derivación de una ecuación de conservación}
-El principio físico de una ecuación de conservación es más explícito cuando esta se deriva a través de cantidades expresadas en forma \textbf{integral.} Considerando un ejemplo de la mecánica de fluidos, se define $M(x_1,x_2,t)$ como la cantidad de masa de un fluido que se encuentra contenido en un ``tubo'' unidimensional en un intervalo  $[x_1,x_2]$ en un tiempo $t$. Si a dicho fluido se le asocia una densidad $\rho(x,t)$, entonces esta última se define de tal manera que su integral definida en un intervalo espacial sea igual a la masa contenida en ese mismo intervalo \cite{Leveque}, i.e.,
+El principio físico de una ecuación de conservación es más explícito cuando esta se deriva a través de cantidades expresadas en forma \textbf{integral.} Considerando un ejemplo de la mecánica de fluidos, se define $M(x_1,x_2,t)$ como la cantidad de masa de un fluido que se encuentra contenido en un ``tubo'' unidimensional en un intervalo  $[x_1,x_2]$ en un tiempo $t$. Si a dicho fluido se le asocia una densidad $\rho(x,t)$, entonces esta última se define de tal manera que su integral definida en un intervalo espacial sea igual a la masa contenida en ese mismo intervalo, i.e.,
 \begin{equation}
 	M(x_1, x_2, t) = \int_{x_1}^{x_2}\rho(x,t)\dd{x}.
 \end{equation}
-Ahora, asumiendo que el tubo es cerrado e impenetrable, la cantidad de masa en una región arbitraria $[x_1,x_2]$ puede variar solamente a causa de que el fluido se desplace (fluya) a través de los puntos límites de la región, $x_1$ y $x_2$ \cite{Leveque}. Para cuantificar el flujo que sale o entra en una región se necesita la velocidad del fluido, $v(x,t)$. Cabe destacar que debido a que el fluido se mueve en un espacio unidimensional, su velocidad se limita a dirigirse en el mismo sentido espacial, es decir, su velocidad tiene dirección sobre $x$. Entonces el flujo del fluido en un punto $(x,t)$, $F(x,t)$, se define como 
+Ahora, asumiendo que el tubo es cerrado e impenetrable, la cantidad de masa en una región arbitraria $[x_1,x_2]$ puede variar solamente a causa de que el fluido se desplace (fluya) a través de los puntos límites de la región, $x_1$ y $x_2$. Para cuantificar el flujo que sale o entra en una región se necesita la velocidad del fluido, $v(x,t)$. Cabe destacar que debido a que el fluido se mueve en un espacio unidimensional, su velocidad se limita a dirigirse en el mismo sentido espacial, es decir, su velocidad tiene dirección sobre $x$. Entonces el flujo del fluido en un punto $(x,t)$, $F(x,t)$, se define como 
 \begin{equation}
 	F(x,t) = \rho(x,t)v(x,t)
-\end{equation}\cite{Leveque}.
+\end{equation}.
 Entonces, como previamente se comentó, se puede escribir la razón instantánea de cambio de masa en la región $[x_1,x_2]$ en términos del flujo entrante y saliente de la misma región
 \begin{equation}
 	\dv{t}	\left[M(x_1, x_2, t)\right] = F(x_2,t) - F(x_1,t)
@@ -63,7 +63,7 @@ Entonces, como previamente se comentó, se puede escribir la razón instantánea
 	\dv{t}	\int_{x_1}^{x_2}\rho(x,t)\dd{x} = \rho(x_2,t)v(x_2,t) - \rho(x_1,t)v(x_1,t)
 	\label{eq:continuidad-1-integral}
 \end{equation}
-Esta es la forma integral de una ecuación de conservación \cite{Leveque}. En particular, esta ecuación refleja el principio de conservación de la masa y a su vez es conocida como \textbf{ecuación de continuidad}. La ecuación (\ref{eq:continuidad-1-integral}) se puede integrar en el tiempo para conseguir expresarla independientemente de cualquier derivada, obteniendo
+Esta es la forma integral de una ecuación de conservación. En particular, esta ecuación refleja el principio de conservación de la masa y a su vez es conocida como \textbf{ecuación de continuidad}. La ecuación (\ref{eq:continuidad-1-integral}) se puede integrar en el tiempo para conseguir expresarla independientemente de cualquier derivada, obteniendo
 \begin{equation}
 	\int_{t_1}^{t_2}\dv{t}\int_{x_1}^{x_2}\rho(x,t)\dd{x}\dd{t}  = \int_{t_1}^{t_2}\left[\rho(x_2,t)v(x_2,t) - \rho(x_1,t)v(x_1,t)\right]\dd{t}
 \end{equation}
@@ -71,7 +71,7 @@ Esta es la forma integral de una ecuación de conservación \cite{Leveque}. En p
 	\int_{x_1}^{x_2}[\rho(x,t_2) - \rho(x,t_1)]\dd{x}  = \int_{t_1}^{t_2}\left[\rho(x_2,t)v(x_2,t) - \rho(x_1,t)v(x_1,t)\right]\dd{t} 
 	\label{eq:continuidad-2-integral}.
 \end{equation}
-Asumiendo que $t_1<t_2$, esta igualdad ofrece una expresión para la diferencia de masa contenida en la región $[x_1,x_2]$ entre los instantes $t_2$ y $t_1$ \cite{Leveque}. 
+Asumiendo que $t_1<t_2$, esta igualdad ofrece una expresión para la diferencia de masa contenida en la región $[x_1,x_2]$ entre los instantes $t_2$ y $t_1$. 
 
 Es posible obtener una forma diferencial partiendo de la forma integral de una ecuación de conservación, pero es necesario asumir que las funciones $\rho(x,t)$ y $v(x,t)$ son \textbf{diferenciables}. Esta última característica que se exige en las funciones entra en conflicto cuando se estudian soluciones\footnote{Dichas soluciones se conocen como \textbf{soluciones débiles}, tema que se abordará a detalle más adelante.} de las ecuaciones de conservación con discontinuidades. Por lo tanto, la forma integral de las ecuaciones es utilizada al estudiar problemas con dichas características. Para convertir la ecuación en forma integral a su forma diferencial, se tienen que usar las siguientes expresiones:
 \begin{equation}
@@ -86,21 +86,21 @@ sustituyendo estas expresiones en (\ref{eq:continuidad-2-integral}) se obtiene
 	\int_{t_1}^{t_2}\int_{x_1}^{x_2}\left[\pdv{\rho(x,t)}{t} + \pdv{\rho(x,t)v(x,t)}{x}\right]\dd{x}\dd{t} = 0.
 	\label{eq:integral-con-derivadas}
 \end{equation}
-Puesto que la ecuación (\ref{eq:integral-con-derivadas}) se cumple para cualquier punto $(x,t)$ del dominio, el integrando de la misma debe ser idénticamente cero \cite{Leveque}. Entonces,
+Puesto que la ecuación (\ref{eq:integral-con-derivadas}) se cumple para cualquier punto $(x,t)$ del dominio, el integrando de la misma debe ser idénticamente cero. Entonces,
 \begin{equation}
 	\rho_{t} + (\rho v)_{x} = 0
 \end{equation}
-es la forma diferencial de la ecuación de conservación de la masa, así como se definió una ecuación de conservación en (\ref{eq:conserv-deriv-short}), ya que la función de flujo se definió como $F = \rho v$. Puesto que la ecuación diferencial de conservación de la masa involucra dos cantidades físicas, esta se puede resolver ya sea si se conoce previamente la función $v(x,t)$ o si esta última se puede escribir como una función de $\rho$, i.e., $v=v(\rho)$. En este último caso la ecuación de conservación de la masa es una ecuación diferencial parcial únicamente para $\rho$ \cite{Leveque} y toma la siguiente forma
+es la forma diferencial de la ecuación de conservación de la masa, así como se definió una ecuación de conservación en (\ref{eq:conserv-deriv-short}), ya que la función de flujo se definió como $F = \rho v$. Puesto que la ecuación diferencial de conservación de la masa involucra dos cantidades físicas, esta se puede resolver ya sea si se conoce previamente la función $v(x,t)$ o si esta última se puede escribir como una función de $\rho$, i.e., $v=v(\rho)$. En este último caso la ecuación de conservación de la masa es una ecuación diferencial parcial únicamente para $\rho$ y toma la siguiente forma
 \begin{equation}
 	\rho_t + f(\rho)_x = 0.
 \end{equation}
-Esta última es un ejemplo de \textbf{ecuación de conservación escalar} \cite{Leveque} ya que solamente interviene una incógnita, $\rho$ \cite{Leveque}.
+Esta última es un ejemplo de \textbf{ecuación de conservación escalar} ya que solamente interviene una incógnita, $\rho$.
 En caso que la velocidad $v(x,t)$ sea una constante $\alpha$, la ecuación de conservación de la masa se convierte en:
 \begin{equation}
 	\rho_t + \alpha\rho_x = 0,
 	\label{eq:adveccion}
 \end{equation}
-esta ecuación se conoce como \textbf{ecuación de advección lineal} o como ecuación de onda de primer orden \cite{Leveque}\cite{heattransfer}.
+esta ecuación se conoce como \textbf{ecuación de advección lineal} o como ecuación de onda de primer orden \cite{heattransfer}.
 \section{Ecuación de advección lineal}
 La ecuación de advección (\ref{eq:adveccion}) con la siguiente condición inicial:
 \begin{equation}
@@ -111,13 +111,13 @@ tiene como solución:
 	\rho(x,t) = \rho_0(x - \alpha t),
 	\label{eq:sol-advec}
 \end{equation}
-para $t> 0$, asumiendo que $\rho_0$ es una función diferenciable \cite{Leveque}. Esta solución se puede interpretar como la traslación de la función $\rho_0$ a lo largo del eje $x$ con una velocidad $\alpha$, en la misma dirección de la velocidad, es decir, a la derecha si $\alpha > 0$ y a la izquierda si $\alpha < 0$.
+para $t> 0$, asumiendo que $\rho_0$ es una función diferenciable. Esta solución se puede interpretar como la traslación de la función $\rho_0$ a lo largo del eje $x$ con una velocidad $\alpha$, en la misma dirección de la velocidad, es decir, a la derecha si $\alpha > 0$ y a la izquierda si $\alpha < 0$.
 \subsection{Curvas características}
-Se puede demostrar que la solución (\ref{eq:sol-advec}) es constante respecto al tiempo a lo largo de cada curva definida por $x-\alpha t = x_0$, para cualquier $x_0$ tal que $x_0 \in [-\infty, \infty]$. Dichas curvas de la forma $x=x(t)$ son conocidas como \textbf{curvas características} de la ecuación diferencial en cuestión \cite{Leveque}. Las curvas características definen dominios en donde la ecuación diferencial parcial se puede escribir como una ecuación diferencial ordinaria. Dichas curvas se definen a partir de ecuaciones diferenciales ordinarias. En el caso de la ecuación de advección lineal (\ref{eq:sol-advec}), las características satisfacen la siguiente ecuación diferencial:
+Se puede demostrar que la solución (\ref{eq:sol-advec}) es constante respecto al tiempo a lo largo de cada curva definida por $x-\alpha t = x_0$, para cualquier $x_0$ tal que $x_0 \in [-\infty, \infty]$. Dichas curvas de la forma $x=x(t)$ son conocidas como \textbf{curvas características} de la ecuación diferencial en cuestión. Las curvas características definen dominios en donde la ecuación diferencial parcial se puede escribir como una ecuación diferencial ordinaria. Dichas curvas se definen a partir de ecuaciones diferenciales ordinarias. En el caso de la ecuación de advección lineal (\ref{eq:sol-advec}), las características satisfacen la siguiente ecuación diferencial:
 \begin{equation}
 	\dv{x}{t} = \alpha, \hspace{1.7cm} x(0) = x_0,
 \end{equation}
-cuya solución es: $x-\alpha t = x_0$ \cite{Leveque}. Para demostrar que la ecuación de advección lineal se convierte en una ecuación diferencial ordinaria a lo largo de dichas curvas, se deriva la función incógnita $\rho$ respecto al tiempo,
+cuya solución es: $x-\alpha t = x_0$. Para demostrar que la ecuación de advección lineal se convierte en una ecuación diferencial ordinaria a lo largo de dichas curvas, se deriva la función incógnita $\rho$ respecto al tiempo,
 \begin{equation}
 	\dv{\rho}{t} = \pdv{\rho}{t} + \pdv{\rho}{x}\dv{x}{t}
 \end{equation}
@@ -127,31 +127,31 @@ cuya solución es: $x-\alpha t = x_0$ \cite{Leveque}. Para demostrar que la ecua
 \begin{equation}
 	\dv{\rho}{t} = 0,
 \end{equation}
-este último paso toma efecto dado que a lo largo de las curvas características, $\dv{x}{t} = \alpha$ \cite{Leveque}. Se puede notar que en este último procedimiento se recuperó la ecuación diferencial en cuestión (\ref{eq:sol-advec}), expresada como una ecuación diferencial ordinaria y concluyó al igualar la derivada temporal a cero, consiguiendo demostrar que $\rho$ es constante a lo largo de las características \cite{Leveque}.
+este último paso toma efecto dado que a lo largo de las curvas características, $\dv{x}{t} = \alpha$. Se puede notar que en este último procedimiento se recuperó la ecuación diferencial en cuestión (\ref{eq:sol-advec}), expresada como una ecuación diferencial ordinaria y concluyó al igualar la derivada temporal a cero, consiguiendo demostrar que $\rho$ es constante a lo largo de las características.
 \section{Dominio de dependencia de una ecuación de conservación}
-En la sección anterior se introdujo el concepto de curvas características de una ecuación de conservación y en el caso de la ecuación de advección, es posible obtener la solución general utilizando la expresión para sus características, esto es $x(t) = x_0 + \alpha t$. Por lo tanto, se puede afirmar que el valor de $\rho(x,t)$ para un instante $(x',t')$ depende de la condición inicial $\rho_0$ únicamente en un solo punto $x'_{0}$ ya que $\rho$ es constante a lo largo de la curva característica $x' = x^{'}_{0} + \alpha t$ \cite{Leveque}. Entonces, sin importar de qué manera se cambien los valores que toma $\rho_0(x)$, mientras no se cambie su valor en $x'_0$, el valor $\rho(x',t')$ permanecerá sin cambiar \cite{Leveque}. 
+En la sección anterior se introdujo el concepto de curvas características de una ecuación de conservación y en el caso de la ecuación de advección, es posible obtener la solución general utilizando la expresión para sus características, esto es $x(t) = x_0 + \alpha t$. Por lo tanto, se puede afirmar que el valor de $\rho(x,t)$ para un instante $(x',t')$ depende de la condición inicial $\rho_0$ únicamente en un solo punto $x'_{0}$ ya que $\rho$ es constante a lo largo de la curva característica $x' = x^{'}_{0} + \alpha t$. Entonces, sin importar de qué manera se cambien los valores que toma $\rho_0(x)$, mientras no se cambie su valor en $x'_0$, el valor $\rho(x',t')$ permanecerá sin cambiar. 
 
-En el caso general, para cualquier sistema hiperbólico, el valor de la solución $\mathbf{U}$ en un punto $(x',t')$ depende únicamente de los valores que toma la función inicial $\mathbf{U}_0$ en un dominio $D(x',t')$ que corresponde a un intervalo \textbf{cerrado} \cite{Leveque}. Este último se denomina \textbf{dominio de dependencia} \cite{Leveque}. El tamaño de este intervalo usualmente crece a medida que avance el tiempo, sin embargo, el tamaño está acotado de la siguiente forma $D(x',t') = \{x : |x-x'| \leq a_{\text{máx}}t \}$ \cite{Leveque}. En resumen, las ecuaciones hiperbólicas poseen una velocidad finita de propagación; lo que significa que la información de la solución puede viajar a lo largo del espacio a una velocidad $a_{\text{máx}}$ como máximo \cite{Leveque}.
+En el caso general, para cualquier sistema hiperbólico, el valor de la solución $\mathbf{U}$ en un punto $(x',t')$ depende únicamente de los valores que toma la función inicial $\mathbf{U}_0$ en un dominio $D(x',t')$ que corresponde a un intervalo \textbf{cerrado}. Este último se denomina \textbf{dominio de dependencia}. El tamaño de este intervalo usualmente crece a medida que avance el tiempo, sin embargo, el tamaño está acotado de la siguiente forma $D(x',t') = \{x : |x-x'| \leq a_{\text{máx}}t \}$. En resumen, las ecuaciones hiperbólicas poseen una velocidad finita de propagación; lo que significa que la información de la solución puede viajar a lo largo del espacio a una velocidad $a_{\text{máx}}$ como máximo.
 
 \section{Discontinuidades en soluciones}
-Al derivar la forma diferencial de una ecuación de conservación (\ref{eq:integral-con-derivadas}) se enfatizó que era necesario exigir la diferenciabilidad de las cantidades conservadas. Sin embargo, si se toman en cuenta los atributos de la solución, proporcionados por las curvas características, de la ecuación de advección, resulta que el valor de la variable involucrada $\rho(x,t)$ depende únicamente del valor de la condición inicial en un punto $x_0$ tal que $x = x_0 + \alpha t$ \cite{Leveque}. Por esta última razón se puede concluir que, al menos para la ecuación de advección, es posible definir una solución sin exigirle que sea una función  suave \cite{Leveque}. La definición de una solución con singularidades surge gracias a que la forma integral de una ecuación de conservación sí se satisface con funciones no diferenciables, a diferencia de la forma diferencial \cite{Leveque}. También es importante hacer énfasis en que la forma integral de una ecuación de conservación tiene un significado físico más fundamental.
+Al derivar la forma diferencial de una ecuación de conservación (\ref{eq:integral-con-derivadas}) se enfatizó que era necesario exigir la diferenciabilidad de las cantidades conservadas. Sin embargo, si se toman en cuenta los atributos de la solución, proporcionados por las curvas características, de la ecuación de advección, resulta que el valor de la variable involucrada $\rho(x,t)$ depende únicamente del valor de la condición inicial en un punto $x_0$ tal que $x = x_0 + \alpha t$. Por esta última razón se puede concluir que, al menos para la ecuación de advección, es posible definir una solución sin exigirle que sea una función  suave. La definición de una solución con singularidades surge gracias a que la forma integral de una ecuación de conservación sí se satisface con funciones no diferenciables, a diferencia de la forma diferencial. También es importante hacer énfasis en que la forma integral de una ecuación de conservación tiene un significado físico más fundamental.
 
-Si la condición inicial de una ecuación de conservación escalar $u_0(x)$ tiene una singularidad (discontinuidad en sí misma o en alguna derivada), en un punto $x_0$, entonces la solución de la ecuación, $u(x,t)$, también poseerá una singularidad del mismo orden en todos los puntos definidos por la característica que parte de $x_0$ \cite{Leveque}. Para los sistemas hiperbólicos en general, las singularidades se propagan a lo largo de las curvas características \cite{Leveque}.
+Si la condición inicial de una ecuación de conservación escalar $u_0(x)$ tiene una singularidad (discontinuidad en sí misma o en alguna derivada), en un punto $x_0$, entonces la solución de la ecuación, $u(x,t)$, también poseerá una singularidad del mismo orden en todos los puntos definidos por la característica que parte de $x_0$. Para los sistemas hiperbólicos en general, las singularidades se propagan a lo largo de las curvas características.
 
 A continuación se describen dos formas de definir las soluciones con singularidades:
 \subsection{Viscosidad disipada}
-Como se vio anteriormente algunas soluciones de las ecuaciones de conservación pueden poseer singularidades si la condición inicial de la ecuación tiene una singularidad. Para los sistemas hiperbólicos no lineales, las discontinuidades pueden formarse a lo largo de la evolución temporal de la solución \cite{Leveque}. A las singularidades que se desarrollan en las soluciones se les llama \textbf{ondas de choque} o \textbf{shocks} en inglés \cite{Cameron}. Para definir cómo estas funciones siguen siendo soluciones, en el sentido estricto de la palabra, se redefine la ecuación que deben satisfacer agregándole un coeficiente de viscosidad $\varepsilon$ que va acompañado del laplaciano de la variable involucrada \cite{Leveque}. En el caso de la ecuación de advección para $u$, se define la siguiente ecuación modificada
+Como se vio anteriormente algunas soluciones de las ecuaciones de conservación pueden poseer singularidades si la condición inicial de la ecuación tiene una singularidad. Para los sistemas hiperbólicos no lineales, las discontinuidades pueden formarse a lo largo de la evolución temporal de la solución. A las singularidades que se desarrollan en las soluciones se les llama \textbf{ondas de choque} o \textbf{shocks} en inglés \cite{Cameron}. Para definir cómo estas funciones siguen siendo soluciones, en el sentido estricto de la palabra, se redefine la ecuación que deben satisfacer agregándole un coeficiente de viscosidad $\varepsilon$ que va acompañado del laplaciano de la variable involucrada. En el caso de la ecuación de advección para $u$, se define la siguiente ecuación modificada
 \begin{equation}
 	u_t + \alpha u_x = \varepsilon u_{xx},
 	\label{eq:advec-difus}
 \end{equation}
-donde $u_{xx} \equiv \pdv[2]{u}{x}$ \cite{Leveque}. A esta ecuación se le conoce como \textbf{ecuación de advección - difusión}, ya que el término viscoso también se denomina como término difusivo y está involucrado en la ecuación de difusión, también conocida como ecuación de calor \cite{heattransfer}. 
+donde $u_{xx} \equiv \pdv[2]{u}{x}$. A esta ecuación se le conoce como \textbf{ecuación de advección - difusión}, ya que el término viscoso también se denomina como término difusivo y está involucrado en la ecuación de difusión, también conocida como ecuación de calor \cite{heattransfer}. 
 
-Si se denota a $u^{\varepsilon}(x,t)$ como la solución de la ecuación (\ref{eq:advec-difus}) con condición inicial $u_0(x)$, entonces $u^{\varepsilon} \in C^{\infty}(\mathbb{R} \times [0,\infty)) $ donde $ C^{\infty}(\mathbb{R}\times [0,\infty))$ es el conjunto de funciones infinitamente diferenciables (suaves) definidas en el mismo espacio en donde se resuelve la ecuación \cite{Leveque}. Esto se cumple incluso si $u_0(x)$ no es una función suave, ya que la ecuación (\ref{eq:advec-difus}) es de tipo parabólica \cite{Leveque}. Para encontrar la solución a la ecuación original (\ref{eq:adveccion}) se debe hacer el límite $\varepsilon \rightarrow 0$ en la solución de la ecuación de advección - difusión (\ref{eq:advec-difus}); a esta forma de definir una solución con discontinuidades se le denomina \textbf{solución con viscosidad disipada} \cite{Leveque}.
+Si se denota a $u^{\varepsilon}(x,t)$ como la solución de la ecuación (\ref{eq:advec-difus}) con condición inicial $u_0(x)$, entonces $u^{\varepsilon} \in C^{\infty}(\mathbb{R} \times [0,\infty)) $ donde $ C^{\infty}(\mathbb{R}\times [0,\infty))$ es el conjunto de funciones infinitamente diferenciables (suaves) definidas en el mismo espacio en donde se resuelve la ecuación. Esto se cumple incluso si $u_0(x)$ no es una función suave, ya que la ecuación (\ref{eq:advec-difus}) es de tipo parabólica. Para encontrar la solución a la ecuación original (\ref{eq:adveccion}) se debe hacer el límite $\varepsilon \rightarrow 0$ en la solución de la ecuación de advección - difusión (\ref{eq:advec-difus}); a esta forma de definir una solución con discontinuidades se le denomina \textbf{solución con viscosidad disipada}.
 \subsection{Solución débil}
-La otra forma de definir una solución con singularidades es definiendo una \textbf{solución débil} de la ecuación de conservación, haciendo uso de la forma integral de esta última \cite{Leveque}. Es evidente que la forma diferencial de la ecuación de conservación no se satisface con una función con singularidades ya que sus derivadas no están bien definidas en todo el dominio de la función. La idea del procedimiento de la definición de una solución débil es reescribir la ecuación en forma integral, trasladando las derivadas hacia una \textbf{función prueba}, que sí es una función diferenciable y así relajar las condiciones de suavidad para la función incógnita \cite{Leveque}.
+La otra forma de definir una solución con singularidades es definiendo una \textbf{solución débil} de la ecuación de conservación, haciendo uso de la forma integral de esta última. Es evidente que la forma diferencial de la ecuación de conservación no se satisface con una función con singularidades ya que sus derivadas no están bien definidas en todo el dominio de la función. La idea del procedimiento de la definición de una solución débil es reescribir la ecuación en forma integral, trasladando las derivadas hacia una \textbf{función prueba}, que sí es una función diferenciable y así relajar las condiciones de suavidad para la función incógnita.
 
-Sea $\phi(x,t)$ una función continuamente diferenciable con \textbf{soporte compacto}, i.e., $\phi(x,t) \in C_{0}^{1} (\mathbb{R} \times [0, \infty))$. La tenencia de soporte compacto de la función significa que $\phi(x,t)$ es exactamente igual a cero fuera de algún conjunto cerrado, por lo que el soporte de la función yace en un subconjunto compacto del espacio $(x,t) = \mathbb{R} \times [0, \infty)$ \cite{Cameron}\cite{Leveque}.
+Sea $\phi(x,t)$ una función continuamente diferenciable con \textbf{soporte compacto}, i.e., $\phi(x,t) \in C_{0}^{1} (\mathbb{R} \times [0, \infty))$. La tenencia de soporte compacto de la función significa que $\phi(x,t)$ es exactamente igual a cero fuera de algún conjunto cerrado, por lo que el soporte de la función yace en un subconjunto compacto del espacio $(x,t) = \mathbb{R} \times [0, \infty)$ \cite{Cameron}.
 
 Para definir la solución débil de la ecuación de conservación escalar $u_t + f(u)_x = 0$, esta se multiplica por la función $\phi$ descrita anteriormente:
 \begin{equation}
@@ -202,7 +202,7 @@ Por tanto, se obtiene la igualdad
 	\int_{0}^{\infty}\int_{-\infty}^{\infty}\left(\phi_t u + \phi_x f(u)\right) \dd{x}\dd{t} = -\int_{-\infty}^{\infty} \phi(x,0)u(x,0) \dd{x},
 	\label{eq:weak-equality}
 \end{equation}
-que tal y como se dijo previamente, las derivadas parciales ahora están siendo aplicadas a $\phi$ y la integral de la nueva ecuación diferencial se iguala a una integral que depende únicamente de las condiciones iniciales del problema a resolver para $u$. Entonces se dice que $u$ es una \textbf{solución débil} de la ecuación (\ref{eq:conser-u}) si y solo si se cumple la igualdad (\ref{eq:weak-equality}) para todo $\phi$ tal que $\phi(x,t) \in C_{0}^{1} (\mathbb{R} \times [0, \infty))$ \cite{Leveque}.
+que tal y como se dijo previamente, las derivadas parciales ahora están siendo aplicadas a $\phi$ y la integral de la nueva ecuación diferencial se iguala a una integral que depende únicamente de las condiciones iniciales del problema a resolver para $u$. Entonces se dice que $u$ es una \textbf{solución débil} de la ecuación (\ref{eq:conser-u}) si y solo si se cumple la igualdad (\ref{eq:weak-equality}) para todo $\phi$ tal que $\phi(x,t) \in C_{0}^{1} (\mathbb{R} \times [0, \infty))$.
 
 Es posible demostrar que la igualdad (\ref{eq:weak-equality}) es equivalente a la forma integral de la ecuación diferencial en cuestión (ecuación \ref{eq:continuidad-2-integral}), mediante la elección de una función de prueba que esta cumpla con la siguiente propiedad:
 \begin{equation}
@@ -212,9 +212,9 @@ Es posible demostrar que la igualdad (\ref{eq:weak-equality}) es equivalente a l
 		0 & \text{para } (x,t) \notin [x_1 - \epsilon, x_2 + \epsilon] \times [t_1 - \epsilon, t_2 + \epsilon].
  	\end{cases}
 \end{equation}
-Además $\phi$ es una función suave en la banda intermedia con ancho $\epsilon$ \cite{Leveque}. Entonces al calcular la integral (\ref{eq:weak-equality})  se puede notar que esta se reduce a la integral sobre la banda $\epsilon$, a raíz de la propiedad expuesta anteriormente. Al calcular esta integral y haciendo el límite $\epsilon \rightarrow 0$, las derivadas $\phi_x$ y $\phi_t$ tienden a deltas de Dirac \footnote{La delta de Dirac $\delta(x)$ es una función generalizada que cumple con la siguiente propiedad $\int_{-\infty}^{\infty} \delta(x-a) f(x)\dd{x} = f(a)$ \cite{methods}.}, recuperando así los valores de $u$ y $ f(u)$ en las fronteras del dominio $ [x_1, x_2] \times [t_1, t_2]$ en integrales que equivalen a los términos de la ecuación de conservación en forma integral (\ref{eq:continuidad-2-integral})\cite{Leveque}. Cabe destacar que este es un esbozo solamente de la demostración, ya que esta requiere más rigor matemático. Sin embargo, lo imprescindible es destacar la equivalencia entre ambas expresiones.
+Además $\phi$ es una función suave en la banda intermedia con ancho $\epsilon$. Entonces al calcular la integral (\ref{eq:weak-equality})  se puede notar que esta se reduce a la integral sobre la banda $\epsilon$, a raíz de la propiedad expuesta anteriormente. Al calcular esta integral y haciendo el límite $\epsilon \rightarrow 0$, las derivadas $\phi_x$ y $\phi_t$ tienden a deltas de Dirac \footnote{La delta de Dirac $\delta(x)$ es una función generalizada que cumple con la siguiente propiedad $\int_{-\infty}^{\infty} \delta(x-a) f(x)\dd{x} = f(a)$ \cite{methods}.}, recuperando así los valores de $u$ y $ f(u)$ en las fronteras del dominio $ [x_1, x_2] \times [t_1, t_2]$ en integrales que equivalen a los términos de la ecuación de conservación en forma integral (\ref{eq:continuidad-2-integral}). Cabe destacar que este es un esbozo solamente de la demostración, ya que esta requiere más rigor matemático. Sin embargo, lo imprescindible es destacar la equivalencia entre ambas expresiones.
 
-La solución de viscosidad disipada también califica como una solución débil y físicamente es la solución correcta \cite{Leveque}. Existen muchas soluciones débiles, incluyendo algunas que no tienen un significado físico consistente, para ello es necesario exigir otras condiciones sobre las soluciones débiles de tal manera que se obtenga la solución correcta \cite{Leveque}. Estas condiciones son conocidas como \texttt{condiciones de entropía} por su papel en la dinámica de fluidos.
+La solución de viscosidad disipada también califica como una solución débil y físicamente es la solución correcta. Existen muchas soluciones débiles, incluyendo algunas que no tienen un significado físico consistente, para ello es necesario exigir otras condiciones sobre las soluciones débiles de tal manera que se obtenga la solución correcta. Estas condiciones son conocidas como \texttt{condiciones de entropía} por su papel en la dinámica de fluidos.
 
 \section{Ecuación de Burgers}
 Se pueden destacar las propiedades más importantes de las ecuaciones de conservación no lineales de la mecánica de fluidos a través de un ejemplo escalar conocido como \textbf{ecuación de Burgers.} Esta ecuación tiene la siguiente forma:
@@ -223,21 +223,21 @@ Se pueden destacar las propiedades más importantes de las ecuaciones de conserv
 	u_t + u u_x = 0,
 	\label{eq:burgers}
 \end{equation}
-la cual es formalmente conocida como Ecuación de Burgers sin viscosidad \cite{Leveque}, pero en este texto se le referirá solamente como Ecuación de Burgers. Esta ecuación es un modelo muy simple de la velocidad $u$ de un gas \cite{Cameron}. La ecuación originalmente estudiada por Jan Burgers \cite{Leveque} contiene un término de viscosidad cinemática:
+la cual es formalmente conocida como Ecuación de Burgers sin viscosidad, pero en este texto se le referirá solamente como Ecuación de Burgers. Esta ecuación es un modelo muy simple de la velocidad $u$ de un gas \cite{Cameron}. La ecuación originalmente estudiada por Jan Burgers contiene un término de viscosidad cinemática:
 \begin{equation}
 	u_t + u u_x = \varepsilon u_{xx},
 	\label{eq:burgers-vis}
 \end{equation}
 donde $\varepsilon$ es el coeficiente de viscosidad cinemática. A esta última ecuación se le referirá como Ecuación de Burgers viscosa.
 
-De la ecuación (\ref{eq:burgers}) podemos notar un ligero parecido a la ecuación de advección (\ref{eq:adveccion}), con la diferencia que la velocidad de advección $\alpha$ se reemplaza por la variable que sufre la advección, i.e., $u$ \cite{Leveque}, lo que brinda la naturaleza no lineal de este modelo. La ecuación de Burgers se puede escribir en forma conservativa:
+De la ecuación (\ref{eq:burgers}) podemos notar un ligero parecido a la ecuación de advección (\ref{eq:adveccion}), con la diferencia que la velocidad de advección $\alpha$ se reemplaza por la variable que sufre la advección, i.e., $u$, lo que brinda la naturaleza no lineal de este modelo. La ecuación de Burgers se puede escribir en forma conservativa:
 \begin{equation}
 	u_t + \left(\frac{1}{2}u^{2}\right)_x = 0.
 	\label{eq:burgers-cons}
 \end{equation}
 A partir de esta forma, se puede concluir que la función de flujo es $f(u) = \frac{1}{2}u^{2}$.
 \subsection{Curvas características}
-Las curvas características de la ecuación de Burgers se pueden definir a través de la siguiente ecuación diferencial \cite{Leveque}
+Las curvas características de la ecuación de Burgers se pueden definir a través de la siguiente ecuación diferencial
 \begin{equation}
 	x'(t) = u(x(t),t),
 	\label{eq:burgers-char}
@@ -254,12 +254,12 @@ Por lo tanto, $u$ es constante en el tiempo sobre cualquier característica. Se 
 	x(t) = u(\xi,0)t + \xi
 	\label{eq:burg-char-expr}
 \end{equation}
-y al resolver para $\xi$, es posible resolver la ecuación diferencial \cite{Leveque}
+y al resolver para $\xi$, es posible resolver la ecuación diferencial
 \begin{equation}
 	u(x,t) = u(\xi, 0).
 	\label{eq:sol-burgers-char}
 \end{equation}
-Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t)$ no es válida para todo $t$, dado que las características definidas por la ecuación (\ref{eq:burg-char-expr}) pueden intersectarse en algún momento. Esto se da si para algún $x$, se tiene que $u_0'(x) < 0$ \cite{Leveque}. 
+Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t)$ no es válida para todo $t$, dado que las características definidas por la ecuación (\ref{eq:burg-char-expr}) pueden intersectarse en algún momento. Esto se da si para algún $x$, se tiene que $u_0'(x) < 0$. 
 
 \begin{figure}
 	\begin{subfigure}{0.5\textwidth}
@@ -278,9 +278,9 @@ Es importante destacar que la expresión (\ref{eq:sol-burgers-char}) para $u(x,t
 	\label{fig:figura_completa}
 \end{figure}
 \subsection{Ondas de choque}
-Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan. Entonces, si las características se intersectan, la expresión (\ref{eq:sol-burgers-char}) no está bien definida, sino que $u(x,t)$ puede tomar varios valores a la vez, cada uno correspondiente a una característica diferente. En el caso de la ecuación de Burgers, cuando las características se intersectan, la solución se convierte en una ``función'' con tres valores distintos \cite{Leveque}. Esta solución puede tener sentido en algunos contextos, como en el caso del problema de agua superficial \cite{Leveque}. Sin embargo, en la mayoría de los casos esta solución no tiene significado físico. Por ejemplo, en la ecuación de Burgers la variable $u(x,t)$ representa una velocidad y esta debe devolver un solo valor \cite{Leveque}.
+Como se puede observar en la figura (\ref{fig:subfig2}), las características asociadas a una condición inicial con forma gaussiana se intersectan. Entonces, si las características se intersectan, la expresión (\ref{eq:sol-burgers-char}) no está bien definida, sino que $u(x,t)$ puede tomar varios valores a la vez, cada uno correspondiente a una característica diferente. En el caso de la ecuación de Burgers, cuando las características se intersectan, la solución se convierte en una ``función'' con tres valores distintos. Esta solución puede tener sentido en algunos contextos, como en el caso del problema de agua superficial. Sin embargo, en la mayoría de los casos esta solución no tiene significado físico. Por ejemplo, en la ecuación de Burgers la variable $u(x,t)$ representa una velocidad y esta debe devolver un solo valor.
 
-La solución con el comportamiento físico correcto cuando las características se intersectan corresponde a una discontinuidad que se propaga con una velocidad determinada \cite{Leveque}. Este efecto se puede demostrar a través del formalismo de la viscosidad disipada. Al obtener la solución de la ecuación de Burgers viscosa (\ref{eq:burgers-vis}), el parámetro $\varepsilon u_{xx}$ evita que la solución presente una discontinuidad, dado que cuando la onda comienza a presentar el choque, la segunda derivada de $u$ crece más rápido que su primera derivada \cite{Leveque}. Así, al efectuar el límite de $\varepsilon \rightarrow 0$ se puede obtener una discontinuidad absoluta que corresponde a la solución de la ecuación de Burgers sin viscosidad. La tendencia de adquirir una discontinuidad  de las soluciones con menos viscosidad se puede evidenciar en la figura (\ref{fig:viscosas}).
+La solución con el comportamiento físico correcto cuando las características se intersectan corresponde a una discontinuidad que se propaga con una velocidad determinada. Este efecto se puede demostrar a través del formalismo de la viscosidad disipada. Al obtener la solución de la ecuación de Burgers viscosa (\ref{eq:burgers-vis}), el parámetro $\varepsilon u_{xx}$ evita que la solución presente una discontinuidad, dado que cuando la onda comienza a presentar el choque, la segunda derivada de $u$ crece más rápido que su primera derivada. Así, al efectuar el límite de $\varepsilon \rightarrow 0$ se puede obtener una discontinuidad absoluta que corresponde a la solución de la ecuación de Burgers sin viscosidad. La tendencia de adquirir una discontinuidad  de las soluciones con menos viscosidad se puede evidenciar en la figura (\ref{fig:viscosas}).
 
 \begin{figure}[ht]
 	\begin{subfigure}{0.5\textwidth}
@@ -317,7 +317,7 @@ Como se ha mostrado, las soluciones a las ecuaciones de conservación admiten so
 		\label{eq:riemannLR}
 	\end{cases}
 \end{equation}
-en donde la solución es determinada por la relación entre $u_L$ y $u_R$ \cite{Leveque}.
+en donde la solución es determinada por la relación entre $u_L$ y $u_R$.
 \subsection{Solución al problema de Riemann para la ecuación de Burgers}
 Para encontrar la solución al problema de Riemann de la ecuación de Burgers es necesario considerar dos casos.
 \subsubsection{Caso $u_L > u_R$:}
@@ -334,7 +334,7 @@ conocida como \textbf{onda de choque}, representa una discontinuidad trasladánd
 	f(u_L) - f(u_R) = s(u_L - u_R),
 	\label{eq:rankinehugo}
 \end{equation}
-donde $f(u) = \frac{1}{2} u^{2}$ \cite{Leveque}. A continuación se demuestra la expresión general de la condición Rankine - Hugoniot.\\
+donde $f(u) = \frac{1}{2} u^{2}$. A continuación se demuestra la expresión general de la condición Rankine - Hugoniot.\\
 
 \textit{Prueba:} Sea $u$ una solución débil de la ecuación diferencial $u_t + f(u)_x = 0$, de la forma (\ref{eq:solriemannLR}). Sea $\mathcal{M} \gg st$. Aplicando la expresión (\ref{eq:continuidad-1-integral}) a $u$:
 \begin{equation}
@@ -352,19 +352,19 @@ Entonces, sustituyendo en (\ref{eq:flux_diff}),
 \begin{equation}
 	s(u_L - u_R) = f(u_L) - f(u_R),
 \end{equation}
-se obtiene la condición de salto de Rankine - Hugoniot \cite{Leveque}.
+se obtiene la condición de salto de Rankine - Hugoniot.
 
 Por lo tanto, para el caso $u_L > u_R$, la solución de la ecuación de Burgers es una discontinuidad que se propaga con una velocidad constante $s = \frac{u_L + u_R}{2}$ \cite{Cameron}.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.8\linewidth]{../some_plots/cap1/graficas/riemannLR.pdf}
-	\caption{Ejemplo gráfico de la solución de la ecuación de Burgers para el caso $u_L > u_R$. \textbf{Fuente: }elaboración propia, basada en el esquema obtenido de \cite{Leveque}.}
+	\caption{Ejemplo gráfico de la solución de la ecuación de Burgers para el caso $u_L > u_R$. \textbf{Fuente: }elaboración propia, basada en el esquema obtenido de.}
 	\label{fig:solriemannLR}
 \end{figure}
 
 \subsubsection{Caso $u_L < u_R$:}
-Hay múltiples soluciones débiles para este caso, por ejemplo, la solución (\ref{eq:solriemannLR}) \cite{Cameron} \cite{Leveque}. Sin embargo, esta no es la solución que corresponde a la solución con viscosidad disipiada \cite{Cameron}. La solución
+Hay múltiples soluciones débiles para este caso, por ejemplo, la solución (\ref{eq:solriemannLR}) \cite{Cameron}. Sin embargo, esta no es la solución que corresponde a la solución con viscosidad disipiada \cite{Cameron}. La solución
 \begin{equation}
 	u(x,t) = 
 	\begin{cases}
@@ -373,7 +373,7 @@ Hay múltiples soluciones débiles para este caso, por ejemplo, la solución (\r
 		u_R, & \hspace{3mm} x > u_{R}t,		
 	\end{cases}\label{eq:solriemannRL}
 \end{equation}
-es la solución correspondiente a la solución con viscosidad disipada y es conocida como una \textbf{onda de rarefacción} \cite{Leveque}. Resulta ser poco práctico tener que recurrir frecuentemente a la solución de viscosidad disipada para encontrar la solución a cualquier caso del problema de Riemann, por lo que en su lugar se suelen imponer condiciones conocidas como \textbf{condiciones de entropía} que son equivalentes a exigir que la solución sea consistente con el formalismo de viscosidad disipada \cite{Leveque}.
+es la solución correspondiente a la solución con viscosidad disipada y es conocida como una \textbf{onda de rarefacción}. Resulta ser poco práctico tener que recurrir frecuentemente a la solución de viscosidad disipada para encontrar la solución a cualquier caso del problema de Riemann, por lo que en su lugar se suelen imponer condiciones conocidas como \textbf{condiciones de entropía} que son equivalentes a exigir que la solución sea consistente con el formalismo de viscosidad disipada.
 
 \begin{figure}[ht]
 	\begin{subfigure}{0.5\textwidth}
@@ -396,7 +396,7 @@ es la solución correspondiente a la solución con viscosidad disipada y es cono
 	\label{fig:rarefaccion}
 \end{figure}
 \section{Condiciones de entropía}
-Se ha mencionado que la solución con viscosidad disipada es la solución débil correcta que debe considerarse al resolver una ecuación de conservación, sin embargo, resulta ser complicado encontrar la solución para una ecuación de conservación con viscosidad. Por lo tanto, se suelen imponer un conjunto de condiciones que sean equivalentes a aplicar el formalismo de viscosidad disipada \cite{Leveque}. Estas se denominan \textbf{condiciones de entropía}, dado que cumplen un papel similar al de la entropía misma en problemas de la dinámica de los gases \cite{Leveque}.
+Se ha mencionado que la solución con viscosidad disipada es la solución débil correcta que debe considerarse al resolver una ecuación de conservación, sin embargo, resulta ser complicado encontrar la solución para una ecuación de conservación con viscosidad. Por lo tanto, se suelen imponer un conjunto de condiciones que sean equivalentes a aplicar el formalismo de viscosidad disipada. Estas se denominan \textbf{condiciones de entropía}, dado que cumplen un papel similar al de la entropía misma en problemas de la dinámica de los gases.
 
 Existen varias versiones de la condición de entropía para una ecuación de conservación. Se mostraran las dos más relevantes con respecto a los métodos numéricos a tratar en este texto.
 \subsection{Condición de entropía, primera versión}
@@ -405,16 +405,15 @@ La primera versión de la condición de entropía establece que una discontinuid
 	f'(u_L) > s > f'(u_R)
 	\label{eq:entropy}
 \end{equation}
-para que se satisfaga la misma condición \cite{Leveque}. Para interpretar esta condición se debe resaltar que la derivada $f'(u)$ corresponde a la velocidad característica de la onda en un punto $(x,t)$ \cite{Leveque}. Por lo tanto, se puede notar que las curvas características se intersectan con la velocidad de propagación de la discontinuidad, de tal manera que las características a la izquierda de la onda de choque avanzan hacia el mismo choque y las características a la derecha son alcanzadas por la onda de choque \cite{Leveque}.
+para que se satisfaga la misma condición. Para interpretar esta condición se debe resaltar que la derivada $f'(u)$ corresponde a la velocidad característica de la onda en un punto $(x,t)$. Por lo tanto, se puede notar que las curvas características se intersectan con la velocidad de propagación de la discontinuidad, de tal manera que las características a la izquierda de la onda de choque avanzan hacia el mismo choque y las características a la derecha son alcanzadas por la onda de choque.
 
-Por otro lado, si se tuviese una discontinuidad que se propaga con una velocidad $s$ tal que se cumple la condición contraria, i.e., $f'(u_L) < s < f'(u_R)$, esta solución no sería estable ante alguna perturbación, ya sea al añadir una pequeña viscosidad o suavizando la discontinuidad en la solución \cite{Leveque}. Al aplicar dichas perturbaciones, se generarían ondas de rarefacción en lugar de ondas de choque.
+Por otro lado, si se tuviese una discontinuidad que se propaga con una velocidad $s$ tal que se cumple la condición contraria, i.e., $f'(u_L) < s < f'(u_R)$, esta solución no sería estable ante alguna perturbación, ya sea al añadir una pequeña viscosidad o suavizando la discontinuidad en la solución. Al aplicar dichas perturbaciones, se generarían ondas de rarefacción en lugar de ondas de choque.
 
 \subsection{Condición de entropía, segunda versión}
-Esta condición desarrollada por Oleinik \cite{Leveque} indica que si $u(x,t)$ es una solución débil físicamente válida si existe una constante $E >0$  tal que para todo $a>0$, $t>0$, sobre cualquier punto $x$ del dominio espacial se cumple que:
+Esta condición desarrollada por Oleinik indica que si $u(x,t)$ es una solución débil físicamente válida si existe una constante $E >0$  tal que para todo $a>0$, $t>0$, sobre cualquier punto $x$ del dominio espacial se cumple que:
 \begin{equation}
 	\frac{u(x+a,t) - u(x,t)}{a} < \frac{E}{t}
-\end{equation}
-\cite{Leveque}.
+\end{equation}.
 
 \section{Sistemas hiperbólicos lineales}
 El objetivo de esta sección es explicar la solución general de un sistema hiperbólico lineal y la solución del problema de Riemann asociado. Estos resultados serán de alta utilidad para construir la solución numérica que se busca en este texto.
@@ -424,7 +423,7 @@ El sistema descrito en la ecuación (\ref{eq:conserv-deriv-short}) con una funci
 	\mathbf{U}_t + \mathbf{A}\mathbf{U}_x = 0
 	\label{eq:linear-sys}
 \end{equation}
-donde $\mathbf{A} \in \mathbb{R}^{m \times m}$ y $\mathbf{U} : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}^{m}$. Formalmente hablando, este es un sistema lineal de $m$ cantidades conservadas \cite{Leveque}. Naturalmente, también se define una condición inicial para este sistema,
+donde $\mathbf{A} \in \mathbb{R}^{m \times m}$ y $\mathbf{U} : \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}^{m}$. Formalmente hablando, este es un sistema lineal de $m$ cantidades conservadas. Naturalmente, también se define una condición inicial para este sistema,
 \begin{equation}
 	\mathbf{U}(x,0) = \mathbf{U}_{0}(x).
 	\label{eq:cond-inicial-linear-sys}
@@ -435,14 +434,14 @@ En la sección \ref{sec:ecuaciones-de-conservacion} se definió un sistema hiper
 	\mathit{\mathbf{A}} = \mathbf{R}\mathbf{\Lambda} \mathbf{R}^{-1}.
 	\label{eq:a-diago}
 \end{equation}
-En esta relación, $\mathbf{\Lambda}$ es la matriz definida como $\text{diag}(\lambda_1, \lambda_2, \dots \lambda_m)$ donde $\lambda_i$ es el i-ésimo autovalor de $\mathbf{A}$. Mientras que $\mathbf{R}$ es la matriz formada por los autovectores columna de $\mathbf{A}$, denominados $\mathbf{r}_i$ \cite{Leveque}. Por ello, se tiene que
+En esta relación, $\mathbf{\Lambda}$ es la matriz definida como $\text{diag}(\lambda_1, \lambda_2, \dots \lambda_m)$ donde $\lambda_i$ es el i-ésimo autovalor de $\mathbf{A}$. Mientras que $\mathbf{R}$ es la matriz formada por los autovectores columna de $\mathbf{A}$, denominados $\mathbf{r}_i$. Por ello, se tiene que
 \begin{equation}
 	\mathbf{A}\mathbf{r}_{p}  = \lambda_{p} \mathbf{r}_{p} 
 \end{equation}
-para todo $p \in [1,2,\dots, m]$ \cite{Leveque}.
+para todo $p \in [1,2,\dots, m]$.
 
 \subsection{Resolución de un sistema hiperbólico lineal}
-Se asumirá que se tiene un sistema de la forma (\ref{eq:linear-sys}), tal que los autovalores de $\mathbf{A}$ son todos distintos y reales, i.e., se trata de un sistema \textbf{estrictamente hiperbólico} \cite{Leveque}. Este sistema se puede resolver introduciendo nuevas variables conocidas como \textbf{variables características} \cite{Leveque}. Se define $\mathbf{v}$ como
+Se asumirá que se tiene un sistema de la forma (\ref{eq:linear-sys}), tal que los autovalores de $\mathbf{A}$ son todos distintos y reales, i.e., se trata de un sistema \textbf{estrictamente hiperbólico}. Este sistema se puede resolver introduciendo nuevas variables conocidas como \textbf{variables características}. Se define $\mathbf{v}$ como
 \begin{equation}
 	\mathbf{v} \equiv \mathbf{R}^{-1} \mathbf{U}.
 	\label{eq:def-v}
@@ -455,22 +454,21 @@ sustituyendo la expresión (\ref{eq:a-diago}) obteniendo,
 \begin{equation}
 	\mathbf{R}^{-1}\mathbf{U}_t + \mathbf{\Lambda} \mathbf{R}^{-1} \mathbf{U}_x = 0
 \end{equation}
-al usar el hecho de que $\mathbf{R}^{-1} \mathbf{R} = \mathbf{I}$ \cite{Leveque}. Luego, usando la definición de $\mathbf{v}$ (\ref{eq:def-v}) y dado que este ejemplo corresponde a un sistema lineal, las matrices $\mathbf{R}$ y su inversa son constantes, por tanto se tiene que
+al usar el hecho de que $\mathbf{R}^{-1} \mathbf{R} = \mathbf{I}$. Luego, usando la definición de $\mathbf{v}$ (\ref{eq:def-v}) y dado que este ejemplo corresponde a un sistema lineal, las matrices $\mathbf{R}$ y su inversa son constantes, por tanto se tiene que
 \begin{equation}
 	\mathbf{v}_t + \mathbf{\Lambda} \mathbf{v}_x = 0
 	\label{eq:diag-linear-sys}
-\end{equation}
-\cite{Leveque}. 
-Cabe destacar la similitud entre esta última ecuación y la ecuación (\ref{eq:linear-sys}). Sin embargo, la principal diferencia entre éstas es que la matriz $\mathbf{\Lambda}$ es una matriz diagonal y la matriz $\mathbf{A}$, en general, no lo es. Por tanto, el sistema definido en (\ref{eq:diag-linear-sys}) se puede desacoplar, obteniendo $m$ ecuaciones escalares lineales independientes \cite{Leveque}. Esto es,
+\end{equation}.
+Cabe destacar la similitud entre esta última ecuación y la ecuación (\ref{eq:linear-sys}). Sin embargo, la principal diferencia entre éstas es que la matriz $\mathbf{\Lambda}$ es una matriz diagonal y la matriz $\mathbf{A}$, en general, no lo es. Por tanto, el sistema definido en (\ref{eq:diag-linear-sys}) se puede desacoplar, obteniendo $m$ ecuaciones escalares lineales independientes. Esto es,
 \begin{equation}
 	(v_p)_t + \lambda_{p} (v_{p})_x = 0, \hspace{17mm} \forall p \in [1,2, \dots, m],
 \end{equation}
-donde $v_p$ es cada componente de $\mathbf{v}$ \cite{Leveque}. Este último sistema se resuelve usando el resultado de la ecuación de advección lineal escalar (\ref{eq:sol-advec}), obteniendo
+donde $v_p$ es cada componente de $\mathbf{v}$. Este último sistema se resuelve usando el resultado de la ecuación de advección lineal escalar (\ref{eq:sol-advec}), obteniendo
 \begin{equation}
 	v_p(x,t) = v_p(x - \lambda_{p}t, 0)
 	\label{eq:v-sub-p}
 \end{equation}
-dado que $v_p(x, 0)$ es la condición inicial para cada ecuación escalar según (\ref{eq:cond-inicial-linear-sys}) \cite{Leveque}.
+dado que $v_p(x, 0)$ es la condición inicial para cada ecuación escalar según (\ref{eq:cond-inicial-linear-sys}).
 
 Ya que se tiene la solución al sistema lineal en términos de las variables características, es oportuno escribir las soluciones en términos de las variables originales, i.e., $\mathbf{U}$. De forma que se tiene,
 \begin{equation}
@@ -479,8 +477,7 @@ Ya que se tiene la solución al sistema lineal en términos de las variables car
 y
 \begin{equation}
 	\mathbf{U}(x,t) = \mathbf{R} \mathbf{v}(x,t)
-\end{equation}
-\cite{Leveque}. Además $\mathbf{U}$ se puede escribir como una combinación lineal de los autovectores de $\mathbf{A}$, tomando en cuenta que el valor $\mathbf{v}_p$ es el coeficiente de cada autovector $\mathbf{r}_p$ en dicha expansión lineal, de tal manera que se tiene lo siguiente
+\end{equation}. Además $\mathbf{U}$ se puede escribir como una combinación lineal de los autovectores de $\mathbf{A}$, tomando en cuenta que el valor $\mathbf{v}_p$ es el coeficiente de cada autovector $\mathbf{r}_p$ en dicha expansión lineal, de tal manera que se tiene lo siguiente
 \begin{equation}
 	\mathbf{U}(x,t) = \sum_{p=1}^{m} v_p(x,t) \mathbf{r}_p
 	\label{eq:sol-linear-sys}
@@ -488,10 +485,9 @@ y
 \begin{equation}
 	\mathbf{U}(x,t) = \sum_{p=1}^{m} v_p(x - \lambda_p t, 0) \mathbf{r}_p
 	\label{eq:sol-linear-sys-con-caracteristicas}
-\end{equation}
-\cite{Leveque}. Cabe destacar que, de forma similar al caso escalar, la solución $\mathbf{U}$ a este sistema lineal solo depende de la condición inicial $\mathbf{U}_0$ en los $m$ conjuntos de puntos, dados por $x - \lambda_p t$. Formalmente, su dominio de dependencia se escribe como $D(\bar{x}, \bar{t}) = \{x = \bar{x} - \lambda_{p} \bar{t}, \hspace{3mm} p = 1,2, \dots, m \}$ \cite{Leveque}.
+\end{equation}. Cabe destacar que, de forma similar al caso escalar, la solución $\mathbf{U}$ a este sistema lineal solo depende de la condición inicial $\mathbf{U}_0$ en los $m$ conjuntos de puntos, dados por $x - \lambda_p t$. Formalmente, su dominio de dependencia se escribe como $D(\bar{x}, \bar{t}) = \{x = \bar{x} - \lambda_{p} \bar{t}, \hspace{3mm} p = 1,2, \dots, m \}$.
 
-De la misma manera que al generalizar el dominio de dependencia de una ecuación de advección lineal, se pueden introducir las curvas características asociadas a este sistema. El conjunto de características de la $p$ familia está dado por la ecuación $x'(t)=\lambda_{p}$ \cite{Leveque}. De tal manera que dichas curvas son de la forma $x = x_0 + \lambda_{p}t$ y se interpretan como rectas sobre el plano $x-t$, lo cual es consistente con el hecho de que se tratan de las características asociadas a un sistema lineal \cite{Leveque}. El coeficiente $v_p(x,t)$ de cada autovector $\mathbf{r}_p$ es constante a lo largo de cada característica \cite{Leveque}.
+De la misma manera que al generalizar el dominio de dependencia de una ecuación de advección lineal, se pueden introducir las curvas características asociadas a este sistema. El conjunto de características de la $p$ familia está dado por la ecuación $x'(t)=\lambda_{p}$. De tal manera que dichas curvas son de la forma $x = x_0 + \lambda_{p}t$ y se interpretan como rectas sobre el plano $x-t$, lo cual es consistente con el hecho de que se tratan de las características asociadas a un sistema lineal. El coeficiente $v_p(x,t)$ de cada autovector $\mathbf{r}_p$ es constante a lo largo de cada característica.
 
 \subsection{Solución al problema de Riemann para un sistema hiperbólico lineal}
 El problema de Riemann para un sistema hiperbólico lineal corresponde a la ecuación diferencial
@@ -506,16 +502,16 @@ junto a la siguiente condición inicial
 		\mathbf{U}_R, & x > 0,
 	\end{cases}
 \end{equation}
-considerando que este sistema es estrictamente hiperbólico \cite{Leveque}.
+considerando que este sistema es estrictamente hiperbólico.
 
-Para resolver este problema, es conveniente escribir los dos estados $\mathbf{U}_L$ y  $\mathbf{U}_R$ en términos de los autovectores de $\mathbf{A}$, $\mathbf{r}_i$ \cite{Leveque}. Esta expansión se sustenta en la propiedad de independencia lineal que poseen los vectores $\mathbf{r}_i$ y dado que estos son $m$ distintos vectores,  indica que forman una base del espacio $\mathbb{R}^{m}$. Por tanto,
+Para resolver este problema, es conveniente escribir los dos estados $\mathbf{U}_L$ y  $\mathbf{U}_R$ en términos de los autovectores de $\mathbf{A}$, $\mathbf{r}_i$. Esta expansión se sustenta en la propiedad de independencia lineal que poseen los vectores $\mathbf{r}_i$ y dado que estos son $m$ distintos vectores,  indica que forman una base del espacio $\mathbb{R}^{m}$. Por tanto,
 \begin{equation}
 	\mathbf{U}_L = \sum_{p=1}^{m} \alpha_{p} \mathbf{r}_{p}
 \end{equation}
 \begin{equation}
 	\mathbf{U}_R = \sum_{p=1}^{m} \beta_{p} \mathbf{r}_{p}
 \end{equation}
-con $\alpha_p$ y $\beta_{p}$ reales y constantes, para todo $p=1,2,\dots, m$ \cite{Leveque}.
+con $\alpha_p$ y $\beta_{p}$ reales y constantes, para todo $p=1,2,\dots, m$.
 Luego, utilizando la solución (\ref{eq:sol-linear-sys}) se obtiene
 \begin{equation}
 	v_p(x,0) = 
@@ -532,20 +528,19 @@ y
 		\beta_{p}, & \text{si} \hspace{4mm} x - \lambda_{p} t > 0,
 	\end{cases}
 \end{equation}
-utilizando la relación del resultado (\ref{eq:v-sub-p}) \cite{Leveque}. Entonces, la solución al problema de Riemann tiene la forma (\ref{eq:sol-linear-sys-con-caracteristicas}), con $v_p$ definido como una función por partes.
+utilizando la relación del resultado (\ref{eq:v-sub-p}). Entonces, la solución al problema de Riemann tiene la forma (\ref{eq:sol-linear-sys-con-caracteristicas}), con $v_p$ definido como una función por partes.
 
 Si se define a $P(x,t)$ como el valor máximo de $p$ tal que $x - \lambda_{p} t > 0$, entonces se puede escribir la solución al problema de Riemann como:
 \begin{equation}
 	\mathbf{U}(x,t) = \sum_{p=1}^{P(x,t)}\beta_{p}\mathbf{r}_{p} + \sum_{p=P(x,t) +1}^{m} \alpha_{p} \mathbf{r}_p
 	\label{eq:sol-riemann-linear-sys-1}
-\end{equation}
-\cite{Leveque}.
+\end{equation}.
 
 Se puede verificar que esta solución cumple con la condición de salto de Rankine-Hugoniot (\ref{eq:rankinehugo}). Notando que al atravesar una curva característica $p$, el coeficiente de $\mathbf{r}_p$ salta de acuerdo a la siguiente expresión:
 \begin{equation}
 	\mathbf{U}_{Lp} - \mathbf{U}_{Rp} = (\beta_{p} - \alpha_{p})\mathbf{r}_p
 \end{equation}
-donde $\mathbf{U}_{Lp}$ y $\mathbf{U}_{Rp}$ son los valores de la onda a la izquierda y derecha de la curva característica $p$, respectivamente \cite{Leveque}.
+donde $\mathbf{U}_{Lp}$ y $\mathbf{U}_{Rp}$ son los valores de la onda a la izquierda y derecha de la curva característica $p$, respectivamente.
 
 Tomando en cuenta que $\mathbf{F}(\mathbf{U}) = \mathbf{A}\mathbf{U}$, entonces:
 \begin{equation}
@@ -557,7 +552,7 @@ Tomando en cuenta que $\mathbf{F}(\mathbf{U}) = \mathbf{A}\mathbf{U}$, entonces:
 \begin{equation}
 	\mathbf{F}(\mathbf{U}_{Lp}) - \mathbf{F}(\mathbf{U}_{Rp}) = \lambda_{p}(\mathbf{U}_{Lp} - \mathbf{U}_{Rp}),
 \end{equation}
-con lo cual se demuestra que se cumple la condición Rankine - Hugoniot, notando que la velocidad de propagación de la discontinuidad es $\lambda_p$ \cite{Leveque}.
+con lo cual se demuestra que se cumple la condición Rankine - Hugoniot, notando que la velocidad de propagación de la discontinuidad es $\lambda_p$.
 
 Otra forma útil de escribir la solución (\ref{eq:sol-riemann-linear-sys-1}) es a través de los saltos previamente desarrollados, esto es,
 \begin{equation}
@@ -566,5 +561,4 @@ Otra forma útil de escribir la solución (\ref{eq:sol-riemann-linear-sys-1}) es
 o de forma equivalente,
 \begin{equation}
 	\mathbf{U}(x,t) = \mathbf{U}_{R}(x,t) - \sum_{\lambda_{p} \geq x/t} (\beta_{p} - \alpha_{p}) \mathbf{r}_{p} 
-\end{equation}
-\cite{Leveque}.
+\end{equation}.
