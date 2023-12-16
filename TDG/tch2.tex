@@ -1,4 +1,16 @@
 \chapter{MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}
-Se describe la estructura del método de volúmenes finitos, principalmente para resolver ecuaciones de conservación y se enfatiza su importancia al aplicarse a problemas de esta naturaleza. Se introducen los conceptos de discretización, ecuación de diferencias, esquema numérico, celda. Se comenta sobre las condiciones de estabilidad de una solución numérica.
+A continuación se describen el método y los esquemas a utilizar para llevar a cabo una solución numérica de una ecuación de conservación. La idea principal del capítulo es describir el método de volúmenes finitos y la motivación de su uso. Se explicarán los esquemas adecuados para aplicar el mencionado método, un solucionador del problema de Riemann, denominado esquema de Godunov y otro solucionador aproximado del problema de Riemann, denominado esquema de Roe. Este último es el esquema elegido para resolver las ecuaciones de Euler en este texto.\\
+El contenido de este capítulo se basa en la parte \textit{Numerical Methods} del texto \cite{Leveque} de Randall LeVeque.
 
-Se exponen algunos esquemas numéricos generales aproximados. Se introduce el esquema de Roe y su relación con el problema de Riemann. Nuevamente, se utiliza como ejemplo la ecuación de Burgers para proporcionar una idea simple de la aplicación de estos esquemas.
+\section{Método de volúmenes finitos}
+El método de volúmenes finitos (MVF) es un método numérico de integración que se especializa en resolver ecuaciones diferenciales escritas en forma conservativa. El MVF destaca por ofrecer una interpretación peculiar de la función a resolver, ya que es un método basado en la forma \textbf{integral} de las ecuaciones.
+
+Sea $D = [a,b]$ el dominio espacial de una ecuación de conservación
+
+
+
+
+
+%Se describe la estructura del método de volúmenes finitos, principalmente para resolver ecuaciones de conservación y se enfatiza su importancia al aplicarse a problemas de esta naturaleza. Se introducen los conceptos de discretización, ecuación de diferencias, esquema numérico, celda. Se comenta sobre las condiciones de estabilidad de una solución numérica.
+%
+%Se exponen algunos esquemas numéricos generales aproximados. Se introduce el esquema de Roe y su relación con el problema de Riemann. Nuevamente, se utiliza como ejemplo la ecuación de Burgers para proporcionar una idea simple de la aplicación de estos esquemas.
