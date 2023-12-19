@@ -8,6 +8,7 @@
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplo gráfico de la solución de la ecuación de Burgers para el caso $u_L > u_R$. \textbf {Fuente: }elaboración propia, basada en el esquema obtenido de.\relax }}{15}{figure.caption.16}%
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Gráficas de las soluciones, en distintos instantes de tiempo, de la ecuación de Burgers para el caso $u_L < u_R$ del problema de Riemann \textbf {Fuente:} elaboración propia.\relax }}{16}{figure.caption.17}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Esquema de símbolos usados para la discretización del dominio espacial. \textbf {Fuente:} elaboración propia.\relax }}{24}{figure.caption.18}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

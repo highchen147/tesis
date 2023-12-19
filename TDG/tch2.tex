@@ -4,13 +4,16 @@ El contenido de este capítulo se basa en la parte \textit{Numerical Methods} de
 
 \section{Método de volúmenes finitos}
 El método de volúmenes finitos (MVF) es un método numérico de integración que se especializa en resolver ecuaciones diferenciales escritas en forma conservativa. El MVF destaca por ofrecer una interpretación peculiar de la función a resolver, ya que es un método basado en la forma \textbf{integral} de las ecuaciones.
+\subsection{Discretización del problema}
+Al aplicar un método numérico para resolver una ecuación diferencial se necesita discretizar el dominio de la función y la función misma. Considerando a  $D = [a,b]$ como el dominio espacial de la solución de una ecuación de conservación, para aplicar el MVF este dominio se divide en $N$ intervalos iguales llamado \textbf{celdas}. Cada celda se denomina $\mathcal{C}_i$ y se define como un intervalo, $\mathcal{C}_i = [x_i, x_{i+1}]$. Además, cada celta tiene un ancho $h$, dado por
+\begin{equation}
+	h = \frac{b-a}{N}
+\end{equation}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{../some_plots/cap2/graficas/domain.pdf}
+	\label{fig:discretizacion-eje-x}
+	\caption{Esquema de símbolos usados para la discretización del dominio espacial. \textbf{Fuente:} elaboración propia.}
+\end{figure}
 
-Sea $D = [a,b]$ el dominio espacial de una ecuación de conservación.
 
-
-
-
-
-%Se describe la estructura del método de volúmenes finitos, principalmente para resolver ecuaciones de conservación y se enfatiza su importancia al aplicarse a problemas de esta naturaleza. Se introducen los conceptos de discretización, ecuación de diferencias, esquema numérico, celda. Se comenta sobre las condiciones de estabilidad de una solución numérica.
-%
-%Se exponen algunos esquemas numéricos generales aproximados. Se introduce el esquema de Roe y su relación con el problema de Riemann. Nuevamente, se utiliza como ejemplo la ecuación de Burgers para proporcionar una idea simple de la aplicación de estos esquemas.
