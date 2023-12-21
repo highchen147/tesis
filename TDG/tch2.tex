@@ -34,3 +34,20 @@ que se interpreta como el valor aproximado numéricamente de la función $\mathb
 de tal manera que, aproximadamente, $U_i^n$ toma el valor promedio de $\mathbf{U}(x,t_n)$ sobre la celda $\mathcal{C}_i$. Vale la pena destacar que si las funciones $u_j$ de las que depende $\mathbf{U}$ son funciones suaves, la expresión para $U_i^n$ coincide en $\mathcal{O}(h^2)$ con el valor exacto de $\mathbf{U}$ en el punto medio de la i-ésima celda.
 
 La ventaja de utilizar un método aproximado basado en los valores promedio de las funciones en las celdas es que éste puede considerarse un método \textbf{conservativo} de tal manera que imite la ley de conservación obtenida a partir de la forma integral de la ecuación de conservación. Esta característica es sumamente importante al considerar ondas de choque como posibles soluciones.
+
+Habiendo considerado la aproximación para obtener $U_i^n$, para continuar con la discretización del problema se puede integrar la ecuación de conservación sobre el dominio $[x_i,x_{i+1}] \times [t_n, t_{n+1}]$, que corresponde a la integral sobre una celda $\mathcal{C}_i$ del dominio espacial y sobre un instante temporal. Utilizando la expresión (\ref{eq:continuidad-2-integral}) se obtiene
+\begin{equation}
+	\int_{\mathcal{C}_i}\mathbf{U}(x, t_{n+1})\dd{x} - \int_{\mathcal{C}_i}\mathbf{U}(x, t_{n})\dd{x} = \int_{t_n}^{t_{n+1}}\mathbf{F}(\mathbf{U}(x_i,t))\dd{t} - \int_{t_n}^{t_{n+1}}\mathbf{F}(\mathbf{U}(x_{i+1},t))\dd{t}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		\frac{1}{h}\int_{\mathcal{C}_i}\mathbf{U}(x, t_{n+1})\dd{x} - \frac{1}{h}\int_{\mathcal{C}_i}\mathbf{U}(x, t_{n})\dd{x} = 
+		\frac{1}{h}\int_{t_n}^{t_{n+1}}\mathbf{F}(\mathbf{U}(x_i,t))\dd{t} -\\ \frac{1}{h}\int_{t_n}^{t_{n+1}}\mathbf{F}(\mathbf{U}(x_{i+1},t))\dd{t}
+	\end{aligned}
+\end{equation}
+En esta expresión se puede obtener la diferencia exacta entre dos estados temporales del valor promedio de $\mathbf{U}$. Las integrales del flujo sobre el tiempo no se pueden calcular con exactitud, dado que se necesitaría saber exactamente cómo evoluciona $\mathbf{U}$ con el tiempo. Entonces, se define el flujo aproximado $F_i^n$,
+\begin{equation}
+	F_i^n \approx \frac{1}{k} \int_{t_n}^{t_n+1} \mathbf{F}(\mathbf{U}(x_i,t)) \dd{t}
+\end{equation}
+Además, se puede usar el hecho de que la información se propaga con velocidad finita a través del espacio, usando las conclusiones del tema del domino de dependencia de una ecuación de conservación. 
+
