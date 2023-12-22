@@ -47,7 +47,10 @@ Habiendo considerado la aproximación para obtener $U_i^n$, para continuar con l
 \end{equation}
 En esta expresión se puede obtener la diferencia exacta entre dos estados temporales del valor promedio de $\mathbf{U}$. Las integrales del flujo sobre el tiempo no se pueden calcular con exactitud, dado que se necesitaría saber exactamente cómo evoluciona $\mathbf{U}$ con el tiempo. Entonces, se define el flujo aproximado $F_i^n$,
 \begin{equation}
-	F_i^n \approx \frac{1}{k} \int_{t_n}^{t_n+1} \mathbf{F}(\mathbf{U}(x_i,t)) \dd{t}
+	F_i^n \approx \frac{1}{k} \int_{t_n}^{t_n+1} \mathbf{F}(\mathbf{U}(x_i,t)) \dd{t}.
 \end{equation}
-Además, se puede usar el hecho de que la información se propaga con velocidad finita a través del espacio, usando las conclusiones del tema del domino de dependencia de una ecuación de conservación. 
+Además, se puede usar el hecho de que la información se propaga con velocidad finita a través del espacio, usando las conclusiones del tema del domino de dependencia de una ecuación de conservación. Por lo que se puede asumir que el flujo numérico aproximado $F_i^n$ depende únicamente de los valores de $U$ en las celdas adyacentes,
+\begin{equation}
+	F_i^n = F(U_{i-1}^n, U_i^n)
+\end{equation} 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  20 DEC 2023 22:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  21 DEC 2023 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1370,17 +1370,21 @@ Package pdftex.def Info: ../some_plots/cap2/graficas/domain.pdf  used on input
 line 18.
 (pdftex.def)             Requested size: 426.39258pt x 195.05908pt.
 
-[24 <../some_plots/cap2/graficas/domain.pdf>]) [25]
+[24 <../some_plots/cap2/graficas/domain.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25])
+[26]
 \openout2 = `tch3.aux'.
 
- (tch3.tex [26
+ (tch3.tex
+Cap\'{\i }tulo 3.
+) [27
 
 
 
 
 ]
-Cap\'{\i }tulo 3.
-) [27]
 \openout2 = `tch4.aux'.
 
  (tch4.tex [28
@@ -1427,8 +1431,8 @@ Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
 (rerunfilecheck)             Checksum: 9FCF87A49E7D2F950071EB6199A19878;8755.
  ) 
 Here is how much of TeX's memory you used:
- 26516 strings out of 476339
- 494352 string characters out of 5787175
+ 26517 strings out of 476339
+ 494364 string characters out of 5787175
  1864340 words of memory out of 5000000
  46138 multiletter control sequences out of 15000+600000
  538737 words of font info for 102 fonts, out of 8000000 for 9000
@@ -1472,9 +1476,9 @@ ers/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1200.
 pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super
 /sftt1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (61 pages, 1039835 bytes).
+Output written on TesisTotalBibTeX.pdf (61 pages, 1040438 bytes).
 PDF statistics:
- 1034 PDF objects out of 1200 (max. 8388607)
- 214 named destinations out of 1000 (max. 500000)
+ 1035 PDF objects out of 1200 (max. 8388607)
+ 215 named destinations out of 1000 (max. 500000)
  410 words of extra memory for PDF output out of 10000 (max. 10000000)
 
