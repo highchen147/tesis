@@ -31,13 +31,13 @@ que se interpreta como el valor aproximado numéricamente de la función $\mathb
 \begin{equation}
 	U_{i}^{n} \approx \frac{1}{h}\int_{x_i}^{x_{i+1}}\mathbf{U}(x, t_n)\dd{x} \equiv \frac{1}{h}\int_{\mathcal{C}_i}\mathbf{U}(x, t_n)\dd{x}
 \end{equation}
-de tal manera que, aproximadamente, $U_i^n$ toma el valor promedio de $\mathbf{U}(x,t_n)$ \footnote{Para un sistema de conservación, tanto $\mathbf{U}$ como $U$ son vectores. Entonces, formalmente hablando, cada componente de $U$ es aproximadamente el valor promedio de cada componente de $\mathbf{U}$ en una celda.} sobre la celda $\mathcal{C}_i$. Vale la pena destacar que si las funciones $u_j$ de las que depende $\mathbf{U}$ son funciones suaves, la expresión para $U_i^n$ coincide en $\mathcal{O}(h^2)$ con el valor exacto de $\mathbf{U}$ en el punto medio de la i-ésima celda.
+de tal manera que, aproximadamente, $U_i^n$ toma el valor promedio de $\mathbf{U}(x,t_n)$ \footnote{Para un sistema de conservación, tanto $\mathbf{U}$ como $U$ son vectores. Entonces, formalmente hablando, cada componente de $U$ es aproximadamente el valor promedio de cada componente de $\mathbf{U}$ en una celda $\mathcal{C}_i$.} sobre la celda $\mathcal{C}_i$. Vale la pena destacar que si las funciones $u_j$ de las que depende $\mathbf{U}$ son funciones suaves, la expresión para $U_i^n$ coincide en $\mathcal{O}(h^2)$ con el valor exacto de $\mathbf{U}$ en el punto medio de la i-ésima celda.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{../some_plots/cap2/graficas/numeric_U.pdf}
 	\label{fig:discretizacion-de-U}
-	\caption{Gráfica de la construcción de una función escalar numéricamente aproximada $u_i$, en un dominio con pocas celdas. Se puede considerar que una función numéricamente aproximada es como una función por partes, en donde cada parte es una constante. \textbf{Fuente:} elaboración propia.}
+	\caption{Gráfica de la construcción de una función escalar numéricamente aproximada $u_i$, en un dominio con pocas celdas. Se puede considerar que una función numéricamente aproximada es una función definida por partes, en donde cada parte es una constante. \textbf{Fuente:} elaboración propia.}
 \end{figure}
 
 La ventaja de utilizar un método aproximado basado en los valores promedio de las funciones en las celdas es que éste puede considerarse un método \textbf{conservativo} de tal manera que imite la ley de conservación obtenida a partir de la forma integral de la ecuación de conservación. Esta característica es sumamente importante al considerar ondas de choque como posibles soluciones.
@@ -61,7 +61,10 @@ Además, se puede usar el hecho de que la información se propaga con velocidad 
 \begin{equation}
 	F_{i-\frac{1}{2}}^n = F(U_{i-1}^n, U_i^n)
 \end{equation} 
-por esta razón, se utiliza el índice fraccionario para indicar dónde se calcula el flujo $F$. Si es posible promediar adecuadamente el valor del flujo entre las interfaces de las celdas, se podrá construir un método numérico discreto completo. Sustituyendo las expresiones para las aproximaciones numéricas en (\ref{eq:integralsobreceldas}), se obtiene
+por esta razón, se utiliza el índice fraccionario para indicar dónde se calcula el flujo $F$. 
+% FIGURA
+
+Si es posible promediar adecuadamente el valor del flujo entre las interfaces de las celdas, se podrá construir un método numérico discreto completo. Sustituyendo las expresiones para las aproximaciones numéricas en (\ref{eq:integralsobreceldas}), se obtiene
 \begin{equation}
 	U_{i}^{n+1}-U_{i}^{n} = 
 	\frac{k}{h}\left[ F_{i-\frac{1}{2}} - F_{i+\frac{1}{2}} \right]
@@ -70,7 +73,24 @@ por esta razón, se utiliza el índice fraccionario para indicar dónde se calcu
 \begin{equation}
 	U_{i}^{n+1}-U_{i}^{n} = 
 	\frac{k}{h}\left[ F(U_{i-1}^n, U_i^n) - F(U_{i}^n, U_{i+1}^n) \right]
+	\label{eq:metodo-vol-finitos-2}
 \end{equation}
 de tal manera que se obtiene un método iterativo para calcular $U$ en cualquier instante de tiempo $t_n$.
 
+Como se mencionó previamente, un método numérico de la forma (\ref{eq:metodo-vol-finitos}) es considerado conservativo, dado que imita la propiedad (\ref{eq:integralsobreceldas}) de la solución exacta, pero en forma discreta. Si se suman todos los valores de $U$ y $F$ sobre todas las celdas, desde la celda $\mathcal{C}_L$ hasta la celda $\mathcal{C}_R$ a partir de la expresión (\ref{eq:metodo-vol-finitos-2}), se obtiene
+\begin{equation}
+ \sum_{i=L}^{R}\left[U_{i}^{n+1}-U_{i}^{n}\right] - 
+ \frac{k}{h}\sum_{i=L}^{R}\left[ F(U_{i-1}^n, U_i^n) - F(U_{i}^n, U_{i+1}^n) \right] = 0
+\end{equation}
+\begin{equation}
+	\sum_{i=L}^{R}\left[U_{i}^{n+1}-U_{i}^{n}\right] - 
+	\frac{k}{h}\left[F(U_{R-1}^n, U_{R}^n) - F(U_{L}^n, U_{L+1}^n) \right] = 0
+\end{equation}
+o bien, utilizando la notación de medios enteros
+\begin{equation}
+	\sum_{i=L}^{R}\left[U_{i}^{n+1}-U_{i}^{n}\right] - \frac{k}{h}\left[F_{R-\frac{1}{2}}^{n} - F_{L+\frac{1}{2}}^{n} \right] = 0.
+\end{equation}
+A partir de este último resultado se puede concluir que la diferencia entre la suma de los valores de $U$ en un conjunto de celdas consecutivas varía únicamente de acuerdo a los flujos sobre las fronteras de las celdas exteriores.
+
+El método iterativo utilizado para resolver la ecuación de conservación depende de cómo esté definida la función de flujo numérico $F_{i + \frac{1}{2}}^{n}$, por lo que es necesario definir un \textbf{esquema} que calcule $F$ basándose en los valores de la función $U$ adyacentes.
 
