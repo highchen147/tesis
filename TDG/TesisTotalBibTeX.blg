@@ -15,6 +15,11 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 A level-1 auxiliary file: tch1.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 A level-1 auxiliary file: tch2.aux
+Case mismatch error between cite keys Leveque and LeVeque
+---line 4 of file tch2.aux
+ : \citation{Leveque
+ :                  }
+I'm skipping whatever remains of this command
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 A level-1 auxiliary file: tch3.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
@@ -31,50 +36,51 @@ Warning--entry type for "Cameron" isn't style-file defined
 --line 3 of file bbtesis.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty translator in methods
-Warning--can't use both author and editor fields in Leveque
-Warning--empty translator in Leveque
+Warning--can't use both author and editor fields in LeVequeAstro
+Warning--empty translator in LeVequeAstro
+Warning--empty translator in LeVeque
 Warning--empty translator in heattransfer
 Warning--empty translator in Roe81
 Warning--empty translator in Roe86
-You've used 7 entries,
+You've used 8 entries,
             3599 wiz_defined-function locations,
-            748 strings with 9814 characters,
-and the built_in function-call counts, 4551 in all, are:
-= -- 343
-> -- 86
-< -- 9
-+ -- 34
-- -- 27
-* -- 377
-:= -- 625
-add.period$ -- 24
-call.type$ -- 7
-change.case$ -- 38
-chr.to.int$ -- 7
-cite$ -- 14
-duplicate$ -- 417
-empty$ -- 421
-format.name$ -- 45
-if$ -- 937
+            756 strings with 10001 characters,
+and the built_in function-call counts, 5123 in all, are:
+= -- 385
+> -- 96
+< -- 10
++ -- 38
+- -- 30
+* -- 420
+:= -- 708
+add.period$ -- 28
+call.type$ -- 8
+change.case$ -- 43
+chr.to.int$ -- 8
+cite$ -- 16
+duplicate$ -- 471
+empty$ -- 479
+format.name$ -- 50
+if$ -- 1056
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 97
-newline$ -- 59
-num.names$ -- 28
-pop$ -- 149
+missing$ -- 111
+newline$ -- 66
+num.names$ -- 32
+pop$ -- 172
 preamble$ -- 1
-purify$ -- 37
+purify$ -- 42
 quote$ -- 0
-skip$ -- 154
+skip$ -- 174
 stack$ -- 0
-substring$ -- 157
-swap$ -- 238
+substring$ -- 168
+swap$ -- 263
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 54
-warning$ -- 6
-while$ -- 28
+type$ -- 60
+warning$ -- 7
+while$ -- 31
 width$ -- 0
-write$ -- 127
-(There were 7 warnings)
+write$ -- 145
+(There was 1 error message)

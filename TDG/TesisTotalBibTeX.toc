@@ -29,9 +29,11 @@
 \contentsline {chapter}{\numberline {2}MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}{23}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Método de volúmenes finitos}{23}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Discretización del problema}{23}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Esquemas de flujo numérico}{27}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Esquema de Lax-Friedrichs}{28}{subsection.2.2.1}%
 \contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{29}{chapter.3}%
 \contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{31}{chapter.4}%
 \contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{33}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{35}{chapter*.20}%
-\contentsline {chapter}{RECOMENDACIONES}{37}{chapter*.21}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{39}{chapter*.22}%
+\contentsline {chapter}{CONCLUSIONES}{35}{chapter*.21}%
+\contentsline {chapter}{RECOMENDACIONES}{37}{chapter*.22}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{39}{chapter*.23}%

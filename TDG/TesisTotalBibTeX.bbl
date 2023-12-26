@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 %Comandos de formato, por si no están definidos.
 \ProvideTextCommand{\guillemotleft}{OT1}{\leavevmode\raise
   .27ex\hbox{$\scriptscriptstyle\ll$}}
@@ -68,7 +68,7 @@
   \newblock Version 5.7.1\finalpoint{}
   \newline\urlprefix\url{http://www.clawpack.org}
 
-\bibitem[{\citenamefont{LeVeque}(1998)}]{Leveque}
+\bibitem[{\citenamefont{LeVeque}(1998)}]{LeVequeAstro}
   \bibnamefont{LeVeque}, \bibfnamefont{Randall~J.}\namesend{}\datebegin 1998.
   \newblock \bibtitle{\emph{Nonlinear Conservation Laws and Finite Volume
   Methods}}.
@@ -77,6 +77,15 @@
   \newblock ISBN 978-3-540-31632-9\dateend{1998}.
   \newblock \doi{10.1007/3-540-31632-9_1}\finalpoint{}
   \newline\urlprefix\url{https://doi.org/10.1007/3-540-31632-9_1}
+
+\bibitem[{\citenamefont{LeVeque}(2013)}]{LeVeque}
+  \namereplace{  \bibnamefont{LeVeque},
+  \bibfnamefont{Randall~J.}}\namesend{}\datebegin 2013.
+  \newblock \bibtitle{\emph{Numerical Methods for Conservation Laws}}.
+  \newblock Lectures in mathematics ETH Z{\"u}rich. Birkh{\"a}user
+  Basel\dateend{2013}.
+  \newblock ISBN 9783034851169\finalpoint{}
+  \newline\urlprefix\url{https://books.google.com.gt/books?id=UvmpBwAAQBAJ}
 
 \bibitem[{\citenamefont{Pletcher}
   \citetalfont{\bbletal{}}(1997)\citenamefont{Pletcher},
