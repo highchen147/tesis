@@ -1,6 +1,6 @@
 \chapter{MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}
 A continuación se describen el método y los esquemas a utilizar para llevar a cabo una solución numérica de una ecuación de conservación. La idea principal del capítulo es describir el método de volúmenes finitos y la motivación de su uso. Se explicarán los esquemas adecuados para aplicar el mencionado método, un solucionador del problema de Riemann, denominado esquema de Godunov y otro solucionador aproximado del problema de Riemann, denominado esquema de Roe. Este último es el esquema elegido para resolver las ecuaciones de Euler en este texto.\\
-El contenido de este capítulo se basa en el capítulo \textit{Numerical Methods in One Dimension} del texto \cite{LeVequeAstro} y en el capítulo de \textit{Numerical Methods} del texto \cite{Leveque}, ambos escritos por Randall LeVeque.
+El contenido de este capítulo se basa en el capítulo \textit{Numerical Methods in One Dimension} del texto \cite{LeVequeAstro} y en el capítulo de \textit{Numerical Methods} del texto \cite{LeVeque}, ambos escritos por Randall LeVeque.
 
 \section{Método de volúmenes finitos}
 El método de volúmenes finitos (MVF) es un método numérico de integración que se especializa en resolver ecuaciones diferenciales escritas en forma conservativa. El MVF destaca por ofrecer una interpretación peculiar de la función a resolver, ya que es un método basado en la forma \textbf{integral} de las ecuaciones.
@@ -16,8 +16,8 @@ Por lo tanto, se tiene una expresión para el valor de cada $x_i$,
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{../some_plots/cap2/graficas/domain.pdf}
-	\label{fig:discretizacion-eje-x}
 	\caption{Esquema de símbolos utilizados para la discretización del dominio espacial. \textbf{Fuente:} elaboración propia.}
+	\label{fig:discretizacion-eje-x}
 \end{figure}
 El dominio temporal, dado por la variable $t$, se discretiza de forma similar. El instante inicial $t_0$ corresponde a $t=0$, de tal manera que cada instante consecuente está separado por un múltiplo entero de una cantidad $k$ denominada \textit{salto temporal}. Por lo tanto, el enésimo instante de tiempo queda como
 \begin{equation}
@@ -36,8 +36,8 @@ de tal manera que, aproximadamente, $U_i^n$ toma el valor promedio de $\mathbf{U
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{../some_plots/cap2/graficas/numeric_U.pdf}
-	\label{fig:discretizacion-de-U}
 	\caption{Gráfica de la construcción de una función escalar numéricamente aproximada $u_i$, en un dominio con pocas celdas. Se puede considerar que una función numéricamente aproximada es una función definida por partes, en donde cada parte es una constante. \textbf{Fuente:} elaboración propia.}
+	\label{fig:discretizacion-de-U}
 \end{figure}
 
 La ventaja de utilizar un método aproximado basado en los valores promedio de las funciones en las celdas es que éste puede considerarse un método \textbf{conservativo} de tal manera que imite la ley de conservación obtenida a partir de la forma integral de la ecuación de conservación. Esta característica es sumamente importante al considerar ondas de choque como posibles soluciones.
@@ -56,6 +56,7 @@ Habiendo considerado la aproximación para obtener $U_i^n$, para continuar con l
 En esta expresión se puede obtener la diferencia exacta entre dos estados temporales del valor promedio de $\mathbf{U}$. Las integrales del flujo sobre el tiempo no se pueden calcular con exactitud, dado que se necesitaría saber exactamente cómo evoluciona $\mathbf{U}$ con el tiempo. Entonces, se define el flujo aproximado $F_{i-\frac{1}{2}}^n$,
 \begin{equation}
 	F_{i-\frac{1}{2}}^n \approx \frac{1}{k} \int_{t_n}^{t_n+1} \mathbf{F}(\mathbf{U}(x_i,t)) \dd{t}.
+	\label{eq:flujo-numerico}
 \end{equation}
 Además, se puede usar el hecho de que la información se propaga con velocidad finita a través del espacio, usando las conclusiones del tema del domino de dependencia de una ecuación de conservación. Por lo que se puede asumir que el flujo numérico aproximado $F_{i-\frac{1}{2}}^n$ depende únicamente de los valores de $U$ en las celdas adyacentes,
 \begin{equation}
@@ -66,8 +67,8 @@ por esta razón, se utiliza el índice fraccionario para indicar dónde se calcu
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.9\linewidth]{../some_plots/cap2/graficas/numeric_Flux.pdf}
-	\label{fig:flujo-sobre-la-grilla}
 	\caption{Esquema que muestra que el flujo numérico aproximado $F$ se calcula entre las interfaces de las celdas $\mathcal{C}_i$. \textbf{Fuente:} elaboración propia.}
+	\label{fig:flujo-sobre-la-grilla}
 \end{figure}
 
 Si es posible promediar adecuadamente el valor del flujo entre las interfaces de las celdas, se podrá construir un método numérico discreto completo. Sustituyendo las expresiones para las aproximaciones numéricas en (\ref{eq:integralsobreceldas}), se obtiene
@@ -111,5 +112,55 @@ de tal manera que al sustituir en (\ref{eq:metodo-vol-finitos-2}) se obtiene
 
 \begin{equation}
 	u_{i}^{n+1} = u_{i}^{n} 
-	- \frac{k}{2h}\left[ f(u_{i+1}^{n}) - f(u_{i-1}^{n}) \right]
+	+ \frac{k}{2h}\left[ f(u_{i-1}^{n}) - f(u_{i+1}^{n}) \right].
 \end{equation}
+Sin embargo este esquema no es estable numéricamente para ningún valor de $h/k$. En cambio al usar el siguiente flujo modificado
+\begin{equation}
+	F(u_{i-1}, u_{i+1}) = \frac{1}{2}\left(f(u_{i-1}) + f(u_{i+	1})\right) + \frac{h}{2k} \left(u_{i-1} - u_{i+1} \right)
+	\label{eq:lax-modificado}
+\end{equation}
+se obtiene el esquema de \textbf{Lax-Friedrichs} al sustituir en (\ref{eq:metodo-vol-finitos-2}), 
+\begin{equation}
+	u_{i}^{n+1} = \frac{1}{2}\left(u_{i-1}^{n} + u_{i+1}^{n}\right) + \frac{h}{2k} \left(f(u_{i-1}^{n}) - f(u_{i+1}^{n})\right)
+\end{equation}
+
+Este esquema produce un flujo correcto a primer orden. El término añadido al flujo en (\ref{eq:lax-modificado}) es un flujo difusivo que funciona agregando una pequeña viscosidad artificial a la dinámica de la solución.\\
+
+A continuación se presentan dos esquemas que se basan en la solución del problema de Riemann en forma exacta y aproximada, respectivamente.
+
+\subsection{Esquema de Godunov}
+El esquema propuesto por Godunov consiste básicamente en resolver el problema de Riemann de la ecuación de conservación en cuestión para cada celda del dominio con el objetivo de calcular el flujo numérico adecuado en las interfaces de las celdas. La ventaja de este esquema es que al resolver el problema de Riemann en distintos intervalos espaciales, este método resulta ser conservativo, puesto que la solución al problema de Riemann satisface la ecuación de conservación como una solución débil.
+
+El esquema de Godunov define una función por partes $\tilde{u}^{n}(x,t_n)$ que toma el valor de $u_{i}^{n}$ para cada $x \in \mathcal{C}_i$ como un valor constante (La idea de interpretar a $u_{i}^{n}$ como una función por partes fue discutida en la figura (\ref{fig:discretizacion-de-U})), y está definida para un intervalo temporal $t_{n}\leq t \leq t_{n+1}$. De tal manera que $\tilde{u}^{n}(x,t_n)$ se toma como la condición inicial para resolver la ecuación de conservación en cuestión en dicho intervalo de tiempo, por tanto, resolviendo una secuencia de problemas de Riemann.
+
+Ya que la idea de un esquema numérico el contexto de los métodos de volúmenes finitos es producir un flujo numérico adecuado, el esquema de Godunov redefine la función de flujo aproximado (\ref{eq:flujo-numerico}) como la integral del flujo exacto en la coordenada $x_i$ dado al valuar la  la función por partes $\tilde{u}^{n}(x,t_n)$ en la función de flujo, esto es
+\begin{equation}
+	F_{i-\frac{1}{2}}^{n} = \frac{1}{k}\int_{t_n}^{t_{n+1}}f(\tilde{u}^{n}(x_i,t))\dd{t}.
+\end{equation}
+La diferencia entre esta integral y la definida en (\ref{eq:flujo-numerico}) es que la última es trivial de resolver. Esto se justifica con el hecho de que todas las soluciones al problema de Riemann en $x=x_{i}$ son soluciones de \textbf{similitud}, i.e., son constantes en las rectas dadas por $(x-x_{i})/t = c$, con $c$ constante. Entonces, $\tilde{u}^{n}(x_{i},t)$ es constante en el tiempo y la integral es trivial.
+
+Sea $u^{*}(u_L; u_R)$ la solución al problema de Riemann sobre la recta $x/t = 0$, que se obtiene con la siguiente condición inicial
+\begin{equation}
+	u(x,0) = 
+	\begin{cases}
+		u_L & \text{si } x < 0 \\
+		u_R & \text{si } x > 0
+	\end{cases}
+\end{equation}
+entonces, se define a $\tilde{u}^{n}(x,t)$ como
+\begin{equation}
+	\tilde{u}^{n}(x_{i},t) \equiv u^{*}(u_{i-1}^{n} ; u_{i}^{n}).
+\end{equation}
+Entonces, el flujo numérico se reduce a
+\begin{equation}
+	F(u_{i-1}^{n}, u_{i}^{n}) = f(u^{*}(u_{i-1}^{n} ; u_{i}^{n}))
+\end{equation}
+y el esquema de Godunov aplicado al MVF resulta en
+\begin{equation}
+	u_{i}^{n+1} = u_{i}^{n} + \frac{h}{k} \left[f(u^{*}(u_{i-1}^{n} ; u_{i}^{n})) - f(u^{*}(u_{i}^{n} ; u_{i+1}^{n}))\right].
+\end{equation}
+Ahora bien, es posible que el valor de la solución $\tilde{u}^{n}(x_{i},t)$ no sea constante en $x_i$ por el efecto de otras ondas que se propagan e interferirían con la solución. Sin embargo, las velocidades de las ondas están limitadas a los autovalores de la matriz jacobiana $f'(u)$ y dado que los intervalos que separan cada dominio en que se resuelve cada problema de Riemann independiente están separados por una distancia $h$, se puede asumir que $\tilde{u}^{n}(x_{i},t)$ será constante en el intervalo de tiempo $[t_n, t_{n+1}]$ siempre que $k$ sea lo suficientemente pequeño. Matemáticamente, eso se describe como
+\begin{equation}
+	\left|\frac{h}{k} \lambda_{p}(u_i^{n})\right| \leq 0
+\end{equation}
+para todos los autovalores $\lambda_{p}$ en cada $u_i^{n}$.
