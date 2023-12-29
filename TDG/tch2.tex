@@ -159,8 +159,24 @@ y el esquema de Godunov aplicado al MVF resulta en
 \begin{equation}
 	u_{i}^{n+1} = u_{i}^{n} + \frac{h}{k} \left[f(u^{*}(u_{i-1}^{n} ; u_{i}^{n})) - f(u^{*}(u_{i}^{n} ; u_{i+1}^{n}))\right].
 \end{equation}
-Ahora bien, es posible que el valor de la solución $\tilde{u}^{n}(x_{i},t)$ no sea constante en $x_i$ por el efecto de otras ondas que se propagan e interferirían con la solución. Sin embargo, las velocidades de las ondas están limitadas a los autovalores de la matriz jacobiana $f'(u)$ y dado que los intervalos que separan cada dominio en que se resuelve cada problema de Riemann independiente están separados por una distancia $h$, se puede asumir que $\tilde{u}^{n}(x_{i},t)$ será constante en el intervalo de tiempo $[t_n, t_{n+1}]$ siempre que $k$ sea lo suficientemente pequeño. Matemáticamente, eso se describe como
+
+\subsubsection{Esquema de Godunov para el caso escalar}
+Para definir la función $u^{*}(u_L; u_R)$ basta con recordar que el problema de Riemann tiene una solución que corresponde a una discontinuidad que se traslada con una velocidad $s=\frac{f(u_L)-f(u_R)}{u_L - u_R}$, de acuerdo a la condición Rankine - Hugoniot. Por tanto, es conveniente proponer una solución de este tipo para $u^{*}$; 
+\begin{equation}
+	u^{*}(u_L; u_R) = 
+	\begin{cases}
+		u_L & \text{si } s \geq 0\\
+		u_R & \text{si } s < 0.
+	\end{cases}
+\end{equation}
+Sin embargo, esta construcción no garantiza que se satisface la condición de entropía.	
+
+\subsubsection{Condición de estabilidad del esquema de Godunov}
+Ahora bien, es posible que el valor de la solución $\tilde{u}^{n}(x_{i},t)$ no sea constante en $x_i$ por el efecto de otras ondas que se propagan e interferirían con la solución. Sin embargo, las velocidades de las ondas están limitadas a los autovalores de la matriz jacobiana $f'(u)$ y dado que los intervalos que separan cada dominio en que se resuelve cada problema de Riemann independiente están separados por una distancia $h$, se puede asumir que $\tilde{u}^{n}(x_{i},t)$ será constante en el intervalo de tiempo $[t_n, t_{n+1}]$ siempre que $k$ sea lo suficientemente pequeño. Matemáticamente, esto se describe como
 \begin{equation}
 	\left|\frac{h}{k} \lambda_{p}(u_i^{n})\right| \leq 0
 \end{equation}
-para todos los autovalores $\lambda_{p}$ en cada $u_i^{n}$.
+para todos los autovalores $\lambda_{p}$ en cada $u_i^{n}$. En el caso escalar, esta condición se reduce a
+\begin{equation}
+	\left|\frac{h}{k} f'(u_i^{n})\right| \leq 0.
+\end{equation}

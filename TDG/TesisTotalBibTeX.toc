@@ -32,6 +32,8 @@
 \contentsline {section}{\numberline {2.2}Esquemas de flujo numérico}{27}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Esquema de Lax-Friedrichs}{28}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Esquema de Godunov}{28}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Esquema de Godunov para el caso escalar}{30}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Condición de estabilidad del esquema de Godunov}{30}{subsubsection.2.2.2.2}%
 \contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{31}{chapter.3}%
 \contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{33}{chapter.4}%
 \contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{35}{chapter.5}%
