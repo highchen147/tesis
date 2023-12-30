@@ -168,9 +168,32 @@ Para definir la función $u^{*}(u_L; u_R)$ basta con recordar que el problema de
 		u_L & \text{si } s \geq 0\\
 		u_R & \text{si } s < 0.
 	\end{cases}
+\label{eq:uprima}
 \end{equation}
-Sin embargo, esta construcción no garantiza que se satisface la condición de entropía.	
-
+Sin embargo, esta construcción no garantiza que se satisfaga la condición de entropía. Para corregir esto, se debe considerar usar la solución débil que satisface la condición de entropía, que puede consistir en una onda de choque o en una onda de rarefacción. En caso $f(u)$ sea una función convexa, es decir que $f''(u)>0$ para todo $u$, se deben considerar cuatro casos:
+\begin{align}
+	1.\hspace{3mm}&f'(u_L),f'(u_R) \geq 0 \hspace{2mm} \Rightarrow \hspace{2mm} u^{*} = u_L \\
+	2.\hspace{3mm}&f'(u_L),f'(u_R) \leq 0 \hspace{2mm} \Rightarrow \hspace{2mm} u^{*} = u_R \\
+	3.\hspace{3mm}&f'(u_L) \geq 0 \geq f'(u_R) \hspace{2mm} \Rightarrow  \hspace{2mm} u^{*} = 
+	\begin{cases}
+		u_L & \text{si } s > 0\\
+		u_R & \text{si } s < 0.
+	\end{cases} \\
+	4. \hspace{3mm}&f'(u_L) < 0 < f'(u_R) \hspace{2mm} \Rightarrow  \hspace{2mm} u^{*} = u_{s}.
+\end{align}
+Los primeros 3 casos están dados correctamente por (\ref{eq:uprima}). El caso número 4 corresponde a una solución conocida como  \textit{onda de rarefacción transónica} y la función $u^{*}$ toma el valor intermedio $u_s$. Este valor se conoce como \textit{punto sónico} y representa el valor de $u$ para el cual la velocidad característica es cero. Esto es,
+\begin{equation}
+	f'(u_s) = 0.
+\end{equation}
+Entonces, se puede definir el flujo del esquema de Godunov como
+\begin{equation}
+	F(u_L,u_R) = 
+	\begin{cases}
+		\min_{u_L \leq u \leq u_R} \hspace{1mm} f(u) & \hspace{7mm} \text{si }u_L \leq u_R \\
+		\max_{u_R \leq u \leq u_L} \hspace{1mm} f(u) & \hspace{7mm} \text{si }u_L > u_R
+	\end{cases}
+\end{equation}
+para luego sustituir en (\ref{eq:metodo-vol-finitos-2}) y concluir con la aplicación de este esquema en el caso escalar.
 \subsubsection{Condición de estabilidad del esquema de Godunov}
 Ahora bien, es posible que el valor de la solución $\tilde{u}^{n}(x_{i},t)$ no sea constante en $x_i$ por el efecto de otras ondas que se propagan e interferirían con la solución. Sin embargo, las velocidades de las ondas están limitadas a los autovalores de la matriz jacobiana $f'(u)$ y dado que los intervalos que separan cada dominio en que se resuelve cada problema de Riemann independiente están separados por una distancia $h$, se puede asumir que $\tilde{u}^{n}(x_{i},t)$ será constante en el intervalo de tiempo $[t_n, t_{n+1}]$ siempre que $k$ sea lo suficientemente pequeño. Matemáticamente, esto se describe como
 \begin{equation}
@@ -180,3 +203,8 @@ para todos los autovalores $\lambda_{p}$ en cada $u_i^{n}$. En el caso escalar, 
 \begin{equation}
 	\left|\frac{h}{k} f'(u_i^{n})\right| \leq 0.
 \end{equation}
+
+\subsection{Esquema de Roe}
+El esquema de Roe es un método numérico basado en la resolución aproximada del problema de Riemann, a diferencia del esquema de Godunov, que es un solucionador exacto.
+
+El esquema de Godunov resuelve el problema de Riemann sobre cada celda del dominio discretizado y genera el flujo numérico apropiado entre cada interfaz del dominio, para cada instante de tiempo. Sin embargo, el valor obtenido para cada celda es el promedio de la función $u_i$ en dicho intervalo; y esto produce error numérico. Por otro lado, la resolución del problema de Riemann es usualmente una tarea realizable, pero que puede resultar costosa y típicamente se necesita de algún otro método numérico para resolver ecuaciones algebraicas no lineales.
