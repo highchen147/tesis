@@ -129,6 +129,7 @@ Este esquema produce un flujo correcto a primer orden. El término añadido al f
 A continuación se presentan dos esquemas que se basan en la solución del problema de Riemann en forma exacta y aproximada, respectivamente.
 
 \subsection{Esquema de Godunov}
+\label{sec:Godunov}
 El esquema propuesto por Godunov consiste básicamente en resolver el problema de Riemann de la ecuación de conservación en cuestión para cada celda del dominio con el objetivo de calcular el flujo numérico adecuado en las interfaces de las celdas. La ventaja de este esquema es que al resolver el problema de Riemann en distintos intervalos espaciales, este método resulta ser conservativo, puesto que la solución al problema de Riemann satisface la ecuación de conservación como una solución débil.
 
 El esquema de Godunov define una función por partes $\tilde{u}^{n}(x,t_n)$ que toma el valor de $u_{i}^{n}$ para cada $x \in \mathcal{C}_i$ como un valor constante (La idea de interpretar a $u_{i}^{n}$ como una función por partes fue discutida en la figura (\ref{fig:discretizacion-de-U})), y está definida para un intervalo temporal $t_{n}\leq t \leq t_{n+1}$. De tal manera que $\tilde{u}^{n}(x,t_n)$ se toma como la condición inicial para resolver la ecuación de conservación en cuestión en dicho intervalo de tiempo, por tanto, resolviendo una secuencia de problemas de Riemann.
@@ -199,7 +200,7 @@ Ahora bien, es posible que el valor de la solución $\tilde{u}^{n}(x_{i},t)$ no 
 \begin{equation}
 	\left|\frac{h}{k} \lambda_{p}(u_i^{n})\right| \leq 0
 \end{equation}
-para todos los autovalores $\lambda_{p}$ en cada $u_i^{n}$. En el caso escalar, esta condición se reduce a
+para todos los autovalores $\lambda_{p}$ en cada $u_i^{n}$. En el caso escalar, esta condición equivale a
 \begin{equation}
 	\left|\frac{h}{k} f'(u_i^{n})\right| \leq 0.
 \end{equation}
@@ -207,4 +208,11 @@ para todos los autovalores $\lambda_{p}$ en cada $u_i^{n}$. En el caso escalar, 
 \subsection{Esquema de Roe}
 El esquema de Roe es un método numérico basado en la resolución aproximada del problema de Riemann, a diferencia del esquema de Godunov, que es un solucionador exacto.
 
-El esquema de Godunov resuelve el problema de Riemann sobre cada celda del dominio discretizado y genera el flujo numérico apropiado entre cada interfaz del dominio, para cada instante de tiempo. Sin embargo, el valor obtenido para cada celda es el promedio de la función $u_i$ en dicho intervalo; y esto produce error numérico. Por otro lado, la resolución del problema de Riemann es usualmente una tarea realizable, pero que puede resultar costosa y típicamente se necesita de algún otro método numérico para resolver ecuaciones algebraicas no lineales.
+El esquema de Godunov resuelve el problema de Riemann sobre cada celda del dominio discretizado y genera el flujo numérico apropiado entre las interfaces de las celdas del dominio, para cada instante de tiempo. Sin embargo, el valor obtenido para la función en cuestión, digamos $u$, en cada celda es el \textbf{promedio} de la función exacta en dicho intervalo; y esto produce error numérico. Por otro lado, la resolución del problema de Riemann es usualmente una tarea realizable, pero que puede ser costosa y típicamente se necesita de algún otro método numérico para resolver ecuaciones algebraicas no lineales que complementan alguna iteración del cálculo de la solución numérica. Por estas razones, se considerará utilizar y estudiar a fondo un esquema aproximado como solucionador de Riemann, ya que involucra medios más prácticos para obtener la solución a un sistema de conservación.
+
+\subsubsection{Idea general de una solución aproximada}
+Sea $\hat{u}(x,t)$ una solución aproximada al problema de Riemann entre dos celdas, cada una con valores iniciales $u_L$ y $u_R$ para $u$. Como se mencionó en la sección (\ref{sec:Godunov}), toda solución al problema de Riemann puede escribirse como una función que depende solamente de $x/t$. Entonces se define la solución aproximada como una función de mencionado tipo, $\hat{u}(x,t) = \hat{w}(x/t)$. Para que esta solución sea conservativa, debe cumplirse la siguiente condición para todo $\mathcal{M}$ suficientemente grande:
+\begin{equation}
+	\int_{-\mathcal{M}}^{\mathcal{M}} \hat{w}(\xi) \dd{\xi} = \mathcal{M} (u_L + u_R) + f(u_L) + f(u_R)
+\end{equation}
+cabe destacar que en la sección (\ref{sec:caso1-burgers}) se mostró que la solución exacta del problema de Riemann satisface esta condición. 
