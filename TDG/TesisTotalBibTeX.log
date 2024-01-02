@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  31 DEC 2023 02:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  1 JAN 2024 23:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1453,8 +1453,8 @@ Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
 (rerunfilecheck)             Checksum: 816A14019ECBB313522CC7BF98FBAC55;10590.
  ) 
 Here is how much of TeX's memory you used:
- 26595 strings out of 476339
- 495994 string characters out of 5787175
+ 26596 strings out of 476339
+ 496007 string characters out of 5787175
  1865340 words of memory out of 5000000
  46172 multiletter control sequences out of 15000+600000
  539083 words of font info for 103 fonts, out of 8000000 for 9000
@@ -1501,9 +1501,9 @@ ic/cm-super/sfss1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/cm-super/sfti1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/cm-super/sftt1200.pfb><C:/Users/Rodrigo/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (68 pages, 1128305 bytes).
+Output written on TesisTotalBibTeX.pdf (68 pages, 1129320 bytes).
 PDF statistics:
- 1211 PDF objects out of 1440 (max. 8388607)
- 257 named destinations out of 1000 (max. 500000)
+ 1212 PDF objects out of 1440 (max. 8388607)
+ 258 named destinations out of 1000 (max. 500000)
  476 words of extra memory for PDF output out of 10000 (max. 10000000)
 
