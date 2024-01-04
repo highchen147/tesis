@@ -36,6 +36,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2.2}Condición de estabilidad del esquema de Godunov}{31}{subsubsection.2.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Esquema de Roe}{31}{subsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.3.1}Idea general de una solución aproximada}{31}{subsubsection.2.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.2.3.2}Modificación de la ecuación de conservación}{32}{subsubsection.2.2.3.2}%
 \contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{33}{chapter.3}%
 \contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{35}{chapter.4}%
 \contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{37}{chapter.5}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  1 JAN 2024 23:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  3 JAN 2024 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -926,7 +926,7 @@ Package hyperref Warning: Option `pdfstartview' has already been used,
 
 Package hyperref Info: Option `plainpages' set `false' on input line 71.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 71.
-<escudo.pdf, id=190, 652.4375pt x 652.4375pt>
+<escudo.pdf, id=194, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
 Package pdftex.def Info: escudo.pdf  used on input line 71.
@@ -963,7 +963,7 @@ File: escudo.pdf Graphic file (type pdf)
 Package pdftex.def Info: escudo.pdf  used on input line 79.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
-<ordenImpresion.pdf, id=225, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=229, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 82.
@@ -972,7 +972,7 @@ File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 82.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ordenImpresion.pdf, id=228, page=1, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=232, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
 Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 82.
@@ -1170,13 +1170,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
                    \relax 
 l.261 \end{equation}
                      [11]
-<../some_plots/cond_inicial.pdf, id=547, 462.52798pt x 346.89601pt>
+<../some_plots/cond_inicial.pdf, id=552, 462.52798pt x 346.89601pt>
 File: ../some_plots/cond_inicial.pdf Graphic file (type pdf)
 <use ../some_plots/cond_inicial.pdf>
 Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 267
 .
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/caracteristicas_burgers.pdf, id=548, 578.16pt x 433.62pt>
+<../some_plots/caracteristicas_burgers.pdf, id=553, 578.16pt x 433.62pt>
 File: ../some_plots/caracteristicas_burgers.pdf Graphic file (type pdf)
 <use ../some_plots/caracteristicas_burgers.pdf>
 Package pdftex.def Info: ../some_plots/caracteristicas_burgers.pdf  used on inp
@@ -1195,7 +1195,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
 l.284 
        [12 <../some_plots/cond_inicial.pdf> <../some_plots/caracteristicas_burg
 ers.pdf>]
-<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=599, 578.16pt x
+<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=604, 578.16pt x
  433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf Graphic file (
 type pdf)
@@ -1203,7 +1203,7 @@ type pdf)
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
 .pdf  used on input line 288.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=600, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=605, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
  (type pdf)
@@ -1211,7 +1211,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
 00.pdf  used on input line 293.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=601, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=606, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
  (type pdf)
@@ -1219,7 +1219,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-2
 00.pdf  used on input line 298.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=602, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=607, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf Graphic file
  (type pdf)
@@ -1263,7 +1263,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--339
  []
 
 [14]
-<../some_plots/cap1/graficas/riemannLR.pdf, id=665, 462.52798pt x 346.89601pt>
+<../some_plots/cap1/graficas/riemannLR.pdf, id=670, 462.52798pt x 346.89601pt>
 File: ../some_plots/cap1/graficas/riemannLR.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannLR.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannLR.pdf  used on inp
@@ -1287,28 +1287,28 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 367.
 
 [15 <../some_plots/cap1/graficas/riemannLR.pdf>]
-<../some_plots/cap1/graficas/riemannRL-0.pdf, id=691, 462.52798pt x 346.89601pt
+<../some_plots/cap1/graficas/riemannRL-0.pdf, id=696, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-0.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.pdf  used on i
 nput line 382.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=692, 462.52798pt x 346.89601
+<../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=697, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.4.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.4.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.4.pdf  used on
  input line 386.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=693, 462.52798pt x 346.89601
+<../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=698, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.8.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.8.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.8.pdf  used on
  input line 390.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-1.pdf, id=694, 462.52798pt x 346.89601pt
+<../some_plots/cap1/graficas/riemannRL-1.pdf, id=699, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-1.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-1.pdf>
@@ -1360,7 +1360,7 @@ Cap\'{\i }tulo 2.
 
 
 ]
-<../some_plots/cap2/graficas/domain.pdf, id=819, 480.49513pt x 152.52072pt>
+<../some_plots/cap2/graficas/domain.pdf, id=824, 480.49513pt x 152.52072pt>
 File: ../some_plots/cap2/graficas/domain.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/domain.pdf>
 Package pdftex.def Info: ../some_plots/cap2/graficas/domain.pdf  used on input 
@@ -1370,14 +1370,14 @@ line 18.
 Underfull \vbox (badness 4144) has occurred while \output is active []
 
  [24 <../some_plots/cap2/graficas/domain.pdf>]
-<../some_plots/cap2/graficas/numeric_U.pdf, id=841, 480.49513pt x 224.8824pt>
+<../some_plots/cap2/graficas/numeric_U.pdf, id=846, 480.49513pt x 224.8824pt>
 File: ../some_plots/cap2/graficas/numeric_U.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/numeric_U.pdf>
 Package pdftex.def Info: ../some_plots/cap2/graficas/numeric_U.pdf  used on inp
 ut line 38.
 (pdftex.def)             Requested size: 426.39258pt x 199.57164pt.
  [25 <../some_plots/cap2/graficas/numeric_U.pdf>]
-<../some_plots/cap2/graficas/numeric_Flux.pdf, id=868, 480.49513pt x 305.87225p
+<../some_plots/cap2/graficas/numeric_Flux.pdf, id=873, 480.49513pt x 305.87225p
 t>
 File: ../some_plots/cap2/graficas/numeric_Flux.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/numeric_Flux.pdf>
@@ -1450,16 +1450,16 @@ LaTeX Info: Redefining \% on input line 22.
 (simbolos.aux) (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux)
 (tch3.aux) (tch4.aux) (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: 816A14019ECBB313522CC7BF98FBAC55;10590.
+(rerunfilecheck)             Checksum: B8A015D32EC6FCC47F782F7D984CA843;10944.
  ) 
 Here is how much of TeX's memory you used:
- 26596 strings out of 476339
- 496007 string characters out of 5787175
+ 26599 strings out of 476339
+ 496064 string characters out of 5787175
  1865340 words of memory out of 5000000
- 46172 multiletter control sequences out of 15000+600000
+ 46173 multiletter control sequences out of 15000+600000
  539083 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,1098b,973s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,90p,1099b,973s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-s
 uper-t1.enc}<C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmbx10.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/ty
@@ -1501,9 +1501,9 @@ ic/cm-super/sfss1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/cm-super/sfti1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/cm-super/sftt1200.pfb><C:/Users/Rodrigo/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (68 pages, 1129320 bytes).
+Output written on TesisTotalBibTeX.pdf (68 pages, 1131345 bytes).
 PDF statistics:
- 1212 PDF objects out of 1440 (max. 8388607)
- 258 named destinations out of 1000 (max. 500000)
- 476 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1219 PDF objects out of 1440 (max. 8388607)
+ 260 named destinations out of 1000 (max. 500000)
+ 484 words of extra memory for PDF output out of 10000 (max. 10000000)
 
