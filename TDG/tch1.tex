@@ -442,6 +442,7 @@ En esta relación, $\mathbf{\Lambda}$ es la matriz definida como $\text{diag}(\l
 para todo $p \in [1,2,\dots, m]$.
 
 \subsection{Resolución de un sistema hiperbólico lineal}
+\label{sec:resolucion-hiperbolico}
 Se asumirá que se tiene un sistema de la forma (\ref{eq:linear-sys}), tal que los autovalores de $\mathbf{A}$ son todos distintos y reales, i.e., se trata de un sistema \textbf{estrictamente hiperbólico}. Este sistema se puede resolver introduciendo nuevas variables conocidas como \textbf{variables características}. Se define $\mathbf{v}$ como
 \begin{equation}
 	\mathbf{v} \equiv \mathbf{R}^{-1} \mathbf{U}.
@@ -508,9 +509,11 @@ considerando que este sistema es estrictamente hiperbólico.
 Para resolver este problema, es conveniente escribir los dos estados $\mathbf{U}_L$ y  $\mathbf{U}_R$ en términos de los autovectores de $\mathbf{A}$, $\mathbf{r}_i$. Esta expansión se sustenta en la propiedad de independencia lineal que poseen los vectores $\mathbf{r}_i$ y dado que estos son $m$ distintos vectores,  indica que forman una base del espacio $\mathbb{R}^{m}$. Por tanto,
 \begin{equation}
 	\mathbf{U}_L = \sum_{p=1}^{m} \alpha_{p} \mathbf{r}_{p}
+	\label{eq:ul-sol-numeric}
 \end{equation}
 \begin{equation}
 	\mathbf{U}_R = \sum_{p=1}^{m} \beta_{p} \mathbf{r}_{p}
+		\label{eq:ur-sol-numeric}
 \end{equation}
 con $\alpha_p$ y $\beta_{p}$ reales y constantes, para todo $p=1,2,\dots, m$.
 Luego, utilizando la solución (\ref{eq:sol-linear-sys}) se obtiene
@@ -558,8 +561,10 @@ con lo cual se demuestra que se cumple la condición Rankine - Hugoniot, notando
 Otra forma útil de escribir la solución (\ref{eq:sol-riemann-linear-sys-1}) es a través de los saltos previamente desarrollados, esto es,
 \begin{equation}
 	\mathbf{U}(x,t) = \mathbf{U}_{L}(x,t) + \sum_{\lambda_{p} < x/t} (\beta_{p} - \alpha_{p}) \mathbf{r}_{p},
+	\label{eq:sol-riemann-linear-1}
 \end{equation}
 o de forma equivalente,
 \begin{equation}
 	\mathbf{U}(x,t) = \mathbf{U}_{R}(x,t) - \sum_{\lambda_{p} \geq x/t} (\beta_{p} - \alpha_{p}) \mathbf{r}_{p}.
+	\label{eq:sol-riemann-linear-2}
 \end{equation}

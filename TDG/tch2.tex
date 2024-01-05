@@ -19,7 +19,7 @@ Por lo tanto, se tiene una expresión para el valor de cada $x_i$,
 	\caption{Esquema de símbolos utilizados para la discretización del dominio espacial. \textbf{Fuente:} elaboración propia.}
 	\label{fig:discretizacion-eje-x}
 \end{figure}
-El dominio temporal, dado por la variable $t$, se discretiza de forma similar. El instante inicial $t_0$ corresponde a $t=0$, de tal manera que cada instante consecuente está separado por un múltiplo entero de una cantidad $k$ denominada \textit{salto temporal}. Por lo tanto, el enésimo instante de tiempo queda como
+El dominio temporal, dado por la variable $t$, se discretiza de forma similar. El instante inicial $t_0$ corresponde a $t=0$, de tal manera que cada instante consecuente está separado por un múltiplo entero de una cantidad $k$ denominada \textit{salto temporal}. Por lo tanto, el enésimo instante de tiempo queda expresado como
 \begin{equation}
 	t_n = nk, \hspace{1cm} \forall n \in \mathbb{N}.
 \end{equation}
@@ -152,7 +152,7 @@ entonces, se define a $\tilde{u}^{n}(x,t)$ como
 \begin{equation}
 	\tilde{u}^{n}(x_{i},t) \equiv u^{*}(u_{i-1}^{n} ; u_{i}^{n}).
 \end{equation}
-Entonces, el flujo numérico se reduce a
+Por tanto, el flujo numérico se reduce a
 \begin{equation}
 	F(u_{i-1}^{n}, u_{i}^{n}) = f(u^{*}(u_{i-1}^{n} ; u_{i}^{n}))
 \end{equation}
@@ -198,11 +198,11 @@ para luego sustituir en (\ref{eq:metodo-vol-finitos-2}) y concluir con la aplica
 \subsubsection{Condición de estabilidad del esquema de Godunov}
 Ahora bien, es posible que el valor de la solución $\tilde{u}^{n}(x_{i},t)$ no sea constante en $x_i$ por el efecto de otras ondas que se propagan e interferirían con la solución. Sin embargo, las velocidades de las ondas están limitadas a los autovalores de la matriz jacobiana $f'(u)$ y dado que los intervalos que separan cada dominio en que se resuelve cada problema de Riemann independiente están separados por una distancia $h$, se puede asumir que $\tilde{u}^{n}(x_{i},t)$ será constante en el intervalo de tiempo $[t_n, t_{n+1}]$ siempre que $k$ sea lo suficientemente pequeño. Matemáticamente, esto se describe como
 \begin{equation}
-	\left|\frac{h}{k} \lambda_{p}(u_i^{n})\right| \leq 0
+	\left|\frac{h}{k} \lambda_{p}(u_i^{n})\right| \leq 1
 \end{equation}
 para todos los autovalores $\lambda_{p}$ en cada $u_i^{n}$. En el caso escalar, esta condición equivale a
 \begin{equation}
-	\left|\frac{h}{k} f'(u_i^{n})\right| \leq 0.
+	\left|\frac{h}{k} f'(u_i^{n})\right| \leq 1.
 \end{equation}
 
 \subsection{Esquema de Roe}
@@ -214,13 +214,49 @@ El esquema de Godunov resuelve el problema de Riemann sobre cada celda del domin
 Sea $\mathbf{\hat{U}}(x,t)$ una solución aproximada al problema de Riemann para la ecuación de conservación $\mathbf{U}_t + \mathbf{F}(\mathbf{U})_x = 0$, entre dos celdas del dominio discretizado; cada una con valores iniciales $\mathbf{U}_L$ y $\mathbf{U}_R$ para $\mathbf{U}$. Como se mencionó en la sección (\ref{sec:Godunov}), toda solución al problema de Riemann puede escribirse como una función que depende solamente de $x/t$. Entonces se define la solución aproximada como una función de mencionado tipo, $\mathbf{\hat{U}}(x,t) = \mathbf{\hat{w}}(x/t)$. Para que esta solución sea conservativa, debe cumplirse la siguiente condición para todo $\mathcal{M}$ suficientemente grande:
 \begin{equation}
 	\int_{-\mathcal{M}}^{\mathcal{M}} \mathbf{\hat{w}}(\xi) \dd{\xi} = \mathcal{M} (\mathbf{U}_L + \mathbf{U}_R) + \mathbf{F}(\mathbf{U}_L) + \mathbf{F}(\mathbf{U}_R)
+	\label{eq:condicion-aprox-riemann}
 \end{equation}
-cabe destacar que utilizando los resultados de la sección (\ref{sec:caso1-burgers}) se puede demostrar que la solución exacta del problema de Riemann satisface esta condición cuando se integra sobre $[\mathcal{M},\mathcal{M}]\times[0,1]$. Si $\mathbf{\hat{w}}$ satisface la igualdad anterior entonces se puede aplicar el MVF para encontrar la solución aproximada. Se puede integrar $\mathbf{\hat{w}}$ de $0$ a $\mathcal{M}$, de tal manera que siendo $\mathcal{M}$ suficientemente grande, se obtiene una expresión para el flujo numérico aproximado $F(\mathbf{U}_L,\mathbf{U}_R)$
+cabe destacar que utilizando los resultados de la sección (\ref{sec:caso1-burgers}) se puede demostrar que la solución exacta del problema de Riemann satisface esta condición cuando se integra sobre $[\mathcal{M},\mathcal{M}]\times[0,1]$. Si $\mathbf{\hat{w}}$ satisface la igualdad anterior entonces se puede aplicar el MVF para encontrar la solución aproximada. Se puede integrar $\mathbf{\hat{w}}$ de $0$ a $\mathcal{M}$, de tal manera que siendo $\mathcal{M}$ suficientemente grande, se obtiene una expresión para el flujo numérico aproximado $F(\mathbf{U}_L,\mathbf{U}_R)$ en términos de $\mathbf{U}_R$
 \begin{equation}
 	\int_{0}^{\mathcal{M}} \mathbf{\hat{w}}(\xi) \dd{\xi} = \mathcal{M}\mathbf{U}_R + F(\mathbf{U}_L,\mathbf{U}_R) - \mathbf{F}(\mathbf{U}_R)
 \end{equation}
 \begin{equation}
-	F(\mathbf{U}_L,\mathbf{U}_R) = \mathbf{F}(\mathbf{U}_R)- \mathcal{M}\mathbf{U}_R -\int_{0}^{\mathcal{M}} \mathbf{\hat{w}}(\xi) \dd{\xi}.
+	F(\mathbf{U}_L,\mathbf{U}_R) = \mathbf{F}(\mathbf{U}_R)- \mathcal{M}\mathbf{U}_R +\int_{0}^{\mathcal{M}} \mathbf{\hat{w}}(\xi) \dd{\xi}.
+\end{equation}
+o bien, en términos de $\mathbf{U}_L$
+\begin{equation}
+	F(\mathbf{U}_L,\mathbf{U}_R) = \mathbf{F}(\mathbf{U}_L)+ \mathcal{M}\mathbf{U}_L -\int_{-\mathcal{M}}^{0} \mathbf{\hat{w}}(\xi) \dd{\xi}.
 \end{equation}
 \subsubsection{Modificación de la ecuación de conservación}
-Puesto que se necesita resolver una versión aproximada del problema de Riemann, es natural tener que redefinir la ecuación de conservación a resolver para cada par de celdas como otra ecuación que sea más sencilla de resolver. Sea esta una ecuación de la forma $\mathbf{U}_t + \mathbf{\hat{F}}(\mathbf{U})_x = 0$, donde $\mathbf{\hat{F}}$ es una función de flujo que se aproxima en algún límite a la función original $\mathbf{{F}}$.
+Puesto que se necesita resolver una versión aproximada del problema de Riemann, es natural tener que redefinir la ecuación de conservación a resolver para cada par de celdas como otra ecuación que sea más sencilla de resolver. Sea esta una ecuación de la forma 
+\begin{equation}
+	\mathbf{U}_t + \mathbf{\hat{F}}(\mathbf{U})_x = 0
+	\label{eq:conservative-eq-aprox}
+\end{equation}
+donde $\mathbf{\hat{F}}$ es una función de flujo que se aproxima en algún límite a la función original $\mathbf{{F}}$ y es una función más sencilla de trabajar al momento de resolver el problema de Riemann. Al integrar la ecuación (\ref{eq:conservative-eq-aprox}) sobre el dominio $[-\mathcal{M}, \mathcal{M}] \times [0,1]$ se puede concluir que la condición descrita en (\ref{eq:condicion-aprox-riemann}) se cumplirá si la siguiente relación entre ambas funciones de flujos también se cumple,
+\begin{equation}
+	\mathbf{\hat{F}}(\mathbf{U}_R) - \mathbf{\hat{F}}(\mathbf{U}_L) = \mathbf{F}(\mathbf{U}_R) - \mathbf{F}(\mathbf{U}_L).
+\end{equation}
+Entonces, se define a $\mathbf{\hat{w}}(x/t)$ como la solución a la ecuación (\ref{eq:conservative-eq-aprox}). Por tanto, se puede encontrar una expresión para la función de flujo numérico,
+\begin{equation}
+	F(\mathbf{U}_R, \mathbf{U}_L) = \mathbf{\hat{F}}({\mathbf{\hat{w}}}(0)) +  \mathbf{F}(\mathbf{U}_R)-\mathbf{\hat{F}}(\mathbf{U}_L).
+\end{equation}
+\subsubsection{El solucionador de Riemann de Roe}
+La idea básica del esquema de Roe consiste en resolver el problema de Riemann, sobre cada celda del dominio, para el sistema de ecuaciones de conservación original como un sistema con coeficientes constantes. La resolución de un un sistema hiperbólico lineal fue expuesta en la sección (\ref{sec:resolucion-hiperbolico}). Por tanto, en el esquema de Roe, la función de flujo aproximada $\mathbf{\hat{F}}$ es una función lineal, i.e, 
+\begin{equation}
+	\mathbf{\hat{F}}(\mathbf{U}) = \mathbf{\hat{A}}\mathbf{U}.
+\end{equation}
+Dado que esta definición para la función de flujo depende del problema de Riemann a resolver, es evidente que la matriz $\mathbf{\hat{A}}$ dependerá de los valores de las celdas adyacentes en donde se resuelve dicho problema,
+\begin{equation}
+	\mathbf{\hat{A}} = \mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R).
+\end{equation}
+En general, la definición de la matriz $\mathbf{\hat{A}}$ dependerá del sistema que busca aproximar. Entonces el sistema constante que define la solución aproximada $\mathbf{\hat{U}}$ se escribe como
+\begin{equation}
+	\mathbf{\hat{U}}_t + \mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R)\mathbf{\hat{U}}_x = 0.
+	\label{eq:aprox-system-roe}
+\end{equation}
+Como se mostró en la sección (\ref{sec:resolucion-hiperbolico}) la solución al problema de Riemann de la ecuación (\ref{eq:aprox-system-roe}), si $\mathbf{\hat{A}}$ tiene autovalores $\lambda_i$ y autovalores $\mathbf{\hat{r}}_{i}$, se puede expresar utilizando la siguiente expresión
+\begin{equation}
+	\mathbf{U}_R - \mathbf{U}_L = \sum_{p} {\alpha}_p \mathbf{\hat{r}}_{p}.
+\end{equation}
+Esta última se justifica a través de las expresiones de las soluciones al problema de Riemann para un sistema hiperbólico lineal, según las ecuaciones (\ref{eq:ul-sol-numeric}) y (\ref{eq:ur-sol-numeric}).

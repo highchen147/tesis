@@ -37,9 +37,10 @@
 \contentsline {subsection}{\numberline {2.2.3}Esquema de Roe}{31}{subsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.3.1}Idea general de una solución aproximada}{31}{subsubsection.2.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.2.3.2}Modificación de la ecuación de conservación}{32}{subsubsection.2.2.3.2}%
-\contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{33}{chapter.3}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{35}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{37}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{39}{chapter*.21}%
-\contentsline {chapter}{RECOMENDACIONES}{41}{chapter*.22}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{43}{chapter*.23}%
+\contentsline {subsubsection}{\numberline {2.2.3.3}El solucionador de Riemann de Roe}{33}{subsubsection.2.2.3.3}%
+\contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{35}{chapter.3}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{37}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{39}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{41}{chapter*.21}%
+\contentsline {chapter}{RECOMENDACIONES}{43}{chapter*.22}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{45}{chapter*.23}%
