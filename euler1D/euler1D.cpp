@@ -19,6 +19,7 @@
 #include <fstream>
 #include <vector>
 #include <sys/stat.h>
+#include <algorithm>
 #include "funciones.hpp" // Incluye el archivo de encabezado
 using namespace std;
 
@@ -34,8 +35,9 @@ double h_prom(double p_L, double p_R, double u_L, double u_R, double rho_L, doub
 double a_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, double u_R);
 void salida(ofstream &of, double *u, double *x, double tiempo, int N);
 vector<double> flujo_euler(double rho, double p, double u);
-vector<double> Flujo(vector<double> F_L, vector<double> F_R, double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R);
-vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R);
+vector<double> Flujo(vector<double> F_L, vector<double> F_R, double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix);
+vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix);
+vector<double> autovalor_lambda(double u, double a);
 vector<double> operator+(const vector<double>& a, const vector<double>& b);
 vector<double> operator-(const vector<double>& a, const vector<double>& b);
 vector<double> operator*(const vector<double>& v, double scalar);
@@ -63,6 +65,9 @@ int main()
     int Nx = 500; // Número de puntos en el eje x
     double L = (1e4); // Largo del dominio en metros
     double dx = L/(Nx-1); // Tamaño de paso en el eje x
+
+    // Otros parámetros
+    bool correccion_de_entropia = false;
 
     // Archivos
     ofstream file_densidad;
@@ -169,11 +174,11 @@ int main()
             Q_N = Q - ((Flujo(flujo_euler(rho[i], p[i], u[i]), flujo_euler(rho[i+1], p[i+1], u[i+1]), 
                             p[i], p[i+1], 
                             u[i], u[i+1], 
-                            rho[i], rho[i+1]) - 
+                            rho[i], rho[i+1], correccion_de_entropia) - 
                       Flujo(flujo_euler(rho[i-1], p[i-1], u[i-1]), flujo_euler(rho[i], p[i], u[i]), 
                             p[i-1], p[i], 
                             u[i-1], u[i], 
-                            rho[i-1], rho[i]))*(dt/dx));
+                            rho[i-1], rho[i], correccion_de_entropia))*(dt/dx));
             
             // Despejar variables físicas de Q
             rho_nueva[i] = Q_N[0];
@@ -365,6 +370,17 @@ double a_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, do
 }
 
 /**
+ * @brief Devuelve el autovalor iésimo de la matriz de Roe
+ * @param u velocidad del gas
+ * @param a velocidad del sonido
+ * @return vector con autovalores lambda
+*/
+vector<double> autovalor_lambda(double u, double a)
+{
+    return {u-a, u, u+a};
+}
+
+/**
  * @brief Suma sobre k de los autovectores de la matriz A del sistema
  * por sus fuerzas y autovalores.
  * 
@@ -376,7 +392,7 @@ double a_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, do
  * @param rho_R Densidad a la derecha
  * @return vector<double> 
  */
-vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R)
+vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix)
 {
     double u = u_prom(u_L, u_R, rho_L, rho_R);
     double rho = rho_prom(rho_L, rho_R);
@@ -402,10 +418,35 @@ vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho
     // Se declara el vector resultante, de dimensión 3 y con ceros.
     vector<double> resultado(3, 0);
 
-    // Se realiza la suma
+    // Se realiza la suma 
     for (int i = 0; i < 3; i++)
     {
-        resultado += e_vec[i]*(alfa[i]*abs(lambda[i]));
+        // Se define la variable que almacena cada autovalor
+        double lambda_i = abs(lambda[i]);
+        // Se define procedimiento para considerar la corrección de entropía sónica de HH
+        if (entropy_fix)
+        {
+            // Se calculan autovalores correspondientes a las ondas adyacentes, L y R.
+            double lambda_L = autovalor_lambda(u_L, a_prom(p_L, p_L, rho_L, rho_L, u_L, u_L))[i];
+            double lambda_R = autovalor_lambda(u_R, a_prom(p_R, p_R, rho_R, rho_R, u_R, u_R))[i];
+            // Se calcula el máximo entre 0 y la diferencia entre los autovalores adyacentes
+            // y el autovalor aproximado lambda_i
+            double delta_i = max(lambda_i-lambda_L, lambda_R-lambda_i);
+            delta_i = max(delta_i, 0.0);
+            if (lambda_i < delta_i)
+            {
+                lambda_i = delta_i;
+            }
+            else
+            {
+                lambda_i = abs(lambda[i]);
+            }
+        }
+        else
+        {
+            lambda_i = abs(lambda[i]);
+        }
+        resultado += e_vec[i]*(alfa[i]*lambda_i);
     }
     return resultado;
 }
@@ -444,10 +485,12 @@ vector<double> flujo_euler(double rho, double p, double u)
 vector<double> Flujo(
     vector<double> F_L, 
     vector<double> F_R, 
-    double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R)
+    double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R,
+    bool entropy_fix)
 {
+    // bool entropy_fix = true;
     vector<double> F_prom = (F_L+F_R)*0.5;
-    return F_prom - (suma_k(p_L, p_R, u_L, u_R, rho_L, rho_R)*0.5);
+    return F_prom - (suma_k(p_L, p_R, u_L, u_R, rho_L, rho_R, entropy_fix)*0.5);
 }
 
 /**
