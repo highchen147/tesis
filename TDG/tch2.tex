@@ -4,7 +4,7 @@ El contenido de este capítulo se basa en el capítulo \textit{Numerical Methods
 
 \section{Método de volúmenes finitos}
 El método de volúmenes finitos (MVF) es un método numérico de integración que se especializa en resolver ecuaciones diferenciales escritas en forma conservativa. El MVF destaca por ofrecer una interpretación peculiar de la función a resolver, ya que es un método basado en la forma \textbf{integral} de las ecuaciones.
-\subsection{Discretización del problema}
+\subsection{Discretización del dominio}
 Al aplicar un método numérico para resolver una ecuación diferencial se necesita discretizar el dominio de la función y la función misma, redefiniendo algunas nociones matemáticas y utilizando aproximaciones. Sea  $D = [a,b]$ el dominio espacial de la solución de una ecuación de conservación. Para aplicar el MVF, este dominio se divide en $N$ intervalos iguales llamados \textbf{celdas}. Cada celda se denomina $\mathcal{C}_i$ y se define como un intervalo, $\mathcal{C}_i = [x_i, x_{i+1}]$. Además, cada celta tiene un ancho $h$ \footnote{La diferencia entre dos puntos sobre el eje $x$ también se denomina $\Delta x$, pero se opta por usar $h$ como símbolo, para evitar escribir ecuaciones engorrosas.}, dado por
 \begin{equation}
 	h = \frac{b-a}{N}.
@@ -12,22 +12,23 @@ Al aplicar un método numérico para resolver una ecuación diferencial se neces
 Por lo tanto, se tiene una expresión para el valor de cada $x_i$,
 \begin{equation}
 	x_i = a + (i-1)h.
-\end{equation} 
+\end{equation}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{../some_plots/cap2/graficas/domain.pdf}
 	\caption{Esquema de símbolos utilizados para la discretización del dominio espacial. \textbf{Fuente:} elaboración propia.}
 	\label{fig:discretizacion-eje-x}
-\end{figure}
+\end{figure}\\
 El dominio temporal, dado por la variable $t$, se discretiza de forma similar. El instante inicial $t_0$ corresponde a $t=0$, de tal manera que cada instante consecuente está separado por un múltiplo entero de una cantidad $k$ denominada \textit{salto temporal}. Por lo tanto, el enésimo instante de tiempo queda expresado como
 \begin{equation}
 	t_n = nk, \hspace{1cm} \forall n \in \mathbb{N}.
 \end{equation}
+\subsection{Aproximaciones numéricas}
 Para referirse a la función $\mathbf{U}$ discretizada se utilizará una notación especial, esta es,
 \begin{equation}
 	\mathbf{U}(x_i, t_n) \approx U_{i}^{n}
 \end{equation}
-que se interpreta como el valor aproximado numéricamente de la función $\mathbf{U}$ en el punto $(x_i, t_n)$. Para conseguir dicha aproximación, el MVF utiliza la siguiente expresión
+que se interpreta como el valor aproximado numéricamente de la función $\mathbf{U}$ en un instante $t_n$. Para conseguir dicha aproximación, el MVF utiliza la siguiente expresión
 \begin{equation}
 	U_{i}^{n} \approx \frac{1}{h}\int_{x_i}^{x_{i+1}}\mathbf{U}(x, t_n)\dd{x} \equiv \frac{1}{h}\int_{\mathcal{C}_i}\mathbf{U}(x, t_n)\dd{x}
 \end{equation}
@@ -138,7 +139,7 @@ Ya que la idea de un esquema numérico el contexto de los métodos de volúmenes
 \begin{equation}
 	F_{i-\frac{1}{2}}^{n} = \frac{1}{k}\int_{t_n}^{t_{n+1}}f(\tilde{u}^{n}(x_i,t))\dd{t}.
 \end{equation}
-La diferencia entre esta integral y la definida en (\ref{eq:flujo-numerico}) es que la última es trivial de resolver. Esto se justifica con el hecho de que todas las soluciones al problema de Riemann en $x=x_{i}$ son soluciones de \textbf{similitud}, i.e., son constantes en las rectas dadas por $(x-x_{i})/t = c$, con $c$ constante. Entonces, $\tilde{u}^{n}(x_{i},t)$ es constante en el tiempo y la integral es trivial.
+La diferencia entre esta integral y la definida en (\ref{eq:flujo-numerico}) es que la solución de la última es trivial. Esto se justifica con el hecho de que todas las soluciones al problema de Riemann en $x=x_{i}$ son soluciones de \textbf{similitud}, i.e., son constantes en las rectas dadas por $(x-x_{i})/t = c$, con $c$ constante. Entonces, $\tilde{u}^{n}(x_{i},t)$ es constante en el tiempo y la integral es trivial.
 
 Sea $u^{*}(u_L; u_R)$ la solución al problema de Riemann sobre la recta $x/t = 0$, que se obtiene con la siguiente condición inicial
 \begin{equation}
@@ -324,9 +325,9 @@ con $\hat{\lambda}_{p}^{-} = \min{(\hat{\lambda}_{p},0)}$. Combinando ambas expr
 	\frac{1}{2}\sum_{p=1}^{m}|\hat{\lambda}_{p}|\alpha_{p}\mathbf{\hat{r}}_{p}.
 	\label{eq:roe-flux}
 \end{equation}
-\subsubsection{Corrección de rarefacción sónica}
-Una desventaja del método de Roe es su incapacidad de producir las soluciones físicamente correctas en el caso que la solución al problema de Riemann corresponda a una onda de rarefacción sónica. Dicha solución fue expuesta en la ecuación (\ref{eq:4-godunov}). Por lo tanto, en el contexto del esquema de Roe, este caso se puede determinar cuando se cumple que $\lambda_{p,L} < 0 < \lambda_{p,R}$, donde $\lambda_{p,K} = \lambda_{p}(\mathbf{{U}}_K)$. Si esta condición se da, es necesario modificar el flujo numérico de Roe. Hay varias maneras de corregir esto. El flujo modificado propuesto por Harten y Hyman
-%agregar cita del PDF%
+\subsubsection{Corrección de entropía sónica}
+Una desventaja del método de Roe es su incapacidad de producir las soluciones físicamente correctas en el caso que la solución al problema de Riemann corresponda a una onda de rarefacción sónica, ya que puede producir soluciones que violan la condición de entropía. La onda de rarefacción sónica fue expuesta en la ecuación (\ref{eq:4-godunov}), considerada como un caso especial por el esquema de Godunov. Por lo tanto, en el contexto del esquema de Roe, este caso se puede determinar cuando se cumple que $\lambda_{p,L} < 0 < \lambda_{p,R}$, donde $\lambda_{p,K} = \lambda_{p}(\mathbf{{U}}_K)$. Si esta condición se da, es necesario modificar el flujo numérico de Roe. Hay varias maneras de corregir esto. El flujo modificado propuesto por Harten y Hyman
+\cite{pelanti}
  es el siguiente.
 \begin{equation}
 	F(\mathbf{U}_L, \mathbf{U}_R) = \frac{1}{2}\left(\mathbf{F}(\mathbf{U}_L) +\mathbf{F}(\mathbf{U}_R)\right) - 

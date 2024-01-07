@@ -28,7 +28,8 @@
 \contentsline {subsection}{\numberline {1.9.2}Solución al problema de Riemann para un sistema hiperbólico lineal}{20}{subsection.1.9.2}%
 \contentsline {chapter}{\numberline {2}MÉTODO DE VOLÚMENES FINITOS Y ESQUEMA DE ROE}{23}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Método de volúmenes finitos}{23}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Discretización del problema}{23}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.1}Discretización del dominio}{23}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Aproximaciones numéricas}{24}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Esquemas de flujo numérico}{27}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Esquema de Lax-Friedrichs}{28}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Esquema de Godunov}{28}{subsection.2.2.2}%
@@ -39,7 +40,7 @@
 \contentsline {subsubsection}{\numberline {2.2.3.2}Modificación de la ecuación de conservación}{32}{subsubsection.2.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.2.3.3}El solucionador de Riemann de Roe}{33}{subsubsection.2.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.2.3.4}El flujo numérico de Roe}{35}{subsubsection.2.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.2.3.5}Corrección de rarefacción sónica}{35}{subsubsection.2.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.2.3.5}Corrección de entropía sónica}{35}{subsubsection.2.2.3.5}%
 \contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{37}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Ecuaciones de Euler}{37}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Derivación de las ecuaciones}{37}{subsection.3.1.1}%
