@@ -36,7 +36,7 @@ de tal manera que, aproximadamente, $U_i^n$ toma el valor promedio de $\mathbf{U
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=\linewidth]{../some_plots/cap2/graficas/numeric_U.pdf}
-	\caption{Gráfica de la construcción de una función escalar numéricamente aproximada $u_i$, en un dominio con pocas celdas. Se puede considerar que una función numéricamente aproximada es una función definida por partes, en donde cada parte es una constante. \textbf{Fuente:} elaboración propia.}
+	\caption{Gráfica de la construcción de una función escalar numéricamente aproximada $u_i$, en un dominio con pocas celdas. Se puede considerar que una función numéricamente aproximada por el MVF es una función definida por partes, en donde cada parte es una constante. \textbf{Fuente:} elaboración propia.}
 	\label{fig:discretizacion-de-U}
 \end{figure}
 
@@ -236,27 +236,91 @@ Puesto que se necesita resolver una versión aproximada del problema de Riemann,
 donde $\mathbf{\hat{F}}$ es una función de flujo que se aproxima en algún límite a la función original $\mathbf{{F}}$ y es una función más sencilla de trabajar al momento de resolver el problema de Riemann. Al integrar la ecuación (\ref{eq:conservative-eq-aprox}) sobre el dominio $[-\mathcal{M}, \mathcal{M}] \times [0,1]$ se puede concluir que la condición descrita en (\ref{eq:condicion-aprox-riemann}) se cumplirá si la siguiente relación entre ambas funciones de flujos también se cumple,
 \begin{equation}
 	\mathbf{\hat{F}}(\mathbf{U}_R) - \mathbf{\hat{F}}(\mathbf{U}_L) = \mathbf{F}(\mathbf{U}_R) - \mathbf{F}(\mathbf{U}_L).
+	\label{eq:flux-differences-condition}
 \end{equation}
 Entonces, se define a $\mathbf{\hat{w}}(x/t)$ como la solución a la ecuación (\ref{eq:conservative-eq-aprox}). Por tanto, se puede encontrar una expresión para la función de flujo numérico,
 \begin{equation}
-	F(\mathbf{U}_R, \mathbf{U}_L) = \mathbf{\hat{F}}({\mathbf{\hat{w}}}(0)) +  \mathbf{F}(\mathbf{U}_R)-\mathbf{\hat{F}}(\mathbf{U}_L).
+	F(\mathbf{U}_R, \mathbf{U}_L) = \mathbf{\hat{F}}({\mathbf{\hat{w}}}(0)) +  \mathbf{F}(\mathbf{U}_R)-\mathbf{\hat{F}}(\mathbf{U}_R).
+	\label{eq:numerical-aprox-flux}
 \end{equation}
 \subsubsection{El solucionador de Riemann de Roe}
 La idea básica del esquema de Roe consiste en resolver el problema de Riemann, sobre cada celda del dominio, para el sistema de ecuaciones de conservación original como un sistema con coeficientes constantes. La resolución de un un sistema hiperbólico lineal fue expuesta en la sección (\ref{sec:resolucion-hiperbolico}). Por tanto, en el esquema de Roe, la función de flujo aproximada $\mathbf{\hat{F}}$ es una función lineal, i.e, 
 \begin{equation}
 	\mathbf{\hat{F}}(\mathbf{U}) = \mathbf{\hat{A}}\mathbf{U}.
+	\label{eq:aprox-flux-roe}
 \end{equation}
-Dado que esta definición para la función de flujo depende del problema de Riemann a resolver, es evidente que la matriz $\mathbf{\hat{A}}$ dependerá de los valores de las celdas adyacentes en donde se resuelve dicho problema,
+Dado que esta definición para la función de flujo depende del problema de Riemann a resolver, es evidente que la matriz $\mathbf{\hat{A}}$ dependerá de los valores de las celdas adyacentes en donde se desea calcular el flujo,
 \begin{equation}
 	\mathbf{\hat{A}} = \mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R).
 \end{equation}
-En general, la definición de la matriz $\mathbf{\hat{A}}$ dependerá del sistema que busca aproximar. Entonces el sistema constante que define la solución aproximada $\mathbf{\hat{U}}$ se escribe como
+En general, la definición de la matriz $\mathbf{\hat{A}}$ dependerá del sistema que se busca aproximar. Entonces el sistema lineal que define la solución aproximada $\mathbf{\hat{U}}$ se escribe como
 \begin{equation}
 	\mathbf{\hat{U}}_t + \mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R)\mathbf{\hat{U}}_x = 0.
 	\label{eq:aprox-system-roe}
 \end{equation}
-Como se mostró en la sección (\ref{sec:resolucion-hiperbolico}) la solución al problema de Riemann de la ecuación (\ref{eq:aprox-system-roe}), si $\mathbf{\hat{A}}$ tiene autovalores $\lambda_i$ y autovalores $\mathbf{\hat{r}}_{i}$, se puede expresar utilizando la siguiente expresión
+Como se mostró en la sección (\ref{sec:resolucion-hiperbolico}) la solución al problema de Riemann de la ecuación (\ref{eq:aprox-system-roe}), si $\mathbf{\hat{A}}$ tiene autovalores $\hat{\lambda}_i$ y autovalores $\mathbf{\hat{r}}_{i}$, se puede expresar utilizando la siguiente expresión
 \begin{equation}
 	\mathbf{U}_R - \mathbf{U}_L = \sum_{p} {\alpha}_p \mathbf{\hat{r}}_{p}.
 \end{equation}
-Esta última se justifica a través de las expresiones de las soluciones al problema de Riemann para un sistema hiperbólico lineal, según las ecuaciones (\ref{eq:ul-sol-numeric}) y (\ref{eq:ur-sol-numeric}).
+Esta última se justifica a través de las expresiones de las soluciones al problema de Riemann para un sistema hiperbólico lineal, según las ecuaciones (\ref{eq:ul-sol-numeric}) y (\ref{eq:ur-sol-numeric}). Utilizando las expresiones (\ref{eq:sol-riemann-linear-1}) y (\ref{eq:sol-riemann-linear-2}) se obtiene
+\begin{equation}
+	\mathbf{\hat{U}} (x,t) = \mathbf{U}_L + \sum_{\hat{\lambda}_{p}<x/t}\alpha_{p}\mathbf{\hat{r}}_{p}
+\end{equation}
+Haciendo uso de la solución de similitud, $\mathbf{\hat{U}} (x,t) = \mathbf{\hat{w}}(x/t) = \mathbf{\hat{w}}(\xi)$, con $\xi = x/t$, se puede escribir
+\begin{equation}
+	\mathbf{\hat{w}}(\xi) = \mathbf{U}_L + \sum_{\hat{\lambda}_{p}<\xi}\alpha_{p}\mathbf{\hat{r}}_{p}
+	\label{eq:w-linear-1}
+\end{equation}
+donde la suma es sobre todo $p$ tal que $\lambda_{p} < \xi$. De manera equivalente se puede escribir la solución en términos de $\mathbf{U}_R$,
+\begin{equation}
+	\mathbf{\hat{w}}(\xi) = \mathbf{U}_R - \sum_{\hat{\lambda}_{p}>\xi}\alpha_{p}\mathbf{\hat{r}}_{p}.
+	\label{eq:w-linear-2}
+\end{equation}
+
+Se comentó que la definición de la matriz aproximada $\mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R)$ depende del sistema a resolver. Sin embargo, Roe propone tres condiciones generales que se deben imponer a esta matriz. 
+
+La primera condición exige que
+\begin{equation}
+	\text{i)}\hspace{3mm} \mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R)(\mathbf{U}_R-\mathbf{U}_L) = \mathbf{F}(\mathbf{U}_R) - \mathbf{F}(\mathbf{U}_L),
+	\label{eq:condition-roe-1}
+\end{equation}
+con la cual se garantiza que se cumpla la relación (\ref{eq:flux-differences-condition}) que a su vez garantiza la condición que debe cumplir toda solución aproximada, descrita en (\ref{eq:condicion-aprox-riemann}). Otro efecto de la anterior condición es asegurar que se cumpla la relación de salto de Rankine-Hugoniot; combinando la ecuación
+\begin{equation}
+	\mathbf{F}(\mathbf{U}_R) - \mathbf{F}(\mathbf{U}_L) = s(\mathbf{U}_R - \mathbf{U}_L),
+\end{equation}
+donde $s$ es la velocidad de la onda de choque o discontinuidad de contacto, con la condición (\ref{eq:condition-roe-1}), se muestra que $\mathbf{U}_R - \mathbf{U}_L$ es un autovector de $\mathbf{\hat{A}}$ con autovalor $s$. Con este resultado, la solución aproximada $\mathbf{\hat{U}}$ consiste en un salto $\mathbf{U}_R - \mathbf{U}_L$ que se propaga con una velocidad $s$.
+
+La segunda condición,
+\begin{equation}
+	\text{ii)}\hspace{3mm} \mathbf{\hat{A}} \text{ es diagonalizable con autovalores reales.}
+\end{equation}
+implica que el sistema (\ref{eq:aprox-system-roe}) se puede resolver y es hiperbólico. 
+
+La tercera y última condición establece que
+\begin{equation}
+	\text{iii)}\hspace{3mm} \mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R) \rightarrow \mathbf{F}'(\mathbf{\bar{U}}) \text{ suavemente mientras } \mathbf{{U}}_L, \mathbf{{U}}_R \rightarrow \mathbf{\bar{U}}.
+\end{equation}
+La tercera condición garantiza que el método de Roe funcione adecuadamente con soluciones suaves, en contraste con la primera condición, que garantiza el funcionamiento del método con discontinuidades locales. 
+\subsubsection{El flujo numérico de Roe}
+La función $\mathbf{\hat{w}}(\xi)$ que se encarga de producir el esquema numérico de Roe corresponde a la solución exacta del problema lineal descrito en la ecuación (\ref{eq:aprox-system-roe}). Entonces, utilizando la expresión de flujo numérico de (\ref{eq:numerical-aprox-flux}) con el flujo numérico aproximado (\ref{eq:aprox-flux-roe}), se obtiene
+\begin{equation}
+	F(\mathbf{U}_L, \mathbf{U}_R) = \mathbf{\hat{A}}{\mathbf{\hat{w}}}(0) +  \mathbf{F}(\mathbf{U}_R)-\mathbf{\hat{A}}\mathbf{U}_R
+\end{equation}
+sustituyendo la solución (\ref{eq:w-linear-2}) se obtiene,
+\begin{equation}
+	F(\mathbf{U}_L, \mathbf{U}_R) = \mathbf{F}(\mathbf{U}_R) - \mathbf{\hat{A}}\sum_{\hat{\lambda}_p > 0}\alpha_{p} \mathbf{\hat{r}}_{p}
+\end{equation}
+\begin{equation}
+	F(\mathbf{U}_L, \mathbf{U}_R) = \mathbf{F}(\mathbf{U}_R) - \sum_{p=1}^{m} \hat{\lambda}_{p}^{+}\alpha_{p}\mathbf{\hat{r}}_{p}
+\end{equation}
+donde $\hat{\lambda}_{p}^{+} = \max{(\hat{\lambda}_{p},0)}$. También es posible escribir el flujo numérico en términos de $\mathbf{U}_L$,
+\begin{equation}
+	F(\mathbf{U}_L, \mathbf{U}_R) = \mathbf{F}(\mathbf{U}_L) + \sum_{p=1}^{m} \hat{\lambda}_{p}^{-}\alpha_{p}\mathbf{\hat{r}}_{p},
+\end{equation}
+con $\hat{\lambda}_{p}^{-} = \min{(\hat{\lambda}_{p},0)}$. Combinando ambas expresiones mediante un promedio, se obtiene el flujo numérico de Roe,
+\begin{equation}
+	F(\mathbf{U}_L, \mathbf{U}_R) = \frac{1}{2}\left(\mathbf{F}(\mathbf{U}_L) +\mathbf{F}(\mathbf{U}_R)\right) - 
+	\frac{1}{2}\sum_{p=1}^{m}|\hat{\lambda}_{p}|\alpha_{p}\mathbf{\hat{r}}_{p}.
+	\label{eq:roe-flux}
+\end{equation}
+\subsubsection{Corrección de entropía sónica}

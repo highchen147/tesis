@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Gráficas de las soluciones, en distintos instantes de tiempo, de la ecuación de Burgers para el caso $u_L < u_R$ del problema de Riemann \textbf {Fuente:} elaboración propia.\relax }}{16}{figure.caption.17}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Esquema de símbolos utilizados para la discretización del dominio espacial. \textbf {Fuente:} elaboración propia.\relax }}{24}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Gráfica de la construcción de una función escalar numéricamente aproximada $u_i$, en un dominio con pocas celdas. Se puede considerar que una función numéricamente aproximada es una función definida por partes, en donde cada parte es una constante. \textbf {Fuente:} elaboración propia.\relax }}{25}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Gráfica de la construcción de una función escalar numéricamente aproximada $u_i$, en un dominio con pocas celdas. Se puede considerar que una función numéricamente aproximada por el MVF es una función definida por partes, en donde cada parte es una constante. \textbf {Fuente:} elaboración propia.\relax }}{25}{figure.caption.19}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema que muestra que el flujo numérico aproximado $F$ se calcula entre las interfaces de las celdas $\mathcal {C}_i$. \textbf {Fuente:} elaboración propia.\relax }}{26}{figure.caption.20}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
