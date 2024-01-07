@@ -1,0 +1,560 @@
+/**
+ * @file euler1D.cpp
+ * @author Rodrigo Castillo (steverogersavengers@gmail.com)
+ * @brief Programa integrador de las ecuaciones de Euler en una dimensión,
+ * correspondiente a un gas ideal.
+ * @version 0.2
+ * @date 2023-05-04
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ * g++ euler1D.cpp funciones.cpp -o solver
+ */
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib> //
+#include <cmath>
+#include <iomanip>
+#include <fstream>
+#include <vector>
+#include <sys/stat.h>
+#include <algorithm>
+#include "funciones.hpp" // Incluye el archivo de encabezado
+using namespace std;
+
+int generateRandomNum();
+double rho_inicial(double x, double L);
+double p_inicial(double x, double L);
+double u_inicial(double x, double L);
+void calc_componentes_Q(double *q1, double *q2, double *q3, double *rho, double *p, double *u, int Nx);
+void calc_componentes_F(double *F1, double *F2, double *F3, double *rho, double *p, double *u, int Nx);
+double rho_prom(double rho_L, double rho_R);
+double u_prom(double u_L, double u_R, double rho_L, double rho_R);
+double h_prom(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R);
+double a_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, double u_R);
+void salida(ofstream &of, double *u, double *x, double tiempo, int N);
+vector<double> flujo_euler(double rho, double p, double u);
+vector<double> Flujo(vector<double> F_L, vector<double> F_R, double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix);
+vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix);
+vector<double> autovalor_lambda(double u, double a);
+vector<double> operator+(const vector<double>& a, const vector<double>& b);
+vector<double> operator-(const vector<double>& a, const vector<double>& b);
+vector<double> operator*(const vector<double>& v, double scalar);
+vector<double>& operator+=(vector<double>& v1, const vector<double>& v2);
+
+const double Gamma = 1.4;
+
+int main()
+{
+    // Inicializar el generador de números aleatorios
+    srand(static_cast<unsigned>(time(nullptr)));
+    int numeroAleatorio = generateRandomNum();
+
+    // Parámetros temporales
+    const double t_total = 2; // Tiempo total en segundos
+    const double dt = 0.005; // Tamaño de paso temporal en segundos
+    int Niter = floor(t_total/dt); // Número total de iteraciones
+    const int num_outs = 400; // Número de gráficas de instantes temporales
+    int out_cada = floor(Niter / num_outs); // Cada out_cada veces se 
+                                            // imprimen los valores
+    
+    double tiempo = 0.0; // Variable de tiempo en la simulación
+
+    // Parámetros espaciales
+    int Nx = 500; // Número de puntos en el eje x
+    double L = (10); // Largo del dominio en metros
+    double dx = L/(Nx-1); // Tamaño de paso en el eje x
+
+    // Otros parámetros
+    bool correccion_de_entropia = true;
+
+    // Archivos
+    ofstream file_densidad;
+    ofstream file_presion;
+    ofstream file_velocidad;
+    std::string nombreDirectorio;
+    std::cout << "Ingrese el nombre del directorio que desea crear para almacenar los datos: ";
+    std::cin >> nombreDirectorio;
+    nombreDirectorio = "data/" + nombreDirectorio + to_string(numeroAleatorio);
+    int directorio = mkdir(nombreDirectorio.c_str());
+    std::cout << "Se ha creado " + nombreDirectorio << endl;
+    string file_densidad_name = nombreDirectorio + "/densidad.dat";
+    string file_presion_name = nombreDirectorio + "/presion.dat";
+    string file_velocidad_name = nombreDirectorio + "/velocidad.dat";
+
+    file_densidad.open(file_densidad_name, ios::out );
+    file_presion.open(file_presion_name, ios::out);
+    file_velocidad.open(file_velocidad_name, ios::out);
+     
+    // Arreglos
+    // Cantidades físicas
+    double *rho = new double[Nx]; // Densidad
+    double *rho_nueva = new double[Nx];
+    double *u = new double[Nx]; // Velocidad
+    double *u_nueva = new double[Nx];
+    double *p = new double[Nx]; // Presión
+    double *p_nueva = new double[Nx];
+    // Componentes del vector Q
+    double *q1 = new double[Nx];
+    double *q2 = new double[Nx];
+    double *q3 = new double[Nx];
+    // Componentes del vector F
+    double *F1 = new double[Nx];
+    double *F2 = new double[Nx];
+    double *F3 = new double[Nx];
+    // Puntos sobre el eje x
+    double *x = new double[Nx];
+
+    // Inicialización de arreglos
+    // Dominio espacial
+    for (int i = 0; i < Nx; i++)
+    {
+        x[i] = i*dx;
+    }
+    // Densidad
+    for (int i = 0; i < Nx; i++)
+    {
+        rho[i] = rho_inicial(x[i], L);
+    }
+    // Presión
+    for (int i = 0; i < Nx; i++)
+    {
+        p[i] = p_inicial(x[i], L);
+    }
+    // Velocidad
+    for (int i = 0; i < Nx; i++)
+    {
+        u[i] = u_inicial(x[i], L);
+        q1[i] = 0.0;
+        q2[i] = 0.0;
+        q3[i] = 0.0;
+    }
+
+    // Se declaran los vectores principales de la integración
+    vector<double> Q(3);
+    vector<double> Q_nuevo(3);
+    vector<double> F(3);
+    // Se calculan las componentes del vector Q de acuerdo a su definición 
+    calc_componentes_Q(q1, q1, q3, rho, p, u, Nx);
+    // Se calculan las componentes del vector F, que representa el flujo
+    calc_componentes_F(F1, F2, F3, rho, p, u, Nx);
+
+    // Se envían los datos iniciales
+    salida(file_densidad, rho, x, tiempo, Nx);
+    salida(file_presion, p, x, tiempo, Nx);
+    salida(file_velocidad, u, x, tiempo, Nx);
+    
+    // Comienza a correr el tiempo
+    tiempo += dt;
+    // Ciclo principal
+    for (int k = 0; k < Niter; k++)
+    {
+        // Condiciones de frontera
+        // rho[0] = 0.0;
+        rho_nueva[0] = rho[0];
+        // rho[Nx-1] = 0.0;
+        rho_nueva[Nx-1] = rho[Nx-1];
+        // u[0] = 0.0;
+        u_nueva[0] = u[0];
+        // u[Nx-1] = 0.0;
+        u_nueva[Nx-1] = u[Nx-1];
+        // La presión queda fija
+        p_nueva[0] = p[0];
+        p_nueva[Nx-1] = p[Nx-1];
+        // Se calculan las componentes del vector Q de acuerdo a su definición 
+        calc_componentes_Q(q1, q2, q3, rho, p, u, Nx);
+        // cout << q1[1] << endl;
+        for (int i = 1; i < Nx-1; i++)
+        {
+            vector<double> Q_N(3);
+            // Definir valores de Q
+            Q = {q1[i], q2[i], q3[i]};
+            
+            // Actualizar e integrar Q
+            Q_N = Q - ((Flujo(flujo_euler(rho[i], p[i], u[i]), flujo_euler(rho[i+1], p[i+1], u[i+1]), 
+                            p[i], p[i+1], 
+                            u[i], u[i+1], 
+                            rho[i], rho[i+1], correccion_de_entropia) - 
+                      Flujo(flujo_euler(rho[i-1], p[i-1], u[i-1]), flujo_euler(rho[i], p[i], u[i]), 
+                            p[i-1], p[i], 
+                            u[i-1], u[i], 
+                            rho[i-1], rho[i], correccion_de_entropia))*(dt/dx));
+            
+            // Despejar variables físicas de Q
+            rho_nueva[i] = Q_N[0];
+            u_nueva[i] = Q_N[1]/rho_nueva[i];
+            p_nueva[i] = (Q_N[2] - 0.5*rho_nueva[i]*pow(u_nueva[i], 2))*(Gamma-1);
+
+            if ((a_prom(p[i], p[i+1], rho[i], rho[i+1], u[i], u[i+1]) == 0.0))
+            {
+                cout << "tiempo: " << k << endl;
+                cout << "coordenada : " << i << endl;
+            }
+
+
+        }
+        // Actualizar variables físicas
+        for (int i = 0; i < Nx; i++)
+        {
+            rho[i] = rho_nueva[i];
+            u[i] = u_nueva[i];
+            p[i] = p_nueva[i];
+        }
+        
+
+        if (k % out_cada == 0)
+        {
+            salida(file_densidad, rho, x, tiempo, Nx);
+            salida(file_presion, p, x, tiempo, Nx);
+            salida(file_velocidad, u, x, tiempo, Nx);
+            cout << round(100*tiempo/t_total*100)/100 << endl;
+        }
+        // Actualizar el tiempo
+        tiempo += dt;
+    }
+    
+}
+
+int generateRandomNum() {
+    return rand() % 1000;
+}
+
+/**
+ * @brief Función inicial de la velocidad
+ * 
+ * @param x Posición en x
+ * @return double 
+ */
+
+double u_inicial(double x, double L)
+{
+    return 0.9;
+    // return exp(-5e-6*pow(x-L/2, 2));
+}
+
+/**
+ * @brief Función inicial de la presión
+ * 
+ * @param x Posición en x
+ * @return double 
+ */
+double p_inicial(double x, double L)
+{
+    double atm = (1.01325e5);
+    // return 100*exp(-0.5*pow((x-L/2), 2));
+    // return atm*1/12*(atan(x-L/2)+4.50);
+    return step_neg(x, 3, 1, L/2);
+}
+
+/**
+ * @brief Función inicial de la densidad
+ * 
+ * @param x Posición en x
+ * @return double 
+ */
+double rho_inicial(double x, double L)
+{
+    // Densidad del aire en kg/m^3
+    double d_aire = 1.29;
+    // return 1.0*d_aire;
+    return step_neg(x, 3, 1, L/2);
+}
+
+/**
+ * @brief Asignar valores a las componentes del vector Q
+ * 
+ * @param q1 Componente 1 de Q
+ * @param q2 Componente 2 de Q
+ * @param q3 Componente 3 de Q
+ * @param rho Densidad
+ * @param p Presión
+ * @param u Velocidad
+ * @param Nx Tamaño de los arreglos que almacenan las funciones
+ */
+void calc_componentes_Q(double *q1, double *q2, double *q3, double *rho, double *p, double *u, int Nx)
+{
+    for (int i = 0; i < Nx; i++)
+    {
+        q1[i] = rho[i];
+        q2[i] = rho[i]*u[i];
+        q3[i] = p[i]/(Gamma-1) + 0.5*rho[i]*pow(u[i], 2);
+    }
+    
+}
+
+/**
+ * @brief Asignar valores a las componentes del vector F (flujo)
+ * 
+ * @param F1 Componente 1 de F
+ * @param F2 Componente 2 de F
+ * @param F3 Componente 3 de F
+ * @param rho Densidad
+ * @param p Presión
+ * @param u Velocidad
+ * @param Nx Tamaño de los arreglos que almacenan las funciones
+ */
+void calc_componentes_F(double *F1, double *F2, double *F3, double *rho, double *p, double *u, int Nx)
+{
+    for (int i = 0; i < Nx; i++)
+    {
+        F1[i] = rho[i]*u[i];
+        F2[i] = p[i] + rho[i]*pow(u[i], 2);
+        F3[i] = u[i]*(p[i]/(Gamma-1) + 0.5*rho[i]*pow(u[i], 2) + p[i]); 
+    }
+    
+}
+
+/**
+ * @brief Calcula media geométrica entre densidades vecinas
+ * 
+ * @param rho_L Densidad a la izquierda
+ * @param rho_R Densidad a la derecha
+ * @return double 
+ */
+double rho_prom(double rho_L, double rho_R)
+{
+    return sqrt(rho_L*rho_R);
+}
+
+/**
+ * @brief Calcula media ponderada de velocidades 
+ * respecto a la raiz de densidades vecinas
+ * 
+ * @param u_L velocidad a la izquierda
+ * @param u_R velocidad a la derecha
+ * @param rho_L densidad a la izquierda
+ * @param rho_R densidad a la derecha
+ * @return double 
+ */
+double u_prom(double u_L, double u_R, double rho_L, double rho_R)
+{
+    return (sqrt(rho_L)*u_L+sqrt(rho_R)*u_R)/
+    (sqrt(rho_L) + sqrt(rho_R));
+}
+
+/**
+ * @brief Calcula media ponderada de la entalpía
+ * respecto a la raíz de densidades vecinas
+ * 
+ * @param p_L presión a la izquierda
+ * @param p_R presión a la derecha
+ * @param u_L velocidad a la izquierda
+ * @param u_R velocidad a la derecha
+ * @param rho_L densidad a la izquierda
+ * @param rho_R densidad a la derecha
+ * @return double 
+ */
+double h_prom(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R)
+{
+    // Se calcula la entalpía a la izquierda y a la derecha
+    double h_L = Gamma/(Gamma-1.0)*(p_L/rho_L) + 0.5*u_L*u_L;
+    double h_R = Gamma/(Gamma-1.0)*(p_R/rho_R) + 0.5*u_R*u_R;
+    // Se devuelve la misma media ponderada que con u_prom pero ahora con las entalpías
+    return (sqrt(rho_L)*h_L+sqrt(rho_R)*h_R)/(sqrt(rho_L) + sqrt(rho_R));
+}
+
+/**
+ * @brief Calcula la media ponderada de a, correspondiente a velocidad del sonido en casos particulares.
+ * También respecto a las densidades vecinas.
+ * 
+ * @param p_L 
+ * @param p_R 
+ * @param rho_L 
+ * @param rho_R 
+ * @return double 
+ */
+double a_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, double u_R)
+{
+    double h = h_prom(p_L, p_R, u_L, u_R, rho_L, rho_R);
+    double u = u_prom(u_L,u_R, rho_L, rho_R);
+    return sqrt((Gamma - 1)*(h - 0.5*pow(u,2)));
+}
+
+/**
+ * @brief Devuelve el autovalor iésimo de la matriz de Roe
+ * @param u velocidad del gas
+ * @param a velocidad del sonido
+ * @return vector con autovalores lambda
+*/
+vector<double> autovalor_lambda(double u, double a)
+{
+    return {u-a, u, u+a};
+}
+
+/**
+ * @brief Suma sobre k de los autovectores de la matriz A del sistema
+ * por sus fuerzas y autovalores.
+ * 
+ * @param p_L Presión a la izquierda
+ * @param p_R Presión a la derecha
+ * @param u_L Velocidad a la izquierda
+ * @param u_R Velocidad a la derecha
+ * @param rho_L Densidad a la izquierda
+ * @param rho_R Densidad a la derecha
+ * @return vector<double> 
+ */
+vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix)
+{
+    double u = u_prom(u_L, u_R, rho_L, rho_R);
+    double rho = rho_prom(rho_L, rho_R);
+    double h = h_prom(p_L, p_R, u_L, u_R, rho_L, rho_R);
+    double a = a_prom(p_L, p_R, rho_L, rho_R, u_L, u_R);
+    double dp = p_R - p_L;
+    double du = u_R - u_L;
+    double drho = rho_R - rho_L;
+    // Fuerzas de las ondas, alfa
+    double alfa_1 = 0.5*(dp-rho*a*du)/pow(a, 2);
+    double alfa_2 = (pow(a, 2)*drho-dp)/pow(a, 2);
+    double alfa_3 = 0.5*(dp+rho*a*du)/pow(a, 2);
+    vector<double> alfa = {alfa_1, alfa_2, alfa_3};
+    // Autovalores de las ondas
+    vector<double> lambda = {u-a, u, u+a};
+    // Autovectores
+    vector<double> e_1 = {1, u-a, h-u*a};
+    vector<double> e_2 = {1, u, 0.5*pow(u,2)};
+    vector<double> e_3 = {1, u+a, h+u*a};
+    // vector de vectores
+    vector<vector<double>> e_vec = {e_1, e_2, e_3};
+
+    // Se declara el vector resultante, de dimensión 3 y con ceros.
+    vector<double> resultado(3, 0);
+
+    // Se realiza la suma 
+    for (int i = 0; i < 3; i++)
+    {
+        // Se define la variable que almacena cada autovalor
+        double lambda_i = abs(lambda[i]);
+        // Se define procedimiento para considerar la corrección de entropía sónica de HH
+        if (entropy_fix)
+        {
+            // Se calculan autovalores correspondientes a las ondas adyacentes, L y R.
+            double lambda_L = autovalor_lambda(u_L, a_prom(p_L, p_L, rho_L, rho_L, u_L, u_L))[i];
+            double lambda_R = autovalor_lambda(u_R, a_prom(p_R, p_R, rho_R, rho_R, u_R, u_R))[i];
+            // Se calcula el máximo entre 0 y la diferencia entre los autovalores adyacentes
+            // y el autovalor aproximado lambda_i
+            double delta_i = max(lambda_i-lambda_L, lambda_R-lambda_i);
+            delta_i = max(delta_i, 0.0);
+            if (lambda_i < delta_i)
+            {
+                lambda_i = delta_i;
+            }
+            else
+            {
+                lambda_i = abs(lambda[i]);
+            }
+        }
+        else
+        {
+            lambda_i = abs(lambda[i]);
+        }
+        resultado += e_vec[i]*(alfa[i]*lambda_i);
+    }
+    return resultado;
+}
+
+/**
+ * @brief Calcula el flujo F de la ecuación de Euler en forma conservativa.
+ * 
+ * @param rho Densidad
+ * @param p Presión
+ * @param u Velocidad
+ * @return vector<double> 
+ */
+vector<double> flujo_euler(double rho, double p, double u)
+{
+    vector<double> f_resultante(3);
+    double F1 = rho*u;
+    double F2 = p + rho*pow(u, 2);
+    double F3 = u*(p/(Gamma-1) + 0.5*rho*pow(u, 2) + p);
+    f_resultante = {F1, F2, F3};
+    return f_resultante;
+}
+
+/**
+ * @brief Calcula el flujo entre celdas utilizando el esquema de Roe
+ * 
+ * @param F_L Flujo total en la celda izquierda
+ * @param F_R Flujo total en la celda derecha
+ * @param p_L Presión a la izquierda
+ * @param p_R Presión a la derecha
+ * @param u_L Velocidad a la izquierda
+ * @param u_R Velocidad a la derecha
+ * @param rho_L Densidad a la izquierda
+ * @param rho_R Densidad a la derecha
+ * @return vector<double> 
+ */
+vector<double> Flujo(
+    vector<double> F_L, 
+    vector<double> F_R, 
+    double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R,
+    bool entropy_fix)
+{
+    // bool entropy_fix = true;
+    vector<double> F_prom = (F_L+F_R)*0.5;
+    return F_prom - (suma_k(p_L, p_R, u_L, u_R, rho_L, rho_R, entropy_fix)*0.5);
+}
+
+/**
+ * @brief Función que envía datos a los archivos, con instantes
+ * temporales separados por doble enter
+ * 
+ * @param of Archivo de datos
+ * @param u Arreglo que almacena los valores de las funciones
+ * @param x Arreglo de dimensión espacial
+ * @param tiempo Instante temporal en cuestión
+ * @param N Tamaño del arreglo
+ */
+void salida(ofstream &of, double *u, double *x, double tiempo, int N){
+    for (int i = 0; i < N; i++)
+    {
+        of << tiempo << "\t" << x[i] << "\t" << u[i] << endl;
+    }
+    of << endl << endl;
+}
+
+vector<double> operator+(const vector<double>& a, const vector<double>& b) {
+    // Asegurarse de que ambos vectores tengan el mismo tamaño
+    if (a.size() != b.size()) {
+        throw runtime_error("Los vectores deben tener el mismo tamaño.");
+    }
+    
+    vector<double> result(a.size());
+    for (size_t i = 0; i < a.size(); i++) {
+        result[i] = a[i] + b[i];
+    }
+    return result;
+}
+
+vector<double> operator-(const vector<double>& a, const vector<double>& b) {
+    // Asegurarse de que ambos vectores tengan el mismo tamaño
+    if (a.size() != b.size()) {
+        throw runtime_error("Los vectores deben tener el mismo tamaño.");
+    }
+    
+    vector<double> result(a.size());
+    for (size_t i = 0; i < a.size(); i++) {
+        result[i] = a[i] - b[i];
+    }
+    return result;
+}
+
+vector<double> operator*(const vector<double>& v, double scalar) {
+    vector<double> result(v.size());
+    for (size_t i = 0; i < v.size(); i++) {
+        result[i] = v[i] * scalar;
+    }
+    return result;
+}
+
+vector<double>& operator+=(vector<double>& v1, const vector<double>& v2) {
+    if (v1.size() != v2.size()) {
+        throw invalid_argument("Los vectores deben tener el mismo tamaño.");
+    }
+
+    for (size_t i = 0; i < v1.size(); i++) {
+        v1[i] += v2[i];
+    }
+
+    return v1;
+}
