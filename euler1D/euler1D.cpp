@@ -1,9 +1,9 @@
 /**
  * @file euler1D.cpp
  * @author Rodrigo Castillo (steverogersavengers@gmail.com)
- * @brief Programa integrador de la ecuación de Euler en una dimensión,
+ * @brief Programa integrador de las ecuaciones de Euler en una dimensión,
  * correspondiente a un gas ideal.
- * @version 0.1
+ * @version 0.2
  * @date 2023-05-04
  * 
  * @copyright Copyright (c) 2023
@@ -43,7 +43,7 @@ vector<double> operator-(const vector<double>& a, const vector<double>& b);
 vector<double> operator*(const vector<double>& v, double scalar);
 vector<double>& operator+=(vector<double>& v1, const vector<double>& v2);
 
-const double Gamma = 1.01;
+const double Gamma = 1.4;
 
 int main()
 {
@@ -52,10 +52,10 @@ int main()
     int numeroAleatorio = generateRandomNum();
 
     // Parámetros temporales
-    const double t_total = 5; // Tiempo total en segundos
-    const double dt = 0.01; // Tamaño de paso temporal en segundos
+    const double t_total = 2; // Tiempo total en segundos
+    const double dt = 0.005; // Tamaño de paso temporal en segundos
     int Niter = floor(t_total/dt); // Número total de iteraciones
-    const int num_outs = 500; // Número de gráficas de instantes temporales
+    const int num_outs = 400; // Número de gráficas de instantes temporales
     int out_cada = floor(Niter / num_outs); // Cada out_cada veces se 
                                             // imprimen los valores
     
@@ -63,7 +63,7 @@ int main()
 
     // Parámetros espaciales
     int Nx = 500; // Número de puntos en el eje x
-    double L = (1e4); // Largo del dominio en metros
+    double L = (10); // Largo del dominio en metros
     double dx = L/(Nx-1); // Tamaño de paso en el eje x
 
     // Otros parámetros
@@ -78,6 +78,7 @@ int main()
     std::cin >> nombreDirectorio;
     nombreDirectorio = "data/" + nombreDirectorio + to_string(numeroAleatorio);
     int directorio = mkdir(nombreDirectorio.c_str());
+    std::cout << "Se ha creado " + nombreDirectorio << endl;
     string file_densidad_name = nombreDirectorio + "/densidad.dat";
     string file_presion_name = nombreDirectorio + "/presion.dat";
     string file_velocidad_name = nombreDirectorio + "/velocidad.dat";
@@ -225,9 +226,10 @@ int generateRandomNum() {
  * @param x Posición en x
  * @return double 
  */
+
 double u_inicial(double x, double L)
 {
-    return 0.0;
+    return 0.9;
     // return exp(-5e-6*pow(x-L/2, 2));
 }
 
@@ -242,7 +244,7 @@ double p_inicial(double x, double L)
     double atm = (1.01325e5);
     // return 100*exp(-0.5*pow((x-L/2), 2));
     // return atm*1/12*(atan(x-L/2)+4.50);
-    return step_neg(x, atm*1.2, atm, L/2);
+    return step_neg(x, 3, 1, L/2);
 }
 
 /**
@@ -256,7 +258,7 @@ double rho_inicial(double x, double L)
     // Densidad del aire en kg/m^3
     double d_aire = 1.29;
     // return 1.0*d_aire;
-    return step_neg(x, d_aire*1.2, d_aire, L/2);
+    return step_neg(x, 3, 1, L/2);
 }
 
 /**
