@@ -181,6 +181,7 @@ Sin embargo, esta construcción no garantiza que se satisfaga la condición de e
 		u_R & \text{si } s < 0.
 	\end{cases} \\
 	4. \hspace{3mm}&f'(u_L) < 0 < f'(u_R) \hspace{2mm} \Rightarrow  \hspace{2mm} u^{*} = u_{s}.
+	\label{eq:4-godunov}
 \end{align}
 Los primeros 3 casos están dados correctamente por (\ref{eq:uprima}). El caso número 4 corresponde a una solución conocida como  \textit{onda de rarefacción transónica} y la función $u^{*}$ toma el valor intermedio $u_s$. Este valor se conoce como \textit{punto sónico} y representa el valor de $u$ para el cual la velocidad característica es cero. Esto es,
 \begin{equation}
@@ -323,4 +324,24 @@ con $\hat{\lambda}_{p}^{-} = \min{(\hat{\lambda}_{p},0)}$. Combinando ambas expr
 	\frac{1}{2}\sum_{p=1}^{m}|\hat{\lambda}_{p}|\alpha_{p}\mathbf{\hat{r}}_{p}.
 	\label{eq:roe-flux}
 \end{equation}
-\subsubsection{Corrección de entropía sónica}
+\subsubsection{Corrección de rarefacción sónica}
+Una desventaja del método de Roe es su incapacidad de producir las soluciones físicamente correctas en el caso que la solución al problema de Riemann corresponda a una onda de rarefacción sónica. Dicha solución fue expuesta en la ecuación (\ref{eq:4-godunov}). Por lo tanto, en el contexto del esquema de Roe, este caso se puede determinar cuando se cumple que $\lambda_{p,L} < 0 < \lambda_{p,R}$, donde $\lambda_{p,K} = \lambda_{p}(\mathbf{{U}}_K)$. Si esta condición se da, es necesario modificar el flujo numérico de Roe. Hay varias maneras de corregir esto. El flujo modificado propuesto por Harten y Hyman
+%agregar cita del PDF%
+ es el siguiente.
+\begin{equation}
+	F(\mathbf{U}_L, \mathbf{U}_R) = \frac{1}{2}\left(\mathbf{F}(\mathbf{U}_L) +\mathbf{F}(\mathbf{U}_R)\right) - 
+	\frac{1}{2}\sum_{p=1}^{m}H(\hat{\lambda}_{p})\alpha_{p}\mathbf{\hat{r}}_{p}.
+	\label{eq:flux-HH-fix}
+\end{equation}
+donde
+\begin{equation}
+	H(\hat{\lambda}_{p})=
+	\begin{cases}
+		\delta_{p} & \text{ si } |\hat{\lambda}_p| < \delta_{p}\\
+		|\hat{\lambda}_p| & \text{ si } |\hat{\lambda}_p| \geq \delta_{p}
+	\end{cases}
+\end{equation}
+con
+\begin{equation}
+	\delta_{p} = \max(0, \hat{\lambda}_p - \lambda_{p,L}, \lambda_{p,R}- \hat{\lambda}_p).
+\end{equation}
