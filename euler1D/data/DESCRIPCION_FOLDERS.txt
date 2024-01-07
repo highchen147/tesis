@@ -1,0 +1,83 @@
+#### Nombre: prueba_antes_entropia349 ####
+CONDICIONES INICIALES:
+    double u_inicial(double x, double L)
+    {
+        return 0.0;
+        // return exp(-5e-6*pow(x-L/2, 2));
+    }
+
+    double p_inicial(double x, double L)
+    {
+        double atm = (1.01325e5);
+        // return 100*exp(-0.5*pow((x-L/2), 2));
+        // return atm*1/12*(atan(x-L/2)+4.50);
+        return step_neg(x, atm*1.2, atm, L/2);
+    }
+
+    double rho_inicial(double x, double L)
+    {
+        // Densidad del aire en kg/m^3
+        double d_aire = 1.29;
+        // return 1.0*d_aire;
+        return step_neg(x, d_aire*1.2, d_aire, L/2);
+    }
+PARÁMETROS:
+    const double t_total = 5; // Tiempo total en segundos
+    const double dt = 0.01; // Tamaño de paso temporal en segundos
+    int Niter = floor(t_total/dt); // Número total de iteraciones
+    const int num_outs = 500; // Número de gráficas de instantes temporales
+    int out_cada = floor(Niter / num_outs); // Cada out_cada veces se 
+                                            // imprimen los valores
+    
+    double tiempo = 0.0; // Variable de tiempo en la simulación
+
+    int Nx = 500; // Número de puntos en el eje x
+    double L = (1e4); // Largo del dominio en metros
+    double dx = L/(Nx-1); // Tamaño de paso en el eje x
+COMENTARIOS:
+    Prueba sin corrección de entropía para luego comparar con corrección de entropía.
+
+
+#### Nombre: prueba_sin_entropia727 ####
+CONDICIONES INICIALES:
+    double u_inicial(double x, double L)
+    {
+        return 0.0;
+        // return exp(-5e-6*pow(x-L/2, 2));
+    }
+
+    double p_inicial(double x, double L)
+    {
+        double atm = (1.01325e5);
+        // return 100*exp(-0.5*pow((x-L/2), 2));
+        // return atm*1/12*(atan(x-L/2)+4.50);
+        return step_neg(x, atm*1.2, atm, L/2);
+    }
+
+    double rho_inicial(double x, double L)
+    {
+        // Densidad del aire en kg/m^3
+        double d_aire = 1.29;
+        // return 1.0*d_aire;
+        return step_neg(x, d_aire*1.2, d_aire, L/2);
+    }
+PARÁMETROS:
+    const double t_total = 5; // Tiempo total en segundos
+    const double dt = 0.01; // Tamaño de paso temporal en segundos
+    int Niter = floor(t_total/dt); // Número total de iteraciones
+    const int num_outs = 500; // Número de gráficas de instantes temporales
+    int out_cada = floor(Niter / num_outs); // Cada out_cada veces se 
+                                            // imprimen los valores
+    
+    double tiempo = 0.0; // Variable de tiempo en la simulación
+
+    int Nx = 500; // Número de puntos en el eje x
+    double L = (1e4); // Largo del dominio en metros
+    double dx = L/(Nx-1); // Tamaño de paso en el eje x
+
+    bool correccion_de_entropia = false;
+COMENTARIOS:
+    Prueba sin corrección de entropía pero con la función ya editada.
+
+
+
