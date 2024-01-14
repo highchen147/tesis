@@ -4,7 +4,43 @@ En este capítulo se explican y derivan las ecuaciones de Euler utilizando las v
 
 Se describe el esquema de Roe implementado en la solución de las ecuaciones de Euler para un gas ideal poliatómico así como las demás especificaciones requeridas por el método de volúmenes finitos. Se explica la implementación del método numérico en \texttt{C++}. Se muestran los resultados obtenidos para un problema de condiciones iniciales específicas.
 \section{Ecuaciones de Euler}
+Las ecuaciones fundamentales de la dinámica de fluidos se basan en las siguientes leyes de conservación universales:
+\begin{itemize}
+	\item Conservación de la masa
+	\item Conservación del momentum
+	\item Conservación de la energía.
+\end{itemize}
+La ecuación de conservación de la masa, que se derivó en la sección (\ref{sec:derivacion-continuidad}), consiste en aplicar la ecuación de continuidad para un fluido con cierta densidad. La ley de conservación del momentum resulta al aplicar la Segunda Ley de Newton en un fluido. Por último, la ley de conservación de la energía es equivalente a la aplicación de la Primera Ley de la Termodinámica. Además de las tres ecuaciones de conservación, es necesario establecer una relación entre las variables físicas del fluido, de tal manera que el sistema de ecuaciones sea resoluble \cite{heattransfer}. En el caso de un gas ideal, la ecuación adicional que relaciona las variables densidad $\rho$, presión $p$ y temperatura $T$, es la ecuación de estado. 
 \subsection{Derivación de las ecuaciones}
+%\subsubsection{Ecuación de continuidad}
+La ecuación de continuidad, derivada en la sección (\ref{sec:derivacion-continuidad}) tiene la siguiente forma
+\begin{equation}
+	\rho_{t} + (\rho v)_{x} = 0.
+	\label{eq:continuidad-euler}
+\end{equation}
+Ya que el flujo asociado a esta ecuación de conservación es $\rho v$, se puede interpretar que, generalmente, para cualquier cantidad física $z$ que sufra advección, su flujo estará dado por el producto de la cantidad por la velocidad de advección, i.e., $f=zv$. 
+
+A partir del último razonamiento, el flujo asociado a la advección de momentum $\rho v$, tiene una contribución al flujo dada por $(\rho v) \cdot v = \rho v^2$. Sin embargo, además de la advección que sufre el momentum, deben considerarse las fuerzas que actúan en el fluido para expresar el flujo total del momentum. En este texto no se considerarán fuerzas externas, por lo que únicamente habría que tomar en cuenta la fuerza interna del fluido, que está dada por el gradiente de \textbf{presión}, $p_x$ \cite{LeVeque}. De esta manera, se expresa la ecuación de conservación del momentum:
+\begin{equation}
+	(\rho v)_t + (\rho v^{2} + p)_{x} = 0.
+	\label{eq:momentum-euler}
+\end{equation}
+
+Para derivar la conservación de energía, se debe considerar que ésta se compone por un término cinético y uno correspondiente a la energía interna del fluido. Sea $E$ la energía total de un fluido. Entonces, se tiene que:
+\begin{equation}
+	E = \frac{1}{2}\rho v^{2} + \rho e,
+	\label{eq:energia-euler}
+\end{equation}
+donde el término $\frac{1}{2}\rho v^{2}$ corresponde a la energía cinética por unidad de masa y $e$ es la \textbf{energía interna} por unidad de masa del fluido. Esta última también suele denominarse como energía interna específica. La energía interna depende de los grados de libertad internos de las moléculas de los gases, considerando energía de rotación, cinética, de vibración y otras formas más complejos de energía. Las ecuaciones de Euler asumen que el fluido se encuentra en equilibrio termodinámico y que la ecuación de estado provee una expresión para la energía interna específica tal que ésta depende de la presión y la densidad del fluido únicamente
+\begin{equation}
+	e = e(p, \rho).
+\end{equation}
+De igual manera que con el momentum, la energía total se ve afectada por la advección del flujo del fluido. Dado que no se consideran fuerzas externas que afecten al sistema, únicamente la presión del fluido hace trabajo y es proporcional al gradiente de $vp$. Entonces la ecuación de conservación de la energía se reduce a:
+\begin{equation}
+	E_{t} + [v(E + p)]_{x} = 0.
+	\label{eq:energia-euler}
+\end{equation}
+
 \subsection{Ecuación de estado para un gas poliatómico}
 \section{Aplicación del esquema de Roe}
 \subsection{Autovalores y autovectores de $\mathbf{A}(\mathbf{U})$}
