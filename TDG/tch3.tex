@@ -29,7 +29,7 @@ A partir del último razonamiento, el flujo asociado a la advección de momentum
 Para derivar la conservación de energía, se debe considerar que ésta se compone por un término cinético y uno correspondiente a la energía interna del fluido. Sea $E$ la energía total de un fluido. Entonces, se tiene que:
 \begin{equation}
 	E = \frac{1}{2}\rho v^{2} + \rho e,
-	\label{eq:energia-euler}
+	\label{eq:energia}
 \end{equation}
 donde el término $\frac{1}{2}\rho v^{2}$ corresponde a la energía cinética por unidad de masa y $e$ es la \textbf{energía interna} por unidad de masa del fluido. Esta última también suele denominarse como energía interna específica. La energía interna depende de los grados de libertad internos de las moléculas de los gases, considerando energía de rotación, cinética, de vibración y otras formas más complejos de energía. Las ecuaciones de Euler asumen que el fluido se encuentra en equilibrio termodinámico y que la ecuación de estado provee una expresión para la energía interna específica tal que ésta depende de la presión y la densidad del fluido únicamente
 \begin{equation}
@@ -41,7 +41,68 @@ De igual manera que con el momentum, la energía total se ve afectada por la adv
 	\label{eq:energia-euler}
 \end{equation}
 
+Las ecuaciones de Euler, (\ref{eq:continuidad-euler}), (\ref{eq:momentum-euler}) y (\ref{eq:energia-euler}) se pueden escribir en forma vectorial, obteniendo:
+\begin{equation}
+	\begin{bmatrix}
+		\rho \\
+		\rho v \\
+		E
+	\end{bmatrix}_{t}
++
+	\begin{bmatrix}
+		\rho v \\
+		\rho v^{2}+p \\
+		v(E + p)
+	\end{bmatrix}_{x}
+= 0,
+\label{eq:euler-eqs-1}
+\end{equation}
+cuya forma coincide con la presentada en (\ref{eq:conservacion}). Cabe mencionar que en este texto se considerarán problemas unidimensionales solamente.
+
+%Para escribir el sistema (\ref{eq:euler-eqs-1}) de la forma (\ref{eq:conservacion-jacobiana}) 
+
 \subsection{Ecuación de estado para un gas poliatómico}
+Para completar el sistema de Euler, es necesario definir la ecuación de estado que relacione la energía con las variables físicas de presión y  densidad. El desarrollo de la ecuación de estado para un gas ideal sigue de cerca la sección \textbf{Ideal Gas} de \cite{LeVeque}.
+
+La energía interna de un gas idea es únicamente dependiente de la temperatura,
+\begin{equation}
+	e = e(T).
+\end{equation}
+Mientras que la temperatura se relaciona con la presión y densidad a través de la ley del gas ideal, que define al mismo. Esta es:
+\begin{equation}
+	p = \mathcal{R}\rho T
+	\label{eq:ideal-gas-law}
+\end{equation}
+donde $\mathcal{R}$ es la constante específica de los gases, que se define como el cociente entre la constante de Boltzmann $k_B$ y  la masa de cada molécula del gas $m$ \cite{blundell}. Por otro lado, la energía interna específica es proporcional a la temperatura,
+\begin{equation}
+	e = c_{v}T
+\end{equation}
+donde $c_{v}$ es la capacidad calorífica específica a volumen constante. Los gases que cumplen con esta propiedad se conocen como gases \textbf{politrópicos}. Entonces, si se cambiase la temperatura de un gas en una cantidad infinitesimal $\dd{T}$, manteniendo el volumen constante, se obtendría
+\begin{equation}
+	\dd{e} = c_{v} \dd{T}
+\end{equation}
+como cambio infinitesimal de energía interna específica. En cambio, si se permite que el gas se expanda pero manteniendo ahora la presión constante, se obtendría una expresión para el cambio de energía considerando al trabajo, $W = -p\dd{V}$, realizado sobre el gas, esto es
+\begin{equation}
+	m\dd{e} = \dd{W} + \dbar Q
+\end{equation}
+\begin{equation}
+	m\dd{e} = -\frac{p}{m}\dd{V} + \dbar Q
+\end{equation}
+\begin{equation}
+	\dd{e} = -\frac{p}{m}\dd{V} + c_{p}\dd{T}
+\end{equation}
+y puesto que al usar $\rho = \frac{m}{V}$, se obtiene que $\dd{V} = m\dd(\frac{1}{\rho})$, entonces:
+\begin{equation}
+	\dd{e} = -p\dd(\frac{1}{\rho}) + c_{p}\dd{T}
+\end{equation}
+\begin{equation}
+	\dd(e + \frac{p}{\rho}) = c_{p}\dd{T},
+\end{equation}
+donde $c_p$ es la capacidad calorífica específica del gas a presión constante. A partir del anterior resultado se define la \textbf{entalpía} específica $\mathrm{h}$ \footnote{No confundir con $h$ definida en \ref{eq:def-h} como el tamaño de cada celda del dominio.}:
+\begin{equation}
+	\mathrm{h} = e + \frac{p}{\rho}
+\end{equation}
+
 \section{Aplicación del esquema de Roe}
 \subsection{Autovalores y autovectores de $\mathbf{A}(\mathbf{U})$}
 \subsection{Valores promediados de Roe}

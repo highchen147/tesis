@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 %Comandos de formato, por si no están definidos.
 \ProvideTextCommand{\guillemotleft}{OT1}{\leavevmode\raise
   .27ex\hbox{$\scriptscriptstyle\ll$}}
@@ -47,6 +47,19 @@
   \begingroup \urlstyle{rm}\Url}\fi
 %Para resultados estilo plain descomente la línea siguiente
 %\let\oldbibitem=\bibitem \def\bibitem[#1]#2{\oldbibitem{#2}}
+
+\bibitem[{\citenamefont{Blundell}
+  \citetalfont{\bbletal{}}(2006)\citenamefont{Blundell},
+  \citenamefont{Blundell} \citeandfont{\bbland{}}
+  \citenamefont{Blundell}}]{blundell}
+  \bibnamefont{Blundell}, \bibfnamefont{S.}\nameseparator{}
+  \bibnamefont{Blundell}, \bibfnamefont{S.J.} \bibandfont{\bbland{}}
+  \bibnamefont{Blundell}, \bibfnamefont{K.M.}\namesend{}\datebegin 2006.
+  \newblock \bibtitle{\emph{Concepts in Thermal Physics}}.
+  \newblock Comprehensive Assessment of Water Management in Agriculture. Oxford
+  University Press\dateend{2006}.
+  \newblock ISBN 9780198567691\finalpoint{}
+  \newline\urlprefix\url{https://books.google.com.gt/books?id=oaDdswEACAAJ}
 
 \bibitem[{\citenamefont{Boas}(2006)}]{methods}
   \bibnamefont{Boas}, \bibfnamefont{M.L.}\namesend{}\datebegin 2006.
