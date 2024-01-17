@@ -20,7 +20,7 @@ La ecuación de continuidad, derivada en la sección (\ref{sec:derivacion-contin
 \end{equation}
 Ya que el flujo asociado a esta ecuación de conservación es $\rho v$, se puede interpretar que, generalmente, para cualquier cantidad física $z$ que sufra advección, su flujo estará dado por el producto de la cantidad por la velocidad de advección, i.e., $f=zv$. 
 
-A partir del último razonamiento, el flujo asociado a la advección de momentum $\rho v$, tiene una contribución al flujo dada por $(\rho v) \cdot v = \rho v^2$. Sin embargo, además de la advección que sufre el momentum, deben considerarse las fuerzas que actúan en el fluido para expresar el flujo total del momentum. En este texto no se considerarán fuerzas externas, por lo que únicamente habría que tomar en cuenta la fuerza interna del fluido, que está dada por el gradiente de \textbf{presión}, $p_x$ \cite{LeVeque}. De esta manera, se expresa la ecuación de conservación del momentum:
+A partir del último razonamiento, el flujo asociado a la advección de momentum $\rho v$, tiene una contribución al flujo dada por $(\rho v) \cdot v = \rho v^2$. Sin embargo, además de la advección que sufre el momentum, deben considerarse las fuerzas que actúan en el fluido para expresar el flujo total del momentum. En este texto no se considerarán fuerzas externas, por lo que únicamente habría que tomar en cuenta la fuerza interna del fluido, que está dada por el gradiente de \textbf{presión}, $p_x$ \cite{LeVeque}. De esta manera, se consigue la ecuación de conservación del momentum:
 \begin{equation}
 	(\rho v)_t + (\rho v^{2} + p)_{x} = 0.
 	\label{eq:momentum-euler}
@@ -31,7 +31,7 @@ Para derivar la conservación de energía, se debe considerar que ésta se compo
 	E = \frac{1}{2}\rho v^{2} + \rho e,
 	\label{eq:energia}
 \end{equation}
-donde el término $\frac{1}{2}\rho v^{2}$ corresponde a la energía cinética por unidad de masa y $e$ es la \textbf{energía interna} por unidad de masa del fluido. Esta última también suele denominarse como energía interna específica. La energía interna depende de los grados de libertad internos de las moléculas de los gases, considerando energía de rotación, cinética, de vibración y otras formas más complejos de energía. Las ecuaciones de Euler asumen que el fluido se encuentra en equilibrio termodinámico y que la ecuación de estado provee una expresión para la energía interna específica tal que ésta depende de la presión y la densidad del fluido únicamente
+donde el término $\frac{1}{2}\rho v^{2}$ corresponde a la energía cinética por unidad de masa y $e$ es la \textbf{energía interna} por unidad de masa del fluido, que también suele denominarse como energía interna específica. La energía interna depende de los grados de libertad internos de las moléculas de los gases, considerando energía de rotación, cinética, de vibración y otras formas más complejos de energía. Las ecuaciones de Euler asumen que el fluido se encuentra en equilibrio termodinámico y que la ecuación de estado provee una expresión para la energía interna específica tal que ésta depende de la presión y la densidad del fluido únicamente
 \begin{equation}
 	e = e(p, \rho).
 \end{equation}
@@ -61,8 +61,8 @@ cuya forma coincide con la presentada en (\ref{eq:conservacion}). Cabe mencionar
 
 %Para escribir el sistema (\ref{eq:euler-eqs-1}) de la forma (\ref{eq:conservacion-jacobiana}) 
 
-\subsection{Ecuación de estado para un gas poliatómico}
-Para completar el sistema de Euler, es necesario definir la ecuación de estado que relacione la energía con las variables físicas de presión y  densidad. El desarrollo de la ecuación de estado para un gas ideal sigue de cerca la sección \textbf{Ideal Gas} de \cite{LeVeque}.
+\subsection{Ecuación de estado para un gas politrópico}
+Para completar el sistema de ecuaciones de Euler, es necesario definir la ecuación de estado que relacione la energía con las variables físicas de presión y  densidad. El desarrollo de la ecuación de estado para un gas ideal sigue de cerca la sección \textit{Ideal Gas} del capítulo \textit{Some Linear Systems} en \cite{LeVeque}.
 
 La energía interna de un gas idea es únicamente dependiente de la temperatura,
 \begin{equation}
@@ -76,6 +76,7 @@ Mientras que la temperatura se relaciona con la presión y densidad a través de
 donde $\mathcal{R}$ es la constante específica de los gases, que se define como el cociente entre la constante de Boltzmann $k_B$ y  la masa de cada molécula del gas $m$ \cite{blundell}. Por otro lado, la energía interna específica es proporcional a la temperatura,
 \begin{equation}
 	e = c_{v}T
+	\label{eq:energia-interna-1}
 \end{equation}
 donde $c_{v}$ es la capacidad calorífica específica a volumen constante. Los gases que cumplen con esta propiedad se conocen como gases \textbf{politrópicos}. Entonces, si se cambiase la temperatura de un gas en una cantidad infinitesimal $\dd{T}$, manteniendo el volumen constante, se obtendría
 \begin{equation}
@@ -86,7 +87,7 @@ como cambio infinitesimal de energía interna específica. En cambio, si se perm
 	m\dd{e} = \dd{W} + \dbar Q
 \end{equation}
 \begin{equation}
-	m\dd{e} = -\frac{p}{m}\dd{V} + \dbar Q
+	m\dd{e} = -p\dd{V} + \dbar Q
 \end{equation}
 \begin{equation}
 	\dd{e} = -\frac{p}{m}\dd{V} + c_{p}\dd{T}
@@ -97,12 +98,62 @@ y puesto que al usar $\rho = \frac{m}{V}$, se obtiene que $\dd{V} = m\dd(\frac{1
 \end{equation}
 \begin{equation}
 	\dd(e + \frac{p}{\rho}) = c_{p}\dd{T},
+	\label{eq:entalpia-temp-dif}
 \end{equation}
 donde $c_p$ es la capacidad calorífica específica del gas a presión constante. A partir del anterior resultado se define la \textbf{entalpía} específica $\mathrm{h}$ \footnote{No confundir con $h$ definida en \ref{eq:def-h} como el tamaño de cada celda del dominio.}:
 \begin{equation}
-	\mathrm{h} = e + \frac{p}{\rho}
+	\mathrm{h} \equiv e + \frac{p}{\rho}.
+	\label{eq:entalpia-1}
 \end{equation}
+Para un gas politrópico se considera a $c_p$ como constante, por lo que integrando la ecuación (\ref{eq:entalpia-temp-dif}) se obtiene otra expresión para la entalpía,
+\begin{equation}
+	\mathrm{h} = c_p T.
+	\label{eq:entalpia-2}
+\end{equation}
+Por otro lado, de acuerdo a la ley del gas ideal se tiene
+\begin{equation}
+	c_p - c_v = \mathcal{R}.
+	\label{eq:diferencia-capacidades}
+\end{equation}
+Para continuar con la derivación, es conveniente definir el \textbf{coeficiente de dilatación adiabática} $\gamma$ como:
+\begin{equation}
+	\gamma \equiv \frac{c_p}{c_v}.
+	\label{eq:gamma-1}
+\end{equation}
+Dicha cantidad está estrechamente relacionada con el número de grados de libertad internos del gas, que depende de la naturaleza del mismo. Según el teorema de equipartición de la energía, el promedio de energía involucrada en cada grado de libertad es el mismo. Específicamente, cada grado de libertad aporta una cantidad promedio de energía por molécula de $\frac{1}{2}k_B T$. De tal manera que si existen ${\alpha}$ grados de libertad internos en un gas que tiene $n$ moléculas por unidad de masa, se obtiene una expresión para la energía interna específica
+\begin{equation}
+	e = \frac{\alpha}{2}n k_B T
+\end{equation}
+o bien, 
+\begin{equation}
+	e = \frac{\alpha}{2}\mathcal{R} T.
+	\label{eq:energia-interna-2}
+\end{equation}
+Comparando con (\ref{eq:energia-interna-1}) se obtiene
+\begin{equation}
+	c_v = \frac{\alpha}{2}\mathcal{R},
+\end{equation}
+sustituyendo en (\ref{eq:diferencia-capacidades}),
+\begin{equation}
+	c_p = \left(1+\frac{\alpha}{2}\right)\mathcal{R}.
+\end{equation}
+Y al aplicar la definición de $\gamma$ en (\ref{eq:gamma-1}) se obtiene la expresión
+\begin{equation}
+	\gamma = \frac{\alpha + 2}{\alpha},
+\end{equation}
+que como se expuso previamente, relaciona el número de grados de libertad con el coeficiente de dilatación adiabática. Por ejemplo, para gases monoatómicos se consideran únicamente tres grados de libertad, correspondientes al movimiento traslacional en tres dimensiones, por lo que $\alpha = 3$ y $\gamma = 5/3$. En gases diatómicos (como el aire, compuesto por $H_2$ y $N_2$ principalmente) se agregan dos grados libertad correspondientes a dos ejes de rotación posibles, de tal manera que $\alpha = 5$ y $\gamma = 7/5 = 1.4$.
 
+Por último, se escribe la ecuación de estado del gas ideal para la energía utilizando  (\ref{eq:ideal-gas-law}),
+\begin{equation}
+	e = c_v T = \frac{c_v}{\mathcal{R}}\cdot\frac{p}{\rho}
+\end{equation}
+\begin{equation}
+	e = \frac{p}{(\gamma - 1) \rho}.
+\end{equation}
+De tal manera que la energía total del gas queda como
+\begin{equation}
+	 E = \frac{1}{2}\rho v^{2} + \frac{p}{\gamma - 1}.
+\end{equation}
 \section{Aplicación del esquema de Roe}
 \subsection{Autovalores y autovectores de $\mathbf{A}(\mathbf{U})$}
 \subsection{Valores promediados de Roe}

@@ -44,14 +44,14 @@
 \contentsline {chapter}{\numberline {3}ECUACIONES DE EULER Y APLICACIÓN DEL ESQUEMA DE ROE}{37}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Ecuaciones de Euler}{37}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Derivación de las ecuaciones}{38}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Ecuación de estado para un gas poliatómico}{39}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Aplicación del esquema de Roe}{40}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Autovalores y autovectores de $\mathbf {A}(\mathbf {U})$}{40}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Valores promediados de Roe}{40}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Código implementado}{40}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Resultados}{40}{section.3.3}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{41}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{43}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{45}{chapter*.21}%
-\contentsline {chapter}{RECOMENDACIONES}{47}{chapter*.22}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{49}{chapter*.23}%
+\contentsline {subsection}{\numberline {3.1.2}Ecuación de estado para un gas politrópico}{39}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Aplicación del esquema de Roe}{42}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Autovalores y autovectores de $\mathbf {A}(\mathbf {U})$}{42}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Valores promediados de Roe}{42}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Código implementado}{42}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Resultados}{42}{section.3.3}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{43}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{45}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{47}{chapter*.21}%
+\contentsline {chapter}{RECOMENDACIONES}{49}{chapter*.22}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{51}{chapter*.23}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  15 JAN 2024 22:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  16 JAN 2024 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1409,20 +1409,26 @@ Cap\'{\i }tulo 3.
 
 
 ] [38] [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 107.
+(hyperref)                removing `math shift' on input line 158.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 107.
+(hyperref)                removing `math shift' on input line 158.
 
-) [40]
+) [42]
 \openout2 = `tch4.aux'.
 
  (tch4.tex
 Cap\'{\i }tulo 4.
-) [41
+) [43
 
 
 
@@ -1430,49 +1436,49 @@ Cap\'{\i }tulo 4.
 ]
 \openout2 = `tch5.aux'.
 
- (tch5.tex [42
+ (tch5.tex [44
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [43] [44
+) [45] [46
 
 
 
 ]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex [45
+ (c_y_r.tex [47
 
 
-] [46
+] [48
 
-]) [47] (TesisTotalBibTeX.bbl [48
+]) [49] (TesisTotalBibTeX.bbl [50
 
 
 
-] [49]
+] [51]
 Underfull \hbox (badness 10000) in paragraph at lines 130--148
 []$\T1/cmtt/m/n/12 https : / / www . sciencedirect . com / science / article / 
 pii /
  []
 
-) [50] (TesisTotalBibTeX.aux
+) [52] (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
  (agradecimientos.aux) (dedicatoria.aux)
 (simbolos.aux) (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux)
 (tch3.aux) (tch4.aux) (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: 86ABC346EC2917523B77B74A40DA8F21;13817.
+(rerunfilecheck)             Checksum: 787512CA0B37E04DF1C67BE9C656FC92;13817.
  ) 
 Here is how much of TeX's memory you used:
- 26718 strings out of 476339
- 497844 string characters out of 5787175
+ 26738 strings out of 476339
+ 498136 string characters out of 5787175
  1865340 words of memory out of 5000000
- 46229 multiletter control sequences out of 15000+600000
+ 46236 multiletter control sequences out of 15000+600000
  541784 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,17n,90p,1099b,973s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1518,9 +1524,9 @@ lic/cm-super/sfrm1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts
 KTeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Users/Rodrigo/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb><C:/Users/Rodrigo/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (76 pages, 1180355 bytes).
+Output written on TesisTotalBibTeX.pdf (78 pages, 1188009 bytes).
 PDF statistics:
- 1405 PDF objects out of 1440 (max. 8388607)
- 322 named destinations out of 1000 (max. 500000)
+ 1432 PDF objects out of 1440 (max. 8388607)
+ 335 named destinations out of 1000 (max. 500000)
  580 words of extra memory for PDF output out of 10000 (max. 10000000)
 
