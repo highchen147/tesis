@@ -42,13 +42,16 @@ def animacion(data: pd.DataFrame, subset: pd.DataFrame, cantidad: str, margen: f
     ax.set_title("{}, t={} s".format(cantidad, t))
 
 # importar datos
-folder_data = "entropia_sonica_181"
+folder_data = "transmisiva980"
 data_d = pd.read_csv("data/" + folder_data + "/densidad.dat", delimiter='\t', skip_blank_lines=False)
 data_d.columns = ["t", "x", "u"]
 data_p = pd.read_csv("data/" + folder_data + "/presion.dat", delimiter="\t", skip_blank_lines=False)
 data_p.columns = ["t", "x", "u"]
 data_u = pd.read_csv("data/" + folder_data + "/velocidad.dat", delimiter="\t", skip_blank_lines=False)
 data_u.columns = ["t", "x", "u"]
+
+# Intervalo entre frames en milisegundos
+frames_sep = 50
 
 # Crear la figura con tres sub-figuras
 fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(12, 4))
@@ -72,7 +75,7 @@ def animate_1(i):
 num_frames = len(subsets_densidad)
 dt = (subsets_densidad[1]['t'].values[0] - subsets_densidad[0]['t'].values[0])*1000
 
-anim1 = animation.FuncAnimation(fig, animate_1, init_func=init, frames=(range(num_frames)), repeat=False, interval=100)
+anim1 = animation.FuncAnimation(fig, animate_1, init_func=init, frames=(range(num_frames)), repeat=False, interval=frames_sep)
 
 # Segunda animación
 line2, = ax2.plot([], [], lw=1)
@@ -88,7 +91,7 @@ def animate_2(i):
     return line2,
 
 
-anim2 = animation.FuncAnimation(fig, animate_2, init_func=init2, frames=(range(num_frames)), repeat=False, interval=100)
+anim2 = animation.FuncAnimation(fig, animate_2, init_func=init2, frames=(range(num_frames)), repeat=False, interval=frames_sep)
 
 # Tercera animación
 line3, = ax3.plot([], [], lw=1)
@@ -103,7 +106,7 @@ def animate_3(i):
     animacion(data_u, subsets_velocidad[i], r'Velocidad $\left(\frac{m}{s}\right)$', 0.25, ax3, line3)
     return line3,
 
-anim3 = animation.FuncAnimation(fig, animate_3, init_func=init3, frames=(range(num_frames)), repeat=False, interval=100)
+anim3 = animation.FuncAnimation(fig, animate_3, init_func=init3, frames=(range(num_frames)), repeat=False, interval=frames_sep)
 
 
 plt.show()
