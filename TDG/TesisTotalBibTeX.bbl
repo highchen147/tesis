@@ -126,7 +126,7 @@
   \newblock ISBN 9781560320463\finalpoint{}
   \newline\urlprefix\url{https://books.google.com.gt/books?id=ZJPbtHeilCgC}
 
-\bibitem[{\citenamefont{Roe}(1981)}]{Roe81}
+\bibitem[{\citenamefont{Roe}(1981)}]{roe81}
   \bibnamefont{Roe}, \bibfnamefont{P.L}\namesend{}\datebegin 1981.
   \newblock \bibtitle{\enquote{Approximate Riemann solvers, parameter vectors,
   and difference schemes}}.
@@ -134,7 +134,7 @@
   \bibvolfont{43(2)}, \bblpp{} 357--372.
   \newblock ISSN 0021-9991.
   \newblock \doi{https://doi.org/10.1016/0021-9991(81)90128-5}\finalpoint{}
-  \bibabstract{Roe81}{Several numerical schemes for the solution of hyperbolic
+  \bibabstract{roe81}{Several numerical schemes for the solution of hyperbolic
   conservation laws are based on exploiting the information obtained by
   considering a sequence of Riemann problems. It is argued that in existing
   schemes much of this information is degraded, and that only certain features
@@ -146,7 +146,7 @@
   conservation laws.}
   \newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/0021999181901285}
 
-\bibitem[{\citenamefont{Roe}(2003)}]{Roe86}
+\bibitem[{\citenamefont{Roe}(2003)}]{roe86}
   \namereplace{  \bibnamefont{Roe}, \bibfnamefont{P.L}}\namesend{}\datebegin
   2003.
   \newblock \bibtitle{\enquote{Characteristic-Based Schemes for the Euler

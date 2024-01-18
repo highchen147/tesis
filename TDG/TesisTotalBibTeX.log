@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  16 JAN 2024 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  17 JAN 2024 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1102,7 +1102,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 \begin{equation}
+l.53 \begin{equation}
                       [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1111,19 +1111,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \end{equation}
+l.75 \end{equation}
                     [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.100 \begin{equation}
+l.101 \begin{equation}
                        [4]
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 \end{equation}
+l.125 \end{equation}
                      [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1132,13 +1132,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.139 
+l.140 
        [6]
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 
+l.151 
        [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1147,7 +1147,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.168 \end{equation}
+l.169 \end{equation}
                      [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1156,34 +1156,34 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.207 
+l.208 
        [9]
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.226 \end{equation}
+l.227 \end{equation}
                      [10]
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.262 \end{equation}
+l.263 \end{equation}
                      [11]
 <../some_plots/cond_inicial.pdf, id=621, 462.52798pt x 346.89601pt>
 File: ../some_plots/cond_inicial.pdf Graphic file (type pdf)
 <use ../some_plots/cond_inicial.pdf>
-Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 268
+Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 269
 .
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
 <../some_plots/caracteristicas_burgers.pdf, id=622, 578.16pt x 433.62pt>
 File: ../some_plots/caracteristicas_burgers.pdf Graphic file (type pdf)
 <use ../some_plots/caracteristicas_burgers.pdf>
 Package pdftex.def Info: ../some_plots/caracteristicas_burgers.pdf  used on inp
-ut line 274.
+ut line 275.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 266--278
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 267--279
 [][] [] 
  []
 
@@ -1192,7 +1192,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.285 
+l.286 
        [12 <../some_plots/cond_inicial.pdf> <../some_plots/caracteristicas_burg
 ers.pdf>]
 <../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=673, 578.16pt x
@@ -1201,7 +1201,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf Graphic file (
 type pdf)
 <use ../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf>
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
-.pdf  used on input line 289.
+.pdf  used on input line 290.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
 <../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=674, 578.16pt
  x 433.62pt>
@@ -1209,7 +1209,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
  (type pdf)
 <use ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf>
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
-00.pdf  used on input line 294.
+00.pdf  used on input line 295.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
 <../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=675, 578.16pt
  x 433.62pt>
@@ -1217,7 +1217,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
  (type pdf)
 <use ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf>
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-2
-00.pdf  used on input line 299.
+00.pdf  used on input line 300.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
 <../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=676, 578.16pt
  x 433.62pt>
@@ -1225,15 +1225,15 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf Graphic file
  (type pdf)
 <use ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf>
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-4
-00.pdf  used on input line 304.
+00.pdf  used on input line 305.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 287--307
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 288--308
 [][] []
  []
 
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 287--307
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 288--308
 [] [] 
  []
 
@@ -1243,22 +1243,22 @@ s/graficas/viscosidades-200.pdf> <../some_plots/burgers-viscosas/graficas/visco
 sidades-400.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 324.
+(hyperref)                removing `math shift' on input line 325.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 324.
+(hyperref)                removing `subscript' on input line 325.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 324.
+(hyperref)                removing `subscript' on input line 325.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 324.
+(hyperref)                removing `math shift' on input line 325.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--340
+Underfull \hbox (badness 10000) in paragraph at lines 339--341
 
  []
 
@@ -1267,24 +1267,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--340
 File: ../some_plots/cap1/graficas/riemannLR.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannLR.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannLR.pdf  used on inp
-ut line 363.
+ut line 364.
 (pdftex.def)             Requested size: 341.11536pt x 255.84682pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 368.
+(hyperref)                removing `math shift' on input line 369.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 368.
+(hyperref)                removing `subscript' on input line 369.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 368.
+(hyperref)                removing `subscript' on input line 369.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 368.
+(hyperref)                removing `math shift' on input line 369.
 
 [15 <../some_plots/cap1/graficas/riemannLR.pdf>]
 <../some_plots/cap1/graficas/riemannRL-0.pdf, id=764, 462.52798pt x 346.89601pt
@@ -1292,36 +1292,36 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 File: ../some_plots/cap1/graficas/riemannRL-0.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.pdf  used on i
-nput line 383.
+nput line 384.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
 <../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=765, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.4.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.4.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.4.pdf  used on
- input line 387.
+ input line 388.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
 <../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=766, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.8.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.8.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.8.pdf  used on
- input line 391.
+ input line 392.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
 <../some_plots/cap1/graficas/riemannRL-1.pdf, id=767, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-1.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-1.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-1.pdf  used on i
-nput line 395.
+nput line 396.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 381--397
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 382--398
 [][] []
  []
 
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 381--397
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 382--398
 [] [] 
  []
 
@@ -1340,7 +1340,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-Overfull \hbox (1.15164pt too wide) in paragraph at lines 544--545
+Overfull \hbox (1.15164pt too wide) in paragraph at lines 545--546
 []\T1/cmr/m/n/12 Se pue-de ve-ri-fi-car que es-ta so-lu-ción cum-ple con la con
 -di-ción de sal-to de Rankine-
  []
@@ -1417,18 +1417,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [41]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
+(hyperref)                removing `math shift' on input line 164.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 158.
+(hyperref)                removing `math shift' on input line 164.
 
-) [42]
+[42] [43]) [44]
 \openout2 = `tch4.aux'.
 
  (tch4.tex
 Cap\'{\i }tulo 4.
-) [43
+) [45
 
 
 
@@ -1436,49 +1436,49 @@ Cap\'{\i }tulo 4.
 ]
 \openout2 = `tch5.aux'.
 
- (tch5.tex [44
+ (tch5.tex [46
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [45] [46
+) [47] [48
 
 
 
 ]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex [47
+ (c_y_r.tex [49
 
 
-] [48
+] [50
 
-]) [49] (TesisTotalBibTeX.bbl [50
+]) [51] (TesisTotalBibTeX.bbl [52
 
 
 
-] [51]
+] [53]
 Underfull \hbox (badness 10000) in paragraph at lines 130--148
 []$\T1/cmtt/m/n/12 https : / / www . sciencedirect . com / science / article / 
 pii /
  []
 
-) [52] (TesisTotalBibTeX.aux
+) [54] (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
  (agradecimientos.aux) (dedicatoria.aux)
 (simbolos.aux) (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux)
 (tch3.aux) (tch4.aux) (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: 787512CA0B37E04DF1C67BE9C656FC92;13817.
+(rerunfilecheck)             Checksum: EF54C5A291403B10C9A11AA0EB3392FB;13865.
  ) 
 Here is how much of TeX's memory you used:
- 26738 strings out of 476339
- 498136 string characters out of 5787175
- 1865340 words of memory out of 5000000
- 46236 multiletter control sequences out of 15000+600000
+ 26760 strings out of 476339
+ 498432 string characters out of 5787175
+ 1868340 words of memory out of 5000000
+ 46239 multiletter control sequences out of 15000+600000
  541784 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,17n,90p,1099b,973s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1524,9 +1524,9 @@ lic/cm-super/sfrm1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts
 KTeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Users/Rodrigo/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb><C:/Users/Rodrigo/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (78 pages, 1188009 bytes).
+Output written on TesisTotalBibTeX.pdf (80 pages, 1199397 bytes).
 PDF statistics:
- 1432 PDF objects out of 1440 (max. 8388607)
- 335 named destinations out of 1000 (max. 500000)
+ 1469 PDF objects out of 1728 (max. 8388607)
+ 354 named destinations out of 1000 (max. 500000)
  580 words of extra memory for PDF output out of 10000 (max. 10000000)
 

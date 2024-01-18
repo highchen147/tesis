@@ -37,11 +37,11 @@ Warning--empty translator in LeVequeAstro
 Warning--empty translator in LeVeque
 Warning--empty booktitle in pelanti
 Warning--empty translator in heattransfer
-Warning--empty translator in Roe81
-Warning--empty translator in Roe86
+Warning--empty translator in roe81
+Warning--empty translator in roe86
 You've used 10 entries,
             3599 wiz_defined-function locations,
-            771 strings with 10428 characters,
+            769 strings with 10418 characters,
 and the built_in function-call counts, 6788 in all, are:
 = -- 498
 > -- 148
