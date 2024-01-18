@@ -150,16 +150,14 @@ int main()
     // Ciclo principal
     for (int k = 0; k < Niter; k++)
     {
-        // Condiciones de frontera
-        // rho[0] = 0.0;
+        // Condiciones de frontera reflectivas
+        // densidad
         rho_nueva[0] = rho[0];
-        // rho[Nx-1] = 0.0;
         rho_nueva[Nx-1] = rho[Nx-1];
-        // u[0] = 0.0;
+        // velocidad
         u_nueva[0] = u[0];
-        // u[Nx-1] = 0.0;
         u_nueva[Nx-1] = u[Nx-1];
-        // La presión queda fija
+        // presión
         p_nueva[0] = p[0];
         p_nueva[Nx-1] = p[Nx-1];
         // Se calculan las componentes del vector Q de acuerdo a su definición 
