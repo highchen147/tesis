@@ -14,14 +14,14 @@
 #include <iostream>
 #include <string>
 #include <ctime>
-#include <cstdlib> //
+#include <cstdlib>
 #include <cmath>
 #include <iomanip>
 #include <fstream>
 #include <vector>
 #include <sys/stat.h>
 #include <algorithm>
-#include "funciones.hpp" // Incluye el archivo de encabezado
+#include "funciones.hpp" // Incluye funciones predefinidas
 using namespace std;
 
 int generateRandomNum();
@@ -63,9 +63,9 @@ int main()
     double tiempo = 0.0; // Variable de tiempo en la simulación
 
     // Parámetros espaciales
-    int Nx = 500; // Número de puntos en el eje x
+    int Nx = 500; // Número de celdas en el eje x
     double L = (10); // Largo del dominio en metros
-    double dx = L/(Nx-1); // Tamaño de paso en el eje x
+    double dx = L/(Nx); // Tamaño de paso en el eje x
 
     // Otros parámetros
     bool correccion_de_entropia = true;
@@ -74,12 +74,12 @@ int main()
     ofstream file_densidad;
     ofstream file_presion;
     ofstream file_velocidad;
-    std::string nombreDirectorio;
-    std::cout << "Ingrese el nombre del directorio que desea crear para almacenar los datos: ";
-    std::cin >> nombreDirectorio;
+    string nombreDirectorio;
+    cout << "Ingrese el nombre del directorio que desea crear para almacenar los datos: ";
+    cin >> nombreDirectorio;
     nombreDirectorio = "data/" + nombreDirectorio + to_string(numeroAleatorio);
     int directorio = mkdir(nombreDirectorio.c_str());
-    std::cout << "Se ha creado " + nombreDirectorio << endl;
+    cout << "Se ha creado " + nombreDirectorio << endl;
     string file_densidad_name = nombreDirectorio + "/densidad.dat";
     string file_presion_name = nombreDirectorio + "/presion.dat";
     string file_velocidad_name = nombreDirectorio + "/velocidad.dat";
@@ -90,11 +90,14 @@ int main()
      
     // Arreglos
     // Cantidades físicas
-    double *rho = new double[Nx]; // Densidad
+    // Densidad
+    double *rho = new double[Nx];
     double *rho_nueva = new double[Nx];
-    double *u = new double[Nx]; // Velocidad
+    // Velocidad
+    double *u = new double[Nx]; 
     double *u_nueva = new double[Nx];
-    double *p = new double[Nx]; // Presión
+    // Presión
+    double *p = new double[Nx]; 
     double *p_nueva = new double[Nx];
     // Componentes del vector Q
     double *q1 = new double[Nx];
@@ -104,10 +107,10 @@ int main()
     double *F1 = new double[Nx];
     double *F2 = new double[Nx];
     double *F3 = new double[Nx];
-    // Puntos sobre el eje x
+    // Celdas sobre el eje x
     double *x = new double[Nx];
 
-    // Inicialización de arreglos
+    // Inicialización de arreglos y condiciones iniciales
     // Dominio espacial
     for (int i = 0; i < Nx; i++)
     {
@@ -134,7 +137,6 @@ int main()
 
     // Se declaran los vectores principales de la integración
     vector<double> Q(3);
-    vector<double> Q_nuevo(3);
     vector<double> F(3);
     // Se calculan las componentes del vector Q de acuerdo a su definición 
     calc_componentes_Q(q1, q1, q3, rho, p, u, Nx);
@@ -151,7 +153,7 @@ int main()
     // Ciclo principal
     for (int k = 0; k < Niter; k++)
     {
-        // Condiciones de frontera reflectivas
+        // Valores extremos para las variables del siguiente instante
         // densidad
         rho_nueva[0] = rho[0];
         rho_nueva[Nx-1] = rho[Nx-1];
@@ -201,7 +203,8 @@ int main()
             u[i] = u_nueva[i];
             p[i] = p_nueva[i];
         }
-        // Condiciones frontera prueba transmisivas
+
+        // Condiciones frontera transmisivas
         rho[0] = rho[1];
         rho[Nx-1] = rho[Nx-2];
         u[0] = u[1];
@@ -237,8 +240,7 @@ int generateRandomNum() {
 
 double u_inicial(double x, double L)
 {
-    return 0.0;
-    // return exp(-5e-6*pow(x-L/2, 2));
+    return step_neg(x, -1, 1, L/2);
 }
 
 /**
@@ -252,7 +254,7 @@ double p_inicial(double x, double L)
     double atm = (1.01325e5);
     // return 100*exp(-0.5*pow((x-L/2), 2));
     // return atm*1/12*(atan(x-L/2)+4.50);
-    return step_neg(x, 3, 1, L/2);
+    return step_neg(x, 0.5, 0.5, L/2);
 }
 
 /**
@@ -266,7 +268,7 @@ double rho_inicial(double x, double L)
     // Densidad del aire en kg/m^3
     double d_aire = 1.29;
     // return 1.0*d_aire;
-    return step_neg(x, 3, 1, L/2);
+    return step_neg(x, 1, 1, L/2);
 }
 
 /**
@@ -498,7 +500,6 @@ vector<double> Flujo(
     double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R,
     bool entropy_fix)
 {
-    // bool entropy_fix = true;
     vector<double> F_prom = (F_L+F_R)*0.5;
     return F_prom - (suma_k(p_L, p_R, u_L, u_R, rho_L, rho_R, entropy_fix)*0.5);
 }
