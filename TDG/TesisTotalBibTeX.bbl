@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 %Comandos de formato, por si no están definidos.
 \ProvideTextCommand{\guillemotleft}{OT1}{\leavevmode\raise
   .27ex\hbox{$\scriptscriptstyle\ll$}}
@@ -154,5 +154,12 @@
   \newblock \emph{Annual Review of Fluid Mechanics}\dateend{2003},
   \bibvolfont{18}, \bblpp{} 337--365.
   \newblock \doi{10.1146/annurev.fl.18.010186.002005}\finalpoint{}
+
+\bibitem[{\citenamefont{van Halder}(2014)}]{thesis-euler-godunov}
+  \bibnamefont{van Halder}, \bibfnamefont{Yous}\namesend{}\datebegin 2014.
+  \newblock \bibtitle{\enquote{Godunov method for the Euler
+  Equations}}\dateend{2014}.
+  \newblock Disponible en
+  \url{https://pure.tue.nl/ws/portalfiles/portal/67742456/789123-1.pdf}\finalpoint{}
 
 \end{thebibliography}

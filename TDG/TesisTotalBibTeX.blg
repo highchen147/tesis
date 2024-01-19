@@ -29,6 +29,8 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: bbtesis.bib
 Warning--entry type for "Cameron" isn't style-file defined
 --line 3 of file bbtesis.bib
+Warning--entry type for "thesis-euler-godunov" isn't style-file defined
+--line 111 of file bbtesis.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Warning--empty translator in blundell
 Warning--empty translator in methods
@@ -39,45 +41,45 @@ Warning--empty booktitle in pelanti
 Warning--empty translator in heattransfer
 Warning--empty translator in roe81
 Warning--empty translator in roe86
-You've used 10 entries,
+You've used 11 entries,
             3599 wiz_defined-function locations,
-            769 strings with 10418 characters,
-and the built_in function-call counts, 6788 in all, are:
-= -- 498
-> -- 148
-< -- 11
-+ -- 60
-- -- 48
-* -- 592
-:= -- 917
-add.period$ -- 35
-call.type$ -- 10
-change.case$ -- 57
-chr.to.int$ -- 10
-cite$ -- 20
-duplicate$ -- 624
-empty$ -- 634
-format.name$ -- 80
-if$ -- 1395
+            776 strings with 10637 characters,
+and the built_in function-call counts, 7252 in all, are:
+= -- 535
+> -- 158
+< -- 12
++ -- 64
+- -- 51
+* -- 627
+:= -- 989
+add.period$ -- 37
+call.type$ -- 11
+change.case$ -- 63
+chr.to.int$ -- 11
+cite$ -- 21
+duplicate$ -- 666
+empty$ -- 673
+format.name$ -- 85
+if$ -- 1486
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 143
-newline$ -- 79
-num.names$ -- 40
-pop$ -- 234
+missing$ -- 153
+newline$ -- 84
+num.names$ -- 44
+pop$ -- 249
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 61
 quote$ -- 0
-skip$ -- 223
+skip$ -- 239
 stack$ -- 0
-substring$ -- 212
-swap$ -- 355
+substring$ -- 225
+swap$ -- 376
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 75
+type$ -- 84
 warning$ -- 9
-while$ -- 39
+while$ -- 42
 width$ -- 0
-write$ -- 177
-(There were 10 warnings)
+write$ -- 190
+(There were 11 warnings)

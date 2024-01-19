@@ -1,9 +1,8 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{ÍNDICE DE FIGURAS}{\es@scroman {v}}{chapter*.7}%
-\contentsline {chapter}{ÍNDICE DE TABLAS}{\es@scroman {vii}}{chapter*.8}%
-\contentsline {chapter}{LISTA DE SÍMBOLOS}{\es@scroman {ix}}{chapter*.9}%
-\contentsline {chapter}{OBJETIVOS}{\es@scroman {xi}}{chapter*.10}%
-\contentsline {chapter}{INTRODUCCIÓN}{\es@scroman {xiii}}{chapter*.13}%
+\contentsline {chapter}{LISTA DE SÍMBOLOS}{\es@scroman {vii}}{chapter*.8}%
+\contentsline {chapter}{OBJETIVOS}{\es@scroman {ix}}{chapter*.9}%
+\contentsline {chapter}{INTRODUCCIÓN}{\es@scroman {xi}}{chapter*.12}%
 \contentsline {chapter}{\numberline {1}ECUACIONES DE CONSERVACIÓN Y SISTEMAS HIPERBÓLICOS DE PRIMER ORDEN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Ecuaciones de conservación}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Derivación de una ecuación de conservación}{3}{section.1.2}%
@@ -48,10 +47,16 @@
 \contentsline {section}{\numberline {3.2}Aplicación del esquema de Roe}{42}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Variables conservadas y propiedades de $\mathbf {A(\mathbf {U})}$}{42}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Valores promediados de Roe}{43}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Código implementado}{44}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Resultados}{44}{section.3.3}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{45}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{47}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{49}{chapter*.21}%
-\contentsline {chapter}{RECOMENDACIONES}{51}{chapter*.22}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{53}{chapter*.23}%
+\contentsline {section}{\numberline {3.3}Características básicas de la simulación}{44}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Dimensiones}{44}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Condiciones iniciales}{45}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Primer test}{46}{subsubsection.3.3.2.1}%
+\contentsline {subsection}{\numberline {3.3.3}Condiciones de frontera}{46}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}Condiciones transmisivas}{46}{subsubsection.3.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.4}Código implementado}{47}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Resultados}{47}{section.3.4}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{49}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{51}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{53}{chapter*.20}%
+\contentsline {chapter}{RECOMENDACIONES}{55}{chapter*.21}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{57}{chapter*.22}%

@@ -161,6 +161,13 @@ De tal manera que la energía total del gas ($\rho E$) queda como
 	 \rho E = \frac{1}{2}\rho v^{2} + \frac{p}{\gamma - 1}.
 \end{equation}
 \section{Aplicación del esquema de Roe}
+Para aplicar el esquema de Roe en la expresión del método de volúmenes finitos, dada por 
+\begin{equation}
+	U_{i}^{n+1}-U_{i}^{n} = 
+	\frac{k}{h}\left[ F(U_{i-1}^n, U_i^n) - F(U_{i}^n, U_{i+1}^n) \right],
+	\label{eq:metodo-vol-finitos-3}
+\end{equation}
+ es necesario definir el flujo entre cada interfaz, $F_{i\pm \frac{1}{2}}$. La expresión de dicho flujo, en su forma simple, se detalló en (\ref{eq:roe-flux}). Mientras que la versión del flujo en conjunto con la corrección de entropía es (\ref{eq:flux-HH-fix}). Por tanto, el siguiente paso es construir el flujo de Roe de acuerdo a las aproximaciones correspondientes.
 \subsection{Variables conservadas y propiedades de $\mathbf{A(\mathbf{U})}$}
 Para implementar el método de volúmenes finitos junto al esquema de Roe en la solución numérica de las ecuaciones de Euler es necesario identificar las \textbf{variables conservadas} involucradas en la definición de un sistema general de conservación, definido en (\ref{eq:conserv-deriv-short}). Comparando esta expresión con el sistema (\ref{eq:euler-eqs-1}) se obtiene:
 \begin{equation}
@@ -189,7 +196,7 @@ Para implementar el método de volúmenes finitos junto al esquema de Roe en la 
 		v(\rho E + p)
 	\end{bmatrix}.
 \end{equation}
-Por tanto, se define a $\mathbf{u}_i$ como la i-ésima variable conservada cuyo  flujo correspondiente, $\mathbf{f}_i$. 
+Por tanto, se define a $\mathbf{u}_i$ como la i-ésima variable conservada cuyo  flujo correspondiente es $\mathbf{f}_i$. 
 
 Por otro lado, el esquema de Roe depende de los autovalores y autovectores de la matriz jacobiana $\mathbf{A(\mathbf{U})}$ definida en (\ref{eq:conservacion-jacobiana}). Aplicando la definición (\ref{eq:jacobiana-A-definicion}) mientras se toma en cuenta la ecuación de estado para la energía (\ref{eq:ideal-gas-law}), se obtiene una expresión para esta matriz:
 \begin{equation}
@@ -252,19 +259,19 @@ se destaca que es necesario encontrar los autovalores $\hat{\lambda}_i$ y autove
 	\hat{\lambda}_3 = \tilde{v}+\tilde{c},
 \end{equation}
 \begin{equation}
-	\mathbf{r}_1 = 
+	\mathbf{\hat{r}}_1 = 
 	\begin{bmatrix}
 		1 \\
 		\tilde{v}-\tilde{c} \\
 		\tilde{\mathrm{h}}-\tilde{v}\tilde{c}
 	\end{bmatrix},\hspace{4mm}
-	\mathbf{r}_2 = 
+	\mathbf{\hat{r}}_2 = 
 	\begin{bmatrix}
 		1 \\
 		\tilde{v} \\
 		\frac{1}{2}\tilde{v}^{2}
 	\end{bmatrix},\hspace{4mm}
-	\mathbf{r}_3 = 
+	\mathbf{\hat{r}}_3 = 
 	\begin{bmatrix}
 		1 \\
 		\tilde{v}+\tilde{c} \\
@@ -274,8 +281,8 @@ se destaca que es necesario encontrar los autovalores $\hat{\lambda}_i$ y autove
  Mientras que los coeficientes de las características $\alpha_{i}$ están dados por:
  \begin{equation}
  	\alpha_1 = \frac{1}{2\tilde{c}^{2}}[\Delta p - \tilde{\rho}\tilde{c}\Delta v], \hspace{4mm}
- 	\alpha_2 = \frac{1}{\tilde{c}^{2}}[\tilde{c}^{2}\Delta\rho - \Delta p], \hspace{4mm}
- 	\alpha_1 = \frac{1}{2\tilde{c}^{2}}[\Delta p + \tilde{\rho}\tilde{c}\Delta v],
+ 	\alpha_2 = \frac{1}{\tilde{c}^{2}}\left[\tilde{c}^{2}\Delta\rho - \Delta p\right], \hspace{4mm}
+ 	\alpha_3 = \frac{1}{2\tilde{c}^{2}}[\Delta p + \tilde{\rho}\tilde{c}\Delta v],
  \end{equation}
 con
 \begin{equation}
@@ -290,6 +297,81 @@ con
 \begin{equation}
 	\tilde{c}^{2} = (\gamma - 1)[\tilde{h} - \tfrac{1}{2}\tilde{v}^2]
 \end{equation}
-donde $\Delta u = u_R - u_L$, para cualquier variable $u$, siendo $u_R$ y $u_L$ el valor de la variable a la derecha e izquierda de la interfaz en donde se calcula el flujo, respectivamente. 
+donde $\Delta u = u_R - u_L$, para cualquier variable $u$, siendo $u_R$ y $u_L$ el valor de la variable a la derecha e izquierda de la interfaz en donde se calcula el flujo, respectivamente.
+\section{Características básicas de la simulación}
+Para resolver las ecuaciones de Euler es necesario especificar algunas características del medio y  del espacio en el que toman lugar las simulaciones a presentar en este texto. 
+\subsection{Dimensiones}
+Las ecuaciones de Euler serán resueltas en una dimensión espacial, que se puede interpretar como la evolución temporal de un gas dentro de un tubo. Naturalmente, un tubo no es exactamente un objeto unidimensional (un objeto unidimensional es una idealización) pero se aproximará como tal para efectuar la simulación. Este dominio posee una longitud de $10\unit{\meter}$, de tal manera que definiendo los parámetros de la sección (\ref{sec:discretizacion-del-dominio}), se tiene:
+\begin{equation}
+	a = 0 \unit{\meter},
+\end{equation}
+\begin{equation}
+	b = 10 \unit{\meter}.
+\end{equation}
+Es natural entonces definir una variable para el largo del dominio, $L\equiv b-a$. Mientras que el número de celdas $N$ a utilizar será:
+\begin{equation}
+	N = 500.
+\end{equation}
+De tal forma que el tamaño de cada celda está dado por:
+\begin{equation}
+	h = \frac{10\unit{\meter}}{500} = 0.02 \unit{\meter}.
+\end{equation}
+El tiempo total por defecto será de $4\unit{\second}$, y se producirá la solución para un número determinado de instantes temporales en total, que generalmente no coincidirá con el número de instantes temporales calculados. Esto se hace para optimizar el tiempo de cómputo. Por esta razón, el tamaño de paso temporal $k$ puede estar sujeto a cambios dependiendo de la simulación, ya que en caso no se cumpla la condición de estabilidad (\ref{eq:cond-estabilidad}) deberán recalibrarse los parámetros temporales.
+
+A excepción de los resultados mostrados en el capítulo \ref{cap:5}, se tomará el coeficiente de dilatación adiabática como el valor aproximado del que posee el aire, $\gamma = 1.4$ \cite{LeVeque}.
+
+\subsection{Condiciones iniciales}
+Se experimentará con tres distintos conjuntos de condiciones iniciales para las ecuaciones de Euler. Las condiciones corresponden a funciones por partes, es decir, las variables tendrán un valor constante distinto que depende de la mitad del dominio en donde se valúen.
+
+Se adoptará la siguiente notación para escribir de manera compacta las condiciones iniciales:
+\begin{equation}
+	\mathbf{V}(x,0) = 
+	\begin{cases}
+		\mathbf{V}_{L} & \text{ si } x \leq L/2\\
+		\mathbf{V}_{R} & \text{ si } x > L/2\\
+	\end{cases}
+\end{equation}
+donde
+\begin{equation}
+\mathbf{V}(x,t) = 
+	\begin{bmatrix}
+		\rho \\
+		v \\
+		P
+	\end{bmatrix},
+\end{equation}
+es el vector de variables físicas independientes.
+
+\subsubsection{Primer test}
+El primer conjunto de condiciones iniciales se denomina Test de Sod \cite{thesis-euler-godunov}. Consiste en los siguientes valores para las variables físicas independientes \footnote{Se omiten las dimensiones de las variables para mantener la legibilidad del texto, sin embargo, todas las unidades utilizadas corresponden a las del Sistema Internacional.}
+
+\begin{equation}
+\mathbf{V}_L = 
+	\begin{bmatrix}
+		3.0\\
+		0.0\\
+		3.0
+	\end{bmatrix},\hspace{4mm}
+\mathbf{V}_R = 
+	\begin{bmatrix}
+		1.0\\
+		0.0\\
+		1.0
+	\end{bmatrix}.
+\end{equation}
+En este conjunto de condiciones iniciales se destaca la diferencia de presión en cada mitad del dominio, así como de la densidad, que va de mayor a menor cantidad. La velocidad inicial del gas es nula.
+\subsection{Condiciones de frontera}
+Previo a poder aplicar el método de volúmenes finitos (MVF) junto al esquema de Roe, es necesario especificar las condiciones de frontera en el dominio espacial.
+De acuerdo a la expresión (\ref{eq:metodo-vol-finitos-3}), generalmente el MVF se aplica sobre un dominio dividido en $N$ celdas, de manera que el índice $i$ se recorre de $1$ a $N$. Por lo tanto, es necesario definir los valores de la frontera, siendo estos $U_{0}^{n}$ y $U_{N+1}^{n}$, para que los flujos $F_{\frac{1}{2}}$ y $F_{N+\frac{1}{2}}$ estén bien definidos y correspondan a flujos físicamente consistentes.
+\subsubsection{Condiciones transmisivas}
+Si se asume que el gas se encuentra dentro de un tubo con las paredes extremas abiertas, se pueden considerar condiciones que permitan la transmisión del medio al exterior \cite{thesis-euler-godunov}. Las condiciones de frontera transmisivas se puede conseguir con las siguientes igualdades:
+\begin{align}
+	\rho_{0}^{n} = \rho_{1}^{n}, \hspace{4mm}&
+	\rho_{N+1}^{n} = \rho_{N}^{n} \\
+	v_{0}^{n} = v_{1}^{n}, \hspace{4mm}&
+	v_{N+1}^{n} = v_{N}^{n} \\
+	p_{0}^{n} = p_{1}^{n}, \hspace{4mm}&
+	p_{N+1}^{n} = p_{N}^{n}.
+\end{align}
 \subsection{Código implementado}
 \section{Resultados}
