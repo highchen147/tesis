@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  18 JAN 2024 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  19 JAN 2024 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -852,33 +852,67 @@ y
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
 \c@subfigure=\count340
 \c@subtable=\count341
-) (TesisTotalBibTeX.aux
+)
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/listingsutf8\listings
+utf8.sty
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count342
+\lst@gtempboxa=\box82
+\lst@token=\toks50
+\lst@length=\count343
+\lst@currlwidth=\dimen294
+\lst@column=\count344
+\lst@pos=\count345
+\lst@lostspace=\dimen295
+\lst@width=\dimen296
+\lst@newlines=\count346
+\lst@lineno=\count347
+\lst@maxwidth=\dimen297
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count348
+\lst@skipnumbers=\count349
+\lst@framebox=\box83
+)
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc
+.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)) (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
- (agradecimientos.aux) (dedicatoria.aux) (simbolos.aux) (objetivos.aux) (introd
-uccion.aux) (tch1.aux) (tch2.aux) (tch3.aux) (tch4.aux) (tch5.aux) (c_y_r.aux))
+ (agradecimientos.aux) (dedicatoria.aux)
+(simbolos.aux) (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux)
+(tch3.aux) (tch4.aux) (tch5.aux) (c_y_r.aux))
 \openout1 = `TesisTotalBibTeX.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Info: Redefining \. on input line 65.
-LaTeX Info: Redefining \% on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -916,6 +950,7 @@ LaTeX Info: Redefining \% on input line 65.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
@@ -926,17 +961,17 @@ Package caption Info: End \AtBeginDocument code.
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count342
-\scratchdimen=\dimen294
-\scratchbox=\box82
-\nofMPsegments=\count343
-\nofMParguments=\count344
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count345
-\MPscratchDim=\dimen295
-\MPnumerator=\count346
-\makeMPintoPDFobject=\count347
-\everyMPtoPDFconversion=\toks51
+\scratchcounter=\count350
+\scratchdimen=\dimen298
+\scratchbox=\box84
+\nofMPsegments=\count351
+\nofMParguments=\count352
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count353
+\MPscratchDim=\dimen299
+\MPnumerator=\count354
+\makeMPintoPDFobject=\count355
+\everyMPtoPDFconversion=\toks52
 )
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -962,7 +997,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring OFF on input line 65.
+Package hyperref Info: Link coloring OFF on input line 67.
  (TesisTotalBibTeX.out) (TesisTotalBibTeX.out)
 \@outlinefile=\write4
 \openout4 = `TesisTotalBibTeX.out'.
@@ -986,18 +1021,19 @@ File: translations-basic-dictionary-spanish.trsl (spanish translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `spanish'. on input line 65.
+or `spanish'. on input line 67.
+\c@lstlisting=\count356
 
 
 Package hyperref Warning: Option `pdfstartview' has already been used,
-(hyperref)                setting the option has no effect on input line 74.
+(hyperref)                setting the option has no effect on input line 76.
 
-Package hyperref Info: Option `plainpages' set `false' on input line 74.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 74.
-<escudo.pdf, id=262, 652.4375pt x 652.4375pt>
+Package hyperref Info: Option `plainpages' set `false' on input line 76.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 76.
+<escudo.pdf, id=282, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
-Package pdftex.def Info: escudo.pdf  used on input line 74.
+Package pdftex.def Info: escudo.pdf  used on input line 76.
 (pdftex.def)             Requested size: 71.13188pt x 71.1312pt.
 [1
 
@@ -1005,21 +1041,21 @@ Package pdftex.def Info: escudo.pdf  used on input line 74.
 df>] [2]
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
-Package pdftex.def Info: escudo.pdf  used on input line 74.
+Package pdftex.def Info: escudo.pdf  used on input line 76.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
 
 
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
 
 
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 74
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 76
 .
 
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -1028,38 +1064,38 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 [3] [4]
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
-Package pdftex.def Info: escudo.pdf  used on input line 82.
+Package pdftex.def Info: escudo.pdf  used on input line 84.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
-<ordenImpresion.pdf, id=297, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=317, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
-Package pdftex.def Info: ordenImpresion.pdf  used on input line 85.
+Package pdftex.def Info: ordenImpresion.pdf  used on input line 87.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
-Package pdftex.def Info: ordenImpresion.pdf  used on input line 85.
+Package pdftex.def Info: ordenImpresion.pdf  used on input line 87.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ordenImpresion.pdf, id=300, page=1, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=320, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 85.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 85.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 85.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 85.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
-Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 85.
+Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
  [7 <./ordenImpresion.pdf>]
 \openout2 = `agradecimientos.aux'.
@@ -1229,13 +1265,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
                    \relax 
 l.263 \end{equation}
                      [11]
-<../some_plots/cond_inicial.pdf, id=637, 462.52798pt x 346.89601pt>
+<../some_plots/cond_inicial.pdf, id=662, 462.52798pt x 346.89601pt>
 File: ../some_plots/cond_inicial.pdf Graphic file (type pdf)
 <use ../some_plots/cond_inicial.pdf>
 Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 269
 .
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/caracteristicas_burgers.pdf, id=638, 578.16pt x 433.62pt>
+<../some_plots/caracteristicas_burgers.pdf, id=663, 578.16pt x 433.62pt>
 File: ../some_plots/caracteristicas_burgers.pdf Graphic file (type pdf)
 <use ../some_plots/caracteristicas_burgers.pdf>
 Package pdftex.def Info: ../some_plots/caracteristicas_burgers.pdf  used on inp
@@ -1254,7 +1290,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
 l.286 
        [12 <../some_plots/cond_inicial.pdf> <../some_plots/caracteristicas_burg
 ers.pdf>]
-<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=689, 578.16pt x
+<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=714, 578.16pt x
  433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf Graphic file (
 type pdf)
@@ -1262,7 +1298,7 @@ type pdf)
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
 .pdf  used on input line 290.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=690, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=715, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
  (type pdf)
@@ -1270,7 +1306,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
 00.pdf  used on input line 295.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=691, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=716, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
  (type pdf)
@@ -1278,7 +1314,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-2
 00.pdf  used on input line 300.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=692, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=717, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf Graphic file
  (type pdf)
@@ -1322,7 +1358,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--341
  []
 
 [14]
-<../some_plots/cap1/graficas/riemannLR.pdf, id=755, 462.52798pt x 346.89601pt>
+<../some_plots/cap1/graficas/riemannLR.pdf, id=780, 462.52798pt x 346.89601pt>
 File: ../some_plots/cap1/graficas/riemannLR.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannLR.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannLR.pdf  used on inp
@@ -1346,28 +1382,28 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 369.
 
 [15 <../some_plots/cap1/graficas/riemannLR.pdf>]
-<../some_plots/cap1/graficas/riemannRL-0.pdf, id=781, 462.52798pt x 346.89601pt
+<../some_plots/cap1/graficas/riemannRL-0.pdf, id=806, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-0.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.pdf  used on i
 nput line 384.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=782, 462.52798pt x 346.89601
+<../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=807, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.4.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.4.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.4.pdf  used on
  input line 388.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=783, 462.52798pt x 346.89601
+<../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=808, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.8.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.8.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.8.pdf  used on
  input line 392.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-1.pdf, id=784, 462.52798pt x 346.89601pt
+<../some_plots/cap1/graficas/riemannRL-1.pdf, id=809, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-1.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-1.pdf>
@@ -1419,30 +1455,30 @@ Cap\'{\i }tulo 2.
 
 
 ]
-<../some_plots/cap2/graficas/domain.pdf, id=909, 480.49513pt x 152.52072pt>
+<../some_plots/cap2/graficas/domain.pdf, id=934, 480.49513pt x 152.52072pt>
 File: ../some_plots/cap2/graficas/domain.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/domain.pdf>
 Package pdftex.def Info: ../some_plots/cap2/graficas/domain.pdf  used on input 
-line 20.
+line 21.
 (pdftex.def)             Requested size: 426.39258pt x 135.35434pt.
  [24 <../some_plots/cap2/graficas/domain.pdf>]
-<../some_plots/cap2/graficas/numeric_U.pdf, id=931, 480.49513pt x 224.8824pt>
+<../some_plots/cap2/graficas/numeric_U.pdf, id=956, 480.49513pt x 224.8824pt>
 File: ../some_plots/cap2/graficas/numeric_U.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/numeric_U.pdf>
 Package pdftex.def Info: ../some_plots/cap2/graficas/numeric_U.pdf  used on inp
-ut line 41.
+ut line 42.
 (pdftex.def)             Requested size: 426.39258pt x 199.57164pt.
  [25 <../some_plots/cap2/graficas/numeric_U.pdf>]
-<../some_plots/cap2/graficas/numeric_Flux.pdf, id=958, 480.49513pt x 305.87225p
+<../some_plots/cap2/graficas/numeric_Flux.pdf, id=983, 480.49513pt x 305.87225p
 t>
 File: ../some_plots/cap2/graficas/numeric_Flux.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/numeric_Flux.pdf>
 Package pdftex.def Info: ../some_plots/cap2/graficas/numeric_Flux.pdf  used on 
-input line 72.
+input line 73.
 (pdftex.def)             Requested size: 383.75072pt x 244.29675pt.
  [26 <../some_plots/cap2/graficas/numeric_Flux.pdf>]
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
@@ -1482,43 +1518,112 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 171.
 
-[42] [43] [44] [45]) [46] [47]
+[42] [43] [44] [45] [46]
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+) (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+File: latin1.def 2021/02/14 v1.3d Input encoding file
+)
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-utf8.d
+ef
+File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
+)
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\se-iso-88
+59-1.def
+File: se-iso-8859-1.def 2019/11/29 v1.12 stringenc: ISO-8859-1
+) [47]
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+File: latin1.def 2021/02/14 v1.3d Input encoding file
+)
+consecutive:
+
+Overfull \hbox (3.55615pt too wide) in paragraph at lines 14--15
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+File: latin1.def 2021/02/14 v1.3d Input encoding file
+)
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+File: latin1.def 2021/02/14 v1.3d Input encoding file
+)
+consecutive:
+
+Overfull \hbox (17.65283pt too wide) in paragraph at lines 4--5
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.55615pt too wide) in paragraph at lines 5--6
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[48]
+Overfull \hbox (66.99121pt too wide) in paragraph at lines 6--7
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (31.74951pt too wide) in paragraph at lines 7--8
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.65283pt too wide) in paragraph at lines 8--9
+[][][][][][][][][][][] 
+ []
+
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+File: latin1.def 2021/02/14 v1.3d Input encoding file
+)
+consecutive:
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+File: latin1.def 2021/02/14 v1.3d Input encoding file
+)
+consecutive:
+[49]) [50]
 \openout2 = `tch4.aux'.
 
- (tch4.tex [48
+ (tch4.tex
+Cap\'{\i }tulo 4.
+) [51
 
 
 
 
 ]
-Cap\'{\i }tulo 4.
-) [49]
 \openout2 = `tch5.aux'.
 
- (tch5.tex [50
+ (tch5.tex [52
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [51] [52
+) [53] [54
 
 
 
 ]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex [53
+ (c_y_r.tex [55
 
 
-] [54
+] [56
 
-]) [55] (TesisTotalBibTeX.bbl [56
+]) [57] (TesisTotalBibTeX.bbl [58
 
 
 
-] [57]
+] [59]
 Underfull \hbox (badness 10000) in paragraph at lines 130--148
 []$\T1/cmtt/m/n/12 https : / / www . sciencedirect . com / science / article / 
 pii /
@@ -1530,23 +1635,23 @@ Underfull \hbox (badness 4024) in paragraph at lines 159--164
 / ws / portalfiles / portal / 67742456 /
  []
 
-) [58] (TesisTotalBibTeX.aux
+) [60] (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
  (agradecimientos.aux) (dedicatoria.aux)
 (simbolos.aux) (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux)
 (tch3.aux) (tch4.aux) (tch5.aux) (c_y_r.aux))
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: 8BE9DA8B7E29482DEB5515BE994BBB25;15009.
+(rerunfilecheck)             Checksum: 5A0F8115506BE4486A53F275E248A0DD;16215.
  ) 
 Here is how much of TeX's memory you used:
- 30692 strings out of 476339
- 614673 string characters out of 5787175
- 1866340 words of memory out of 5000000
- 50135 multiletter control sequences out of 15000+600000
+ 32823 strings out of 476339
+ 645941 string characters out of 5787175
+ 1878340 words of memory out of 5000000
+ 52164 multiletter control sequences out of 15000+600000
  541784 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,1099b,1423s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,90p,1099b,3252s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-s
 uper-ts1.enc}{C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm
 -super/cm-super-t1.enc}<C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/ty
@@ -1589,9 +1694,9 @@ lic/cm-super/sfrm1200.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts
 KTeX/fonts/type1/public/cm-super/sfti1200.pfb><C:/Users/Rodrigo/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb><C:/Users/Rodrigo/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (82 pages, 1216463 bytes).
+Output written on TesisTotalBibTeX.pdf (84 pages, 1241080 bytes).
 PDF statistics:
- 1532 PDF objects out of 1728 (max. 8388607)
- 374 named destinations out of 1000 (max. 500000)
- 620 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1626 PDF objects out of 1728 (max. 8388607)
+ 425 named destinations out of 1000 (max. 500000)
+ 660 words of extra memory for PDF output out of 10000 (max. 10000000)
 

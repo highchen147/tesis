@@ -116,7 +116,7 @@ Para un gas politrópico se considera a $c_p$ como constante, por lo que integra
 	\mathrm{h}_i = c_p T.
 	\label{eq:entalpia-2}
 \end{equation}
-Por otro lado, de acuerdo a la ley del gas ideal se tiene la siguiente relación
+Por otro lado, de acuerdo a la ley del gas ideal, se tiene la siguiente relación
 \begin{equation}
 	c_p - c_v = \mathcal{R}.
 	\label{eq:diferencia-capacidades}
@@ -147,7 +147,7 @@ Y al aplicar la definición de $\gamma$ en (\ref{eq:gamma-1}) se obtiene la expr
 \begin{equation}
 	\gamma = \frac{\alpha + 2}{\alpha},
 \end{equation}
-que como se expuso previamente, relaciona el número de grados de libertad con el coeficiente de dilatación adiabática. Por ejemplo, para gases monoatómicos se consideran únicamente tres grados de libertad, correspondientes al movimiento traslacional en tres dimensiones, por lo que $\alpha = 3$ y $\gamma = 5/3$. En gases diatómicos (como el aire, compuesto por $H_2$ y $N_2$ principalmente) se agregan dos grados libertad correspondientes a dos ejes de rotación posibles, de tal manera que $\alpha = 5$ y $\gamma = 7/5 = 1.4$.
+que, como se expuso previamente, relaciona el número de grados de libertad con el coeficiente de dilatación adiabática. Por ejemplo, para gases monoatómicos se consideran únicamente tres grados de libertad, correspondientes al movimiento traslacional en tres dimensiones, por lo que $\alpha = 3$ y $\gamma = 5/3$. En gases diatómicos (como el aire, compuesto por $H_2$ y $N_2$ principalmente) se agregan dos grados libertad correspondientes a dos ejes de rotación posibles para cada molécula, de tal manera que $\alpha = 5$ y $\gamma = 7/5 = 1.4$.
 
 Por último, se escribe la ecuación de estado del gas ideal para la energía utilizando  (\ref{eq:ideal-gas-law}),
 \begin{equation}
@@ -301,6 +301,7 @@ donde $\Delta u = u_R - u_L$, para cualquier variable $u$, siendo $u_R$ y $u_L$ 
 \section{Características básicas de la simulación}
 Para resolver las ecuaciones de Euler es necesario especificar algunas características del medio y  del espacio en el que toman lugar las simulaciones a presentar en este texto. 
 \subsection{Dimensiones}
+\label{sec:dimensiones}
 Las ecuaciones de Euler serán resueltas en una dimensión espacial, que se puede interpretar como la evolución temporal de un gas dentro de un tubo. Naturalmente, un tubo no es exactamente un objeto unidimensional (un objeto unidimensional es una idealización) pero se aproximará como tal para efectuar la simulación. Este dominio posee una longitud de $10\unit{\meter}$, de tal manera que definiendo los parámetros de la sección (\ref{sec:discretizacion-del-dominio}), se tiene:
 \begin{equation}
 	a = 0 \unit{\meter},
@@ -328,7 +329,7 @@ Se adoptará la siguiente notación para escribir de manera compacta las condici
 	\mathbf{V}(x,0) = 
 	\begin{cases}
 		\mathbf{V}_{L} & \text{ si } x \leq L/2\\
-		\mathbf{V}_{R} & \text{ si } x > L/2\\
+		\mathbf{V}_{R} & \text{ si } x > L/2,
 	\end{cases}
 \end{equation}
 donde
@@ -342,7 +343,7 @@ donde
 \end{equation}
 es el vector de variables físicas independientes.
 
-\subsubsection{Primer test}
+\subsubsection{Primer conjunto}
 El primer conjunto de condiciones iniciales se denomina Test de Sod \cite{thesis-euler-godunov}. Consiste en los siguientes valores para las variables físicas independientes \footnote{Se omiten las dimensiones de las variables para mantener la legibilidad del texto, sin embargo, todas las unidades utilizadas corresponden a las del Sistema Internacional.}
 
 \begin{equation}
@@ -360,6 +361,40 @@ El primer conjunto de condiciones iniciales se denomina Test de Sod \cite{thesis
 	\end{bmatrix}.
 \end{equation}
 En este conjunto de condiciones iniciales se destaca la diferencia de presión en cada mitad del dominio, así como de la densidad, que va de mayor a menor cantidad. La velocidad inicial del gas es nula.
+
+\subsubsection{Segundo conjunto}
+El siguiente conjunto de condiciones iniciales fue propuesto por LeVeque para evaluar el funcionamiento del esquema numérico utilizado cuando se presentan ondas de rarefacción transónica \cite{pelanti}. Es similar al test de Sod, pero con la diferencia que la velocidad inicial del gas no es nula. Los valores iniciales son:
+\begin{equation}
+	\mathbf{V}_L = 
+	\begin{bmatrix}
+		3.0\\
+		0.9\\
+		3.0
+	\end{bmatrix},\hspace{4mm}
+	\mathbf{V}_R = 
+	\begin{bmatrix}
+		1.0\\
+		0.9\\
+		1.0
+	\end{bmatrix}.
+\end{equation}
+\subsubsection{Tercer conjunto}
+Este conjunto de condiciones iniciales corresponde a una solución con dos ondas de rarefacción viajando en direcciones contrarias \cite{thesis-euler-godunov}. Los valores iniciales son:
+\begin{equation}
+	\mathbf{V}_L = 
+	\begin{bmatrix}
+		1.0\\
+		-1.0\\
+		0.5
+	\end{bmatrix},\hspace{4mm}
+	\mathbf{V}_R = 
+	\begin{bmatrix}
+		1.0\\
+		1.0\\
+		0.5
+	\end{bmatrix}.
+\end{equation}
+Es evidente la creación de ondas de rarefacción al notar la diferencia de signo de la velocidad inicial en cada mitad del dominio.
 \subsection{Condiciones de frontera}
 Previo a poder aplicar el método de volúmenes finitos (MVF) junto al esquema de Roe, es necesario especificar las condiciones de frontera en el dominio espacial.
 De acuerdo a la expresión (\ref{eq:metodo-vol-finitos-3}), generalmente el MVF se aplica sobre un dominio dividido en $N$ celdas, de manera que el índice $i$ se recorre de $1$ a $N$. Por lo tanto, es necesario definir los valores de la frontera, siendo estos $U_{0}^{n}$ y $U_{N+1}^{n}$, para que los flujos $F_{\frac{1}{2}}$ y $F_{N+\frac{1}{2}}$ estén bien definidos y correspondan a flujos físicamente consistentes.
@@ -374,4 +409,62 @@ Si se asume que el gas se encuentra dentro de un tubo con las paredes extremas a
 	p_{N+1}^{n} = p_{N}^{n}.
 \end{align}
 \subsection{Código implementado}
+\lstset{inputencoding=utf8/latin1}
+Como fue comentado previamente, la solución numérica de las ecuaciones de Euler se implementó en un programa de \texttt{C++}. El código fuente completo se encuentra disponible en \url{https://github.com/highchen147/tesis/blob/main/euler1D/euler1D.cpp}.
+
+\subsubsection{Librerías y paquetes utilizados}
+Se utilizaron las siguientes librerías en el desarrollo del programa integrador:
+\lstinputlisting[title = Librerías,
+language=C++,
+firstline=1,
+lastline=12,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/preambulo.cpp}
+
+En el paquete con nombre \texttt{funciones.hpp} se definió una función por partes, para aplicar las condiciones iniciales de forma práctica.
+
+\lstinputlisting[title = Función por partes,
+language=C++,
+firstline=13,
+lastline=24,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/preambulo.cpp}
+
+\subsubsection{Definición de parámetros principales}
+Se definió el coeficiente de dilatación adiabática como una variable global, esto con el fin de evitar escribir muchas funciones en donde dicho coeficiente fuera un parámetro de las mismas y así contar con una variable constante y segura para toda la simulación.
+
+\lstinputlisting[
+title = Definición de $\gamma$,
+language=C++,
+firstline=1,
+lastline=1,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/parametros.cpp}
+
+Se definieron seis parámetros temporales en la función \texttt{int main()} del programa:
+\lstinputlisting[
+title = Parámetros temporales,
+language=C++,
+firstline=3,
+lastline=10,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/parametros.cpp}
+
+Los parámetros \texttt{t\_total}, \texttt{dt} y \texttt{num\_outs} son modificables de acuerdo a lo necesario para conseguir una simulación satisfactoria. \texttt{t\_total} es el tiempo total de la simulación, mientras que \texttt{dt} es el tamaño de paso temporal que fue definido en el capítulo \ref{cap:2} como $k$. El parámetro \texttt{Niter} se define como el número de iteraciones necesarias temporales para conseguir una simulación que dure lo preestablecido y coincida con el tamaño de paso \texttt{dt}; además, se usa la función \texttt{floor()} para garantizar un número entero de iteraciones. 
+
+La variable \texttt{num\_outs} almacena el número de soluciones producidas para estados temporales determinados, es decir, se imprimen los datos de las funciones calculadas para \texttt{num\_outs} instantes temporales, que no necesariamente coincidirá con el número de iteraciones. Luego se define \texttt{out\_cada}, que calcula cada cuántas iteraciones se deberán imprimir los datos. Por último, la variable \texttt{tiempo} almacena el tiempo real de la simulación.
+
+Los parámetros espaciales, que fueron descritos en la sección (\ref{sec:dimensiones}) se definieron de la siguiente manera en el código:
+\lstinputlisting[
+title = Parámetros espaciales,
+language=C++,
+firstline=12,
+lastline=14,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/parametros.cpp}
+
+Por último, se definió una variable de tipo booleana, para activar o desactivar la corrección de entropía. En otras palabras, esta variable decide si se usa el flujo simple de Roe (\ref{eq:roe-flux}) o el flujo modificado para corregir el caso de entropía sónica (\ref{eq:flux-HH-fix}).
+\lstinputlisting[
+title = Corrección de entropía,
+language=C++,
+firstline=17,
+lastline=17,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/parametros.cpp}
+\subsubsection{Objetos definidos}
+Las soluciones numéricas son aproximaciones en forma discreta, por lo que para construir las funciones de magnitudes físicas en el programa, se definieron punteros a arreglos unidimensionales, con un tamaño que coincidiera con el número de celdas definido para la simulación.
 \section{Resultados}

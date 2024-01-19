@@ -50,13 +50,18 @@
 \contentsline {section}{\numberline {3.3}Características básicas de la simulación}{44}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Dimensiones}{44}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Condiciones iniciales}{45}{subsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.1}Primer test}{46}{subsubsection.3.3.2.1}%
-\contentsline {subsection}{\numberline {3.3.3}Condiciones de frontera}{46}{subsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.3.1}Condiciones transmisivas}{46}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Primer conjunto}{46}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}Segundo conjunto}{46}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}Tercer conjunto}{46}{subsubsection.3.3.2.3}%
+\contentsline {subsection}{\numberline {3.3.3}Condiciones de frontera}{47}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}Condiciones transmisivas}{47}{subsubsection.3.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.4}Código implementado}{47}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Resultados}{47}{section.3.4}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{49}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{51}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{53}{chapter*.20}%
-\contentsline {chapter}{RECOMENDACIONES}{55}{chapter*.21}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{57}{chapter*.22}%
+\contentsline {subsubsection}{\numberline {3.3.4.1}Librerías y paquetes utilizados}{47}{subsubsection.3.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.3.4.2}Definición de parámetros principales}{48}{subsubsection.3.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.3.4.3}Objetos definidos}{49}{subsubsection.3.3.4.3}%
+\contentsline {section}{\numberline {3.4}Resultados}{50}{section.3.4}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{51}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{53}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{55}{chapter*.20}%
+\contentsline {chapter}{RECOMENDACIONES}{57}{chapter*.21}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{59}{chapter*.22}%
