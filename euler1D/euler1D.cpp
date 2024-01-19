@@ -8,7 +8,7 @@
  * 
  * @copyright Copyright (c) 2023
  * 
- * g++ euler1D.cpp funciones.cpp -o solver
+ * Para compilar: g++ euler1D.cpp funciones.cpp -o solver
  * 
  */
 #include <iostream>
