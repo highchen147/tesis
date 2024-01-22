@@ -28,12 +28,12 @@ int generateRandomNum();
 double rho_inicial(double x, double L);
 double p_inicial(double x, double L);
 double u_inicial(double x, double L);
-void calc_componentes_Q(double *q1, double *q2, double *q3, double *rho, double *p, double *u, int Nx);
+void calc_componentes_U(double *u1, double *u2, double *u3, double *rho, double *p, double *u, int Nx);
 void calc_componentes_F(double *F1, double *F2, double *F3, double *rho, double *p, double *u, int Nx);
 double rho_prom(double rho_L, double rho_R);
 double u_prom(double u_L, double u_R, double rho_L, double rho_R);
 double h_prom(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R);
-double a_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, double u_R);
+double c_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, double u_R);
 void salida(ofstream &of, double *u, double *x, double tiempo, int N);
 vector<double> flujo_euler(double rho, double p, double u);
 vector<double> Flujo(vector<double> F_L, vector<double> F_R, double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix);
@@ -53,10 +53,10 @@ int main()
     int numeroAleatorio = generateRandomNum();
 
     // Parámetros temporales
-    const double t_total = 4; // Tiempo total en segundos
+    const double t_total = 1; // Tiempo total en segundos
     const double dt = 0.005; // Tamaño de paso temporal en segundos
     int Niter = floor(t_total/dt); // Número total de iteraciones
-    const int num_outs = 400; // Número de gráficas de instantes temporales
+    const int num_outs = 100; // Número de gráficas de instantes temporales
     int out_cada = floor(Niter / num_outs); // Cada out_cada veces se 
                                             // imprimen los valores
     
@@ -99,10 +99,10 @@ int main()
     // Presión
     double *p = new double[Nx]; 
     double *p_nueva = new double[Nx];
-    // Componentes del vector Q
-    double *q1 = new double[Nx];
-    double *q2 = new double[Nx];
-    double *q3 = new double[Nx];
+    // Componentes del vector U
+    double *u1 = new double[Nx];
+    double *u2 = new double[Nx];
+    double *u3 = new double[Nx];
     // Componentes del vector F
     double *F1 = new double[Nx];
     double *F2 = new double[Nx];
@@ -116,30 +116,22 @@ int main()
     {
         x[i] = i*dx;
     }
-    // Densidad
+    // Cantidades físicas
     for (int i = 0; i < Nx; i++)
     {
+        // Densidad
         rho[i] = rho_inicial(x[i], L);
-    }
-    // Presión
-    for (int i = 0; i < Nx; i++)
-    {
+        // Presión
         p[i] = p_inicial(x[i], L);
-    }
-    // Velocidad
-    for (int i = 0; i < Nx; i++)
-    {
+        // Velocidad
         u[i] = u_inicial(x[i], L);
-        q1[i] = 0.0;
-        q2[i] = 0.0;
-        q3[i] = 0.0;
     }
 
     // Se declaran los vectores principales de la integración
-    vector<double> Q(3);
+    vector<double> U(3);
     vector<double> F(3);
-    // Se calculan las componentes del vector Q de acuerdo a su definición 
-    calc_componentes_Q(q1, q1, q3, rho, p, u, Nx);
+    // Se calculan las componentes del vector U de acuerdo a su definición 
+    calc_componentes_U(u1, u2, u3, rho, p, u, Nx);
     // Se calculan las componentes del vector F, que representa el flujo
     calc_componentes_F(F1, F2, F3, rho, p, u, Nx);
 
@@ -153,47 +145,40 @@ int main()
     // Ciclo principal
     for (int k = 0; k < Niter; k++)
     {
-        // Valores extremos para las variables del siguiente instante
-        // densidad
-        rho_nueva[0] = rho[0];
-        rho_nueva[Nx-1] = rho[Nx-1];
-        // velocidad
-        u_nueva[0] = u[0];
-        u_nueva[Nx-1] = u[Nx-1];
-        // presión
-        p_nueva[0] = p[0];
-        p_nueva[Nx-1] = p[Nx-1];
-        // Se calculan las componentes del vector Q de acuerdo a su definición 
-        calc_componentes_Q(q1, q2, q3, rho, p, u, Nx);
-        // cout << q1[1] << endl;
+        // Se calculan las componentes del vector U
+        calc_componentes_U(u1, u2, u3, rho, p, u, Nx);
+        // Ciclo para integración espacial
         for (int i = 1; i < Nx-1; i++)
         {
-            vector<double> Q_N(3);
-            // Definir valores de Q
-            Q = {q1[i], q2[i], q3[i]};
-            
-            // Actualizar e integrar Q
-            Q_N = Q - ((Flujo(flujo_euler(rho[i], p[i], u[i]), flujo_euler(rho[i+1], p[i+1], u[i+1]), 
-                            p[i], p[i+1], 
-                            u[i], u[i+1], 
-                            rho[i], rho[i+1], correccion_de_entropia) - 
-                      Flujo(flujo_euler(rho[i-1], p[i-1], u[i-1]), flujo_euler(rho[i], p[i], u[i]), 
-                            p[i-1], p[i], 
-                            u[i-1], u[i], 
-                            rho[i-1], rho[i], correccion_de_entropia))*(dt/dx));
-            
-            // Despejar variables físicas de Q
-            rho_nueva[i] = Q_N[0];
-            u_nueva[i] = Q_N[1]/rho_nueva[i];
-            p_nueva[i] = (Q_N[2] - 0.5*rho_nueva[i]*pow(u_nueva[i], 2))*(Gamma-1);
+            vector<double> U_N(3);
+            // Definir valores de U
+            U = {u1[i], u2[i], u3[i]};
+            // Actualizar e integrar U
+            U_N=U-((Flujo(flujo_euler(rho[i], p[i], u[i]), 
+                          flujo_euler(rho[i+1], p[i+1], u[i+1]),
+                          p[i], p[i+1],
+                          u[i], u[i+1],
+                          rho[i], rho[i+1], correccion_de_entropia)-
+                    Flujo(flujo_euler(rho[i-1], p[i-1], u[i-1]), 
+                          flujo_euler(rho[i], p[i], u[i]), 
+                          p[i-1], p[i],
+                          u[i-1], u[i],
+                          rho[i-1], rho[i], correccion_de_entropia))*
+                          (dt/dx));
 
-            if ((a_prom(p[i], p[i+1], rho[i], rho[i+1], u[i], u[i+1]) == 0.0))
+            // Despejar variables físicas de U
+            rho_nueva[i] = U_N[0];
+            u_nueva[i] = U_N[1]/rho_nueva[i];
+            p_nueva[i] = (U_N[2]-0.5*rho_nueva[i]*pow(u_nueva[i], 2))*
+                         (Gamma-1);
+
+            // En caso la velocidad del sonido sea nula, se envía una
+            // alerta, indicando el momento y la coordenada.
+            if (c_prom(p[i],p[i+1],rho[i],rho[i+1],u[i],u[i+1])==0.0)
             {
                 cout << "tiempo: " << k << endl;
                 cout << "coordenada : " << i << endl;
             }
-
-
         }
 
         // Actualizar variables físicas
@@ -212,7 +197,8 @@ int main()
         p[0] = p[1];
         p[Nx-1] = p[Nx-2];
 
-
+        // Se evalúa si la iteración corresponde a un instante de
+        // impresión de datos
         if (k % out_cada == 0)
         {
             salida(file_densidad, rho, x, tiempo, Nx);
@@ -265,30 +251,27 @@ double p_inicial(double x, double L)
  */
 double rho_inicial(double x, double L)
 {
-    // Densidad del aire en kg/m^3
-    double d_aire = 1.29;
-    // return 1.0*d_aire;
     return step_neg(x, 1, 1, L/2);
 }
 
 /**
- * @brief Asignar valores a las componentes del vector Q
+ * @brief Asignar valores a las componentes del vector U
  * 
- * @param q1 Componente 1 de Q
- * @param q2 Componente 2 de Q
- * @param q3 Componente 3 de Q
+ * @param u1 Componente 1 de U
+ * @param u2 Componente 2 de U
+ * @param u3 Componente 3 de U
  * @param rho Densidad
  * @param p Presión
  * @param u Velocidad
  * @param Nx Tamaño de los arreglos que almacenan las funciones
  */
-void calc_componentes_Q(double *q1, double *q2, double *q3, double *rho, double *p, double *u, int Nx)
+void calc_componentes_U(double *u1, double *u2, double *u3, double *rho, double *p, double *u, int Nx)
 {
     for (int i = 0; i < Nx; i++)
     {
-        q1[i] = rho[i];
-        q2[i] = rho[i]*u[i];
-        q3[i] = p[i]/(Gamma-1) + 0.5*rho[i]*pow(u[i], 2);
+        u1[i] = rho[i];
+        u2[i] = rho[i]*u[i];
+        u3[i] = p[i]/(Gamma-1) + 0.5*rho[i]*pow(u[i], 2);
     }
     
 }
@@ -374,7 +357,7 @@ double h_prom(double p_L, double p_R, double u_L, double u_R, double rho_L, doub
  * @param rho_R 
  * @return double 
  */
-double a_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, double u_R)
+double c_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, double u_R)
 {
     double h = h_prom(p_L, p_R, u_L, u_R, rho_L, rho_R);
     double u = u_prom(u_L,u_R, rho_L, rho_R);
@@ -409,7 +392,7 @@ vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho
     double u = u_prom(u_L, u_R, rho_L, rho_R);
     double rho = rho_prom(rho_L, rho_R);
     double h = h_prom(p_L, p_R, u_L, u_R, rho_L, rho_R);
-    double a = a_prom(p_L, p_R, rho_L, rho_R, u_L, u_R);
+    double a = c_prom(p_L, p_R, rho_L, rho_R, u_L, u_R);
     double dp = p_R - p_L;
     double du = u_R - u_L;
     double drho = rho_R - rho_L;
@@ -439,8 +422,8 @@ vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho
         if (entropy_fix)
         {
             // Se calculan autovalores correspondientes a las ondas adyacentes, L y R.
-            double lambda_L = autovalor_lambda(u_L, a_prom(p_L, p_L, rho_L, rho_L, u_L, u_L))[i];
-            double lambda_R = autovalor_lambda(u_R, a_prom(p_R, p_R, rho_R, rho_R, u_R, u_R))[i];
+            double lambda_L = autovalor_lambda(u_L, c_prom(p_L, p_L, rho_L, rho_L, u_L, u_L))[i];
+            double lambda_R = autovalor_lambda(u_R, c_prom(p_R, p_R, rho_R, rho_R, u_R, u_R))[i];
             // Se calcula el máximo entre 0 y la diferencia entre los autovalores adyacentes
             // y el autovalor aproximado lambda_i
             double delta_i = max(lambda_i-lambda_L, lambda_R-lambda_i);
@@ -484,8 +467,8 @@ vector<double> flujo_euler(double rho, double p, double u)
 /**
  * @brief Calcula el flujo entre celdas utilizando el esquema de Roe
  * 
- * @param F_L Flujo total en la celda izquierda
- * @param F_R Flujo total en la celda derecha
+ * @param F_L Flujo exacto en la celda izquierda
+ * @param F_R Flujo exacto en la celda derecha
  * @param p_L Presión a la izquierda
  * @param p_R Presión a la derecha
  * @param u_L Velocidad a la izquierda
@@ -497,11 +480,22 @@ vector<double> flujo_euler(double rho, double p, double u)
 vector<double> Flujo(
     vector<double> F_L, 
     vector<double> F_R, 
-    double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R,
+    double p_L, 
+    double p_R, 
+    double u_L, 
+    double u_R, 
+    double rho_L, 
+    double rho_R,
     bool entropy_fix)
 {
-    vector<double> F_prom = (F_L+F_R)*0.5;
-    return F_prom - (suma_k(p_L, p_R, u_L, u_R, rho_L, rho_R, entropy_fix)*0.5);
+    vector<double> F_prom = (F_L + F_R)*0.5;
+    return F_prom - (suma_k(p_L, 
+                            p_R, 
+                            u_L, 
+                            u_R, 
+                            rho_L, 
+                            rho_R, 
+                            entropy_fix)*0.5);
 }
 
 /**
