@@ -159,6 +159,7 @@ Por último, se escribe la ecuación de estado del gas ideal para la energía ut
 De tal manera que la energía total del gas ($\rho E$) queda como
 \begin{equation}
 	 \rho E = \frac{1}{2}\rho v^{2} + \frac{p}{\gamma - 1}.
+	 \label{eq:energia-total}
 \end{equation}
 \section{Aplicación del esquema de Roe}
 Para aplicar el esquema de Roe en la expresión del método de volúmenes finitos, dada por 
@@ -195,6 +196,7 @@ Para implementar el método de volúmenes finitos junto al esquema de Roe en la 
 		\rho v^2 + p \\
 		v(\rho E + p)
 	\end{bmatrix}.
+\label{eq:flujo-euler-exacto}
 \end{equation}
 Por tanto, se define a $\mathbf{u}_i$ como la i-ésima variable conservada cuyo  flujo correspondiente es $\mathbf{f}_i$. 
 
@@ -379,6 +381,7 @@ El siguiente conjunto de condiciones iniciales fue propuesto por LeVeque para ev
 	\end{bmatrix}.
 \end{equation}
 \subsubsection{Tercer conjunto}
+\label{sec:tercer-conjunto}
 Este conjunto de condiciones iniciales corresponde a una solución con dos ondas de rarefacción viajando en direcciones contrarias \cite{thesis-euler-godunov}. Los valores iniciales son:
 \begin{equation}
 	\mathbf{V}_L = 
@@ -408,11 +411,11 @@ Si se asume que el gas se encuentra dentro de un tubo con las paredes extremas a
 	p_{0}^{n} = p_{1}^{n}, \hspace{4mm}&
 	p_{N+1}^{n} = p_{N}^{n}.
 \end{align}
-\subsection{Código implementado}
+\section{Código implementado}
 \lstset{inputencoding=utf8/latin1}
-Como fue comentado previamente, la solución numérica de las ecuaciones de Euler se implementó en un programa de \texttt{C++}. El código fuente completo se encuentra disponible en \url{https://github.com/highchen147/tesis/blob/main/euler1D/euler1D.cpp}.
+Como fue comentado previamente, la solución numérica de las ecuaciones de Euler se implementó en un programa de \texttt{C++}. El código fuente completo de la simulación se encuentra disponible en \url{https://github.com/highchen147/tesis/blob/main/euler1D/euler1D.cpp}.
 
-\subsubsection{Librerías y paquetes utilizados}
+\subsection{Librerías y paquetes utilizados}
 Se utilizaron las siguientes librerías en el desarrollo del programa integrador:
 \lstinputlisting[title = Librerías,
 language=C++,
@@ -422,17 +425,21 @@ keywordstyle=\color{blue}]{../euler1D/code_en_TDG/preambulo.cpp}
 
 En el paquete con nombre \texttt{funciones.hpp} se definió una función por partes, para aplicar las condiciones iniciales de forma práctica.
 
-\lstinputlisting[title = Función por partes,
+\lstinputlisting[
+caption={Función \texttt{step\_neg}},
+label=cod:step-neg,
 language=C++,
 firstline=13,
 lastline=24,
-keywordstyle=\color{blue}]{../euler1D/code_en_TDG/preambulo.cpp}
+keywordstyle=\color{blue}
+]{../euler1D/code_en_TDG/preambulo.cpp}
 
-\subsubsection{Definición de parámetros principales}
+\subsection{Definición de parámetros principales}
 Se definió el coeficiente de dilatación adiabática como una variable global, esto con el fin de evitar escribir muchas funciones en donde dicho coeficiente fuera un parámetro de las mismas y así contar con una variable constante y segura para toda la simulación.
 
 \lstinputlisting[
-title = Definición de $\gamma$,
+caption = {Definición de $\gamma$},
+%label
 language=C++,
 firstline=1,
 lastline=1,
@@ -440,7 +447,7 @@ keywordstyle=\color{blue}]{../euler1D/code_en_TDG/parametros.cpp}
 
 Se definieron seis parámetros temporales en la función \texttt{int main()} del programa:
 \lstinputlisting[
-title = Parámetros temporales,
+caption = {Parámetros temporales},
 language=C++,
 firstline=3,
 lastline=10,
@@ -452,7 +459,7 @@ La variable \texttt{num\_outs} almacena el número de soluciones producidas para
 
 Los parámetros espaciales, que fueron descritos en la sección (\ref{sec:dimensiones}) se definieron de la siguiente manera en el código:
 \lstinputlisting[
-title = Parámetros espaciales,
+caption = {Parámetros espaciales},
 language=C++,
 firstline=12,
 lastline=14,
@@ -460,11 +467,96 @@ keywordstyle=\color{blue}]{../euler1D/code_en_TDG/parametros.cpp}
 
 Por último, se definió una variable de tipo booleana, para activar o desactivar la corrección de entropía. En otras palabras, esta variable decide si se usa el flujo simple de Roe (\ref{eq:roe-flux}) o el flujo modificado para corregir el caso de entropía sónica (\ref{eq:flux-HH-fix}).
 \lstinputlisting[
-title = Corrección de entropía,
+caption = {Corrección de entropía},
 language=C++,
 firstline=17,
 lastline=17,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/parametros.cpp}
-\subsubsection{Objetos definidos}
-Las soluciones numéricas son aproximaciones en forma discreta, por lo que para construir las funciones de magnitudes físicas en el programa, se definieron punteros a arreglos unidimensionales, con un tamaño que coincidiera con el número de celdas definido para la simulación.
+\subsection{Objetos definidos}
+Las soluciones numéricas son aproximaciones en forma discreta, por lo que para construir las funciones de magnitudes físicas en el programa, se definieron punteros a arreglos unidimensionales, con un tamaño que coincidiera con el número de celdas definido para la simulación \footnote{A diferencia del resto del texto, se definió a la velocidad del gas como \texttt{u}.}.
+\lstinputlisting[
+caption = {Arreglos de variables físicas},
+language=C++,
+firstline=2,
+lastline=11,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/objetos.cpp}
+
+Las variables \texttt{rho}, \texttt{u} y \texttt{p} corresponden a las funciones de densidad, velocidad y presión valuadas en el instante temporal $n$, respectivamente. Las variables cuyo nombre lleva el sufijo \texttt{\_nueva} corresponden a la cantidad valuada en el instante temporal siguiente $n+1$, i.e,
+\begin{equation}
+	\rho_{i}^{n} \leftrightarrow \texttt{rho[i]}
+\end{equation}
+\begin{equation}
+	\rho_{i}^{n+1} \leftrightarrow \texttt{rho\_nueva[i]}.
+\end{equation}
+
+También se definieron arreglos para las componentes del vector $\mathbf{{U}}$, siendo \texttt{ui} la iésima componente de $\mathbf{{U}}$.
+\lstinputlisting[
+caption = {Componentes vectoriales},
+language=C++,
+firstline=12,
+lastline=15,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/objetos.cpp}
+
+El vector en cuestión fue implementado como un objeto de la clase \texttt{vector} de tipo \texttt{double} con dimensión 3. El uso de objetos de dicha clase fue con el objetivo de utilizar la sobrecarga de los operadores básicos (\texttt{+}, \texttt{-}, \texttt{*}) para realizar operaciones entre los vectores prácticamente. La definición de la acción de los operadores se omitirá en este texto, ya que su funcionamiento e implementación son triviales. 
+\lstinputlisting[
+caption = {Componentes vectoriales},
+label=cod:definicion-U,
+language=C++,
+firstline=23,
+lastline=24,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/objetos.cpp}
+
+El dominio se dividió en celdas, cuya ubicación en el espacio se almacenó en un puntero.
+\lstinputlisting[
+caption = {Arreglo de celdas},
+language=C++,
+firstline=20,
+lastline=21,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/objetos.cpp}
+\subsection{Inicialización de arreglos}
+Para inicializar cada arreglo previamente definido se utilizaron ciclos iterativos.
+\lstinputlisting[
+caption = {Inicialización de variables},
+language=C++,
+firstline=2,
+lastline=16,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/inicializacion.cpp}
+
+Las funciones \texttt{rho\_inicial}, \texttt{p\_inicial}, \texttt{u\_inicial} son variaciones de la función por partes, definida en el código (\ref{cod:step-neg}), que dependen de la condición inicial por aplicar. Por ejemplo, la condición de (\ref{sec:tercer-conjunto}) para la velocidad, se aplica de la siguiente manera:
+\lstinputlisting[
+caption = {Condición inicial para la velocidad},
+language=C++,
+firstline=18,
+lastline=21,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/inicializacion.cpp}
+
+La inicialización de las componentes de $\mathbf{{U}}$ se realizó con una función de tipo \texttt{void} para facilitar la escritura en el código del cálculo de las componentes del mismo vector.
+\lstinputlisting[
+caption = {Cálcuo de las componentes del vector de cantidades conservadas},
+language=C++,
+firstline=23,
+lastline=48,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/inicializacion.cpp}
+Se puede apreciar que los cálculos de las componentes de $\mathbf{{U}}$ coinciden con (\ref{eq:euler-eqs-1}) tomando en cuenta la definición de la energía (\ref{eq:energia-total}).
+\subsection{Funciones auxiliares del esquema de Roe}
+Previo a la descripción del ciclo iterativo de la integración numérica, se muestra la construcción de las principales funciones que completan la implementación en el programa de la expresión (\ref{eq:metodo-vol-finitos-2}).
+
+La función \texttt{flujo\_euler} calcula el flujo exacto del sistema de Euler. En otras palabras, es la implementación directa de $\mathbf{{F}}$, definido en (\ref{eq:flujo-euler-exacto}).
+\lstinputlisting[
+caption = {Definición de la función que calcula el flujo del sistema de Euler},
+language=C++,
+firstline=1,
+lastline=18,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/flujos.cpp}
+Cabe destacar que el flujo de Euler se implementa como un objeto de la clase \texttt{vector}, de la misma manera que se define \texttt{U}, como se expuso en el código (\ref{cod:definicion-U}).
+
+Evidentemente, el flujo exacto de Euler no es igual al flujo numérico de Roe, sino que el último depende del primero. El flujo de Roe se construyó  por partes en el programa. A continuación se muestra la implementación de $F(\mathbf{{U}}_L, \mathbf{{U}}_R)$, correspondiente a la ecuación (\ref{eq:roe-flux}).
+\lstinputlisting[
+caption = {Definición de la función que devuelve el flujo numérico},
+language=C++,
+firstline=20,
+lastline=53,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/flujos.cpp}
+Esta función retorna un objeto de la clase \texttt{vector}. La función \texttt{suma\_k} corresponde al cálculo de la suma $\sum_{p=1}^{m}|\hat{\lambda}_{p}|\alpha_{p}\mathbf{\hat{r}}_{p}$; su implementación es la más extensa de todo el programa.
+
 \section{Resultados}

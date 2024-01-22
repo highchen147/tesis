@@ -24,9 +24,11 @@
 \newlabel{eq:diferencia-capacidades}{{3.19}{41}{Ecuación de estado para un gas politrópico}{equation.3.19}{}}
 \newlabel{eq:gamma-1}{{3.20}{41}{Ecuación de estado para un gas politrópico}{equation.3.20}{}}
 \newlabel{eq:energia-interna-2}{{3.22}{41}{Ecuación de estado para un gas politrópico}{equation.3.22}{}}
+\newlabel{eq:energia-total}{{3.28}{42}{Ecuación de estado para un gas politrópico}{equation.3.28}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Aplicación del esquema de Roe}{42}{section.3.2}\protected@file@percent }
 \newlabel{eq:metodo-vol-finitos-3}{{3.29}{42}{Aplicación del esquema de Roe}{equation.3.29}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Variables conservadas y propiedades de $\mathbf  {A(\mathbf  {U})}$}{42}{subsection.3.2.1}\protected@file@percent }
+\newlabel{eq:flujo-euler-exacto}{{3.31}{42}{Variables conservadas y propiedades de $\mathbf {A(\mathbf {U})}$}{equation.3.31}{}}
 \citation{roe81}
 \citation{roe86}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Valores promediados de Roe}{43}{subsection.3.2.2}\protected@file@percent }
@@ -42,26 +44,45 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.1}Primer conjunto}{46}{subsubsection.3.3.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.2}Segundo conjunto}{46}{subsubsection.3.3.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2.3}Tercer conjunto}{46}{subsubsection.3.3.2.3}\protected@file@percent }
+\newlabel{sec:tercer-conjunto}{{3.3.2.3}{46}{Tercer conjunto}{subsubsection.3.3.2.3}{}}
 \citation{thesis-euler-godunov}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Condiciones de frontera}{47}{subsection.3.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3.1}Condiciones transmisivas}{47}{subsubsection.3.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Código implementado}{47}{subsection.3.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4.1}Librerías y paquetes utilizados}{47}{subsubsection.3.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4.2}Definición de parámetros principales}{48}{subsubsection.3.3.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.4.3}Objetos definidos}{49}{subsubsection.3.3.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Resultados}{50}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Código implementado}{47}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Librerías y paquetes utilizados}{47}{subsection.3.4.1}\protected@file@percent }
+\newlabel{cod:step-neg}{{3.1}{48}{Función \texttt {step\_neg}}{lstlisting.3.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.1}{\ignorespaces Función \texttt  {step\_neg}}}{48}{lstlisting.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Definición de parámetros principales}{48}{subsection.3.4.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.2}{\ignorespaces Definición de $\gamma $}}{48}{lstlisting.3.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.3}{\ignorespaces Parámetros temporales}}{48}{lstlisting.3.3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.4}{\ignorespaces Parámetros espaciales}}{49}{lstlisting.3.4}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.5}{\ignorespaces Corrección de entropía}}{49}{lstlisting.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Objetos definidos}{50}{subsection.3.4.3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.6}{\ignorespaces Arreglos de variables físicas}}{50}{lstlisting.3.6}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.7}{\ignorespaces Componentes vectoriales}}{50}{lstlisting.3.7}\protected@file@percent }
+\newlabel{cod:definicion-U}{{3.8}{51}{Componentes vectoriales}{lstlisting.3.8}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.8}{\ignorespaces Componentes vectoriales}}{51}{lstlisting.3.8}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.9}{\ignorespaces Arreglo de celdas}}{51}{lstlisting.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Inicialización de arreglos}{51}{subsection.3.4.4}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.10}{\ignorespaces Inicialización de variables}}{51}{lstlisting.3.10}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.11}{\ignorespaces Condición inicial para la velocidad}}{52}{lstlisting.3.11}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.12}{\ignorespaces Cálcuo de las componentes del vector de cantidades conservadas}}{52}{lstlisting.3.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Funciones auxiliares del esquema de Roe}{53}{subsection.3.4.5}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.13}{\ignorespaces Definición de la función que calcula el flujo del sistema de Euler}}{53}{lstlisting.3.13}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.14}{\ignorespaces Definición de la función que devuelve el flujo numérico}}{53}{lstlisting.3.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Resultados}{55}{section.3.5}\protected@file@percent }
 \@setckpt{tch3}{
-\setcounter{page}{51}
-\setcounter{equation}{57}
+\setcounter{page}{56}
+\setcounter{equation}{59}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
 \setcounter{enumiv}{0}
-\setcounter{footnote}{2}
+\setcounter{footnote}{3}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{3}
-\setcounter{section}{4}
+\setcounter{section}{5}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
@@ -76,12 +97,12 @@
 \setcounter{AM@survey}{0}
 \setcounter{section@level}{1}
 \setcounter{Item}{4}
-\setcounter{Hfootnote}{6}
-\setcounter{bookmark@seq@number}{64}
+\setcounter{Hfootnote}{7}
+\setcounter{bookmark@seq@number}{66}
 \setcounter{defn}{0}
 \setcounter{NAT@ctr}{0}
 \setcounter{subfigure}{0}
 \setcounter{subtable}{0}
-\setcounter{lstnumber}{2}
-\setcounter{lstlisting}{0}
+\setcounter{lstnumber}{35}
+\setcounter{lstlisting}{14}
 }
