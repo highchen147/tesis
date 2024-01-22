@@ -389,14 +389,16 @@ vector<double> autovalor_lambda(double u, double a)
  */
 vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix)
 {
+    // Cálculo de promedios de Roe
     double u = u_prom(u_L, u_R, rho_L, rho_R);
     double rho = rho_prom(rho_L, rho_R);
     double h = h_prom(p_L, p_R, u_L, u_R, rho_L, rho_R);
     double a = c_prom(p_L, p_R, rho_L, rho_R, u_L, u_R);
+    // Cálculo de diferencias delta
     double dp = p_R - p_L;
     double du = u_R - u_L;
     double drho = rho_R - rho_L;
-    // Fuerzas de las ondas, alfa
+    // Coeficientes alfa
     double alfa_1 = 0.5*(dp-rho*a*du)/pow(a, 2);
     double alfa_2 = (pow(a, 2)*drho-dp)/pow(a, 2);
     double alfa_3 = 0.5*(dp+rho*a*du)/pow(a, 2);
@@ -404,13 +406,14 @@ vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho
     // Autovalores de las ondas
     vector<double> lambda = {u-a, u, u+a};
     // Autovectores
-    vector<double> e_1 = {1, u-a, h-u*a};
-    vector<double> e_2 = {1, u, 0.5*pow(u,2)};
-    vector<double> e_3 = {1, u+a, h+u*a};
+    vector<double> r_1 = {1, u-a, h-u*a};
+    vector<double> r_2 = {1, u, 0.5*pow(u,2)};
+    vector<double> r_3 = {1, u+a, h+u*a};
     // vector de vectores
-    vector<vector<double>> e_vec = {e_1, e_2, e_3};
+    vector<vector<double>> r_vec = {r_1, r_2, r_3};
 
-    // Se declara el vector resultante, de dimensión 3 y con ceros.
+    // Se declara el vector resultante de la suma, 
+    // de dimensión 3 y con ceros.
     vector<double> resultado(3, 0);
 
     // Se realiza la suma 
@@ -418,14 +421,16 @@ vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho
     {
         // Se define la variable que almacena cada autovalor
         double lambda_i = abs(lambda[i]);
-        // Se define procedimiento para considerar la corrección de entropía sónica de HH
+        // Se define procedimiento para considerar la corrección
+        //  de entropía sónica
         if (entropy_fix)
         {
             // Se calculan autovalores correspondientes a las ondas adyacentes, L y R.
             double lambda_L = autovalor_lambda(u_L, c_prom(p_L, p_L, rho_L, rho_L, u_L, u_L))[i];
             double lambda_R = autovalor_lambda(u_R, c_prom(p_R, p_R, rho_R, rho_R, u_R, u_R))[i];
-            // Se calcula el máximo entre 0 y la diferencia entre los autovalores adyacentes
-            // y el autovalor aproximado lambda_i
+            // Se calcula el máximo entre 0 y la diferencia entre los 
+            // autovalores adyacentes y el autovalor aproximado 
+            // lambda_i
             double delta_i = max(lambda_i-lambda_L, lambda_R-lambda_i);
             delta_i = max(delta_i, 0.0);
             if (lambda_i < delta_i)
@@ -441,7 +446,7 @@ vector<double> suma_k(double p_L, double p_R, double u_L, double u_R, double rho
         {
             lambda_i = abs(lambda[i]);
         }
-        resultado += e_vec[i]*(alfa[i]*lambda_i);
+        resultado += r_vec[i]*(alfa[i]*lambda_i);
     }
     return resultado;
 }
