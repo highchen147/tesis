@@ -42,7 +42,7 @@ def animacion(data: pd.DataFrame, subset: pd.DataFrame, cantidad: str, margen: f
     ax.set_title("{}, t={} s".format(cantidad, t))
 
 # importar datos
-folder_data = "prueba2797"
+folder_data = "prueba3564"
 data_d = pd.read_csv("data/" + folder_data + "/densidad.dat", delimiter='\t', skip_blank_lines=False)
 data_d.columns = ["t", "x", "u"]
 data_p = pd.read_csv("data/" + folder_data + "/presion.dat", delimiter="\t", skip_blank_lines=False)
