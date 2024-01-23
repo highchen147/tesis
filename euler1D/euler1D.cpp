@@ -3,7 +3,7 @@
  * @author Rodrigo Castillo (steverogersavengers@gmail.com)
  * @brief Programa integrador de las ecuaciones de Euler en una dimensión,
  * correspondiente a un gas ideal.
- * @version 0.2
+ * @version 0.3
  * @date 2023-05-04
  * 
  * @copyright Copyright (c) 2023
@@ -38,7 +38,6 @@ void salida(ofstream &of, double *u, double *x, double tiempo, int N);
 vector<double> flujo_euler(double rho, double p, double u);
 vector<double> Flujo(vector<double> F_L, vector<double> F_R, double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R, bool entropy_fix);
 vector<double> suma_p(double p_L, double p_R, double u_L, double u_R, double rho_L, double rho_R);
-vector<double> autovalor_lambda(double u, double a);
 vector<double> operator+(const vector<double>& a, const vector<double>& b);
 vector<double> operator-(const vector<double>& a, const vector<double>& b);
 vector<double> operator*(const vector<double>& v, double scalar);
@@ -150,6 +149,8 @@ int main()
         // Ciclo para integración espacial
         for (int i = 1; i < Nx-1; i++)
         {
+            // Definición del vector U_N que corresponde al vector U en
+            // el siguiente instante de tiempo
             vector<double> U_N(3);
             // Definir valores de U
             U = {u1[i], u2[i], u3[i]};
@@ -365,17 +366,6 @@ double c_prom(double p_L, double p_R, double rho_L, double rho_R, double u_L, do
 }
 
 /**
- * @brief Devuelve el autovalor iésimo de la matriz de Roe
- * @param u velocidad del gas
- * @param a velocidad del sonido
- * @return vector con autovalores lambda
-*/
-vector<double> autovalor_lambda(double u, double a)
-{
-    return {u-a, u, u+a};
-}
-
-/**
  * @brief Suma sobre p de los autovectores de la matriz A del sistema
  * por sus fuerzas y autovalores.
  * 
@@ -485,7 +475,7 @@ vector<double> suma_p_fix(double p_L, double p_R, double u_L, double u_R, double
         // Se define la variable que almacena el valor absoluto del 
         // autovalor iésimo.
         double lambda_i = abs(lambda[i]);
-        // Se define el delta de la corrección HH.
+        // Se define delta de la corrección HH.
         double delta_i = max(lambda_i-lambda_L[i], 
                              lambda_R[i]-lambda_i);
         delta_i = max(delta_i, 0.0);
