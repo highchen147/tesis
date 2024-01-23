@@ -305,6 +305,7 @@ implica que el sistema (\ref{eq:aprox-system-roe}) se puede resolver y es hiperb
 La tercera y última condición establece que
 \begin{equation}
 	\text{iii)}\hspace{3mm} \mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R) \rightarrow \mathbf{F}'(\mathbf{\bar{U}}) \text{ suavemente mientras } \mathbf{{U}}_L, \mathbf{{U}}_R \rightarrow \mathbf{\bar{U}}.
+	\label{eq:tercera-cond-roe}
 \end{equation}
 La tercera condición garantiza que el método de Roe funcione adecuadamente con soluciones suaves, en contraste con la primera condición, que garantiza el funcionamiento del método con discontinuidades locales. 
 \subsubsection{El flujo numérico de Roe}
@@ -345,6 +346,7 @@ donde
 		\delta_{p} & \text{ si } |\hat{\lambda}_p| < \delta_{p}\\
 		|\hat{\lambda}_p| & \text{ si } |\hat{\lambda}_p| \geq \delta_{p}
 	\end{cases}
+\label{eq:HH-fix}
 \end{equation}
 con
 \begin{equation}

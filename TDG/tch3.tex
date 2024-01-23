@@ -209,7 +209,7 @@ Por otro lado, el esquema de Roe depende de los autovalores y autovectores de la
 		\frac{1}{2}(\gamma - 1)v^3 - v(\rho E+p)/\rho & (\rho E+p)/\rho-(\gamma - 1)v^2 & \gamma v \\
 	\end{bmatrix}.
 \end{equation}
-Entonces, se deben calcular los autovalores y autovectores de esta matriz. Siguiendo la notación de los últimos capítulos, al autovalor $\lambda_i$ le corresponde el autovector $\mathbf{r}_i$, y estos son:
+Seguidamente, se deben calcular los autovalores y autovectores de esta matriz. Siguiendo la notación de los últimos capítulos, al autovalor $\lambda_i$ le corresponde el autovector $\mathbf{r}_i$, y estos son:
 \begin{equation}
 	\lambda_1 = v-c, \hspace{4mm}
 	\lambda_2 = c, \hspace{4mm}
@@ -245,7 +245,7 @@ mientras $\mathrm{h}$ es la entalpía total definida en (\ref{eq:entalpia-total}
 \end{equation}
 Por lo tanto, es posible escribir la velocidad del sonido en términos de la entalpía y la velocidad:
 \begin{equation}
-	c^2 = (\gamma - 1)\left[\mathrm{h} - \frac{1}{2}v^{2}\right].
+	c^2 = (\gamma - 1)\left[\mathrm{h} - \tfrac{1}{2}v^{2}\right].
 \end{equation}
 \subsection{Valores promediados de Roe}
 Retornando a la expresión para el flujo numérico simple de Roe,
@@ -288,7 +288,8 @@ se destaca que es necesario encontrar los autovalores $\hat{\lambda}_i$ y autove
  \end{equation}
 con
 \begin{equation}
-	\tilde{\rho} = \sqrt{\rho_L \rho_R}
+	\tilde{\rho} = \tilde{\rho}(\rho_L, \rho_R) = \sqrt{\rho_L \rho_R}
+	\label{eq:rho-prom}
 \end{equation}
 \begin{equation}
 	\tilde{v} = \frac{\sqrt{\rho_{L}}\cdot v_L + \sqrt{\rho_{R}}\cdot v_R}{\sqrt{\rho_{L}} + \sqrt{\rho_{R}}}
@@ -298,6 +299,7 @@ con
 \end{equation}
 \begin{equation}
 	\tilde{c}^{2} = (\gamma - 1)[\tilde{h} - \tfrac{1}{2}\tilde{v}^2]
+	\label{eq:c-prom}
 \end{equation}
 donde $\Delta u = u_R - u_L$, para cualquier variable $u$, siendo $u_R$ y $u_L$ el valor de la variable a la derecha e izquierda de la interfaz en donde se calcula el flujo, respectivamente.
 \section{Características básicas de la simulación}
@@ -539,7 +541,7 @@ lastline=48,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/inicializacion.cpp}
 Se puede apreciar que los cálculos de las componentes de $\mathbf{{U}}$ coinciden con (\ref{eq:euler-eqs-1}) tomando en cuenta la definición de la energía (\ref{eq:energia-total}).
 \subsection{Funciones auxiliares del esquema de Roe}
-Previo a la descripción del ciclo iterativo de la integración numérica, se muestra la construcción de las principales funciones que completan la implementación en el programa de la expresión (\ref{eq:metodo-vol-finitos-2}).
+Previo a la descripción del ciclo iterativo de la integración numérica, se muestra la construcción de las funciones que completan la implementación en el programa de la expresión (\ref{eq:metodo-vol-finitos-2}).
 
 La función \texttt{flujo\_euler} calcula el flujo exacto del sistema de Euler. En otras palabras, es la implementación directa de $\mathbf{{F}}$, definido en (\ref{eq:flujo-euler-exacto}).
 \lstinputlisting[
@@ -555,8 +557,58 @@ Evidentemente, el flujo exacto de Euler no es igual al flujo numérico de Roe, s
 caption = {Definición de la función que devuelve el flujo numérico},
 language=C++,
 firstline=20,
-lastline=53,
+lastline=63,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/flujos.cpp}
-Esta función retorna un objeto de la clase \texttt{vector}. La función \texttt{suma\_k} corresponde al cálculo de la suma $\sum_{p=1}^{m}|\hat{\lambda}_{p}|\alpha_{p}\mathbf{\hat{r}}_{p}$; su implementación es la más extensa de todo el programa.
+Esta función retorna un objeto de la clase \texttt{vector}. La función \texttt{suma\_p} corresponde al cálculo de la suma $\sum_{p=1}^{m}|\hat{\lambda}_{p}|\alpha_{p}\mathbf{\hat{r}}_{p}$. Por otro lado, la función \texttt{suma\_p\_fix} corresponde a la modificación de la anterior implementando la corrección de entropía, es decir, calcula la suma $\sum_{p=1}^{m}H(\hat{\lambda}_{p})\alpha_{p}\mathbf{\hat{r}}_{p}$, definida en la ecuación (\ref{eq:flux-HH-fix}). A continuación se muestra el código implementado de la suma sobre los vectores propios.
+\lstinputlisting[
+caption = {Definición de \texttt{suma\_p}},
+language=C++,
+firstline=1,
+lastline=58,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/sumas.cpp}
+En esta función se realizó el cálculo de los promedios de Roe, a través de las funciones \texttt{rho\_prom}, \texttt{u\_prom} y \texttt{p\_prom}. La implementación del cálculo de dichos promedios (ecuaciones (\ref{eq:rho-prom}) - (\ref{eq:c-prom})) es trivial y directa, por lo que se omitirá el código fuente de cada función en este texto. Seguidamente, se calculan las diferencias laterales $\Delta \rho$, $\Delta u$, $\Delta p$; los coeficientes de las ondas, $\alpha_{p}$; los autovalores de las ondas, $\lambda_{p}$; y los autovectores $\mathbf{\hat{r}}$.
 
+Por otra parte, en la función \texttt{suma\_p\_fix} se definen las mismas variables que en \texttt{suma\_p}; ya que, en problemas en donde no se detectan rarefacciones sónicas, ambas funciones son equivalentes. En \texttt{suma\_p\_fix} es necesario definir los autovalores de las ondas laterales: $\lambda_{p,L}$ y $\lambda_{p,R}$.
+\lstinputlisting[
+caption = {Implementación de $\lambda_{p,L}$ y $\lambda_{p,R}$},
+language=C++,
+firstline=91,
+lastline=95,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/sumas.cpp}
+Puesto que los autovalores de una onda dependen de la velocidad del sonido en dicha onda ($c$), se definen las variables \texttt{c\_L} y \texttt{c\_R} que corresponden a la velocidad del sonido de la onda izquierda y derecha respectivamente. Dichas variables se construyen utilizando las siguientes propiedades de los promedios de Roe:
+\begin{equation}
+	\tilde{c}(\mathbf{{U}}_L, \mathbf{{U}}_L) = c_L
+\end{equation}
+\begin{equation}
+	\tilde{c}(\mathbf{{U}}_R, \mathbf{{U}}_R) = c_R,
+\end{equation}
+que se deducen inmediatamente de \ref{eq:tercera-cond-roe}, implementándose mediante la función \texttt{c\_prom}. El siguiente proceso que se define para \texttt{suma\_p\_fix} se encarga de implementar la función $H(\lambda_{p})$ definida en \eqref{eq:HH-fix}.
+\lstinputlisting[
+caption = {Construcción de la corrección de entropía de Harten y Hyman},
+language=C++,
+firstline=108,
+lastline=128,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/sumas.cpp}
+
+\subsection{Ciclo principal de iteración}
+Habiendo explicado las funciones auxiliares involucradas en el esquema de Roe, se puede entender el funcionamiento del ciclo principal de iteración. Este ciclo se encarga de aplicar la definición del método de volúmenes finitos,
+\begin{equation}
+	U_{i}^{n+1} = U_{i}^{n} +
+	\frac{k}{h}\left[ F(U_{i-1}^n, U_i^n) - F(U_{i}^n, U_{i+1}^n) \right].
+	\label{eq:mvf-U_N}
+\end{equation}
+Es evidente que para completar la aproximación numérica $U$ se necesita iterar sobre dos ciclos: el espacial, iterando $i$ y el temporal iterando $n$. Para iterar sobre los instantes temporales se utilizó el índice \texttt{k}.
+\lstinputlisting[
+caption = {Ciclo principal de iteración},
+language=C++,
+firstline=1,
+lastline=28,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/ciclo.cpp}
+Se puede notar que las iteraciones temporales se detienen en cuánto se alcance el número de iteraciones \texttt{Niter}, previamente definido. También destaca la expresión para \texttt{U\_N}, que emula el resultado de la ecuación \eqref{eq:mvf-U_N}, tomando en cuenta que:
+\begin{equation}
+	U^{n} \leftrightarrow \texttt{U}
+\end{equation}
+\begin{equation}
+	U^{n+1} \leftrightarrow \texttt{U\_N}
+\end{equation}
 \section{Resultados}
