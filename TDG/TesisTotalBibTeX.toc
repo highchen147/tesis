@@ -52,19 +52,20 @@
 \contentsline {subsection}{\numberline {3.3.2}Condiciones iniciales}{45}{subsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.2.1}Primer conjunto}{46}{subsubsection.3.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.3.2.2}Segundo conjunto}{46}{subsubsection.3.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.3}Tercer conjunto}{46}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}Tercer conjunto}{47}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}Cuarto conjunto}{47}{subsubsection.3.3.2.4}%
 \contentsline {subsection}{\numberline {3.3.3}Condiciones de frontera}{47}{subsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.3.1}Condiciones transmisivas}{47}{subsubsection.3.3.3.1}%
-\contentsline {section}{\numberline {3.4}Código implementado}{47}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Librerías y paquetes utilizados}{47}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Definición de parámetros principales}{48}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.4}Código implementado}{48}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Librerías y paquetes utilizados}{48}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Definición de parámetros principales}{49}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Objetos definidos}{50}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Inicialización de arreglos}{51}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.4}Inicialización de arreglos}{52}{subsection.3.4.4}%
 \contentsline {subsection}{\numberline {3.4.5}Funciones auxiliares del esquema de Roe}{53}{subsection.3.4.5}%
-\contentsline {subsection}{\numberline {3.4.6}Ciclo principal de iteración}{58}{subsection.3.4.6}%
-\contentsline {section}{\numberline {3.5}Resultados}{59}{section.3.5}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{61}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{63}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{65}{chapter*.20}%
-\contentsline {chapter}{RECOMENDACIONES}{67}{chapter*.21}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{69}{chapter*.22}%
+\contentsline {subsection}{\numberline {3.4.6}Ciclo principal de iteración}{59}{subsection.3.4.6}%
+\contentsline {section}{\numberline {3.5}Resultados}{62}{section.3.5}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{63}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{65}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{67}{chapter*.20}%
+\contentsline {chapter}{RECOMENDACIONES}{69}{chapter*.21}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{71}{chapter*.22}%

@@ -254,7 +254,7 @@ Retornando a la expresión para el flujo numérico simple de Roe,
 	\frac{1}{2}\sum_{p=1}^{m}|\hat{\lambda}_{p}|\alpha_{p}\mathbf{\hat{r}}_{p},
 	\label{eq:roe-flux-2}
 \end{equation}
-se destaca que es necesario encontrar los autovalores $\hat{\lambda}_i$ y autovectores $\hat{r}_i$ correspondientes a la matriz aproximada $\mathbf{\hat{A}}$. Roe \cite{roe81} propuso expresiones, basadas en promedios específicos de los valores adyacentes, para los mencionados autovectores y autovalores de la matriz aproximada y junto a Pike demostraron que son los únicos promedios que satisfacen con las condiciones necesarias impuestas al flujo numérico del esquema de Roe \cite{roe86}. Los autovalores y autovectores de Roe son:
+se destaca que es necesario encontrar los autovalores $\hat{\lambda}_i$ y autovectores $\hat{r}_i$ correspondientes a la matriz aproximada $\mathbf{\hat{A}}$. Roe \cite{roe81} propuso expresiones, basadas en promedios específicos de los valores adyacentes, para los mencionados autovectores y autovalores de la matriz aproximada y junto a Pike demostraron que son los únicos promedios que satisfacen las condiciones necesarias impuestas al flujo numérico del esquema de Roe \cite{roe86}. Los autovalores y autovectores de Roe son:
 \begin{equation}
 	\hat{\lambda}_1 = \tilde{v}-\tilde{c}, \hspace{4mm}
 	\hat{\lambda}_2 = \tilde{c}, \hspace{4mm}
@@ -288,7 +288,7 @@ se destaca que es necesario encontrar los autovalores $\hat{\lambda}_i$ y autove
  \end{equation}
 con
 \begin{equation}
-	\tilde{\rho} = \tilde{\rho}(\rho_L, \rho_R) = \sqrt{\rho_L \rho_R}
+	\tilde{\rho} = \sqrt{\rho_L \rho_R}
 	\label{eq:rho-prom}
 \end{equation}
 \begin{equation}
@@ -323,12 +323,22 @@ De tal forma que el tamaño de cada celda está dado por:
 \end{equation}
 El tiempo total por defecto será de $4\unit{\second}$, y se producirá la solución para un número determinado de instantes temporales en total, que generalmente no coincidirá con el número de instantes temporales calculados. Esto se hace para optimizar el tiempo de cómputo. Por esta razón, el tamaño de paso temporal $k$ puede estar sujeto a cambios dependiendo de la simulación, ya que en caso no se cumpla la condición de estabilidad (\ref{eq:cond-estabilidad}) deberán recalibrarse los parámetros temporales.
 
-A excepción de los resultados mostrados en el capítulo \ref{cap:5}, se tomará el coeficiente de dilatación adiabática como el valor aproximado del que posee el aire, $\gamma = 1.4$ \cite{LeVeque}.
+A excepción de los resultados mostrados en el capítulo \ref{cap:5}, se tomará el coeficiente de dilatación adiabática como el valor aproximado que posee el aire, $\gamma = 1.4$ \cite{LeVeque}.
 
 \subsection{Condiciones iniciales}
-Se experimentará con tres distintos conjuntos de condiciones iniciales para las ecuaciones de Euler. Las condiciones corresponden a funciones por partes, es decir, las variables tendrán un valor constante distinto que depende de la mitad del dominio en donde se valúen.
+Se experimentará con cuatro distintos conjuntos de condiciones iniciales para las ecuaciones de Euler. 
 
-Se adoptará la siguiente notación para escribir de manera compacta las condiciones iniciales:
+\subsubsection{Primer conjunto}
+\label{sec:gaussiana41}
+Este conjunto corresponde a un caso trivial que tiene solución exacta. Las condiciones iniciales de las variables físicas son las siguientes
+\begin{align}
+	&\rho(x,0) =  \left(1.0+\exp[-(x-\tfrac{L}{2})^{2}]\right)\hspace{1mm}\unit{\kilogram\per\meter^{3}} \\
+	&v(x,0) = 1.0 \hspace{1mm}\unit{\meter\per\second} \\
+	&p(x,0) = 0.5 \hspace{1mm}\unit{\pascal}
+\end{align}
+Notando que tanto la velocidad como la presión son constantes, se espera que el perfil gaussiano definido para la densidad se traslade a velocidad constante sobre el eje $x$. Esto se deriva del hecho de que la ecuación de continuidad \eqref{eq:continuidad-euler} se reduce a una ecuación de advección lineal en este caso.
+
+Los siguientes conjuntos de condiciones iniciales corresponden a funciones definidas por partes. Las variables tendrán un valor constante que depende de la mitad del dominio en donde se valúen. Se adoptará la siguiente notación para escribir de manera compacta las condiciones iniciales:
 \begin{equation}
 	\mathbf{V}(x,0) = 
 	\begin{cases}
@@ -347,8 +357,9 @@ donde
 \end{equation}
 es el vector de variables físicas independientes.
 
-\subsubsection{Primer conjunto}
-El primer conjunto de condiciones iniciales se denomina Test de Sod \cite{thesis-euler-godunov}. Consiste en los siguientes valores para las variables físicas independientes \footnote{Se omiten las dimensiones de las variables para mantener la legibilidad del texto, sin embargo, todas las unidades utilizadas corresponden a las del Sistema Internacional.}
+\subsubsection{Segundo conjunto}
+\label{sec:sod_con_entropy148}
+Este conjunto de condiciones iniciales se denomina Test de Sod \cite{thesis-euler-godunov}. Consiste en los siguientes valores para las variables físicas independientes \footnote{Se omiten las dimensiones de las variables para mantener la legibilidad del texto, sin embargo, todas las unidades utilizadas corresponden a las del Sistema Internacional.}
 
 \begin{equation}
 \mathbf{V}_L = 
@@ -366,7 +377,8 @@ El primer conjunto de condiciones iniciales se denomina Test de Sod \cite{thesis
 \end{equation}
 En este conjunto de condiciones iniciales se destaca la diferencia de presión en cada mitad del dominio, así como de la densidad, que va de mayor a menor cantidad. La velocidad inicial del gas es nula.
 
-\subsubsection{Segundo conjunto}
+\subsubsection{Tercer conjunto}
+\label{sec:leveque_sin_entropy714}
 El siguiente conjunto de condiciones iniciales fue propuesto por LeVeque para evaluar el funcionamiento del esquema numérico utilizado cuando se presentan ondas de rarefacción transónica \cite{pelanti}. Es similar al test de Sod, pero con la diferencia que la velocidad inicial del gas no es nula. Los valores iniciales son:
 \begin{equation}
 	\mathbf{V}_L = 
@@ -382,7 +394,7 @@ El siguiente conjunto de condiciones iniciales fue propuesto por LeVeque para ev
 		1.0
 	\end{bmatrix}.
 \end{equation}
-\subsubsection{Tercer conjunto}
+\subsubsection{Cuarto conjunto}
 \label{sec:tercer-conjunto}
 Este conjunto de condiciones iniciales corresponde a una solución con dos ondas de rarefacción viajando en direcciones contrarias \cite{thesis-euler-godunov}. Los valores iniciales son:
 \begin{equation}
@@ -557,7 +569,7 @@ Evidentemente, el flujo exacto de Euler no es igual al flujo numérico de Roe, s
 caption = {Definición de la función que devuelve el flujo numérico},
 language=C++,
 firstline=20,
-lastline=63,
+lastline=65,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/flujos.cpp}
 Esta función retorna un objeto de la clase \texttt{vector}. La función \texttt{suma\_p} corresponde al cálculo de la suma $\sum_{p=1}^{m}|\hat{\lambda}_{p}|\alpha_{p}\mathbf{\hat{r}}_{p}$. Por otro lado, la función \texttt{suma\_p\_fix} corresponde a la modificación de la anterior implementando la corrección de entropía, es decir, calcula la suma $\sum_{p=1}^{m}H(\hat{\lambda}_{p})\alpha_{p}\mathbf{\hat{r}}_{p}$, definida en la ecuación (\ref{eq:flux-HH-fix}). A continuación se muestra el código implementado de la suma sobre los vectores propios.
 \lstinputlisting[
@@ -593,22 +605,44 @@ keywordstyle=\color{blue}]{../euler1D/code_en_TDG/sumas.cpp}
 \subsection{Ciclo principal de iteración}
 Habiendo explicado las funciones auxiliares involucradas en el esquema de Roe, se puede entender el funcionamiento del ciclo principal de iteración. Este ciclo se encarga de aplicar la definición del método de volúmenes finitos,
 \begin{equation}
-	U_{i}^{n+1} = U_{i}^{n} +
-	\frac{k}{h}\left[ F(U_{i-1}^n, U_i^n) - F(U_{i}^n, U_{i+1}^n) \right].
+	U_{i}^{n+1} = U_{i}^{n} -
+	\frac{k}{h}\left[ F(U_{i}^n, U_{i+1}^n) - F(U_{i-1}^n, U_i^n)\right].
 	\label{eq:mvf-U_N}
 \end{equation}
-Es evidente que para completar la aproximación numérica $U$ se necesita iterar sobre dos ciclos: el espacial, iterando $i$ y el temporal iterando $n$. Para iterar sobre los instantes temporales se utilizó el índice \texttt{k}.
+Es evidente que para completar la aproximación numérica $U$ se necesita iterar sobre dos ciclos: el espacial, iterando $i$ y el temporal, iterando $n$. Para iterar sobre los instantes temporales en el código, se utilizó el índice \texttt{k}.
 \lstinputlisting[
 caption = {Ciclo principal de iteración},
 language=C++,
 firstline=1,
 lastline=28,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/ciclo.cpp}
-Se puede notar que el ciclo de las iteraciones temporales se detiene en cuánto se alcanza el número de iteraciones \texttt{Niter}, previamente definido. También destaca la expresión para \texttt{U\_N}, que emula el resultado de la ecuación \eqref{eq:mvf-U_N}, tomando en cuenta que:
+Se puede notar que el ciclo de las iteraciones temporales se detiene en cuánto se alcanza el número de iteraciones \texttt{Niter}, previamente definido. También destaca la expresión para \texttt{U\_N}, que emula el resultado de la ecuación \eqref{eq:mvf-U_N}, tomando en cuenta las siguientes equivalencias:
 \begin{equation}
 	U^{n} \leftrightarrow \texttt{U}
 \end{equation}
 \begin{equation}
 	U^{n+1} \leftrightarrow \texttt{U\_N}.
 \end{equation}
+
+Consecutivamente, en el ciclo de integración espacial, se despejan y actualizan las variables físicas independientes de los valores de \texttt{U\_N}, ya que dichas variables serán exportadas como los datos definitivos de solución del sistema.
+\lstinputlisting[
+language=C++,
+firstline=29,
+lastline=42,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/ciclo.cpp}
+
+Por último, se vuelven a aplicar las condiciones de frontera en el ciclo principal y se imprimen los datos en archivos de formato \texttt{.dat} cuando la iteración corresponda a una salida de datos.
+\lstinputlisting[
+language=C++,
+firstline=44,
+lastline=63,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/ciclo.cpp}
+
+La función \texttt{salida} se encarga de imprimir los datos haciendo uso de objetos de tipo \texttt{ofstream}.
+\lstinputlisting[
+caption={Definición de la función \texttt{salida}, que envía los datos}
+language=C++,
+firstline=65,
+lastline=82,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/ciclo.cpp}
 \section{Resultados}
