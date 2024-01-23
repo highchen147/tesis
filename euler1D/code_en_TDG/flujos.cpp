@@ -18,8 +18,7 @@ vector<double> flujo_euler(double rho, double p, double u)
 }
 
 /**
- * @brief Calcula el flujo entre celdas utilizando el esquema
- *  de Roe
+ * @brief Calcula el flujo entre celdas utilizando el esquema de Roe
  * 
  * @param F_L Flujo exacto en la celda izquierda
  * @param F_R Flujo exacto en la celda derecha
@@ -43,11 +42,22 @@ vector<double> Flujo(
     bool entropy_fix)
 {
     vector<double> F_prom = (F_L + F_R)*0.5;
-    return F_prom - (suma_k(p_L, 
-                            p_R, 
-                            u_L, 
-                            u_R, 
-                            rho_L, 
-                            rho_R, 
-                            entropy_fix)*0.5);
+    if (entropy_fix)
+    {
+        return F_prom - (suma_p_fix(p_L,
+                                    p_R, 
+                                    u_L, 
+                                    u_R, 
+                                    rho_L, 
+                                    rho_R)*0.5);
+    }
+    else 
+    {
+        return F_prom - (suma_p(p_L, 
+                                p_R, 
+                                u_L, 
+                                u_R, 
+                                rho_L, 
+                                rho_R)*0.5);
+    }
 }
