@@ -31,14 +31,6 @@ for (int i = 1; i < Nx-1; i++)
     u_nueva[i] = U_N[1]/rho_nueva[i];
     p_nueva[i] = (U_N[2]-0.5*rho_nueva[i]*pow(u_nueva[i], 2))*
                     (Gamma-1);
-
-    // En caso la velocidad del sonido sea nula, se envía una
-    // alerta, indicando el momento y la coordenada.
-    if (c_prom(p[i],p[i+1],rho[i],rho[i+1],u[i],u[i+1])==0.0)
-    {
-        cout << "tiempo: " << k << endl;
-        cout << "coordenada : " << i << endl;
-    }
 }
 
 // Actualizar variables físicas
@@ -49,7 +41,7 @@ for (int i = 1; i < Nx-1; i++)
     p[i] = p_nueva[i];
 }
 
-// Condiciones frontera transmisivas
+// Condiciones de frontera transmisivas
 rho[0] = rho[1];
 rho[Nx-1] = rho[Nx-2];
 u[0] = u[1];
@@ -68,4 +60,23 @@ if (k % out_cada == 0)
 }
 // Actualizar el tiempo
 tiempo += dt;
+}
+
+/**
+ * @brief Función que envía datos a los archivos, con instantes
+ * temporales separados por doble enter
+ * 
+ * @param of Archivo de datos
+ * @param u Arreglo que almacena los valores de las funciones
+ * @param x Arreglo de dimensión espacial
+ * @param tiempo Instante temporal en cuestión
+ * @param N Tamaño de los arreglos u y x
+ */
+void salida(ofstream &of, double *u, double *x, double tiempo, 
+            int N){
+    for (int i = 0; i < N; i++)
+    {
+        of << tiempo << "\t" << x[i] << "\t" << u[i] << endl;
+    }
+    of << endl << endl;
 }

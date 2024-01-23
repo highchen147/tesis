@@ -28,6 +28,8 @@ vector<double> flujo_euler(double rho, double p, double u)
  * @param u_R Velocidad a la derecha
  * @param rho_L Densidad a la izquierda
  * @param rho_R Densidad a la derecha
+ * @param entropy_fix Parámetro para decidir el uso de la
+ * correción de entropía
  * @return vector<double> 
  */
 vector<double> Flujo(
