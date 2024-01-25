@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  24 JAN 2024 21:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  24 JAN 2024 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1791,12 +1791,7 @@ File: ../euler1D/plots_en_TDG/set2/1.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/1.pdf  used on input line
  683.
-(pdftex.def)             Requested size: 469.03442pt x 179.93695pt.
-
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 683--684
- [][] 
- []
-
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 <../euler1D/plots_en_TDG/set2/20.pdf, id=1852, 706.3691pt x 270.98325pt>
 File: ../euler1D/plots_en_TDG/set2/20.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/20.pdf>
@@ -1946,7 +1941,7 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1095.pfb><C:/Users/Rod
 rigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb><C:
 /Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfxc12
 00.pfb>
-Output written on TesisTotalBibTeX.pdf (100 pages, 1491069 bytes).
+Output written on TesisTotalBibTeX.pdf (100 pages, 1491383 bytes).
 PDF statistics:
  2295 PDF objects out of 2487 (max. 8388607)
  776 named destinations out of 1000 (max. 500000)

@@ -437,7 +437,7 @@ firstline=1,
 lastline=12,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/preambulo.cpp}
 
-En el paquete con nombre \texttt{funciones.hpp} se definió una función por partes, para aplicar las condiciones iniciales de forma práctica.
+En el paquete con nombre \texttt{funciones.hpp} se definió una función por partes, con nombre \texttt{step\_neg}, para aplicar las condiciones iniciales de forma práctica.
 
 \lstinputlisting[
 caption={Función \texttt{step\_neg}},
@@ -655,7 +655,7 @@ Se realizó la simulación de las ecuaciones de Euler con las condiciones inicia
 	\centering
 	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/1.pdf}
 	\caption{Gráficas para $t=0.0\unit{\s}$}
-\end{figure}\vspace{\baselineskip}
+\end{figure}
 \begin{figure}[ht]
 	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/135.pdf}
 	\caption{Gráficas para $t=1.335\unit{\s}$}
@@ -674,13 +674,13 @@ Se realizó la simulación de las ecuaciones de Euler con las condiciones inicia
 Es apreciable el comportamiento de advección que sufre el perfil gaussiano de la densidad del gas. En el instante $t=0.0\unit{\s}$ el centro de la curva gaussiana se encuentra en $x=5\unit{\meter}$, mientras que en el instante $t=3.995\unit{\s}$ éste se encuentra aproximadamente en $x=9\unit{\meter}$. Esta última observación coincide con lo esperado, dado que la velocidad del gas es $1.0\unit{\meter\per\s}$ y es constante a lo largo de toda la simulación.
 Por otro lado, destaca que el máximo de la función de densidad no se mantiene constante, sino que se reduce. Esto se debe al error numérico de integración del esquema utilizado.
 
-Esta simulación se realizó sin la corrección de entropía del esquema de Roe.
+Esta simulación se realizó sin la corrección de entropía del esquema de Roe ya que no presentó ninguna diferencia cuando se aplicaba la corrección.
 \subsection{Simulación con el segundo conjunto de condiciones iniciales}
 Las siguientes gráficas corresponden a la simulación realizada con las condiciones iniciales descritas en la sección (\ref{sec:sod_con_entropy148}). Este conjunto de condiciones se caracteriza por la diferencia entre las magnitudes de las mitades del dominio. La densidad del lado izquierdo triplica la del lado derecho, al igual que sucede con la presión, mientras que la velocidad inicial del fluido es nula. Entonces este sistema puede ser interpretado como la súbita fusión de dos gases con densidad y presión distinta, o en otras palabras, como un \textbf{choque}.
 \subsubsection{Gráficas}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set2/1.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set2/1.pdf}
 	\caption{Gráficas para $t=0.0\unit{\s}$}
 \end{figure}
 \begin{figure}[ht]
@@ -697,4 +697,8 @@ Las siguientes gráficas corresponden a la simulación realizada con las condici
 \end{figure}
 \clearpage
 \subsubsection{Discusión}
-En esta simulación se destaca principalmente la manifestación de ondas de choque y de rarefacción en todas las variables del gas. La densidad se divide en tres ondas; una de choque, que avanza hacia la derecha, y otra de rarefacción, que avanza a la izquierda. La onda intermedia entre las dos últimas se conoce como \textbf{discontinuidad de contacto} \cite{thesis-euler-godunov} y se caracteriza por ser una discontinuidad en la densidad únicamente, ya que la presión y velocidad permanecen constantes. La discontinuidad de contacto también está estrechamente relacionada con la diferencia de temperatura entre las ondas \cite{LeVeque}.
+En esta simulación se destaca principalmente la manifestación de ondas de choque y de rarefacción en todas las variables del gas. La densidad se divide en tres ondas; una de choque, que avanza hacia la derecha, y otra de rarefacción, que avanza a la izquierda. La onda intermedia entre las dos últimas se conoce como \textbf{discontinuidad de contacto} \cite{thesis-euler-godunov} y se caracteriza por ser una discontinuidad en la densidad únicamente, ya que la presión y velocidad permanecen constantes. La discontinuidad de contacto también está estrechamente relacionada con la diferencia de temperatura entre las partes del gas que ésta divide \cite{LeVeque}. 
+
+Por otro lado, es notable la eficiencia del esquema de Roe al capturar ondas de choque (discontinuidades) como soluciones.
+
+Esta simulación se realizó sin la corrección de entropía del esquema de Roe ya que no presentó ninguna diferencia cuando se aplicaba la corrección.
