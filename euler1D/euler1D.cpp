@@ -67,7 +67,7 @@ int main()
     double dx = L/(Nx); // Tamaño de paso en el eje x
 
     // Otros parámetros
-    bool correccion_de_entropia = true;
+    bool correccion_de_entropia = false;
 
     // Archivos
     ofstream file_densidad;
