@@ -12,6 +12,14 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Gráfica de la construcción de una función escalar numéricamente aproximada $u_i$, en un dominio con pocas celdas. Se puede considerar que una función numéricamente aproximada por el MVF es una función definida por partes, en donde cada parte es una constante. \textbf {Fuente:} elaboración propia.\relax }}{25}{figure.caption.18}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema que muestra que el flujo numérico aproximado $F$ se calcula entre las interfaces de las celdas $\mathcal {C}_i$. \textbf {Fuente:} elaboración propia.\relax }}{26}{figure.caption.19}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Gráficas para $t=0.0\unit {\s }$\relax }}{62}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Gráficas para $t=1.335\unit {\s }$\relax }}{63}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Gráficas para $t=2.675\unit {\s }$\relax }}{63}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Gráficas para $t=3.995\unit {\s }$\relax }}{63}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Gráficas para $t=0.0\unit {\s }$\relax }}{64}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Gráficas para $t=0.185\unit {\s }$\relax }}{65}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Gráficas para $t=0.585\unit {\s }$\relax }}{65}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Gráficas para $t=2.675\unit {\s }$\relax }}{65}{figure.caption.27}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
