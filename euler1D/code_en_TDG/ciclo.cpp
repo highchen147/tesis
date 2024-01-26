@@ -78,5 +78,4 @@ void salida(ofstream &of, double *u, double *x, double tiempo,
     {
         of << tiempo << "\t" << x[i] << "\t" << u[i] << endl;
     }
-    of << endl << endl;
-}
+    of << endl << endl;}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  24 JAN 2024 23:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  25 JAN 2024 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1030,7 +1030,7 @@ Package hyperref Warning: Option `pdfstartview' has already been used,
 
 Package hyperref Info: Option `plainpages' set `false' on input line 76.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 76.
-<escudo.pdf, id=322, 652.4375pt x 652.4375pt>
+<escudo.pdf, id=334, 652.4375pt x 652.4375pt>
 File: escudo.pdf Graphic file (type pdf)
 <use escudo.pdf>
 Package pdftex.def Info: escudo.pdf  used on input line 76.
@@ -1067,7 +1067,7 @@ File: escudo.pdf Graphic file (type pdf)
 Package pdftex.def Info: escudo.pdf  used on input line 84.
 (pdftex.def)             Requested size: 118.07875pt x 118.07082pt.
  [5] [6]
-<ordenImpresion.pdf, id=357, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=369, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 87.
@@ -1076,7 +1076,7 @@ File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf>
 Package pdftex.def Info: ordenImpresion.pdf  used on input line 87.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<ordenImpresion.pdf, id=360, page=1, 614.295pt x 794.97pt>
+<ordenImpresion.pdf, id=372, page=1, 614.295pt x 794.97pt>
 File: ordenImpresion.pdf Graphic file (type pdf)
 <use ordenImpresion.pdf, page 1>
 Package pdftex.def Info: ordenImpresion.pdf , page1 used on input line 87.
@@ -1265,13 +1265,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
                    \relax 
 l.263 \end{equation}
                      [11]
-<../some_plots/cond_inicial.pdf, id=728, 462.52798pt x 346.89601pt>
+<../some_plots/cond_inicial.pdf, id=755, 462.52798pt x 346.89601pt>
 File: ../some_plots/cond_inicial.pdf Graphic file (type pdf)
 <use ../some_plots/cond_inicial.pdf>
 Package pdftex.def Info: ../some_plots/cond_inicial.pdf  used on input line 269
 .
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/caracteristicas_burgers.pdf, id=729, 578.16pt x 433.62pt>
+<../some_plots/caracteristicas_burgers.pdf, id=756, 578.16pt x 433.62pt>
 File: ../some_plots/caracteristicas_burgers.pdf Graphic file (type pdf)
 <use ../some_plots/caracteristicas_burgers.pdf>
 Package pdftex.def Info: ../some_plots/caracteristicas_burgers.pdf  used on inp
@@ -1290,7 +1290,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
 l.286 
        [12 <../some_plots/cond_inicial.pdf> <../some_plots/caracteristicas_burg
 ers.pdf>]
-<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=780, 578.16pt x
+<../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf, id=807, 578.16pt x
  433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-1.pdf Graphic file (
 type pdf)
@@ -1298,7 +1298,7 @@ type pdf)
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
 .pdf  used on input line 290.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=781, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf, id=808, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
  (type pdf)
@@ -1306,7 +1306,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-100.pdf Graphic file
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-1
 00.pdf  used on input line 295.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=782, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf, id=809, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
  (type pdf)
@@ -1314,7 +1314,7 @@ File: ../some_plots/burgers-viscosas/graficas/viscosidades-200.pdf Graphic file
 Package pdftex.def Info: ../some_plots/burgers-viscosas/graficas/viscosidades-2
 00.pdf  used on input line 300.
 (pdftex.def)             Requested size: 213.19629pt x 159.89433pt.
-<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=783, 578.16pt
+<../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf, id=810, 578.16pt
  x 433.62pt>
 File: ../some_plots/burgers-viscosas/graficas/viscosidades-400.pdf Graphic file
  (type pdf)
@@ -1358,7 +1358,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--341
  []
 
 [14]
-<../some_plots/cap1/graficas/riemannLR.pdf, id=846, 462.52798pt x 346.89601pt>
+<../some_plots/cap1/graficas/riemannLR.pdf, id=873, 462.52798pt x 346.89601pt>
 File: ../some_plots/cap1/graficas/riemannLR.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannLR.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannLR.pdf  used on inp
@@ -1382,28 +1382,28 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 369.
 
 [15 <../some_plots/cap1/graficas/riemannLR.pdf>]
-<../some_plots/cap1/graficas/riemannRL-0.pdf, id=872, 462.52798pt x 346.89601pt
+<../some_plots/cap1/graficas/riemannRL-0.pdf, id=899, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-0.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.pdf  used on i
 nput line 384.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=873, 462.52798pt x 346.89601
+<../some_plots/cap1/graficas/riemannRL-0.4.pdf, id=900, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.4.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.4.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.4.pdf  used on
  input line 388.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=874, 462.52798pt x 346.89601
+<../some_plots/cap1/graficas/riemannRL-0.8.pdf, id=901, 462.52798pt x 346.89601
 pt>
 File: ../some_plots/cap1/graficas/riemannRL-0.8.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-0.8.pdf>
 Package pdftex.def Info: ../some_plots/cap1/graficas/riemannRL-0.8.pdf  used on
  input line 392.
 (pdftex.def)             Requested size: 213.19629pt x 159.89697pt.
-<../some_plots/cap1/graficas/riemannRL-1.pdf, id=875, 462.52798pt x 346.89601pt
+<../some_plots/cap1/graficas/riemannRL-1.pdf, id=902, 462.52798pt x 346.89601pt
 >
 File: ../some_plots/cap1/graficas/riemannRL-1.pdf Graphic file (type pdf)
 <use ../some_plots/cap1/graficas/riemannRL-1.pdf>
@@ -1455,21 +1455,21 @@ Cap\'{\i }tulo 2.
 
 
 ]
-<../some_plots/cap2/graficas/domain.pdf, id=1000, 480.49513pt x 152.52072pt>
+<../some_plots/cap2/graficas/domain.pdf, id=1027, 480.49513pt x 152.52072pt>
 File: ../some_plots/cap2/graficas/domain.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/domain.pdf>
 Package pdftex.def Info: ../some_plots/cap2/graficas/domain.pdf  used on input 
 line 21.
 (pdftex.def)             Requested size: 426.39258pt x 135.35434pt.
  [24 <../some_plots/cap2/graficas/domain.pdf>]
-<../some_plots/cap2/graficas/numeric_U.pdf, id=1022, 480.49513pt x 224.8824pt>
+<../some_plots/cap2/graficas/numeric_U.pdf, id=1049, 480.49513pt x 224.8824pt>
 File: ../some_plots/cap2/graficas/numeric_U.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/numeric_U.pdf>
 Package pdftex.def Info: ../some_plots/cap2/graficas/numeric_U.pdf  used on inp
 ut line 42.
 (pdftex.def)             Requested size: 426.39258pt x 199.57164pt.
  [25 <../some_plots/cap2/graficas/numeric_U.pdf>]
-<../some_plots/cap2/graficas/numeric_Flux.pdf, id=1049, 480.49513pt x 305.87225
+<../some_plots/cap2/graficas/numeric_Flux.pdf, id=1076, 480.49513pt x 305.87225
 pt>
 File: ../some_plots/cap2/graficas/numeric_Flux.pdf Graphic file (type pdf)
 <use ../some_plots/cap2/graficas/numeric_Flux.pdf>
@@ -1526,7 +1526,10 @@ Underfull \vbox (badness 8094) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [45]
-[46] [47]
+[46]
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+ [47]
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -1547,7 +1550,7 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 File: se-iso-8859-1.def 2019/11/29 v1.12 stringenc: ISO-8859-1
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 449.
+nput line 431.
 
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
@@ -1613,10 +1616,15 @@ consecutive:
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 consecutive:
-[51] (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 consecutive:
+[51]
+
+LaTeX Warning: Reference `sec:tercer-conjunto' on page 52 undefined on input li
+ne 521.
+
 (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
@@ -1625,12 +1633,12 @@ consecutive:
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 consecutive:
-[52]
+
 Overfull \hbox (17.65283pt too wide) in paragraph at lines 32--33
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+[52] (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 Overfull \hbox (3.55615pt too wide) in paragraph at lines 2--3
@@ -1646,15 +1654,14 @@ Overfull \hbox (52.89453pt too wide) in paragraph at lines 21--22
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[54] [55]
-(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+[54] (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 Overfull \hbox (59.94287pt too wide) in paragraph at lines 2--3
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
+[55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [56]
@@ -1662,11 +1669,11 @@ Overfull \hbox (38.79785pt too wide) in paragraph at lines 52--53
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[57] (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 consecutive:
-(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+[57] (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 consecutive:
@@ -1687,12 +1694,15 @@ Overfull \hbox (17.65283pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[59]
+
 Overfull \hbox (10.60449pt too wide) in paragraph at lines 21--22
 [][][][][][][][][][][][][][][][] 
  []
 
 
+Underfull \vbox (badness 1122) has occurred while \output is active []
+
+ [59]
 Overfull \hbox (17.65283pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][] 
  []
@@ -1706,11 +1716,11 @@ Overfull \hbox (10.60449pt too wide) in paragraph at lines 32--33
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[60] (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 consecutive:
-(C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+[60] (C:\Users\Rodrigo\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
 )
 consecutive:
@@ -1729,114 +1739,133 @@ Overfull \hbox (10.60449pt too wide) in paragraph at lines 75--76
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[61]
+
 Overfull \hbox (3.55615pt too wide) in paragraph at lines 79--80
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ] 
  []
 
-<../euler1D/plots_en_TDG/set1/graficas/1.pdf, id=1778, 706.3691pt x 270.98325pt
+[61]
+<../euler1D/plots_en_TDG/set1/graficas/1.pdf, id=1809, 706.3691pt x 270.98325pt
 >
 File: ../euler1D/plots_en_TDG/set1/graficas/1.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set1/graficas/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set1/graficas/1.pdf  used on i
-nput line 656.
-(pdftex.def)             Requested size: 469.03442pt x 179.93695pt.
-
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 656--657
- [][] 
- []
-
-<../euler1D/plots_en_TDG/set1/graficas/135.pdf, id=1779, 706.3691pt x 270.98325
+nput line 638.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set1/graficas/135.pdf, id=1810, 706.3691pt x 270.98325
 pt>
 File: ../euler1D/plots_en_TDG/set1/graficas/135.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set1/graficas/135.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set1/graficas/135.pdf  used on
- input line 660.
-(pdftex.def)             Requested size: 469.03442pt x 179.93695pt.
-
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 660--661
-[][] 
- []
-
-<../euler1D/plots_en_TDG/set1/graficas/269.pdf, id=1780, 706.3691pt x 270.98325
+ input line 642.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set1/graficas/269.pdf, id=1811, 706.3691pt x 270.98325
 pt>
 File: ../euler1D/plots_en_TDG/set1/graficas/269.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set1/graficas/269.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set1/graficas/269.pdf  used on
- input line 664.
-(pdftex.def)             Requested size: 469.03442pt x 179.93695pt.
-
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 664--665
-[][] 
- []
-
-<../euler1D/plots_en_TDG/set1/graficas/401.pdf, id=1781, 706.3691pt x 270.98325
+ input line 646.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set1/graficas/401.pdf, id=1812, 706.3691pt x 270.98325
 pt>
 File: ../euler1D/plots_en_TDG/set1/graficas/401.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set1/graficas/401.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set1/graficas/401.pdf  used on
- input line 668.
-(pdftex.def)             Requested size: 469.03442pt x 179.93695pt.
-
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 668--669
-[][] 
- []
-
-[62 <../euler1D/plots_en_TDG/set1/graficas/1.pdf>] [63 <../euler1D/plots_en_TDG
-/set1/graficas/135.pdf> <../euler1D/plots_en_TDG/set1/graficas/269.pdf> <../eul
-er1D/plots_en_TDG/set1/graficas/401.pdf>]
-<../euler1D/plots_en_TDG/set2/1.pdf, id=1851, 706.3691pt x 270.98325pt>
+ input line 650.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+ [62 <../euler1D/plots_en_TDG/set1/graficas/1.pdf> <../euler1D/plots_en_TDG/set
+1/graficas/135.pdf>] [63 <../euler1D/plots_en_TDG/set1/graficas/269.pdf> <../eu
+ler1D/plots_en_TDG/set1/graficas/401.pdf>]
+<../euler1D/plots_en_TDG/set2/1.pdf, id=1874, 706.3691pt x 270.98325pt>
 File: ../euler1D/plots_en_TDG/set2/1.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/1.pdf  used on input line
- 683.
+ 663.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
-<../euler1D/plots_en_TDG/set2/20.pdf, id=1852, 706.3691pt x 270.98325pt>
+<../euler1D/plots_en_TDG/set2/20.pdf, id=1875, 706.3691pt x 270.98325pt>
 File: ../euler1D/plots_en_TDG/set2/20.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/20.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/20.pdf  used on input lin
-e 687.
-(pdftex.def)             Requested size: 469.03442pt x 179.93695pt.
-
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 687--688
-[][] 
- []
-
-<../euler1D/plots_en_TDG/set2/60.pdf, id=1853, 706.3691pt x 270.98325pt>
+e 667.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set2/60.pdf, id=1876, 706.3691pt x 270.98325pt>
 File: ../euler1D/plots_en_TDG/set2/60.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/60.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/60.pdf  used on input lin
-e 691.
-(pdftex.def)             Requested size: 469.03442pt x 179.93695pt.
-
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 691--692
-[][] 
- []
-
-<../euler1D/plots_en_TDG/set2/110.pdf, id=1854, 706.3691pt x 270.98325pt>
+e 671.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set2/110.pdf, id=1877, 706.3691pt x 270.98325pt>
 File: ../euler1D/plots_en_TDG/set2/110.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/110.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/110.pdf  used on input li
-ne 695.
-(pdftex.def)             Requested size: 469.03442pt x 179.93695pt.
+ne 675.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+ [64 <../euler1D/plots_en_TDG/set2/1.pdf> <../euler1D/plots_en_TDG/set2/20.pdf>
+] [65 <../euler1D/plots_en_TDG/set2/60.pdf> <../euler1D/plots_en_TDG/set2/110.p
+df>]
+<../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.pdf, id=1944, 706.3691pt
+ x 270.98325pt>
+File: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.pdf Graphic file (t
+ype pdf)
+<use ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.pdf>
+Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.
+pdf  used on input line 690.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60.pdf, id=1945, 706.3691p
+t x 270.98325pt>
+File: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60.pdf Graphic file (
+type pdf)
+<use ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60.pdf>
+Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60
+.pdf  used on input line 694.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf, id=1946, 706.3691
+pt x 270.98325pt>
+File: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf Graphic file 
+(type pdf)
+<use ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf>
+Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/12
+0.pdf  used on input line 698.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.pdf, id=1947, 706.3691pt
+ x 270.98325pt>
+File: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.pdf Graphic file (t
+ype pdf)
+<use ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.pdf>
+Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.
+pdf  used on input line 705.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+ [66 <../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.pdf> <../euler1D/pl
+ots_en_TDG/set3/leveque_sin_entropy714/60.pdf>]
+<../euler1D/plots_en_TDG/set3/leveque_con_entropy123/60.pdf, id=1978, 706.3691p
+t x 270.98325pt>
+File: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/60.pdf Graphic file (
+type pdf)
+<use ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/60.pdf>
+Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/60
+.pdf  used on input line 709.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+<../euler1D/plots_en_TDG/set3/leveque_con_entropy123/120.pdf, id=1979, 706.3691
+pt x 270.98325pt>
+File: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/120.pdf Graphic file 
+(type pdf)
+<use ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/120.pdf>
+Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/12
+0.pdf  used on input line 713.
+(pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 695--696
-[][] 
- []
-
-[64
-
- <../euler1D/plots_en_TDG/set2/1.pdf>] [65 <../euler1D/plots_en_TDG/set2/20.pdf
-> <../euler1D/plots_en_TDG/set2/60.pdf> <../euler1D/plots_en_TDG/set2/110.pdf>]
-) [66
-
-]
+ [67 <../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf> <../euler1D/
+plots_en_TDG/set3/leveque_con_entropy123/1.pdf>] [68 <../euler1D/plots_en_TDG/s
+et3/leveque_con_entropy123/60.pdf> <../euler1D/plots_en_TDG/set3/leveque_con_en
+tropy123/120.pdf>]
 \openout2 = `tch4.aux'.
 
  (tch4.tex
 Cap\'{\i }tulo 4.
-) [67
+) [69
 
 
 
@@ -1844,30 +1873,30 @@ Cap\'{\i }tulo 4.
 ]
 \openout2 = `tch5.aux'.
 
- (tch5.tex [68
+ (tch5.tex [70
 
 
 
 
 ]
 Cap\'{\i }tulo 5.
-) [69] [70
+) [71] [72
 
 
 
 ]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex [71
+ (c_y_r.tex [73
 
 
-] [72
+] [74
 
-]) [73] (TesisTotalBibTeX.bbl [74
+]) [75] (TesisTotalBibTeX.bbl [76
 
 
 
-] [75]
+] [77]
 Underfull \hbox (badness 10000) in paragraph at lines 130--148
 []$\T1/cmtt/m/n/12 https : / / www . sciencedirect . com / science / article / 
 pii /
@@ -1879,23 +1908,26 @@ Underfull \hbox (badness 4024) in paragraph at lines 159--164
 / ws / portalfiles / portal / 67742456 /
  []
 
-) [76] (TesisTotalBibTeX.aux
+) [78] (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
  (agradecimientos.aux) (dedicatoria.aux)
 (simbolos.aux) (objetivos.aux) (introduccion.aux) (tch1.aux) (tch2.aux)
 (tch3.aux) (tch4.aux) (tch5.aux) (c_y_r.aux))
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
-(rerunfilecheck)             Checksum: A83F67121E984E8344DAE6A84B3C9456;18582.
+(rerunfilecheck)             Checksum: B5010DB166F3F9F428D8C0BCFDD67A94;19777.
  ) 
 Here is how much of TeX's memory you used:
- 33525 strings out of 476339
- 659494 string characters out of 5787175
- 1898340 words of memory out of 5000000
- 52465 multiletter control sequences out of 15000+600000
+ 33577 strings out of 476339
+ 662275 string characters out of 5787175
+ 1908340 words of memory out of 5000000
+ 52505 multiletter control sequences out of 15000+600000
  543414 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,17n,90p,1099b,3188s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,90p,1099b,3191s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-s
 uper-ts1.enc}{C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm
 -super/cm-super-t1.enc}<C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/ty
@@ -1941,9 +1973,9 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1095.pfb><C:/Users/Rod
 rigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb><C:
 /Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfxc12
 00.pfb>
-Output written on TesisTotalBibTeX.pdf (100 pages, 1491383 bytes).
+Output written on TesisTotalBibTeX.pdf (102 pages, 1560907 bytes).
 PDF statistics:
- 2295 PDF objects out of 2487 (max. 8388607)
- 776 named destinations out of 1000 (max. 500000)
- 780 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2413 PDF objects out of 2487 (max. 8388607)
+ 785 named destinations out of 1000 (max. 500000)
+ 834 words of extra memory for PDF output out of 10000 (max. 10000000)
 

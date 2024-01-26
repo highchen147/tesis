@@ -53,25 +53,28 @@
 \contentsline {subsubsection}{\numberline {3.3.2.1}Primer conjunto}{46}{subsubsection.3.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.3.2.2}Segundo conjunto}{46}{subsubsection.3.3.2.2}%
 \contentsline {subsubsection}{\numberline {3.3.2.3}Tercer conjunto}{47}{subsubsection.3.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.3.2.4}Cuarto conjunto}{47}{subsubsection.3.3.2.4}%
 \contentsline {subsection}{\numberline {3.3.3}Condiciones de frontera}{47}{subsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.3.1}Condiciones transmisivas}{47}{subsubsection.3.3.3.1}%
 \contentsline {section}{\numberline {3.4}Código implementado}{48}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Librerías y paquetes utilizados}{48}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Definición de parámetros principales}{49}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Objetos definidos}{50}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Inicialización de arreglos}{52}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.4}Inicialización de arreglos}{51}{subsection.3.4.4}%
 \contentsline {subsection}{\numberline {3.4.5}Funciones auxiliares del esquema de Roe}{53}{subsection.3.4.5}%
 \contentsline {subsection}{\numberline {3.4.6}Ciclo principal de iteración}{59}{subsection.3.4.6}%
 \contentsline {section}{\numberline {3.5}Resultados}{62}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Simulación con el primer conjunto de condiciones iniciales}{62}{subsection.3.5.1}%
 \contentsline {subsubsection}{\numberline {3.5.1.1}Gráficas}{62}{subsubsection.3.5.1.1}%
-\contentsline {subsubsection}{\numberline {3.5.1.2}Discusión}{64}{subsubsection.3.5.1.2}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}Discusión}{63}{subsubsection.3.5.1.2}%
 \contentsline {subsection}{\numberline {3.5.2}Simulación con el segundo conjunto de condiciones iniciales}{64}{subsection.3.5.2}%
 \contentsline {subsubsection}{\numberline {3.5.2.1}Gráficas}{64}{subsubsection.3.5.2.1}%
-\contentsline {subsubsection}{\numberline {3.5.2.2}Discusión}{66}{subsubsection.3.5.2.2}%
-\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{67}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{69}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{71}{chapter*.28}%
-\contentsline {chapter}{RECOMENDACIONES}{73}{chapter*.29}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{75}{chapter*.30}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}Discusión}{65}{subsubsection.3.5.2.2}%
+\contentsline {subsection}{\numberline {3.5.3}Simulación con el tercer conjunto de condiciones iniciales}{66}{subsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.3.1}Gráficas de la simulación sin corrección de entropía}{66}{subsubsection.3.5.3.1}%
+\contentsline {subsubsection}{\numberline {3.5.3.2}Gráficas de la simulación con corrección de entropía}{67}{subsubsection.3.5.3.2}%
+\contentsline {subsubsection}{\numberline {3.5.3.3}Discusión}{68}{subsubsection.3.5.3.3}%
+\contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{69}{chapter.4}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{71}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{73}{chapter*.34}%
+\contentsline {chapter}{RECOMENDACIONES}{75}{chapter*.35}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{77}{chapter*.36}%

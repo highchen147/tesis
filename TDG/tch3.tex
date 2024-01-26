@@ -326,11 +326,11 @@ El tiempo total por defecto será de $4\unit{\second}$, y se producirá la soluc
 A excepción de los resultados mostrados en el capítulo \ref{cap:5}, se tomará el coeficiente de dilatación adiabática como el valor aproximado que posee el aire, $\gamma = 1.4$ \cite{LeVeque}.
 
 \subsection{Condiciones iniciales}
-Se experimentará con cuatro distintos conjuntos de condiciones iniciales para las ecuaciones de Euler. 
+Se experimentará con tres distintos conjuntos de condiciones iniciales para las ecuaciones de Euler. 
 
 \subsubsection{Primer conjunto}
 \label{sec:gaussiana41}
-Este conjunto corresponde a un caso trivial que tiene solución exacta. Las condiciones iniciales de las variables físicas son las siguientes
+Este conjunto corresponde a una solución trivial. Las condiciones iniciales de las variables físicas son las siguientes
 \begin{align}
 	&\rho(x,0) =  \left(1.0+\exp[-(x-\tfrac{L}{2})^{2}]\right)\hspace{1mm}\unit{\kilogram\per\meter^{3}} \\
 	&v(x,0) = 1.0 \hspace{1mm}\unit{\meter\per\second} \\
@@ -394,24 +394,6 @@ El siguiente conjunto de condiciones iniciales fue propuesto por LeVeque para ev
 		1.0
 	\end{bmatrix}.
 \end{equation}
-\subsubsection{Cuarto conjunto}
-\label{sec:tercer-conjunto}
-Este conjunto de condiciones iniciales corresponde a una solución con dos ondas de rarefacción viajando en direcciones contrarias \cite{thesis-euler-godunov}. Los valores iniciales son:
-\begin{equation}
-	\mathbf{V}_L = 
-	\begin{bmatrix}
-		1.0\\
-		-1.0\\
-		0.5
-	\end{bmatrix},\hspace{4mm}
-	\mathbf{V}_R = 
-	\begin{bmatrix}
-		1.0\\
-		1.0\\
-		0.5
-	\end{bmatrix}.
-\end{equation}
-Es evidente la creación de ondas de rarefacción al notar la diferencia de signo de la velocidad inicial en cada mitad del dominio.
 \subsection{Condiciones de frontera}
 Previo a poder aplicar el método de volúmenes finitos (MVF) junto al esquema de Roe, es necesario especificar las condiciones de frontera en el dominio espacial.
 De acuerdo a la expresión (\ref{eq:metodo-vol-finitos-3}), generalmente el MVF se aplica sobre un dominio dividido en $N$ celdas, de manera que el índice $i$ se recorre de $1$ a $N$. Por lo tanto, es necesario definir los valores de la frontera, siendo estos $U_{0}^{n}$ y $U_{N+1}^{n}$, para que los flujos $F_{\frac{1}{2}}$ y $F_{N+\frac{1}{2}}$ estén bien definidos y correspondan a flujos físicamente consistentes.
@@ -643,7 +625,7 @@ La función \texttt{salida} se encarga de imprimir los datos haciendo uso de obj
 caption={Definición de la función \texttt{salida}, que envía los datos}
 language=C++,
 firstline=65,
-lastline=82,
+lastline=81,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/ciclo.cpp}
 \section{Resultados}
 \subsection{Simulación con el primer conjunto de condiciones iniciales}
@@ -653,23 +635,21 @@ Se realizó la simulación de las ecuaciones de Euler con las condiciones inicia
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/1.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/1.pdf}
 	\caption{Gráficas para $t=0.0\unit{\s}$}
 \end{figure}
 \begin{figure}[ht]
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/135.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/135.pdf}
 	\caption{Gráficas para $t=1.335\unit{\s}$}
 \end{figure}\vspace{\baselineskip}
 \begin{figure}[ht]
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/269.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/269.pdf}
 	\caption{Gráficas para $t=2.675\unit{\s}$}
 \end{figure}\vspace{\baselineskip}
 \begin{figure}[ht]
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/401.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/401.pdf}
 	\caption{Gráficas para $t=3.995\unit{\s}$}
 \end{figure}
-%\vspace{2cm}
-\clearpage
 \subsubsection{Discusión}
 Es apreciable el comportamiento de advección que sufre el perfil gaussiano de la densidad del gas. En el instante $t=0.0\unit{\s}$ el centro de la curva gaussiana se encuentra en $x=5\unit{\meter}$, mientras que en el instante $t=3.995\unit{\s}$ éste se encuentra aproximadamente en $x=9\unit{\meter}$. Esta última observación coincide con lo esperado, dado que la velocidad del gas es $1.0\unit{\meter\per\s}$ y es constante a lo largo de toda la simulación.
 Por otro lado, destaca que el máximo de la función de densidad no se mantiene constante, sino que se reduce. Esto se debe al error numérico de integración del esquema utilizado.
@@ -684,21 +664,56 @@ Las siguientes gráficas corresponden a la simulación realizada con las condici
 	\caption{Gráficas para $t=0.0\unit{\s}$}
 \end{figure}
 \begin{figure}[ht]
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set2/20.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set2/20.pdf}
 	\caption{Gráficas para $t=0.185\unit{\s}$}
 \end{figure}
 \begin{figure}[ht]
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set2/60.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set2/60.pdf}
 	\caption{Gráficas para $t=0.585\unit{\s}$}
 \end{figure}
 \begin{figure}[ht]
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/set2/110.pdf}
-	\caption{Gráficas para $t=2.675\unit{\s}$}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set2/110.pdf}
+	\caption{Gráficas para $t=1.085\unit{\s}$}
 \end{figure}
-\clearpage
 \subsubsection{Discusión}
 En esta simulación se destaca principalmente la manifestación de ondas de choque y de rarefacción en todas las variables del gas. La densidad se divide en tres ondas; una de choque, que avanza hacia la derecha, y otra de rarefacción, que avanza a la izquierda. La onda intermedia entre las dos últimas se conoce como \textbf{discontinuidad de contacto} \cite{thesis-euler-godunov} y se caracteriza por ser una discontinuidad en la densidad únicamente, ya que la presión y velocidad permanecen constantes. La discontinuidad de contacto también está estrechamente relacionada con la diferencia de temperatura entre las partes del gas que ésta divide \cite{LeVeque}. 
 
 Por otro lado, es notable la eficiencia del esquema de Roe al capturar ondas de choque (discontinuidades) como soluciones.
 
 Esta simulación se realizó sin la corrección de entropía del esquema de Roe ya que no presentó ninguna diferencia cuando se aplicaba la corrección.
+\subsection{Simulación con el tercer conjunto de condiciones iniciales}
+Se experimentó con el conjunto de condiciones iniciales descrito en la sección (\ref{sec:leveque_sin_entropy714}). Este conjunto es similar al discutido anteriormente, con la diferencia que la velocidad inicial de este conjunto no es nula, sino que tiene un valor constante en todo el dominio. Este problema surge a partir de una forma de evaluar la aparición de ondas de rarefacción sónica, de tal manera que pone a prueba la función de corrección de entropía utilizada.
+
+\subsubsection{Gráficas de la simulación sin corrección de entropía}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.pdf}
+	\caption{Gráficas para $t=0.0\unit{\s}$}
+\end{figure}
+\begin{figure}[ht]
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60.pdf}
+	\caption{Gráficas para $t=0.585\unit{\s}$}
+\end{figure}
+\begin{figure}[ht]
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf}
+	\caption{Gráficas para $t=1.085\unit{\s}$}
+\end{figure}\vspace{\baselineskip}
+
+\subsubsection{Gráficas de la simulación con corrección de entropía}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.pdf}
+	\caption{Gráficas para $t=0.0\unit{\s}$}
+\end{figure}
+\begin{figure}[ht]
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_con_entropy123/60.pdf}
+	\caption{Gráficas para $t=0.585\unit{\s}$}
+\end{figure}
+\begin{figure}[ht]
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_con_entropy123/120.pdf}
+	\caption{Gráficas para $t=1.085\unit{\s}$}
+	\label{fig:ultima-sin-entropy}
+\end{figure}\vspace{5cm}
+
+\subsubsection{Discusión}
+Se puede notar la similitud entre los resultados de esta simulación y la correspondiente al segundo conjunto. Sin embargo, en este caso el programa sin la condición de entropía no logra capturar las ondas de rarefacción, como puede notarse en la figura \ref{fig:ultima-sin-entropy}; dado que especialmente la onda de rarefacción que avanza a la izquierda (identificada en los resultados de la sección anterior) aparece dividida por una discontinuidad
