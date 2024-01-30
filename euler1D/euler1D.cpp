@@ -52,10 +52,10 @@ int main()
     int numeroAleatorio = generateRandomNum();
 
     // Parámetros temporales
-    const double t_total = 4; // Tiempo total en segundos
-    const double dt = 0.005; // Tamaño de paso temporal en segundos
+    const double t_total = 3; // Tiempo total en segundos
+    const double dt = 0.006; // Tamaño de paso temporal en segundos
     int Niter = floor(t_total/dt); // Número total de iteraciones
-    const int num_outs = 400; // Número de gráficas de instantes temporales
+    const int num_outs = 5; // Número de gráficas de instantes temporales
     int out_cada = floor(Niter / num_outs); // Cada out_cada veces se 
                                             // imprimen los valores
     
@@ -200,12 +200,13 @@ int main()
 
         // Se evalúa si la iteración corresponde a un instante de
         // impresión de datos
-        if (k % out_cada == 0)
+        if ((k+1) % out_cada == 0)
         {
             salida(file_densidad, rho, x, tiempo, Nx);
             salida(file_presion, p, x, tiempo, Nx);
             salida(file_velocidad, u, x, tiempo, Nx);
-            cout << round(100*tiempo/t_total*100)/100 << endl;
+            // cout << round(100*tiempo/t_total*100)/100 << endl;
+            cout << tiempo <<endl;
         }
         // Actualizar el tiempo
         tiempo += dt;

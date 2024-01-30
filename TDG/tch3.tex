@@ -569,14 +569,14 @@ language=C++,
 firstline=91,
 lastline=95,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/sumas.cpp}
-Puesto que los autovalores de una onda dependen de la velocidad del sonido en dicha onda ($c$), se definen las variables \texttt{c\_L} y \texttt{c\_R} que corresponden a la velocidad del sonido de la onda izquierda y derecha respectivamente. Dichas variables se construyen utilizando las siguientes propiedades de los promedios de Roe:
+Puesto que los autovalores de una onda dependen de la velocidad del sonido en dicha onda ($c$), se definen las variables \texttt{c\_L} y \texttt{c\_R} que corresponden a la velocidad del sonido de la onda izquierda y derecha respectivamente. Dichas variables se construyen en el código utilizando las siguientes propiedades de los promedios de Roe:
 \begin{equation}
 	\tilde{c}(\mathbf{{U}}_L, \mathbf{{U}}_L) = c_L
 \end{equation}
 \begin{equation}
 	\tilde{c}(\mathbf{{U}}_R, \mathbf{{U}}_R) = c_R,
 \end{equation}
-que se deducen inmediatamente de \ref{eq:tercera-cond-roe}, implementándose mediante la función \texttt{c\_prom}. El siguiente proceso que se define para \texttt{suma\_p\_fix} se encarga de implementar la función $H(\lambda_{p})$ definida en \eqref{eq:HH-fix}.
+que se deducen inmediatamente de \ref{eq:tercera-cond-roe}, y se implementan mediante la función \texttt{c\_prom}. El siguiente proceso que se define para \texttt{suma\_p\_fix} se encarga de implementar la función $H(\lambda_{p})$ definida en \eqref{eq:HH-fix}.
 \lstinputlisting[
 caption = {Construcción de la corrección de entropía de Harten y Hyman},
 language=C++,
@@ -622,7 +622,7 @@ keywordstyle=\color{blue}]{../euler1D/code_en_TDG/ciclo.cpp}
 
 La función \texttt{salida} se encarga de imprimir los datos haciendo uso de objetos de tipo \texttt{ofstream}.
 \lstinputlisting[
-caption={Definición de la función \texttt{salida}, que envía los datos}
+caption={Definición de la función \texttt{salida}, que envía los datos},
 language=C++,
 firstline=65,
 lastline=81,
@@ -655,7 +655,9 @@ Es apreciable el comportamiento de advección que sufre el perfil gaussiano de l
 Por otro lado, destaca que el máximo de la función de densidad no se mantiene constante, sino que se reduce. Esto se debe al error numérico de integración del esquema utilizado.
 
 Esta simulación se realizó sin la corrección de entropía del esquema de Roe ya que no presentó ninguna diferencia cuando se aplicaba la corrección.
+
 \subsection{Simulación con el segundo conjunto de condiciones iniciales}
+\label{sec:resultados-set-2}
 Las siguientes gráficas corresponden a la simulación realizada con las condiciones iniciales descritas en la sección (\ref{sec:sod_con_entropy148}). Este conjunto de condiciones se caracteriza por la diferencia entre las magnitudes de las mitades del dominio. La densidad del lado izquierdo triplica la del lado derecho, al igual que sucede con la presión, mientras que la velocidad inicial del fluido es nula. Entonces este sistema puede ser interpretado como la súbita fusión de dos gases con densidad y presión distinta, o en otras palabras, como un \textbf{choque}.
 \subsubsection{Gráficas}
 \begin{figure}[ht]
@@ -681,6 +683,7 @@ En esta simulación se destaca principalmente la manifestación de ondas de choq
 Por otro lado, es notable la eficiencia del esquema de Roe al capturar ondas de choque (discontinuidades) como soluciones.
 
 Esta simulación se realizó sin la corrección de entropía del esquema de Roe ya que no presentó ninguna diferencia cuando se aplicaba la corrección.
+
 \subsection{Simulación con el tercer conjunto de condiciones iniciales}
 Se experimentó con el conjunto de condiciones iniciales descrito en la sección (\ref{sec:leveque_sin_entropy714}). Este conjunto es similar al discutido anteriormente, con la diferencia que la velocidad inicial de este conjunto no es nula, sino que tiene un valor constante en todo el dominio. Este problema surge a partir de una forma de evaluar la aparición de ondas de rarefacción sónica, de tal manera que pone a prueba la función de corrección de entropía utilizada.
 
@@ -696,7 +699,7 @@ Se experimentó con el conjunto de condiciones iniciales descrito en la sección
 \end{figure}
 \begin{figure}[ht]
 	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf}
-	\caption{Gráficas para $t=1.085\unit{\s}$}
+	\caption{Gráficas para $t=1.185\unit{\s}$}
 \end{figure}\vspace{\baselineskip}
 
 \subsubsection{Gráficas de la simulación con corrección de entropía}
@@ -711,9 +714,9 @@ Se experimentó con el conjunto de condiciones iniciales descrito en la sección
 \end{figure}
 \begin{figure}[ht]
 	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_con_entropy123/120.pdf}
-	\caption{Gráficas para $t=1.085\unit{\s}$}
+	\caption{Gráficas para $t=1.185\unit{\s}$}
 	\label{fig:ultima-sin-entropy}
 \end{figure}\vspace{5cm}
 
 \subsubsection{Discusión}
-Se puede notar la similitud entre los resultados de esta simulación y la correspondiente al segundo conjunto. Sin embargo, en este caso el programa sin la condición de entropía no logra capturar las ondas de rarefacción, como puede notarse en la figura \ref{fig:ultima-sin-entropy}; dado que especialmente la onda de rarefacción que avanza a la izquierda (identificada en los resultados de la sección anterior) aparece dividida por una discontinuidad
+Se puede notar la similitud entre los resultados de esta simulación y la correspondiente al segundo conjunto. Sin embargo, en este caso el programa sin la condición de entropía no logra capturar las ondas de rarefacción, como puede notarse en la figura \ref{fig:ultima-sin-entropy}; notando que especialmente la onda de rarefacción que avanza a la izquierda (identificada en los resultados de la sección anterior) aparece dividida por una discontinuidad. En cambio, los resultados producidos al utilizar la corrección de entropía sí son consistentes con las ondas de rarefacción esperadas; se puede notar la similitud entre estos resultados y los de la sección (\ref{sec:resultados-set-2}). La onda de rarefacción izquierda no presenta discontinuidades en estos resultados.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  25 JAN 2024 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  26 JAN 2024 08:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1736,13 +1736,13 @@ Overfull \hbox (3.55615pt too wide) in paragraph at lines 70--71
 
 
 Overfull \hbox (10.60449pt too wide) in paragraph at lines 75--76
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (3.55615pt too wide) in paragraph at lines 79--80
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
+][][] 
  []
 
 [61]
@@ -1781,25 +1781,25 @@ ler1D/plots_en_TDG/set1/graficas/401.pdf>]
 File: ../euler1D/plots_en_TDG/set2/1.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/1.pdf  used on input line
- 663.
+ 665.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 <../euler1D/plots_en_TDG/set2/20.pdf, id=1875, 706.3691pt x 270.98325pt>
 File: ../euler1D/plots_en_TDG/set2/20.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/20.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/20.pdf  used on input lin
-e 667.
+e 669.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 <../euler1D/plots_en_TDG/set2/60.pdf, id=1876, 706.3691pt x 270.98325pt>
 File: ../euler1D/plots_en_TDG/set2/60.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/60.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/60.pdf  used on input lin
-e 671.
+e 673.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 <../euler1D/plots_en_TDG/set2/110.pdf, id=1877, 706.3691pt x 270.98325pt>
 File: ../euler1D/plots_en_TDG/set2/110.pdf Graphic file (type pdf)
 <use ../euler1D/plots_en_TDG/set2/110.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set2/110.pdf  used on input li
-ne 675.
+ne 677.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
  [64 <../euler1D/plots_en_TDG/set2/1.pdf> <../euler1D/plots_en_TDG/set2/20.pdf>
 ] [65 <../euler1D/plots_en_TDG/set2/60.pdf> <../euler1D/plots_en_TDG/set2/110.p
@@ -1810,7 +1810,7 @@ File: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.pdf Graphic file (t
 ype pdf)
 <use ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.
-pdf  used on input line 690.
+pdf  used on input line 693.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 <../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60.pdf, id=1945, 706.3691p
 t x 270.98325pt>
@@ -1818,7 +1818,7 @@ File: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60.pdf Graphic file (
 type pdf)
 <use ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/60
-.pdf  used on input line 694.
+.pdf  used on input line 697.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 <../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf, id=1946, 706.3691
 pt x 270.98325pt>
@@ -1826,7 +1826,7 @@ File: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf Graphic file
 (type pdf)
 <use ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/12
-0.pdf  used on input line 698.
+0.pdf  used on input line 701.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 <../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.pdf, id=1947, 706.3691pt
  x 270.98325pt>
@@ -1834,7 +1834,7 @@ File: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.pdf Graphic file (t
 ype pdf)
 <use ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/1.
-pdf  used on input line 705.
+pdf  used on input line 708.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
  [66 <../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/1.pdf> <../euler1D/pl
 ots_en_TDG/set3/leveque_sin_entropy714/60.pdf>]
@@ -1844,7 +1844,7 @@ File: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/60.pdf Graphic file (
 type pdf)
 <use ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/60.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/60
-.pdf  used on input line 709.
+.pdf  used on input line 712.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 <../euler1D/plots_en_TDG/set3/leveque_con_entropy123/120.pdf, id=1979, 706.3691
 pt x 270.98325pt>
@@ -1852,7 +1852,7 @@ File: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/120.pdf Graphic file
 (type pdf)
 <use ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/120.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/set3/leveque_con_entropy123/12
-0.pdf  used on input line 713.
+0.pdf  used on input line 716.
 (pdftex.def)             Requested size: 426.39258pt x 163.57942pt.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1921,10 +1921,10 @@ Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
 (rerunfilecheck)             Checksum: B5010DB166F3F9F428D8C0BCFDD67A94;19777.
  ) 
 Here is how much of TeX's memory you used:
- 33577 strings out of 476339
- 662275 string characters out of 5787175
+ 33512 strings out of 476339
+ 661587 string characters out of 5787175
  1908340 words of memory out of 5000000
- 52505 multiletter control sequences out of 15000+600000
+ 52440 multiletter control sequences out of 15000+600000
  543414 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,17n,90p,1099b,3191s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1973,9 +1973,9 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1095.pfb><C:/Users/Rod
 rigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1200.pfb><C:
 /Users/Rodrigo/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfxc12
 00.pfb>
-Output written on TesisTotalBibTeX.pdf (102 pages, 1560907 bytes).
+Output written on TesisTotalBibTeX.pdf (102 pages, 1561036 bytes).
 PDF statistics:
- 2413 PDF objects out of 2487 (max. 8388607)
+ 2414 PDF objects out of 2487 (max. 8388607)
  785 named destinations out of 1000 (max. 500000)
  834 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -107,7 +107,7 @@ A partir de este último resultado se puede concluir que la diferencia entre la 
 El método iterativo utilizado para resolver la ecuación de conservación depende de cómo esté definida la función de flujo numérico $F_{i + \frac{1}{2}}^{n}$ en la interfaz entre dos celdas, por lo que es necesario definir un \textbf{esquema} que calcule $F$ basándose en los valores de la función $U$ adyacentes. A continuación se presentan algunos esquemas que proporcionan una función de flujo numérico \textbf{escalar}.
 
 \subsection{Esquema de Lax-Friedrichs}
-Para definir una función de flujo numérico aproximada, que dependa de los valores de $u_{i}^{n}$ en dos celdas vecinas, se puede considerar promediar el valor de la función de flujo exacta valuada en los valores de $u$ de ambas celdas, esto es
+Para definir una función de flujo numérico aproximada, que dependa de los valores de $u_{i}^{n}$ en dos celdas vecinas, se puede considerar promediar el valor de la función de flujo exacta valuada en los valores de $u$ en ambas celdas, esto es
 \begin{equation}
 	F(u_{i-1}, u_{i+1}) = \frac{1}{2}\left(f(u_{i-1}) + f(u_{i+	1})\right)
 \end{equation}
