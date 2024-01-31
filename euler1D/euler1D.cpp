@@ -52,8 +52,8 @@ int main()
     int numeroAleatorio = generateRandomNum();
 
     // Parámetros temporales
-    const double t_total = 3; // Tiempo total en segundos
-    const double dt = 0.006; // Tamaño de paso temporal en segundos
+    const double t_total = 2; // Tiempo total en segundos
+    const double dt = 0.005; // Tamaño de paso temporal en segundos
     int Niter = floor(t_total/dt); // Número total de iteraciones
     const int num_outs = 5; // Número de gráficas de instantes temporales
     int out_cada = floor(Niter / num_outs); // Cada out_cada veces se 
@@ -67,7 +67,7 @@ int main()
     double dx = L/(Nx); // Tamaño de paso en el eje x
 
     // Otros parámetros
-    bool correccion_de_entropia = false;
+    bool correccion_de_entropia = true;
 
     // Archivos
     ofstream file_densidad;
@@ -228,7 +228,7 @@ int generateRandomNum() {
 
 double u_inicial(double x, double L)
 {
-    return step_neg(x, 1, 1, L/2);
+    return step_neg(x, 0.9, 0.9, L/2);
 }
 
 /**
@@ -242,7 +242,7 @@ double p_inicial(double x, double L)
     double atm = (1.01325e5);
     // return 100*exp(-0.5*pow((x-L/2), 2));
     // return atm*1/12*(atan(x-L/2)+4.50);
-    return step_neg(x, 0.5, 0.5, L/2);
+    return step_neg(x, 3, 1, L/2);
 }
 
 /**
@@ -253,8 +253,8 @@ double p_inicial(double x, double L)
  */
 double rho_inicial(double x, double L)
 {
-    // return step_neg(x, 1, 1, L/2);
-    return 1+exp(-(x-L/2)*(x-L/2));
+    return step_neg(x, 3, 1, L/2);
+    // return 1+exp(-(x-L/2)*(x-L/2));
 }
 
 /**
