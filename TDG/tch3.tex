@@ -13,7 +13,7 @@ Las ecuaciones fundamentales de la dinámica de fluidos se basan en las siguient
 La ecuación de conservación de la masa, que se derivó en la sección \ref{sec:derivacion-continuidad}, consiste en aplicar la ecuación de continuidad para un fluido con cierta densidad. La ley de conservación del momentum resulta al aplicar la Segunda Ley de Newton en un fluido. Por último, la ley de conservación de la energía es equivalente a la aplicación de la Primera Ley de la Termodinámica. Además de las tres ecuaciones de conservación, es necesario establecer una relación entre las variables físicas del fluido, de tal manera que el sistema de ecuaciones sea resoluble \cite{heattransfer}. En el caso de un gas ideal, la ecuación adicional que relaciona las variables densidad $\rho$, presión $p$ y temperatura $T$, es la ecuación de estado. 
 \subsection{Derivación de las ecuaciones}
 %\subsubsection{Ecuación de continuidad}
-La ecuación de continuidad, derivada en la sección (\ref{sec:derivacion-continuidad}) tiene la siguiente forma
+La ecuación de continuidad, derivada en la sección \ref{sec:derivacion-continuidad} tiene la siguiente forma
 \begin{equation}
 	\rho_{t} + (\rho v)_{x} = 0.
 	\label{eq:continuidad-euler}
@@ -31,7 +31,7 @@ Para derivar la conservación de energía, se debe considerar que ésta se compo
 	E = \frac{1}{2} v^{2} + e,
 	\label{eq:energia}
 \end{equation}
-donde el término $\frac{1}{2} v^{2}$ corresponde a la densidad de energía cinética por unidad de masa y $e$ es la \textbf{energía interna} por unidad de masa del fluido, que también suele denominarse como energía interna específica. La energía interna depende de los grados de libertad internos de las moléculas de los gases, considerando energía de rotación, cinética, de vibración y otras formas más complejos de energía. Las ecuaciones de Euler asumen que el fluido se encuentra en equilibrio termodinámico y que la ecuación de estado provee una expresión para la energía interna específica tal que ésta depende de la presión y la densidad del fluido únicamente
+donde el término $\frac{1}{2} v^{2}$ corresponde a la densidad de energía cinética por unidad de masa y $e$ es la \textbf{energía interna} por unidad de masa del fluido, que también suele denominarse como energía interna específica. La energía interna depende de los grados de libertad internos de las moléculas de los gases, considerando energía de rotación, cinética, de vibración y otras formas más complejas de energía. Las ecuaciones de Euler suponen que la ecuación de estado provee una expresión para la energía interna específica tal que ésta depende de la presión y la densidad del fluido únicamente
 \begin{equation}
 	e = e(p, \rho).
 \end{equation}
@@ -40,7 +40,7 @@ De igual manera que con el momentum, la energía total se ve afectada por la adv
 	(\rho E)_{t} + [v(\rho E + p)]_{x} = 0.
 	\label{eq:energia-euler}
 \end{equation}
-haciendo notar que $\rho E$ corresponde a la energía total del gas.
+Haciendo notar que $\rho E$ corresponde a la energía total del gas.
 
 Las ecuaciones de Euler, (\ref{eq:continuidad-euler}), (\ref{eq:momentum-euler}) y (\ref{eq:energia-euler}) se pueden escribir en forma vectorial, obteniendo:
 \begin{equation}
@@ -65,7 +65,7 @@ cuya forma coincide con la presentada en (\ref{eq:conservacion}). Cabe mencionar
 \subsection{Ecuación de estado para un gas politrópico}
 Para completar el sistema de ecuaciones de Euler, es necesario definir la ecuación de estado que relacione la energía con las variables físicas de presión y  densidad. El desarrollo de la ecuación de estado para un gas ideal sigue de cerca la sección \textit{Ideal Gas} del capítulo \textit{Some Linear Systems} en \cite{LeVeque}.
 
-La energía interna de un gas idea es únicamente dependiente de la temperatura,
+La energía interna de un gas ideal es únicamente dependiente de la temperatura,
 \begin{equation}
 	e = e(T).
 \end{equation}
@@ -83,7 +83,7 @@ donde $c_{v}$ es la capacidad calorífica específica a volumen constante. Los g
 \begin{equation}
 	\dd{e} = c_{v} \dd{T}
 \end{equation}
-como cambio infinitesimal de energía interna específica. En cambio, si se permite que el gas se expanda pero manteniendo ahora la presión constante, se obtendría una expresión para el cambio de energía considerando al trabajo, $W = -p\dd{V}$, realizado sobre el gas, esto es
+como cambio infinitesimal de energía interna específica. En cambio, si se permite que el gas se expanda pero manteniendo ahora la presión constante, se obtendría una expresión para el cambio de energía considerando al trabajo, $\dd{W} = -p\dd{V}$, realizado sobre el gas, esto es
 \begin{equation}
 	m\dd{e} = \dd{W} + \dbar Q
 \end{equation}
@@ -147,7 +147,7 @@ Y al aplicar la definición de $\gamma$ en (\ref{eq:gamma-1}) se obtiene la expr
 \begin{equation}
 	\gamma = \frac{\alpha + 2}{\alpha},
 \end{equation}
-que, como se expuso previamente, relaciona el número de grados de libertad con el coeficiente de dilatación adiabática. Por ejemplo, para gases monoatómicos se consideran únicamente tres grados de libertad, correspondientes al movimiento traslacional en tres dimensiones, por lo que $\alpha = 3$ y $\gamma = 5/3$. En gases diatómicos (como el aire, compuesto por $H_2$ y $N_2$ principalmente) se agregan dos grados libertad correspondientes a dos ejes de rotación posibles para cada molécula, de tal manera que $\alpha = 5$ y $\gamma = 7/5 = 1.4$.
+que, como se expuso previamente, relaciona el número de grados de libertad con el coeficiente de dilatación adiabática. Por ejemplo, para gases monoatómicos se consideran únicamente tres grados de libertad, correspondientes al movimiento traslacional en tres dimensiones, por lo que $\alpha = 3$ y $\gamma = 5/3$. En gases diatómicos (como el aire, compuesto por $\mathrm{H}_2$ y $\mathrm{N}_2$ principalmente) se agregan dos grados libertad correspondientes a dos ejes de rotación posibles para cada molécula, de tal manera que $\alpha = 5$ y $\gamma = 7/5 = 1.4$.
 
 Por último, se escribe la ecuación de estado del gas ideal para la energía utilizando  (\ref{eq:ideal-gas-law}),
 \begin{equation}
@@ -306,7 +306,7 @@ donde $\Delta u = u_R - u_L$, para cualquier variable $u$, siendo $u_R$ y $u_L$ 
 Para resolver las ecuaciones de Euler es necesario especificar algunas características del medio y  del espacio en el que toman lugar las simulaciones a presentar en este texto. 
 \subsection{Dimensiones}
 \label{sec:dimensiones}
-Las ecuaciones de Euler serán resueltas en una dimensión espacial, que se puede interpretar como la evolución temporal de un gas dentro de un tubo. Naturalmente, un tubo no es exactamente un objeto unidimensional (un objeto unidimensional es una idealización) pero se aproximará como tal para efectuar la simulación. Este dominio posee una longitud de $10\unit{\meter}$, de tal manera que definiendo los parámetros de la sección (\ref{sec:discretizacion-del-dominio}), se tiene:
+Las ecuaciones de Euler serán resueltas en una dimensión espacial, que se puede interpretar como la evolución temporal de un gas dentro de un tubo. Naturalmente, un tubo no es exactamente un objeto unidimensional (un objeto unidimensional es una idealización) pero se aproximará como tal para efectuar la simulación. Este dominio posee una longitud de $10\unit{\meter}$, de tal manera que definiendo los parámetros de la sección \ref{sec:discretizacion-del-dominio}, se tiene:
 \begin{equation}
 	a = 0 \unit{\meter},
 \end{equation}
@@ -453,7 +453,7 @@ Los parámetros \texttt{t\_total}, \texttt{dt} y \texttt{num\_outs} son modifica
 
 La variable \texttt{num\_outs} almacena el número de soluciones producidas para estados temporales determinados, es decir, se imprimen los datos de las funciones calculadas para \texttt{num\_outs} instantes temporales, que no necesariamente coincidirá con el número de iteraciones. Luego se define \texttt{out\_cada}, que calcula cada cuántas iteraciones se deberán imprimir los datos. Por último, la variable \texttt{tiempo} almacena el tiempo real de la simulación.
 
-Los parámetros espaciales, que fueron descritos en la sección (\ref{sec:dimensiones}) se definieron de la siguiente manera en el código:
+Los parámetros espaciales, que fueron descritos en la sección \ref{sec:dimensiones} se definieron de la siguiente manera en el código:
 \lstinputlisting[
 caption = {Parámetros espaciales},
 language=C++,
@@ -518,7 +518,7 @@ firstline=2,
 lastline=16,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/inicializacion.cpp}
 
-Las funciones \texttt{rho\_inicial}, \texttt{p\_inicial}, \texttt{u\_inicial} son variaciones de la función por partes, definida en el código (\ref{cod:step-neg}), que dependen de la condición inicial por aplicar. Por ejemplo, la condición de (\ref{sec:tercer-conjunto}) para la velocidad, se aplica de la siguiente manera:
+Las funciones \texttt{rho\_inicial}, \texttt{p\_inicial}, \texttt{u\_inicial} son variaciones de la función por partes, definida en el código (\ref{cod:step-neg}), que dependen de la condición inicial por aplicar. Por ejemplo, la condición de  la sección \ref{sec:leveque_sin_entropy714} para la velocidad, se aplica de la siguiente manera:
 \lstinputlisting[
 caption = {Condición inicial para la velocidad},
 language=C++,
@@ -576,7 +576,7 @@ Puesto que los autovalores de una onda dependen de la velocidad del sonido en di
 \begin{equation}
 	\tilde{c}(\mathbf{{U}}_R, \mathbf{{U}}_R) = c_R,
 \end{equation}
-que se deducen inmediatamente de \ref{eq:tercera-cond-roe}, y se implementan mediante la función \texttt{c\_prom}. El siguiente proceso que se define para \texttt{suma\_p\_fix} se encarga de implementar la función $H(\lambda_{p})$ definida en \eqref{eq:HH-fix}.
+que se deducen inmediatamente de \eqref{eq:tercera-cond-roe}, y se implementan mediante la función \texttt{c\_prom}. El siguiente proceso que se define para \texttt{suma\_p\_fix} se encarga de implementar la función $H(\lambda_{p})$ definida en \eqref{eq:HH-fix}.
 \lstinputlisting[
 caption = {Construcción de la corrección de entropía de Harten y Hyman},
 language=C++,
@@ -629,7 +629,7 @@ lastline=81,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/ciclo.cpp}
 \section{Resultados}
 \subsection{Simulación con el primer conjunto de condiciones iniciales}
-Se realizó la simulación de las ecuaciones de Euler con las condiciones iniciales descritas en la sección (\ref{sec:gaussiana41}). Como se había mencionado, se esperaba que la función de densidad $\rho$ se comportara como la solución a una ecuación de advección; esto a partir de que la condición inicial para la velocidad era constante y la presión también.
+Se realizó la simulación de las ecuaciones de Euler con las condiciones iniciales descritas en la sección \ref{sec:gaussiana41}. Como se había mencionado, se esperaba que la función de densidad $\rho$ se comportara como la solución a una ecuación de advección; esto a partir de que la condición inicial para la velocidad era constante y la presión también.
 
 \subsubsection{Gráficas}
 
@@ -639,15 +639,15 @@ Se realizó la simulación de las ecuaciones de Euler con las condiciones inicia
 	\caption{Gráficas para $t=0.0\unit{\s}$}
 \end{figure}
 \begin{figure}[ht]
-	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/135.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/135.pdf}
 	\caption{Gráficas para $t=1.335\unit{\s}$}
 \end{figure}\vspace{\baselineskip}
 \begin{figure}[ht]
-	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/269.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/269.pdf}
 	\caption{Gráficas para $t=2.675\unit{\s}$}
 \end{figure}\vspace{\baselineskip}
 \begin{figure}[ht]
-	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/graficas/401.pdf}
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set1/401.pdf}
 	\caption{Gráficas para $t=3.995\unit{\s}$}
 \end{figure}
 \subsubsection{Discusión}
@@ -658,24 +658,28 @@ Esta simulación se realizó sin la corrección de entropía del esquema de Roe 
 
 \subsection{Simulación con el segundo conjunto de condiciones iniciales}
 \label{sec:resultados-set-2}
-Las siguientes gráficas corresponden a la simulación realizada con las condiciones iniciales descritas en la sección (\ref{sec:sod_con_entropy148}). Este conjunto de condiciones se caracteriza por la diferencia entre las magnitudes de las mitades del dominio. La densidad del lado izquierdo triplica la del lado derecho, al igual que sucede con la presión, mientras que la velocidad inicial del fluido es nula. Entonces este sistema puede ser interpretado como la súbita fusión de dos gases con densidad y presión distinta, o en otras palabras, como un \textbf{choque}.
+Las gráficas de las figuras \ref{fig:set2-1} - \ref{fig:set2-4} corresponden a la simulación realizada con las condiciones iniciales descritas en la sección \ref{sec:sod_con_entropy148}. Este conjunto de condiciones se caracteriza por la diferencia entre las magnitudes de las mitades del dominio. La densidad del lado izquierdo triplica la del lado derecho, al igual que sucede con la presión, mientras que la velocidad inicial del fluido es nula. Entonces este sistema puede ser interpretado como la súbita fusión de dos gases con densidad y presión distinta, o en otras palabras, como un \textbf{choque}.
 \subsubsection{Gráficas}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set2/1.pdf}
 	\caption{Gráficas para $t=0.0\unit{\s}$}
+	\label{fig:set2-1}
 \end{figure}
 \begin{figure}[ht]
 	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set2/20.pdf}
 	\caption{Gráficas para $t=0.185\unit{\s}$}
+	\label{fig:set2-2}
 \end{figure}
 \begin{figure}[ht]
 	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set2/60.pdf}
 	\caption{Gráficas para $t=0.585\unit{\s}$}
+	\label{fig:set2-3}
 \end{figure}
 \begin{figure}[ht]
 	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set2/110.pdf}
 	\caption{Gráficas para $t=1.085\unit{\s}$}
+	\label{fig:set2-4}
 \end{figure}
 \subsubsection{Discusión}
 En esta simulación se destaca principalmente la manifestación de ondas de choque y de rarefacción en todas las variables del gas. La densidad se divide en tres ondas; una de choque, que avanza hacia la derecha, y otra de rarefacción, que avanza a la izquierda. La onda intermedia entre las dos últimas se conoce como \textbf{discontinuidad de contacto} \cite{thesis-euler-godunov} y se caracteriza por ser una discontinuidad en la densidad únicamente, ya que la presión y velocidad permanecen constantes. La discontinuidad de contacto también está estrechamente relacionada con la diferencia de temperatura entre las partes del gas que ésta divide \cite{LeVeque}. 
@@ -685,7 +689,7 @@ Por otro lado, es notable la eficiencia del esquema de Roe al capturar ondas de 
 Esta simulación se realizó sin la corrección de entropía del esquema de Roe ya que no presentó ninguna diferencia cuando se aplicaba la corrección.
 
 \subsection{Simulación con el tercer conjunto de condiciones iniciales}
-Se experimentó con el conjunto de condiciones iniciales descrito en la sección (\ref{sec:leveque_sin_entropy714}). Este conjunto es similar al discutido anteriormente, con la diferencia que la velocidad inicial de este conjunto no es nula, sino que tiene un valor constante en todo el dominio. Este problema surge a partir de una forma de evaluar la aparición de ondas de rarefacción sónica, de tal manera que pone a prueba la función de corrección de entropía utilizada.
+Se experimentó con el conjunto de condiciones iniciales descrito en la sección \ref{sec:leveque_sin_entropy714}. Este conjunto es similar al discutido anteriormente, con la diferencia que la velocidad inicial de este conjunto no es nula, sino que tiene un valor constante en todo el dominio. Este problema surge a partir de una forma de evaluar la aparición de ondas de rarefacción sónica, de tal manera que pone a prueba la función de corrección de entropía utilizada.
 
 \subsubsection{Gráficas de la simulación sin corrección de entropía}
 \begin{figure}[ht]
@@ -700,7 +704,8 @@ Se experimentó con el conjunto de condiciones iniciales descrito en la sección
 \begin{figure}[ht]
 	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/set3/leveque_sin_entropy714/120.pdf}
 	\caption{Gráficas para $t=1.185\unit{\s}$}
-\end{figure}\vspace{\baselineskip}
+\end{figure}
+\clearpage
 
 \subsubsection{Gráficas de la simulación con corrección de entropía}
 \begin{figure}[ht]
@@ -719,4 +724,4 @@ Se experimentó con el conjunto de condiciones iniciales descrito en la sección
 \end{figure}\vspace{5cm}
 
 \subsubsection{Discusión}
-Se puede notar la similitud entre los resultados de esta simulación y la correspondiente al segundo conjunto. Sin embargo, en este caso el programa sin la condición de entropía no logra capturar las ondas de rarefacción, como puede notarse en la figura \ref{fig:ultima-sin-entropy}; notando que especialmente la onda de rarefacción que avanza a la izquierda (identificada en los resultados de la sección anterior) aparece dividida por una discontinuidad. En cambio, los resultados producidos al utilizar la corrección de entropía sí son consistentes con las ondas de rarefacción esperadas; se puede notar la similitud entre estos resultados y los de la sección (\ref{sec:resultados-set-2}). La onda de rarefacción izquierda no presenta discontinuidades en estos resultados.
+Se puede notar la similitud entre los resultados de esta simulación y la correspondiente al segundo conjunto. Sin embargo, en este caso el programa sin la condición de entropía no logra capturar las ondas de rarefacción, como puede notarse en la figura \ref{fig:ultima-sin-entropy}; notando que especialmente la onda de rarefacción que avanza a la izquierda (identificada en los resultados de la sección anterior) aparece dividida por una discontinuidad. En cambio, los resultados producidos al utilizar la corrección de entropía sí son consistentes con las ondas de rarefacción esperadas; se puede notar la similitud entre estos resultados y los de la sección \ref{sec:resultados-set-2}. La onda de rarefacción izquierda no presenta discontinuidades en estos resultados.

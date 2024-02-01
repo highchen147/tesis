@@ -217,12 +217,12 @@ El esquema de Roe es un método numérico basado en la resolución aproximada de
 El esquema de Godunov resuelve el problema de Riemann sobre cada celda del dominio discretizado y genera el flujo numérico apropiado entre las interfaces de las celdas del dominio, para cada instante de tiempo. Sin embargo, el valor obtenido para la función en cuestión, en cada celda es el \textbf{promedio} de la función exacta en dicho intervalo; y esto produce error numérico. Por otro lado, la resolución del problema de Riemann es usualmente una tarea realizable, pero que puede ser costosa y típicamente se necesita de algún otro método numérico para resolver ecuaciones algebraicas no lineales que complementan alguna iteración del cálculo de la solución numérica. Por estas razones, se considerará utilizar y estudiar a fondo un esquema aproximado como solucionador de Riemann, ya que involucra medios más prácticos para obtener la solución numérica a un sistema de conservación.
 
 \subsubsection{Idea general de una solución aproximada}
-Sea $\mathbf{\hat{U}}(x,t)$ una solución aproximada al problema de Riemann para la ecuación de conservación $\mathbf{U}_t + \mathbf{F}(\mathbf{U})_x = 0$, entre dos celdas del dominio discretizado; cada una con valores iniciales $\mathbf{U}_L$ y $\mathbf{U}_R$ para $\mathbf{U}$. Como se mencionó en la sección (\ref{sec:Godunov}), toda solución al problema de Riemann puede escribirse como una función que depende solamente de $x/t$. Entonces se define la solución aproximada como una función de mencionado tipo, $\mathbf{\hat{U}}(x,t) = \mathbf{\hat{w}}(x/t)$. Para que esta solución sea conservativa, debe cumplirse la siguiente condición para todo $\mathcal{M}$ suficientemente grande:
+Sea $\mathbf{\hat{U}}(x,t)$ una solución aproximada al problema de Riemann para la ecuación de conservación $\mathbf{U}_t + \mathbf{F}(\mathbf{U})_x = 0$, entre dos celdas del dominio discretizado; cada una con valores iniciales $\mathbf{U}_L$ y $\mathbf{U}_R$ para $\mathbf{U}$. Como se mencionó en la sección \ref{sec:Godunov}, toda solución al problema de Riemann puede escribirse como una función que depende solamente de $x/t$. Entonces se define la solución aproximada como una función de mencionado tipo, $\mathbf{\hat{U}}(x,t) = \mathbf{\hat{w}}(x/t)$. Para que esta solución sea conservativa, debe cumplirse la siguiente condición para todo $\mathcal{M}$ suficientemente grande:
 \begin{equation}
 	\int_{-\mathcal{M}}^{\mathcal{M}} \mathbf{\hat{w}}(\xi) \dd{\xi} = \mathcal{M} (\mathbf{U}_L + \mathbf{U}_R) + \mathbf{F}(\mathbf{U}_L) + \mathbf{F}(\mathbf{U}_R)
 	\label{eq:condicion-aprox-riemann}
 \end{equation}
-cabe destacar que utilizando los resultados de la sección (\ref{sec:caso1-burgers}) se puede demostrar que la solución exacta del problema de Riemann satisface esta condición cuando se integra sobre $[\mathcal{M},\mathcal{M}]\times[0,1]$. Si $\mathbf{\hat{w}}$ satisface la igualdad anterior entonces se puede aplicar el MVF para encontrar la solución aproximada. Se puede integrar $\mathbf{\hat{w}}$ de $0$ a $\mathcal{M}$, de tal manera que siendo $\mathcal{M}$ suficientemente grande, se obtiene una expresión para el flujo numérico aproximado $F(\mathbf{U}_L,\mathbf{U}_R)$ en términos de $\mathbf{U}_R$
+cabe destacar que utilizando los resultados de la sección \ref{sec:caso1-burgers} se puede demostrar que la solución exacta del problema de Riemann satisface esta condición cuando se integra sobre $[\mathcal{M},\mathcal{M}]\times[0,1]$. Si $\mathbf{\hat{w}}$ satisface la igualdad anterior entonces se puede aplicar el MVF para encontrar la solución aproximada. Se puede integrar $\mathbf{\hat{w}}$ de $0$ a $\mathcal{M}$, de tal manera que siendo $\mathcal{M}$ suficientemente grande, se obtiene una expresión para el flujo numérico aproximado $F(\mathbf{U}_L,\mathbf{U}_R)$ en términos de $\mathbf{U}_R$
 \begin{equation}
 	\int_{0}^{\mathcal{M}} \mathbf{\hat{w}}(\xi) \dd{\xi} = \mathcal{M}\mathbf{U}_R + F(\mathbf{U}_L,\mathbf{U}_R) - \mathbf{F}(\mathbf{U}_R)
 \end{equation}
@@ -250,7 +250,7 @@ Entonces, se define a $\mathbf{\hat{w}}(x/t)$ como la solución a la ecuación (
 	\label{eq:numerical-aprox-flux}
 \end{equation}
 \subsubsection{El solucionador de Riemann de Roe}
-La idea básica del esquema de Roe consiste en resolver el problema de Riemann, sobre cada celda del dominio, para el sistema de ecuaciones de conservación original como un sistema con coeficientes constantes. La resolución de un sistema hiperbólico lineal fue expuesta en la sección (\ref{sec:resolucion-hiperbolico}). Por tanto, en el esquema de Roe, la función de flujo aproximada $\mathbf{\hat{F}}$ es una función lineal, i.e, 
+La idea básica del esquema de Roe consiste en resolver el problema de Riemann, sobre cada celda del dominio, para el sistema de ecuaciones de conservación original como un sistema con coeficientes constantes. La resolución de un sistema hiperbólico lineal fue expuesta en la sección \ref{sec:resolucion-hiperbolico}. Por tanto, en el esquema de Roe, la función de flujo aproximada $\mathbf{\hat{F}}$ es una función lineal, i.e, 
 \begin{equation}
 	\mathbf{\hat{F}}(\mathbf{U}) = \mathbf{\hat{A}}\mathbf{U}.
 	\label{eq:aprox-flux-roe}
@@ -264,7 +264,7 @@ En general, la definición de la matriz $\mathbf{\hat{A}}$ dependerá del sistem
 	\mathbf{\hat{U}}_t + \mathbf{\hat{A}}(\mathbf{U}_L, \mathbf{U}_R)\mathbf{\hat{U}}_x = 0.
 	\label{eq:aprox-system-roe}
 \end{equation}
-Como se mostró en la sección (\ref{sec:resolucion-hiperbolico}) la solución al problema de Riemann de la ecuación (\ref{eq:aprox-system-roe}), si $\mathbf{\hat{A}}$ tiene autovalores $\hat{\lambda}_i$ y autovalores $\mathbf{\hat{r}}_{i}$, se puede expresar utilizando la siguiente expresión
+Como se mostró en la sección \ref{sec:resolucion-hiperbolico} la solución al problema de Riemann de la ecuación (\ref{eq:aprox-system-roe}), si $\mathbf{\hat{A}}$ tiene autovalores $\hat{\lambda}_i$ y autovalores $\mathbf{\hat{r}}_{i}$, se puede expresar utilizando la siguiente expresión
 \begin{equation}
 	\mathbf{U}_R - \mathbf{U}_L = \sum_{p} {\alpha}_p \mathbf{\hat{r}}_{p}.
 \end{equation}
