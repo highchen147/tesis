@@ -74,7 +74,13 @@
 \contentsline {subsubsection}{\numberline {3.5.3.2}Gráficas de la simulación con corrección de entropía}{67}{subsubsection.3.5.3.2}%
 \contentsline {subsubsection}{\numberline {3.5.3.3}Discusión}{68}{subsubsection.3.5.3.3}%
 \contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{69}{chapter.4}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{71}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{73}{chapter*.35}%
-\contentsline {chapter}{RECOMENDACIONES}{75}{chapter*.36}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{77}{chapter*.37}%
+\contentsline {section}{\numberline {4.1}Fundamentos de Clawpack}{69}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Código de PyClaw utilizado}{71}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Comparación del primer conjunto de condiciones iniciales}{71}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Comparación del segundo conjunto de condiciones iniciales}{71}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Comparación del tercer conjunto de condiciones iniciales}{71}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Discusión}{71}{section.4.6}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{73}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{75}{chapter*.34}%
+\contentsline {chapter}{RECOMENDACIONES}{77}{chapter*.35}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{79}{chapter*.36}%

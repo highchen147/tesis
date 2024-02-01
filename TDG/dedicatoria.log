@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  15 NOV 2023 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  31 JAN 2024 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -128,36 +128,20 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no ' in font nullfont!
 Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no q in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no p in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -192,8 +176,8 @@ Overfull \hbox (5.55557pt too wide) in paragraph at lines 2--5
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 2--5
-\/cmr/m/n/10 ^^Sa
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 2--5
+\/cmr/m/n/10 ~n
  []
 
 
@@ -216,8 +200,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.8 	`
-      `He know \textbf{flow} like interstellar wind...'' - MF DOOM
+l.7 	`
+      `He know, \textbf{flow} like interstellar wind...'' - MF DOOM
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -229,6 +213,7 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no k in font nullfont!
@@ -268,19 +253,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 \end{quote}
+l.8 \end{quote}
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 8--11
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--10
 []
  []
 
 
-Overfull \hbox (20.1249pt too wide) in paragraph at lines 8--11
+Overfull \hbox (20.1249pt too wide) in paragraph at lines 7--10
 \OT1/cmr/bx/n/10 flow
  []
 
@@ -292,11 +277,11 @@ Overfull \hbox (20.1249pt too wide) in paragraph at lines 8--11
 
  
 Here is how much of TeX's memory you used:
- 33 strings out of 476339
- 583 string characters out of 5787175
+ 34 strings out of 476339
+ 585 string characters out of 5787175
  1849340 words of memory out of 5000000
- 20556 multiletter control sequences out of 15000+600000
+ 20557 multiletter control sequences out of 15000+600000
  512595 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,1n,32p,195b,88s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 23i,1n,32p,174b,88s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!

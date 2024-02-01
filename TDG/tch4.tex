@@ -1,11 +1,55 @@
 \chapter{COMPARACIÓN CON PYCLAW}
-Se da una breve explicación del funcionamiento y diseño de la simulación del problema de condiciones iniciales del capítulo anterior con la librería PyClaw y se comparan los resultados obtenidos.
+Mientras se investigaba sobre las ecuaciones de conservación, previo a la realización de este texto, los textos de Randy LeVeque destacaron por su inmenso aporte a la teoría de la resolución numérica de estos sistemas. Al profundizar en los aportes de LeVeque, fue imposible no toparse con el paquete para el lenguaje de programación Python, \textbf{PyClaw}, donde él está listado como el principal diseñador del software y de los algoritmos implementados \cite{clawpack}. El paquete PyClaw fue desarrollado para la resolución numérica de ecuaciones de conservación lineales y no lineales, utilizando métodos de alta resolución. Estos métodos se basan en la construcción de la solución del problema de Riemann a través de diversos esquemas, como el de Roe.
+\section{Fundamentos de Clawpack}
+\textbf{PyClaw} forma parte del paquete de solucionadores numéricos \textbf{Clawpack} \footnote{El nombre abrevia la frase en inglés \textbf{C}onservation \textbf{Law} \textbf{Pack}age.}. Éste es capaz de resolver sistemas de ecuaciones diferenciales de la forma estándar de conservación
+\begin{equation}
+	q_t + f(q)_x = 0.
+\end{equation}
 
+La solución numérica de estos sistemas se basa en solucionadores de Riemann. Sea $S(Q_{i-1}, Q_{i})$ un solucionador de Riemann. Para poder implementar éste último es necesario que retorne un conjunto de $M_{w}$ ondas denominadas $\mathcal{W}_{i-1/2}^{p}$, con velocidades $s_{i-1/2}^{p}$, que correspondan a la solución del problema de Riemann entre las celdas $i$ e $i-1$, siempre que satisfaga la siguiente condición
+\begin{equation}
+	\sum_{p=1}^{M_{w}}\mathcal{W}_{i-1/2}^{p} = Q_i - Q_{i-1} \equiv \Delta Q_{i-1/2}.
+\end{equation}
+La construcción, basada en ondas y sus velocidades, de la solución del problema de Riemann se asemeja a la forma en la que se construye la solución para el caso lineal (ver sección \ref{sec:sol-riemann-lineal}). Para calcular la diferencia de flujos que toma lugar en el método de volúmenes finitos, el algoritmo de PyClaw divide la diferencia de flujos en dos fluctuaciones,
+\begin{equation}
+	\mathcal{A}^{+}\Delta Q_{i-1/2} = \sum_{p}(s_{i-1/2}^{p})^{+}\mathcal{W}_{i-1/2}^{p}
+\end{equation}
+\begin{equation}
+	\mathcal{A}^{-}\Delta Q_{i-1/2} = \sum_{p}(s_{i-1/2}^{p})^{-}\mathcal{W}_{i-1/2}^{p},
+\end{equation}
+con $s^{-} = \min(s,0)$ y $s^{+} = \max(s,0)$. De tal manera que estas fluctuaciones satisfacen lo siguiente
+\begin{equation}
+	\mathcal{A}^{+}\Delta Q_{i-1/2} + \mathcal{A}^{-}\Delta Q_{i-1/2} = f(Q_{i})-f(Q_{i-1}).
+\end{equation}
 
+Definiendo estos términos, se obtiene una expresión para el esquema general de integración. En la documentación oficial de PyClaw éste se denomina \textbf{Método de Godunov}, pero no debe confundirse con el esquema de Godunov. Entonces,
+\begin{equation}
+	Q_{i}^{n+1} = Q_{i}^{n} - \frac{k}{h}\left[\mathcal{A}^{+}\Delta Q_{i-1/2} + \mathcal{A}^{-}\Delta Q_{i-1/2}\right]
+	\label{eq:pyclaw-scheme}
+\end{equation}
+es la expresión utilizada en los algoritmos de integración de PyClaw. Cabe resaltar su similitud con \eqref{eq:metodo-vol-finitos-2}, y además implica que la diferencia de flujos numéricos $F(U_{i-1}^n, U_i^n) - F(U_{i}^n, U_{i+1}^n)$ equivale a la suma de las fluctuaciones $\mathcal{A}^{+}\Delta Q_{i-1/2} + \mathcal{A}^{-}\Delta Q_{i-1/2}$ definidas en los algoritmos de PyClaw.
+
+En el software PyClaw se implementa la forma \eqref{eq:pyclaw-scheme} para resolver el sistema de conservación ya que al construir la solución a través de las ondas $\mathcal{W}_{i-1/2}^{p}$ y sus velocidades $s_{i-1/2}^{p}$ es posible implementar métodos de alta resolución. Los métodos de alta resolución introducen valores limitantes para las ondas, de tal manera que se evitan oscilaciones no-naturales cerca de las discontinuidades o también gradientes muy pronunciados o inexactos. Los métodos de alta resolución son métodos numéricos con \textit{variación total disminuida} o métodos \textbf{TVD} por sus siglas en inglés. La forma general de éstos es
+\begin{equation}
+	Q_{i}^{n+1} = Q_{i}^{n} - \frac{k}{h}\left[\mathcal{A}^{+}\Delta Q_{i-1/2} + \mathcal{A}^{-}\Delta Q_{i-1/2}\right] - \frac{k}{h}\left(\tilde{F}_{i+1/2} - \tilde{F}_{i-1/2}\right),
+\end{equation}
+donde la corrección de flujos está dada por:
+\begin{equation}
+	\tilde{F}_{i-1 / 2}=\frac{1}{2} \sum_{p=1}^{M_w}\left|s_{i-1 / 2}^p\right|\left(1-\frac{\Delta t}{\Delta x}\left|s_{i-1 / 2}^p\right|\right) \tilde{\mathcal{W}}_{i-1 / 2}^p .
+\end{equation}
+Aquí, $\tilde{\mathcal{W}}_{i-1 / 2}^p$ representa la onda ${\mathcal{W}}_{i-1 / 2}^p$ luego de que se le ha aplicado la limitante, de acuerdo al método de alta resolución.
+%\clearpage
+
+\section{Código de PyClaw utilizado}
+\section{Comparación del primer conjunto de condiciones iniciales}
+\section{Comparación del segundo conjunto de condiciones iniciales}
+\section{Comparación del tercer conjunto de condiciones iniciales}
+
+\section{Discusión}
 %
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf}
-	\caption{Gráficas para $t=0.0\unit{\s}$}
-\end{figure}
+%\begin{figure}[ht]
+%	\centering
+%	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf}
+%	\caption{Gráficas para $t=0.0\unit{\s}$}
+%\end{figure}
 %C:\Users\Rodrigo\Documents\mundo9\Universo\tesis\euler1D\plots_en_TDG\py_sin_claw\py_gauss199\1.pdf
