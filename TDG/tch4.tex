@@ -44,6 +44,42 @@ Aquí, $\tilde{\mathcal{W}}_{i-1 / 2}^p$ representa la onda ${\mathcal{W}}_{i-1 
 %\clearpage
 
 \section{Código de PyClaw utilizado}
+PyClaw ofrece la resolución de las ecuaciones de Euler a través de los algoritmos presentados implementados en Python o incluso mediante Fortran \footnote{Fortran es un lenguaje de programación para cálculos científicos, creado en 1957. Destaca por su eficiencia numérica y sigue siendo útil en aplicaciones científicas.}. Para la resolución de las ecuaciones de Euler se decidió utilizar la versión de Python. En PyClaw están disponibles otros esquemas de flujo numérico distintos al esquema de Roe. Sin embargo, se utilizó de nuevo este esquema para reducir las diferencias entre los programas diseñados (C++ y Python) y basar la comparación en los algoritmos de resolución, principalmente.
+
+\lstinputlisting[
+caption = {Paquetes e instancias},
+language=Python,
+firstline=1,
+lastline=9,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/pyclaw_script.py}
+Los paquetes imprescindibles en una simulación de Clawpack son \texttt{pyclaw} y \texttt{riemann}. El solucionador, que implementa la expresión \eqref{eq:pyclaw-scheme}, es un objeto de \texttt{pyclaw} y debe elegirse dependiendo de la dimensión espacial del problema; por ello se utilizó \texttt{ClawSolver1D}. El paquete \texttt{riemann} contiene, como objetos, los sistemas que Clawpack puede solucionar numéricamente. Dichos objetos tienen como métodos los solucionadores de Riemann disponibles.
+
+\lstinputlisting[
+caption = {Parámetros básicos de la solución},
+language=Python,
+firstline=10,
+lastline=20,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/pyclaw_script.py}
+Las condiciones de frontera que funcionan como condiciones transmisivas se denominan \texttt{extrap} y se pasan como valores de las listas \texttt{bc\_upper} y \texttt{bc\_lower}, que son atributos del solucionador. El dominio se divide en 500 celdas, al igual que en la simulación de C++, y va de $0\unit{\m}$ a $10\unit{\m}$ horizontalmente. Es posible acceder al punto medio sobre el eje $x$ de cada celda con la lista \texttt{state.grid.p\_centers[0]}.
+
+\lstinputlisting[
+caption = {Condiciones iniciales y parámetros auxiliares},
+language=Python,
+firstline=21,
+lastline=37,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/pyclaw_script.py}
+La simulación de PyClaw implementa la resolución de las ecuaciones de Euler en términos de las variables conservadas, i.e., densidad, $\rho$; momentum, $\rho v$ y energía, $\rho E$. Por esta razón, se definieron  las variables físicas independientes y en términos de éstas se asignaron los valores de las variables conservadas. Además, PyClaw exige la definición del coeficiente de dilatación adiabática $\gamma$ como un parámetro del problema como valor del atributo del estado de la solución, \texttt{problem\_data}. Curiosamente, el valor para $\gamma -1$ se asigna por aparte en este mismo atributo.
+
+Por último, el parámetro \texttt{efix} de \texttt{problem\_data} es un booleano que decide si se utilizará la corrección de entropía. Sin embargo, a la fecha no existe ningún algoritmo de corrección de entropía implementado en PyClaw.
+
+\lstinputlisting[
+caption = {Ejecución de la simulación},
+language=Python,
+firstline=38,
+lastline=47,
+keywordstyle=\color{blue}]{../euler1D/code_en_TDG/pyclaw_script.py}
+Para ejecutar la simulación es necesario utilizar un objeto de la clase \texttt{Controller} de \texttt{pyclaw}. En los atributos del objeto se definen otros parámetros relacionados con el tiempo total de simulación y las veces que se imprimen los valores. Cabe destacar que existen atributos del controlador que sirven para indicar el tamaño de paso temporal máximo, ya que hay algoritmos con tamaño de paso temporal adaptativo implementados en la librería.
+
 \section{Comparación del primer conjunto de condiciones iniciales}
 \section{Comparación del segundo conjunto de condiciones iniciales}
 \section{Comparación del tercer conjunto de condiciones iniciales}

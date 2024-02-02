@@ -76,11 +76,11 @@
 \contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{71}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Fundamentos de Clawpack}{71}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Código de PyClaw utilizado}{73}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Comparación del primer conjunto de condiciones iniciales}{73}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Comparación del segundo conjunto de condiciones iniciales}{73}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Comparación del tercer conjunto de condiciones iniciales}{73}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Discusión}{73}{section.4.6}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{75}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{77}{chapter*.34}%
-\contentsline {chapter}{RECOMENDACIONES}{79}{chapter*.35}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{81}{chapter*.36}%
+\contentsline {section}{\numberline {4.3}Comparación del primer conjunto de condiciones iniciales}{76}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Comparación del segundo conjunto de condiciones iniciales}{76}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Comparación del tercer conjunto de condiciones iniciales}{76}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Discusión}{76}{section.4.6}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{77}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{79}{chapter*.34}%
+\contentsline {chapter}{RECOMENDACIONES}{81}{chapter*.35}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{83}{chapter*.36}%
