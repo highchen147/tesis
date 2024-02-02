@@ -5,6 +5,7 @@ from clawpack import riemann
 from funciones import funcion_paso
 # Importar el solucionador
 solver = pyclaw.ClawSolver1D(riemann.euler_1D_py.euler_roe_1D)
+# Establecer el kernel del algoritmo de integración
 solver.kernel_language = "Python"
 # Condiciones de frontera.
 solver.bc_upper[0] = pyclaw.BC.extrap
@@ -13,7 +14,7 @@ solver.bc_lower[0] = pyclaw.BC.extrap
 domain = pyclaw.Domain([0], [10], [500])
 # Objeto de solución
 solution = pyclaw.Solution(solver.num_eqn, domain)
-# Condición inicial
+# Objeto de estado de la simulación
 state = solution.state
 # Centros de celdas de dominio espacial
 xc = state.grid.p_centers[0]
@@ -30,7 +31,7 @@ energia = presion/(cda_gamma - 1) + 0.5*densidad*velocidad**2
 state.q[0,:] = densidad
 state.q[1,:] = densidad*velocidad
 state.q[2,:] = energia
-# Parámetros
+# Parámetros del problema
 state.problem_data["gamma"] = cda_gamma
 state.problem_data["gamma1"] = cda_gamma - 1
 state.problem_data["efix"] = False
