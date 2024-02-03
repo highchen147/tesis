@@ -80,15 +80,118 @@ lastline=47,
 keywordstyle=\color{blue}]{../euler1D/code_en_TDG/pyclaw_script.py}
 Para ejecutar la simulación es necesario utilizar un objeto de la clase \texttt{Controller} de \texttt{pyclaw}. En los atributos del objeto se definen otros parámetros relacionados con el tiempo total de simulación y las veces que se imprimen los valores. Cabe destacar que existen atributos del controlador que sirven para indicar el tamaño de paso temporal máximo, ya que hay algoritmos con tamaño de paso temporal adaptativo implementados en la librería.
 
-\section{Comparación del primer conjunto de condiciones iniciales}
-\section{Comparación del segundo conjunto de condiciones iniciales}
-\section{Comparación del tercer conjunto de condiciones iniciales}
+\section{Comparación de resultados}
+Para visualizar la diferencia entre las simulaciones obtenidas con el programa escrito en C++ y las generadas a través de PyClaw se mostrará la superposición de las gráficas de ambas soluciones sobre algunos instantes temporales. 
 
-\section{Discusión}
+Por otro lado, para poder cuantificar la diferencia entre las simulaciones se optó por hacer uso del \textbf{error cuadrático medio} entre ambas soluciones. Considerando a $\rho_{i,\texttt{c++}}^{n}$, $u_{i,\texttt{c++}}^{n}$ y $p_{i,\texttt{c++}}^{n}$ como las funciones numéricas producidas por la simulación en C++ y a $\rho_{i,\texttt{py}}^{n}$, $u_{i,\texttt{py}}^{n}$ y $p_{i,\texttt{py}}^{n}$ como las generadas por PyClaw, se define el error cuadrático medio \footnote{RMSE: Root-Mean-Square Error, en inglés} en el enésimo instante de tiempo, $\text{RMSE}_n$, como:
+\begin{equation}
+	\text{RMSE}_n(\rho) = \sqrt{\frac{\sum_{i}(\rho_{i,\texttt{c++}}^{n} - \rho_{i,\texttt{py}}^{n})^{2}}{N_x}},
+\end{equation}
+donde $N_x$ es el número de celdas. La misma fórmula se aplica para las demás variables independientes. Para cuantificar el error total entre simulaciones, se calcula la media cuadrática de los errores cuadráticos previamente definidos. Entonces, se define la cantidad RMSE como
+\begin{equation}
+	\text{RMSE} = \sqrt{\frac{\sum_{n}^{N_{t}} (\text{RMSE}_{n})^{2}}{N_t}},
+\end{equation}
+donde $N_t$ es el número de instantes temporales. Este cálculo también se realiza por cada variable.
+\subsection{Comparación del primer conjunto de condiciones iniciales}
+\subsubsection{Gráficas}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf}
+	\caption{Gráficas para $t=0.0\unit{\s}$}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/4.pdf}
+	\caption{Gráficas para $t=1.8\unit{\s}$}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/6.pdf}
+\caption{Gráficas para $t=3.0\unit{\s}$}
+\label{fig:set-1-py-seg3}
+\end{figure}
+
+\begin{table}[ht]
+	\large
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Resultados & $\rho$ & $u$ & $p$ \\ \hline
+		RMSE & 8.2e-03 & 0.0e+00 & 0.0e+00 \\ \hline
+		Error máximo & 4.1e-02 & 0.0e+00 & 0.0e+00 \\ \hline
+	\end{tabular}
+	\caption{Comparativa de error entre simulaciones, primer conjunto de condiciones iniciales.}
+	\label{tab:tabla-set-1}
+\end{table}
+
+\subsubsection{Discusión del primer conjunto de condiciones iniciales}
+Se puede notar cómo la simulación de PyClaw sí mantiene la forma original de la campana gaussiana correspondiente a la densidad. En la figura \ref{fig:set-1-py-seg3} es apreciable que el máximo de las dos funciones difiere. Las funciones de velocidad y presión no presentan diferencias entre las dos simulaciones.
+
+
+\subsection{Comparación del segundo conjunto de condiciones iniciales}
+\subsubsection{Gráficas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_sod659/1.pdf}
+	\caption{Gráficas para $t=0.0\unit{\s}$}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_sod659/4.pdf}
+	\caption{Gráficas para $t=1.2\unit{\s}$}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_sod659/6.pdf}
+	\caption{Gráficas para $t=3.0\unit{\s}$}
+\end{figure}\vspace{\baselineskip}
+\begin{table}[H]
+	\large
+	\centering
+	\begin{tabular}{|l|l|l|l|} \hline
+		Resultados & $\rho$ & $u$ & $p$ \\ \hline
+		RMSE & 2.2e-02 & 1.4e-02 & 2.6e-02 \\ \hline
+		Error máximo & 1.6e-01 & 1.7e-01 & 2.3e-01 \\ \hline
+	\end{tabular}
+	\caption{Comparativa de error entre simulaciones, segundo conjunto de condiciones iniciales.}
+	\label{tab:tabla-set-2}
+\end{table}
+\vspace{3\baselineskip}
+\subsubsection{Discusión del segundo conjunto de condiciones iniciales}
+A través de la simulación con este conjunto de condiciones iniciales se destaca que las funciones producidas por PyClaw devuelven ondas de rarefacción distintas a las producidas por la simulación de C++, notando que poseen pendientes más pronunciadas cerca de las discontinuidades. Este hecho es más evidente al observar la evolución de la presión, ya que es la variable con el valor de RMSE más alto. Se puede inferir que esta diferencia se debe a los algoritmos de alta resolución implementados en PyClaw.
+
+A través de esta simulación resalta que tanto el algoritmo implementado en C++ como los métodos de PyClaw capturan adecuadamente la velocidad de propagación de las ondas de choque y de rarefacción. Este hecho es importante dado que garantiza que los métodos implementados son conservativos.
+\clearpage
 %
-%\begin{figure}[ht]
-%	\centering
-%	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf}
-%	\caption{Gráficas para $t=0.0\unit{\s}$}
-%\end{figure}
-%C:\Users\Rodrigo\Documents\mundo9\Universo\tesis\euler1D\plots_en_TDG\py_sin_claw\py_gauss199\1.pdf
+\subsection{Comparación del tercer conjunto de condiciones iniciales}
+\subsubsection{Gráficas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/1.pdf}
+	\caption{Gráficas para $t=0.0\unit{\s}$}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/4.pdf}
+	\caption{Gráficas para $t=1.2\unit{\s}$}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/6.pdf}
+	\caption{Gráficas para $t=2.0\unit{\s}$}
+\end{figure}
+\begin{table}[H]
+	\large
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Resultados & $\rho$ & $u$ & $p$ \\ \hline
+		RMSE & 2.5e-02 & 1.4e-02 & 2.6e-02 \\ \hline
+		Error máximo & 2.5e-01 & 1.6e-01 & 3.2e-01 \\ \hline
+	\end{tabular}
+	\caption{Comparativa de error entre simulaciones, tercer conjunto de condiciones iniciales.}
+\end{table}
+\subsubsection{Discusión del tercer conjunto de condiciones iniciales}
+En este conjunto de soluciones se expone una diferencia que ya había sido observada en los resultados de la simulación con C++ con la corrección de entropía y sin ésta (sección \ref{sec:set-3-cpp}). El algoritmo de PyClaw no considera la corrección de entropía en el esquema de Roe, a diferencia del programa escrito en C++, que sí tiene esta funcionalidad. Por estas razones, este conjunto de soluciones son las que presentan los mayores RMSE. Aunque los errores máximos encontrados no parecen alarmantes, si se dejara correr la simulación por más tiempo, se esperaría que el error aumentara considerablemente. 

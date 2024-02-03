@@ -1,8 +1,9 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{ÍNDICE DE FIGURAS}{\es@scroman {vi}}{chapter*.7}%
-\contentsline {chapter}{LISTA DE SÍMBOLOS}{\es@scroman {vii}}{chapter*.8}%
-\contentsline {chapter}{OBJETIVOS}{\es@scroman {ix}}{chapter*.9}%
-\contentsline {chapter}{INTRODUCCIÓN}{\es@scroman {xi}}{chapter*.12}%
+\contentsline {chapter}{ÍNDICE DE TABLAS}{\es@scroman {vii}}{chapter*.8}%
+\contentsline {chapter}{LISTA DE SÍMBOLOS}{\es@scroman {ix}}{chapter*.9}%
+\contentsline {chapter}{OBJETIVOS}{\es@scroman {xi}}{chapter*.10}%
+\contentsline {chapter}{INTRODUCCIÓN}{\es@scroman {xiii}}{chapter*.13}%
 \contentsline {chapter}{\numberline {1}ECUACIONES DE CONSERVACIÓN Y SISTEMAS HIPERBÓLICOS DE PRIMER ORDEN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Ecuaciones de conservación}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Derivación de una ecuación de conservación}{3}{section.1.2}%
@@ -76,11 +77,17 @@
 \contentsline {chapter}{\numberline {4}COMPARACIÓN CON PYCLAW}{71}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Fundamentos de Clawpack}{71}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Código de PyClaw utilizado}{73}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Comparación del primer conjunto de condiciones iniciales}{76}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Comparación del segundo conjunto de condiciones iniciales}{76}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Comparación del tercer conjunto de condiciones iniciales}{76}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Discusión}{76}{section.4.6}%
-\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{77}{chapter.5}%
-\contentsline {chapter}{CONCLUSIONES}{79}{chapter*.34}%
-\contentsline {chapter}{RECOMENDACIONES}{81}{chapter*.35}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{83}{chapter*.36}%
+\contentsline {section}{\numberline {4.3}Comparación de resultados}{75}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Comparación del primer conjunto de condiciones iniciales}{76}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Gráficas}{76}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}Discusión del primer conjunto de condiciones iniciales}{77}{subsubsection.4.3.1.2}%
+\contentsline {subsection}{\numberline {4.3.2}Comparación del segundo conjunto de condiciones iniciales}{78}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Gráficas}{78}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Discusión del segundo conjunto de condiciones iniciales}{79}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}Comparación del tercer conjunto de condiciones iniciales}{80}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}Gráficas}{80}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}Discusión del tercer conjunto de condiciones iniciales}{81}{subsubsection.4.3.3.2}%
+\contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{83}{chapter.5}%
+\contentsline {chapter}{CONCLUSIONES}{85}{chapter*.47}%
+\contentsline {chapter}{RECOMENDACIONES}{87}{chapter*.48}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{89}{chapter*.49}%
