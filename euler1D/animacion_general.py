@@ -4,7 +4,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.animation import FFMpegWriter
-
+import sys
+folder_name = sys.argv[1]
 def generar_subsets(data: pd.DataFrame) -> list[pd.DataFrame]:
     
     vacios = data[pd.isna(data["t"])]
@@ -42,7 +43,7 @@ def animacion(data: pd.DataFrame, subset: pd.DataFrame, cantidad: str, margen: f
     ax.set_title("{}, t={} s".format(cantidad, t))
 
 # importar datos
-folder_data = "py_gauss161"
+folder_data = folder_name
 
 data_d = pd.read_csv("data/" + folder_data + "/densidad.dat", delimiter='\t', skip_blank_lines=False)
 data_d.columns = ["t", "x", "u"]
