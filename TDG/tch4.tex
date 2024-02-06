@@ -83,7 +83,7 @@ Para ejecutar la simulación es necesario utilizar un objeto de la clase \texttt
 \section{Comparación de resultados}
 Para visualizar la diferencia entre las simulaciones obtenidas con el programa escrito en C++ y las generadas a través de PyClaw se mostrará la superposición de las gráficas de ambas soluciones sobre algunos instantes temporales. 
 
-Por otro lado, para poder cuantificar la diferencia entre las simulaciones se optó por hacer uso del \textbf{error cuadrático medio} entre ambas soluciones. Considerando a $\rho_{i,\texttt{c++}}^{n}$, $u_{i,\texttt{c++}}^{n}$ y $p_{i,\texttt{c++}}^{n}$ como las funciones numéricas producidas por la simulación en C++ y a $\rho_{i,\texttt{py}}^{n}$, $u_{i,\texttt{py}}^{n}$ y $p_{i,\texttt{py}}^{n}$ como las generadas por PyClaw, se define el error cuadrático medio \footnote{RMSE: Root-Mean-Square Error, en inglés} en el enésimo instante de tiempo, $\text{RMSE}_n$, como:
+Por otro lado, para poder cuantificar la diferencia entre las simulaciones se optó por hacer uso del \textbf{error cuadrático medio} entre ambas soluciones. Considerando a $\rho_{i,\texttt{c++}}^{n}$, $u_{i,\texttt{c++}}^{n}$ y $p_{i,\texttt{c++}}^{n}$ como las funciones numéricas producidas por la simulación en C++ y a $\rho_{i,\texttt{py}}^{n}$, $u_{i,\texttt{py}}^{n}$ y $p_{i,\texttt{py}}^{n}$ como las generadas por PyClaw, se define el error cuadrático medio \footnote{RMSE: Root-Mean-Square Error, en inglés.} en el enésimo instante de tiempo, $\text{RMSE}_n$, como:
 \begin{equation}
 	\text{RMSE}_n(\rho) = \sqrt{\frac{\sum_{i}(\rho_{i,\texttt{c++}}^{n} - \rho_{i,\texttt{py}}^{n})^{2}}{N_x}},
 \end{equation}
