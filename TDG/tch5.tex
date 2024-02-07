@@ -14,14 +14,44 @@ En las anteriores simulaciones, se calculó $\gamma$ para un gas diatómico como
 \end{equation}
 Entonces, se considerarán experimentos de gases con 16 y 32 grados de libertad internos, que corresponden a $\gamma=1.125$ y $\gamma=1.0625$ respectivamente.
 \section{Test de Sod}
-El problema de condiciones iniciales que se estudiará con simulaciones con distintos valores para $\gamma$ es el test de Sod (sección \ref{sec:sod_con_entropy148}).
+El problema de condiciones iniciales que se estudiará con simulaciones con distintos valores para $\gamma$ es el test de Sod (sección \ref{sec:sod_con_entropy148}). En las figuras \ref{fig:sod-gammas-1} - \ref{fig:sod-gammas-2} se encuentran seis instantes temporales de las simulaciones para el test de Sod.
 \begin{figure}[H]
 	\includegraphics[width=\linewidth]{../euler1D/experimentos/graficas_sod/1.pdf}
 	\caption{Primeros tres instantes de las simulaciones con distintos $\gamma$.}
+	\label{fig:sod-gammas-1}
 \end{figure}
 \begin{figure}[H]
 	\includegraphics[width=\linewidth]{../euler1D/experimentos/graficas_sod/2.pdf}
 	\caption{Últimos tres instantes de las simulaciones con distintos $\gamma$.}
+	\label{fig:sod-gammas-2}
 \end{figure}
 
 \subsection{Observaciones}
+\begin{itemize}
+	\item En la simulación para la densidad, destaca cómo la diferencia en la discontinuidad de contacto disminuye al disminuir $\gamma$. Se puede hipotetizar que en el límite $\alpha \rightarrow \infty$, la discontinuidad de contacto desaparece completamente. De acuerdo a \cite{LeVeque}, cuando $\gamma = 1$, la simulación correspondería a la de un gas con \textbf{flujo isotérmico}. Esto último es consistente con la desaparición de la discontinuidad de contacto, ya que esta aparece cuando dos partes del gas tienen temperaturas distintas.
+	\item Se destaca que las velocidades de los gases alcanzan distintos valores máximos; mientras más cercano a 1 es el valor de $\gamma$ mayor es el valor de la velocidad $u$. Sin embargo, la velocidad de propagación de esta discontinuidad es distinta para cada gas y sucede al contrario que con la última observación. A mayor $\gamma$, mayor velocidad de propagación.
+	\item La presión destaca por ser la cantidad que menos varía entre los gases simulados. La principal diferencia entre las presiones es, al igual que con la velocidad, la velocidad de propagación de las ondas. Esto sucede tanto con la onda de choque como con la de rarefacción.
+\end{itemize}
+
+\subsection{Entropía y energía}
+La entropía de un gas regido por las ecuaciones de Euler, está definida por
+\begin{equation}
+	S = c_{v}\log(p/\rho^{\gamma}) + \text{constante},
+\end{equation}
+donde $c_v$ es la capacidad calorífica a volumen constante \cite{LeVeque}. En las figuras \ref{fig:ee-gammas-1} - \ref{fig:ee-gammas-2} se muestran las gráficas correspondientes a la energía total \eqref{eq:energia-total} y la entropía, para cada gas, en seis instantes de tiempo. La entropía se calculó y graficó en unidades de $c_v$.
+
+Se pudieron destacar las siguientes observaciones:
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{../euler1D/experimentos/energia/1.pdf}
+	\caption{Energía y entropía en los primeros tres instantes de las simulaciones con distintos $\gamma$.}
+	\label{fig:ee-gammas-1}
+\end{figure}
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{../euler1D/experimentos/energia/2.pdf}
+	\caption{Energía y entropía en los últimos tres instantes de las simulaciones con distintos $\gamma$.}
+	\label{fig:ee-gammas-2}
+\end{figure}

@@ -91,6 +91,7 @@
 \contentsline {section}{\numberline {5.1}Consideraciones preliminares}{83}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Test de Sod}{83}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Observaciones}{85}{subsection.5.2.1}%
-\contentsline {chapter}{CONCLUSIONES}{87}{chapter*.49}%
-\contentsline {chapter}{RECOMENDACIONES}{89}{chapter*.50}%
-\contentsline {chapter}{BIBLIOGRAF\'IA}{91}{chapter*.51}%
+\contentsline {subsection}{\numberline {5.2.2}Entropía y energía}{86}{subsection.5.2.2}%
+\contentsline {chapter}{CONCLUSIONES}{89}{chapter*.51}%
+\contentsline {chapter}{RECOMENDACIONES}{91}{chapter*.52}%
+\contentsline {chapter}{BIBLIOGRAF\'IA}{93}{chapter*.53}%
