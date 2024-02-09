@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  6 FEB 2024 21:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  8 FEB 2024 20:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2045,14 +2045,15 @@ File: ../euler1D/experimentos/graficas_sod/1.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../euler1D/experimentos/graficas_sod/1.pdf  used on in
 put line 19.
 (pdftex.def)             Requested size: 426.39258pt x 537.069pt.
-<../euler1D/experimentos/graficas_sod/2.pdf, id=2475, 704.14207pt x 886.89816pt
+[83]
+<../euler1D/experimentos/graficas_sod/2.pdf, id=2482, 704.14207pt x 886.89816pt
 >
 File: ../euler1D/experimentos/graficas_sod/2.pdf Graphic file (type pdf)
 <use ../euler1D/experimentos/graficas_sod/2.pdf>
 Package pdftex.def Info: ../euler1D/experimentos/graficas_sod/2.pdf  used on in
 put line 24.
 (pdftex.def)             Requested size: 426.39258pt x 537.069pt.
-[83]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [84 <../euler1D/experimentos/graficas_sod/1.pdf>] [85 <../euler1D/experimentos
@@ -2061,13 +2062,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: ../euler1D/experimentos/energia/1.pdf Graphic file (type pdf)
 <use ../euler1D/experimentos/energia/1.pdf>
 Package pdftex.def Info: ../euler1D/experimentos/energia/1.pdf  used on input l
-ine 49.
+ine 45.
 (pdftex.def)             Requested size: 426.39258pt x 647.15962pt.
 <../euler1D/experimentos/energia/2.pdf, id=2542, 584.34576pt x 886.89816pt>
 File: ../euler1D/experimentos/energia/2.pdf Graphic file (type pdf)
 <use ../euler1D/experimentos/energia/2.pdf>
 Package pdftex.def Info: ../euler1D/experimentos/energia/2.pdf  used on input l
-ine 54.
+ine 50.
 (pdftex.def)             Requested size: 426.39258pt x 647.15962pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2076,27 +2077,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (33.92961pt too high) has occurred while \output is active []
 
 
-[87 <../euler1D/experimentos/energia/1.pdf>])
+[87 <../euler1D/experimentos/energia/1.pdf>]
 Overfull \vbox (33.92961pt too high) has occurred while \output is active []
 
 
-[88 <../euler1D/experimentos/energia/2.pdf>]
+[88 <../euler1D/experimentos/energia/2.pdf>]) [89] [90
+
+
+
+]
 \openout2 = `c_y_r.aux'.
 
- (c_y_r.tex [89
+ (c_y_r.tex [91
+
+
+]
+[92]) [93
+
+] (TesisTotalBibTeX.bbl [94
 
 
 
-
-
-] [90
-
-]) [91]
-(TesisTotalBibTeX.bbl [92
-
-
-
-] [93]
+] [95]
 Underfull \hbox (badness 10000) in paragraph at lines 130--148
 []$\T1/cmtt/m/n/12 https : / / www . sciencedirect . com / science / article / 
 pii /
@@ -2108,7 +2110,7 @@ Underfull \hbox (badness 4024) in paragraph at lines 159--164
 / ws / portalfiles / portal / 67742456 /
  []
 
-) [94] (TesisTotalBibTeX.aux
+) [96] (TesisTotalBibTeX.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
  (agradecimientos.aux) (dedicatoria.aux)
@@ -2118,8 +2120,8 @@ Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
 (rerunfilecheck)             Checksum: B2A9E726F84B7975D8DCDFBA55E2492C;24150.
  ) 
 Here is how much of TeX's memory you used:
- 34032 strings out of 476339
- 672821 string characters out of 5787175
+ 34036 strings out of 476339
+ 672849 string characters out of 5787175
  1908340 words of memory out of 5000000
  52814 multiletter control sequences out of 15000+600000
  543414 words of font info for 118 fonts, out of 8000000 for 9000
@@ -2175,9 +2177,9 @@ blic/cm-super/sftt1000.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/font
 s/type1/public/cm-super/sftt1095.pfb><C:/Users/Rodrigo/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/cm-super/sftt1200.pfb><C:/Users/Rodrigo/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (120 pages, 2011208 bytes).
+Output written on TesisTotalBibTeX.pdf (122 pages, 2017287 bytes).
 PDF statistics:
- 2998 PDF objects out of 3580 (max. 8388607)
- 903 named destinations out of 1000 (max. 500000)
+ 3010 PDF objects out of 3580 (max. 8388607)
+ 907 named destinations out of 1000 (max. 500000)
  1035 words of extra memory for PDF output out of 10000 (max. 10000000)
 
