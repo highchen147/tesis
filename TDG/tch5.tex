@@ -12,11 +12,17 @@ En las anteriores simulaciones, se calculó $\gamma$ para un gas diatómico, com
 \begin{equation}
 	\alpha = 5 \implies \gamma = 7/5 = 1.4.
 \end{equation}
-Entonces, se considerarán experimentos con gases de 16 y 32 grados de libertad internos, que corresponden a $\gamma=1.125$ y $\gamma=1.0625$ respectivamente.
+Si se considera un gas monoatómico, entonces éste contaría con tres grados internos de libertad traslacional únicamente, obteniendo $\gamma=5/3$. 
+
+Por otro lado, modelando un gas cuyas moléculas constituyentes poseen 4 grados de libertad rotacionales, 3 traslacionales y 2 vibracionales, se tendría $\alpha=9$, mientras que $\gamma=11/9$.
+
+Entonces, se considerarán experimentos con gases de 3, 5 y 9 grados de libertad
+internos, que corresponden a $\gamma = 5/3$, $\gamma = 7/5$ y $\gamma = 11/9$ respectivamente.
+%Entonces, se considerarán experimentos con gases de 16 y 32 grados de libertad internos, que corresponden a $\gamma=1.125$ y $\gamma=1.0625$ respectivamente.
 \section{Test de Sod}
 El problema de condiciones iniciales que se estudiará con simulaciones con distintos valores para $\gamma$ es el test de Sod (sección \ref{sec:sod_con_entropy148}). En las figuras \ref{fig:sod-gammas-1} - \ref{fig:sod-gammas-2} se encuentran seis instantes temporales de las simulaciones para el test de Sod.
 \begin{figure}[H]
-	\includegraphics[width=\linewidth]{../euler1D/experimentos/graficas_sod/1.pdf}
+	\includegraphics[width=0.95\linewidth]{../euler1D/experimentos/graficas_sod/1.pdf}
 	\caption{Primeros tres instantes de las simulaciones con distintos $\gamma$.}
 	\label{fig:sod-gammas-1}
 \end{figure}

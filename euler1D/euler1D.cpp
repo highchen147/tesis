@@ -43,7 +43,7 @@ vector<double> operator-(const vector<double>& a, const vector<double>& b);
 vector<double> operator*(const vector<double>& v, double scalar);
 vector<double>& operator+=(vector<double>& v1, const vector<double>& v2);
 
-const double Gamma = 1.0625;
+const double Gamma = (5e0 /3);
 
 int main()
 {

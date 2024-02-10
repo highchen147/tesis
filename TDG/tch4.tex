@@ -91,22 +91,27 @@ donde $N_x$ es el número de celdas. La misma fórmula se aplica para las demás
 \begin{equation}
 	\text{RMSE} = \sqrt{\frac{\sum_{n}^{N_{t}} (\text{RMSE}_{n})^{2}}{N_t}},
 \end{equation}
-donde $N_t$ es el número de instantes temporales. Este cálculo también se realiza por cada variable.
+donde $N_t$ es el número de instantes temporales. Este cálculo también se realiza por cada variable. 
+
+Adicionalmente se calculó el error máximo absoluto entre simulaciones, que corresponde a la máxima diferencia absoluta sobre los valores de las funciones numéricas producidas por cada programa. Por ejemplo, el error máximo de la densidad  se calcula como
+\begin{equation}
+	\text{Error máximo} = \max{(|\rho_{i,\texttt{c++}}^{n} - \rho_{i,\texttt{py}}^{n}|)}.
+\end{equation}
 \subsection{Comparación del primer conjunto de condiciones iniciales}
 \subsubsection{Gráficas}
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf}
 	\caption{Gráficas para $t=0.0\unit{\s}$}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/4.pdf}
 	\caption{Gráficas para $t=1.8\unit{\s}$}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1.1\linewidth]{../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/6.pdf}
 \caption{Gráficas para $t=3.0\unit{\s}$}

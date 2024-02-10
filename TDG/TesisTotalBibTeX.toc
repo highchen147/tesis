@@ -78,18 +78,18 @@
 \contentsline {section}{\numberline {4.1}Fundamentos de Clawpack}{71}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Código de PyClaw utilizado}{73}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Comparación de resultados}{75}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Comparación del primer conjunto de condiciones iniciales}{76}{subsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}Gráficas}{76}{subsubsection.4.3.1.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}Discusión del primer conjunto de condiciones iniciales}{77}{subsubsection.4.3.1.2}%
-\contentsline {subsection}{\numberline {4.3.2}Comparación del segundo conjunto de condiciones iniciales}{78}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Gráficas}{78}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}Discusión del segundo conjunto de condiciones iniciales}{79}{subsubsection.4.3.2.2}%
-\contentsline {subsection}{\numberline {4.3.3}Comparación del tercer conjunto de condiciones iniciales}{80}{subsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.3.1}Gráficas}{80}{subsubsection.4.3.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.3.2}Discusión del tercer conjunto de condiciones iniciales}{81}{subsubsection.4.3.3.2}%
+\contentsline {subsection}{\numberline {4.3.1}Comparación del primer conjunto de condiciones iniciales}{77}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Gráficas}{77}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}Discusión del primer conjunto de condiciones iniciales}{78}{subsubsection.4.3.1.2}%
+\contentsline {subsection}{\numberline {4.3.2}Comparación del segundo conjunto de condiciones iniciales}{79}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Gráficas}{79}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Discusión del segundo conjunto de condiciones iniciales}{80}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}Comparación del tercer conjunto de condiciones iniciales}{81}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}Gráficas}{81}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}Discusión del tercer conjunto de condiciones iniciales}{82}{subsubsection.4.3.3.2}%
 \contentsline {chapter}{\numberline {5}SIMULACIONES CON DISTINTOS COEFICIENTES DE DILATACIÓN ADIABÁTICA}{83}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Consideraciones preliminares}{83}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Test de Sod}{83}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Test de Sod}{84}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Observaciones}{85}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Entropía y energía}{86}{subsection.5.2.2}%
 \contentsline {chapter}{CONCLUSIONES}{91}{chapter*.51}%

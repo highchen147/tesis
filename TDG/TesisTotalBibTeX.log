@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  8 FEB 2024 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.26)  9 FEB 2024 21:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1928,147 +1928,154 @@ File: ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf Graphic file (type
 pdf)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf 
- used on input line 99.
+ used on input line 104.
 (pdftex.def)             Requested size: 469.03442pt x 178.64676pt.
 
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 99--100
+Overfull \hbox (42.64185pt too wide) in paragraph at lines 104--105
  [][] 
  []
 
-<../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/4.pdf, id=2277, 762.49878pt x 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76]
+<../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/4.pdf, id=2286, 762.49878pt x 
 290.41583pt>
 File: ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/4.pdf Graphic file (type 
 pdf)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/4.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/4.pdf 
- used on input line 105.
+ used on input line 110.
 (pdftex.def)             Requested size: 469.03442pt x 178.64676pt.
 
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 105--106
+Overfull \hbox (42.64185pt too wide) in paragraph at lines 110--111
  [][] 
  []
 
-<../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/6.pdf, id=2278, 762.49878pt x 
+<../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/6.pdf, id=2287, 762.49878pt x 
 290.41583pt>
 File: ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/6.pdf Graphic file (type 
 pdf)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/6.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/6.pdf 
- used on input line 111.
+ used on input line 116.
 (pdftex.def)             Requested size: 469.03442pt x 178.64676pt.
 
-Overfull \hbox (42.64185pt too wide) in paragraph at lines 111--112
+Overfull \hbox (42.64185pt too wide) in paragraph at lines 116--117
  [][] 
  []
 
-[76 <../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf>]
-<../euler1D/plots_en_TDG/py_sin_claw/py_sod659/1.pdf, id=2306, 762.49878pt x 29
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77 <../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/1.pdf> <../euler1D/plots_
+en_TDG/py_sin_claw/py_gauss199/4.pdf>]
+<../euler1D/plots_en_TDG/py_sin_claw/py_sod659/1.pdf, id=2328, 762.49878pt x 29
 0.41583pt>
 File: ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/1.pdf Graphic file (type pd
 f)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/1.pdf  u
-sed on input line 137.
+sed on input line 142.
 (pdftex.def)             Requested size: 426.39258pt x 162.40575pt.
-<../euler1D/plots_en_TDG/py_sin_claw/py_sod659/4.pdf, id=2307, 762.49878pt x 29
+<../euler1D/plots_en_TDG/py_sin_claw/py_sod659/4.pdf, id=2329, 762.49878pt x 29
 0.41583pt>
 File: ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/4.pdf Graphic file (type pd
 f)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/4.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/4.pdf  u
-sed on input line 142.
+sed on input line 147.
 (pdftex.def)             Requested size: 426.39258pt x 162.40575pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [77 <../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/4.pdf> <../euler1D/plots_
-en_TDG/py_sin_claw/py_gauss199/6.pdf>]
-<../euler1D/plots_en_TDG/py_sin_claw/py_sod659/6.pdf, id=2345, 762.49878pt x 29
+ [78 <../euler1D/plots_en_TDG/py_sin_claw/py_gauss199/6.pdf>]
+<../euler1D/plots_en_TDG/py_sin_claw/py_sod659/6.pdf, id=2351, 762.49878pt x 29
 0.41583pt>
 File: ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/6.pdf Graphic file (type pd
 f)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/6.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_sod659/6.pdf  u
-sed on input line 147.
+sed on input line 152.
 (pdftex.def)             Requested size: 426.39258pt x 162.40575pt.
 
-Underfull \vbox (badness 3128) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [78 <../euler1D/plots_en_TDG/py_sin_claw/py_sod659/1.pdf> <../euler1D/plots_en
-_TDG/py_sin_claw/py_sod659/4.pdf>] [79 <../euler1D/plots_en_TDG/py_sin_claw/py_
+ [79 <../euler1D/plots_en_TDG/py_sin_claw/py_sod659/1.pdf> <../euler1D/plots_en
+_TDG/py_sin_claw/py_sod659/4.pdf>] [80 <../euler1D/plots_en_TDG/py_sin_claw/py_
 sod659/6.pdf>]
-<../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/1.pdf, id=2406, 762.49878pt 
+<../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/1.pdf, id=2411, 762.49878pt 
 x 290.41583pt>
 File: ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/1.pdf Graphic file (typ
 e pdf)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/1.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/1.pd
-f  used on input line 172.
+f  used on input line 177.
 (pdftex.def)             Requested size: 426.39258pt x 162.40575pt.
-<../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/4.pdf, id=2407, 762.49878pt 
+<../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/4.pdf, id=2412, 762.49878pt 
 x 290.41583pt>
 File: ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/4.pdf Graphic file (typ
 e pdf)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/4.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/4.pd
-f  used on input line 177.
+f  used on input line 182.
 (pdftex.def)             Requested size: 426.39258pt x 162.40575pt.
-<../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/6.pdf, id=2408, 762.49878pt 
+<../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/6.pdf, id=2413, 762.49878pt 
 x 290.41583pt>
 File: ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/6.pdf Graphic file (typ
 e pdf)
 <use ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/6.pdf>
 Package pdftex.def Info: ../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/6.pd
-f  used on input line 182.
+f  used on input line 187.
 (pdftex.def)             Requested size: 426.39258pt x 162.40575pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [80
+ [81
 
  <../euler1D/plots_en_TDG/py_sin_claw/py_leveque518/1.pdf> <../euler1D/plots_en
-_TDG/py_sin_claw/py_leveque518/4.pdf>]) [81 <../euler1D/plots_en_TDG/py_sin_cla
+_TDG/py_sin_claw/py_leveque518/4.pdf>]) [82 <../euler1D/plots_en_TDG/py_sin_cla
 w/py_leveque518/6.pdf>]
 \openout2 = `tch5.aux'.
 
- (tch5.tex [82
+ (tch5.tex
+Cap\'{\i }tulo 5.
+<../euler1D/experimentos/graficas_sod/1.pdf, id=2475, 704.14207pt x 886.89816pt
+>
+File: ../euler1D/experimentos/graficas_sod/1.pdf Graphic file (type pdf)
+<use ../euler1D/experimentos/graficas_sod/1.pdf>
+Package pdftex.def Info: ../euler1D/experimentos/graficas_sod/1.pdf  used on in
+put line 25.
+(pdftex.def)             Requested size: 405.07164pt x 510.20607pt.
+[83
 
 
 
 
 ]
-Cap\'{\i }tulo 5.
-<../euler1D/experimentos/graficas_sod/1.pdf, id=2474, 704.14207pt x 886.89816pt
->
-File: ../euler1D/experimentos/graficas_sod/1.pdf Graphic file (type pdf)
-<use ../euler1D/experimentos/graficas_sod/1.pdf>
-Package pdftex.def Info: ../euler1D/experimentos/graficas_sod/1.pdf  used on in
-put line 19.
-(pdftex.def)             Requested size: 426.39258pt x 537.069pt.
-[83]
-<../euler1D/experimentos/graficas_sod/2.pdf, id=2482, 704.14207pt x 886.89816pt
+<../euler1D/experimentos/graficas_sod/2.pdf, id=2483, 704.14207pt x 886.89816pt
 >
 File: ../euler1D/experimentos/graficas_sod/2.pdf Graphic file (type pdf)
 <use ../euler1D/experimentos/graficas_sod/2.pdf>
 Package pdftex.def Info: ../euler1D/experimentos/graficas_sod/2.pdf  used on in
-put line 24.
+put line 30.
 (pdftex.def)             Requested size: 426.39258pt x 537.069pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4467) has occurred while \output is active []
 
  [84 <../euler1D/experimentos/graficas_sod/1.pdf>] [85 <../euler1D/experimentos
 /graficas_sod/2.pdf>]
-<../euler1D/experimentos/energia/1.pdf, id=2541, 584.34576pt x 886.89816pt>
+<../euler1D/experimentos/energia/1.pdf, id=2542, 584.34576pt x 886.89816pt>
 File: ../euler1D/experimentos/energia/1.pdf Graphic file (type pdf)
 <use ../euler1D/experimentos/energia/1.pdf>
 Package pdftex.def Info: ../euler1D/experimentos/energia/1.pdf  used on input l
-ine 45.
+ine 51.
 (pdftex.def)             Requested size: 426.39258pt x 647.15962pt.
-<../euler1D/experimentos/energia/2.pdf, id=2542, 584.34576pt x 886.89816pt>
+<../euler1D/experimentos/energia/2.pdf, id=2543, 584.34576pt x 886.89816pt>
 File: ../euler1D/experimentos/energia/2.pdf Graphic file (type pdf)
 <use ../euler1D/experimentos/energia/2.pdf>
 Package pdftex.def Info: ../euler1D/experimentos/energia/2.pdf  used on input l
-ine 50.
+ine 56.
 (pdftex.def)             Requested size: 426.39258pt x 647.15962pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2120,8 +2127,8 @@ Package rerunfilecheck Info: File `TesisTotalBibTeX.out' has not changed.
 (rerunfilecheck)             Checksum: B2A9E726F84B7975D8DCDFBA55E2492C;24150.
  ) 
 Here is how much of TeX's memory you used:
- 34036 strings out of 476339
- 672849 string characters out of 5787175
+ 34037 strings out of 476339
+ 672862 string characters out of 5787175
  1908340 words of memory out of 5000000
  52814 multiletter control sequences out of 15000+600000
  543414 words of font info for 118 fonts, out of 8000000 for 9000
@@ -2177,9 +2184,9 @@ blic/cm-super/sftt1000.pfb><C:/Users/Rodrigo/AppData/Local/Programs/MiKTeX/font
 s/type1/public/cm-super/sftt1095.pfb><C:/Users/Rodrigo/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/cm-super/sftt1200.pfb><C:/Users/Rodrigo/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on TesisTotalBibTeX.pdf (122 pages, 2017287 bytes).
+Output written on TesisTotalBibTeX.pdf (122 pages, 2019990 bytes).
 PDF statistics:
- 3010 PDF objects out of 3580 (max. 8388607)
- 907 named destinations out of 1000 (max. 500000)
+ 3011 PDF objects out of 3580 (max. 8388607)
+ 908 named destinations out of 1000 (max. 500000)
  1035 words of extra memory for PDF output out of 10000 (max. 10000000)
 
